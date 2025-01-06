@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Christian	Trinidad</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Christian	Trinidad</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><br>def checks_if_palindrome(input_str):<br>&nbsp; #This function is made to find if the given string "input_str" is a palindrome which is&nbsp;<br>&nbsp; # a word, phrase, number, or other sequence of characters that reads the same forwards and&nbsp;<br>&nbsp; # backwards (ignoring spaces, punctuation, and capitalization)<br>&nbsp; # I will be going to do this by checking if the string reads the same forward and backwards and like the instructions say,<br>&nbsp; # I have to remove spaces and punctuation, and in the case the user inputs a string thats capitalized we will make it lowercase.</p>
+<p>&nbsp; # Now I am going to make a variable that has the input string flipped to later compare it to the initial string<br>&nbsp; new_str = ''.join(c.lower() for c in input_str if c.isalnum())<br>#the following code compares the user input to the new string that has been flipped and if they are the same then it will return true<br>&nbsp; if new_str == new_str[::-1]:<br>&nbsp; &nbsp; &nbsp; return "The string is a palindrome."<br>&nbsp; else:<br>&nbsp; &nbsp; &nbsp; #if the string is not the reverse then this will print out<br>&nbsp; &nbsp; &nbsp; return "The string is not a palindrome."<br>&nbsp; &nbsp; #allows the actual code to run allowing the user to input a string<br>user_input = input("Enter a string to check if it's a palindrome: ")</p>
+<p>&nbsp; &nbsp; #Calls the function and display the result<br>result = checks_if_palindrome(user_input)<br>print(result)</p>
+</div>
+</body>
+</html>

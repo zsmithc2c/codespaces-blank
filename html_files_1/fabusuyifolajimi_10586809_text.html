@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Folajimi	Fabusuyi</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Folajimi	Fabusuyi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><code><span>'''</span></code></div>
+<div><code><span>Palindrome: The word is the same as the word backwards.</span></code></div>
+<div><code><span>Input: string</span></code></div>
+<div><code><span>Return: string based on boolean value</span></code></div>
+<br>
+<div><code><span>Edge cases: </span></code></div>
+<div><code><span>&nbsp; &nbsp; Case: The string has spaces/punctuations in it</span></code></div>
+<div><code><span>&nbsp; &nbsp; Solution: Remove all the spaces/punctuations in the word before assignment</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; Case: Empty string input</span></code></div>
+<div><code><span>&nbsp; &nbsp; Solution: Should return true regardless</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; Case: Upper case characters in string</span></code></div>
+<div><code><span>&nbsp; &nbsp; Solution: turn on letters to lower case.</span></code></div>
+<br>
+<div><code><span>'''</span></code></div>
+<br>
+<div><code><span>def</span> <span>palindrome</span><span>(</span><span>word</span><span>):</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># This removes spaces/punctuations in the word after turning it to a list and then joins the list back together</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>word</span> <span>=</span> <span>""</span><span>.</span><span>join</span><span>([</span><span>char</span><span>.lower() </span><span>for</span> <span>char</span> <span>in</span> <span>word</span> <span>if</span> <span>char</span><span>.lower() </span><span>in</span> <span>"abcdefghijklmnopqrstuvwxyz"</span><span>])</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># Checks if word is equal to its reverse through reverse splicing/stepping</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>is_palindrome</span> <span>=</span> <span>word</span> <span>==</span> <span>word</span><span>[::</span><span>-</span><span>1</span><span>]</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># Returns the correct string based on if palindrome is correct</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>return</span> <span>"The string is a palindrome"</span> <span>if</span> <span>is_palindrome</span> <span>else</span> <span>"The string is not a palindrome"</span></code></div>
+<br><br>
+<div><code><span>print</span><span>(</span><span>palindrome</span><span>(</span><span>"Race Car"</span><span>)) </span><span># -&gt; true</span></code></div>
+<div><code><span>print</span><span>(</span><span>palindrome</span><span>(</span><span>" "</span><span>)) </span><span># -&gt; true</span></code></div>
+<div><code><span>print</span><span>(</span><span>palindrome</span><span>(</span><span>"Level"</span><span>)) </span><span># -&gt; true</span></code></div>
+<div><code><span>print</span><span>(</span><span>palindrome</span><span>(</span><span>"Hello World"</span><span>)) </span><span># -&gt; false</span></code></div>
+</div>
+</div>
+</body>
+</html>

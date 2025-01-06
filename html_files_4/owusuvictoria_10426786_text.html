@@ -1,0 +1,40 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Victoria	Owusu</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Victoria	Owusu</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span> <span>random</span></div>
+<div><span># Create a program that plays a guessing game with the user. The program will choose a random number between 1 and 100, and then ask the user to guess the number.</span></div>
+<br>
+<div><span>number</span><span> = </span><span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
+<div><span>#generates random number</span></div>
+<br><br>
+<div><span>guess</span><span> = int(input(</span><span>"Please guess the generated number from 1-100: "</span><span>))</span></div>
+<div><span>#user starts guessing numbers from 1-100</span></div>
+<br>
+<div><span>while</span><span> (</span><span>number</span> <span>!</span><span>= </span><span>guess</span><span>):</span></div>
+<div><span>if</span><span> (</span><span>guess</span> <span>&gt;</span> <span>number</span><span>):</span></div>
+<div><span> print(</span><span>"Your guess is too high, try again."</span><span>)</span></div>
+<div><span>#let user know the guess is too high</span></div>
+<div><span>elif</span><span> (</span><span>guess</span> <span>&lt;</span> <span>number</span><span>):</span></div>
+<div><span> print(</span><span>"Your guess is too low, try again."</span><span>)</span></div>
+<div><span>#let user know the guess is too low</span></div>
+<div><span>else</span><span>: </span></div>
+<div><span> print(</span><span>"Your guess is invalid, try again."</span><span>)</span></div>
+<div><span>#let user know the guess is invalid</span></div>
+<div><span>guess</span><span> = int(input(</span><span>" "</span><span>))</span></div>
+<div><span>print(</span><span>f</span><span>"Correct! The generated number is {guess}!"</span><span>)</span></div>
+<div><span>#once user guesses the generated number, the loop is broken and the computer lets them know they've guessed the right answer.</span></div>
+</div>
+</div>
+</body>
+</html>

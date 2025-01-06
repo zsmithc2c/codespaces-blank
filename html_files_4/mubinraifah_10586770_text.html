@@ -1,0 +1,28 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Raifah Mubin</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Raifah Mubin</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import random</p>
+<p>def number_guessing_game():</p>
+<p>&nbsp; &nbsp; # Understand:<br>&nbsp; &nbsp; # - Problem: The program generates a random number between 1 and 100.<br>&nbsp; &nbsp; # &nbsp; The user needs to guess the number. Provide feedback if their guess is too high or low.<br>&nbsp; &nbsp; # - Inputs: User guesses.<br>&nbsp; &nbsp; # - Outputs: Feedback for each guess and a congratulatory message if correct.<br>&nbsp; &nbsp; # - Edge cases: Invalid inputs, such as non-numeric entries.</p>
+<p>&nbsp; &nbsp; # Clues:<br>&nbsp; &nbsp; # - Use random.randint for generating the random number.<br>&nbsp; &nbsp; # - Use a loop for repeated guesses until the correct one.<br>&nbsp; &nbsp; # - Handle invalid inputs with error messages.</p>
+<p>&nbsp; &nbsp; # Assemble:<br>&nbsp; &nbsp; # Step 1: Generate a random number.<br>&nbsp; &nbsp; random_number = random.randint(1, 100)</p>
+<p>&nbsp; &nbsp; print("Welcome to the Number Guessing Game!")<br>&nbsp; &nbsp; print("I have chosen a number between 1 and 100. Try to guess it!")</p>
+<p>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; # Step 2: Prompt the user for a guess.<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; user_guess = int(input("Enter your guess: "))</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Check if the guess is within range.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if user_guess &lt; 1 or user_guess &gt; 100:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Your guess is out of range. Please enter a number between 1 and 100.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Step 3: Compare the guess with the random number.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if user_guess &gt; random_number:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too high! Try a smaller number.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif user_guess &lt; random_number:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too low! Try a larger number.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Correct guess ends the game.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"Congratulations! You guessed the number {random_number} correctly.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Handle invalid input.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please enter a valid number.")</p>
+<p># Solve:<br># Call the function to start the game.<br>number_guessing_game()</p>
+<p># Examine:<br># - Results:<br># &nbsp; - If the user inputs valid guesses, the game guides them to the correct answer.<br># &nbsp; - Invalid inputs provide an error message without crashing the program.<br># - Performance:<br># &nbsp; - Efficiently generates a random number and handles all edge cases with a simple loop.</p>
+</div>
+</body>
+</html>

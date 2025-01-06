@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Patrick Wilson</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Patrick Wilson</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def is_palindrome(s):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Check if a given string is a palindrome.<br>&nbsp; &nbsp; :param s: str, input string<br>&nbsp; &nbsp; :return: str, result message<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; # Step 4: Solve</p>
+<p>&nbsp; &nbsp; # Normalize the string: remove non-alphanumeric characters and convert to lowercase<br>&nbsp; &nbsp; normalized = ''.join(char.lower() for char in s if char.isalnum())</p>
+<p>&nbsp; &nbsp; # Compare the normalized string to its reverse<br>&nbsp; &nbsp; if normalized == normalized[::-1]:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is a palindrome."<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome."</p>
+<p># Test cases<br>if __name__ == "__main__":<br>&nbsp; &nbsp; test_strings = [<br>&nbsp; &nbsp; &nbsp; &nbsp; "Racecar", &nbsp;# Palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; "Hello", &nbsp; &nbsp;# Not a palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; "A man, a plan, a canal: Panama", &nbsp;# Palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; "", &nbsp; &nbsp; &nbsp; &nbsp; # Palindrome (empty string)<br>&nbsp; &nbsp; &nbsp; &nbsp; "No lemon, no melon" &nbsp;# Palindrome<br>&nbsp; &nbsp; ]</p>
+<p>&nbsp; &nbsp; for test in test_strings:<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"Input: {test}\nOutput: {is_palindrome(test)}\n")</p>
+</div>
+</body>
+</html>

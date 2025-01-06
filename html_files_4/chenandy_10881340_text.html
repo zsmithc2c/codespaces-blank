@@ -1,0 +1,32 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Andy Chen</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Andy Chen</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span style="background-color: #bfedd2;">import random</span></p>
+<p><span style="background-color: #bfedd2;">*Import the random function or library&nbsp;</span></p>
+<p>def guessing_game():<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Plays a guessing game with the user.<br>&nbsp; &nbsp; """<br><span style="background-color: #bfedd2;">&nbsp; &nbsp; secret_number = random.randint(1, 100)</span><br><span style="background-color: #bfedd2;">&nbsp; &nbsp; num_guesses = 0</span></p>
+<p><span style="background-color: #bfedd2;">* gerenate a random number using the random library in a range from one to 100.&nbsp;</span></p>
+<p>&nbsp; &nbsp; print("I'm thinking of a number between 1 and 100.")</p>
+<p><span style="background-color: #bfedd2;">&nbsp; &nbsp; while True:</span></p>
+<p><span style="background-color: #bfedd2;">*until the user gives the number the situation will remain True.&nbsp;</span><br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess = int(input("Take a guess: "))<br><span style="background-color: #bfedd2;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num_guesses += 1</span></p>
+<p><span style="background-color: #bfedd2;">*For every guess it adds up in the storage it adds one to category that hold the number of guess.&nbsp;</span></p>
+<p>&nbsp;<span style="background-color: #bfedd2;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if guess == secret_number:</span><br><span style="background-color: #bfedd2;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"Congratulations! You guessed the number in {num_guesses} tries.")</span></p>
+<p><span style="background-color: #bfedd2;">*Guess correct it will displayed the number of tries you made and end the game</span><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif guess &lt; secret_number:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too low! Try again.")</p>
+<p>*If the user's guess is too low, the program tells them the answer is larger and lets them guess again.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too high! Try again.")</p>
+<p>*If the user's guess is too high, the program tells them the answer is smaller and lets them guess again.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please enter a number.")</p>
+<p>guessing_game()</p>
+<p>*calls the game&nbsp;</p>
+</div>
+</body>
+</html>

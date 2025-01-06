@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Alyson	Hernandez</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Alyson	Hernandez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>## Source for reversing strings: https://www.w3schools.com/python/python_howto_reverse_string.asp</p>
+<p>def cleanText(o):<br>&nbsp; &nbsp; # Get rid of any spaces within the string by replacing them with ""<br>&nbsp; &nbsp; a = o.replace(" ", "")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Lowercases the entire string<br>&nbsp; &nbsp; b = a.lower()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Goes through the string and replaces any punctuation with ""<br>&nbsp; &nbsp; for punctuation in ',.?_!;"-':<br>&nbsp; &nbsp; &nbsp; &nbsp; b = b.replace(punctuation, "")<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; return b<br>&nbsp; &nbsp;&nbsp;<br>def isPalindrome(text):<br>&nbsp; &nbsp; # Reversed the string by using slicing<br>&nbsp; &nbsp; return text == text[::-1]</p>
+<p># Returns if string is palindrome or not<br>def palindromeAns(ans):<br>&nbsp; &nbsp; if ans:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is a palindrome.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is not a palindrome.")</p>
+<p><br>#Case 1<br>o = "Racecar"<br>new = cleanText(o)<br>ans = isPalindrome(new)<br>palindromeAns(ans)</p>
+<p>#Case 2<br>o = "Taco cat"<br>new = cleanText(o)<br>ans = isPalindrome(new)<br>palindromeAns(ans)</p>
+<p>#Case 2<br>o = "Ka_yak!"<br>new = cleanText(o)<br>ans = isPalindrome(new)<br>palindromeAns(ans)</p>
+</div>
+</body>
+</html>

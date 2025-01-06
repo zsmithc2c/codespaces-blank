@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Jose	Carmona</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Jose	Carmona</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import re<br>#look if string is palindrome<br>#input: string<br>#output: 'string is a palindrome' or 'string is not a palindrome'</p>
+<p><br>#initial look(ignoring case sensitivity):<br>#since capitalization doesn't matter convert string to lower case in ensure no errors<br>#create new string that is reverse of the original string<br>#compare if the new string is equal to the original string<br>#if equal return 'string is a palindrome'<br>#if not equal return 'string is not a palindrome'</p>
+<p>#final look(space and punctuation sensitivity)<br>#first remove all space and punctuation from string<br>#im gonna try using re.sub() that i learned from doing leet code problems on my own<br>#re.sub(pattern, replace, string)<br>#pattern(punction and spaces): ^a-zA-Z0-9<br>#a-zA-Z0-9: all letters and numbers and i think numbers are ok to leave in<br>#^: for not in the string<br>#replace: ''<br>#emtpy string in order to remove<br>#trying this because its something i want to get better at using and technically would run faster<br>#than doing something like looping through the string and comparing each character or using the "in" operator<br>#to cheack if the character is in the string and then using str.index() over and over to find then remove all cases of that character</p>
+<p><br>def firstIsPalindrome(string):<br>&nbsp; #make string lower to ignore case sensitivity<br>&nbsp; string = string.lower()<br>&nbsp; #creating new string that is reverse of original string<br>&nbsp; newString = string[::-1]<br>&nbsp; #comparing if new string is equal to original string<br>&nbsp; #if equal returning 'string is a palindrome'<br>&nbsp; #if not equal returning 'string is not a palindrome'<br>&nbsp; if newString == string:<br>&nbsp; &nbsp; return 'string is a palindrome'<br>&nbsp; else:<br>&nbsp; &nbsp; return 'string is not a palindrome'</p>
+<p>&nbsp;</p>
+<p>def finalIsPalindrome(string):<br>&nbsp; #removing all spaces and punctuation<br>&nbsp; string = re.sub(r'[^a-zA-Z0-9]', '', string)<br>&nbsp; #making string lower to ignore case sensitivity<br>&nbsp; string = string.lower()<br>&nbsp; #creating new string that is reverse of original string<br>&nbsp; newString = string[::-1]<br>&nbsp; #checking if new string is equal to original string<br>&nbsp;&nbsp;<br>&nbsp; if newString == string:<br>&nbsp; &nbsp; return 'string is a palindrome'<br>&nbsp; else:<br>&nbsp; &nbsp; return 'string is not a palindrome'<br>&nbsp;&nbsp;<br>#tests<br>#case sensitivity<br>print(firstIsPalindrome('Racecar'))<br>print(firstIsPalindrome('Taco'))<br>print(firstIsPalindrome('MadAM'))</p>
+<p>#spacing between testing<br>print('' + '\n'*3)</p>
+<p>#space and puncuation sensitivity<br>print(finalIsPalindrome('Racecar'))<br>print(finalIsPalindrome('Taco'))<br>print(finalIsPalindrome('MadAM'))<br>print(finalIsPalindrome('Able was I, I saw Elba'))<br>print(finalIsPalindrome('Never odd or even'))</p>
+</div>
+</body>
+</html>

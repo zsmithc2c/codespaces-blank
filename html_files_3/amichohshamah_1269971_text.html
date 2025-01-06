@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Shamah Amichoh</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Shamah Amichoh</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># we need to create a function that determines if all the characters in a given string are unique</p>
+<p># we might have to use a dictionary to store the characters and their counts<br># we might need a for lop to iterate through the string and add each element to our dictionary</p>
+<p>def checkUnique(a):<br>&nbsp; # define and empty list<br>&nbsp; in_string = []<br>&nbsp; #loop through the string<br>&nbsp; for character in a:<br>&nbsp; &nbsp; # if the certain index value is in my list then that means the character appeard twice return false<br>&nbsp; &nbsp; if character in in_string:<br>&nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp;#else add that value to my list and continue the loop&nbsp;<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; in_string.append(character)<br>&nbsp; &nbsp; &nbsp; #added a print statement for debugging and for a visual representation&nbsp;<br>&nbsp; &nbsp; &nbsp; print(in_string)<br>&nbsp; # return true if return false didn't trigger&nbsp;<br>&nbsp; return True</p>
+<p>print(checkUnique("shamah"))<br>&nbsp; &nbsp; &nbsp;&nbsp;</p>
+</div>
+</body>
+</html>

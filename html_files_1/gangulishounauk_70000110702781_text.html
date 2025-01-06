@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Shounauk Ganguli</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Shounauk Ganguli</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def isPalindrome(s):<br>&nbsp; &nbsp; slower = s.lower() #Convert everything to lowercase to ignore capitalization<br>&nbsp; &nbsp; removethis = " !?,.;:()&amp;[]/-" #List of punctuation to ignore<br>&nbsp; &nbsp; sready = "" #Empty string that will become the string that will be reversed after removing punctuation<br>&nbsp; &nbsp; for char in slower:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char not in removethis:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sready += char #Loop that iterates through the word and creates a new word from what isn't ignored<br>&nbsp; &nbsp; sreverse = sready[::-1] #Reverse the final string<br>&nbsp; &nbsp; if sreverse == sready: #Compares strings<br>&nbsp; &nbsp; &nbsp; &nbsp; print("This string is a palindrome")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("This string is not a palindrome") #Prints results</p>
+<p>isPalindrome("!R ace?.. C!aR!") #Returns true</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

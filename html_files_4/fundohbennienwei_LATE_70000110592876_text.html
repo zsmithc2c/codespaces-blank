@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Bennie-Nwei Fundoh</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Bennie-Nwei Fundoh</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>"""<br>I am tasked to program a guessing game that will prompt the user to guess a number from 1 to 100</p>
+<p>Steps<br>&nbsp; &nbsp; - Prompt the program to generate a random number from 1 - 100<br>&nbsp; &nbsp; - Prompt the user for a number<br>&nbsp; &nbsp; - Repeat until user number equals to generated number<br>&nbsp; &nbsp; &nbsp; &nbsp; - If the number is greater than the generated number&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Print "Your number is too high. Try a lower number"<br>&nbsp; &nbsp; &nbsp; &nbsp; - If the number is lower than the generated number<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Print "Your number is too low. Try a higher number"<br>&nbsp; &nbsp; &nbsp; &nbsp; - If the number is equal to the generated number&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Print "Congratulation you have guessed the correct number"<br>"""</p>
+<p>import random as rd</p>
+<p>number = rd.randint(1, 100)<br>user_number = int(input("Choose a number from 1 to 100: "))</p>
+<p>while user_number != number:<br>&nbsp; if user_number &lt; number:<br>&nbsp; &nbsp; print("Your number is too high. Try a lower number")<br>&nbsp; if user_number &gt; number:<br>&nbsp; &nbsp; print("Your number is too low. Try a higher number")<br>&nbsp; if user_number == number:<br>&nbsp; &nbsp; print("Congratulation you have guessed the correct number")<br>&nbsp; user_number = int(input("Choose a number from 1 to 100: "))</p>
+</div>
+</body>
+</html>

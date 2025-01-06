@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Abhiram Nair</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Abhiram Nair</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div style="color: #cccccc; background-color: #1f1f1f; font-family: Consolas, 'Courier New', monospace;  font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">def</span><span style="color: #cccccc;"> </span><span style="color: #dcdcaa;">palindrome_checker</span><span style="color: #cccccc;">(</span><span style="color: #9cdcfe;">word1</span><span style="color: #cccccc;">):</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># Create an empty string to store the reversed word</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #9cdcfe;">word2</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">=</span><span style="color: #cccccc;"> </span><span style="color: #ce9178;">""</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># Loop through word1 in reverse order</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># Start from the last index and go down to 0</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #c586c0;">for</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">i</span><span style="color: #cccccc;"> </span><span style="color: #c586c0;">in</span><span style="color: #cccccc;"> </span><span style="color: #4ec9b0;">range</span><span style="color: #cccccc;">(</span><span style="color: #dcdcaa;">len</span><span style="color: #cccccc;">(</span><span style="color: #9cdcfe;">word1</span><span style="color: #cccccc;">) </span><span style="color: #d4d4d4;">-</span><span style="color: #cccccc;"> </span><span style="color: #b5cea8;">1</span><span style="color: #cccccc;">, </span><span style="color: #d4d4d4;">-</span><span style="color: #b5cea8;">1</span><span style="color: #cccccc;">, </span><span style="color: #d4d4d4;">-</span><span style="color: #b5cea8;">1</span><span style="color: #cccccc;">):</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Append each character to word2</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #9cdcfe;">word2</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">+=</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">word1</span><span style="color: #cccccc;">[</span><span style="color: #9cdcfe;">i</span><span style="color: #cccccc;">]</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># Check if the original word is the same as the reversed word</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #c586c0;">if</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">word1</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">==</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">word2</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># If they are the same, it is a palindrome</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #569cd6;">f</span><span style="color: #ce9178;">'"</span><span style="color: #569cd6;">{</span><span style="color: #9cdcfe;">word1</span><span style="color: #569cd6;">}</span><span style="color: #ce9178;">" is a palindrome.'</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #c586c0;">else</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># If they are different, it is not a palindrome</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #569cd6;">f</span><span style="color: #ce9178;">'"</span><span style="color: #569cd6;">{</span><span style="color: #9cdcfe;">word1</span><span style="color: #569cd6;">}</span><span style="color: #ce9178;">" is not a palindrome.'</span><span style="color: #cccccc;">)</span></div>
+<br>
+<div><span style="color: #6a9955;"># Call the function with a test word</span></div>
+<div><span style="color: #dcdcaa;">palindrome_checker</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"racecar"</span><span style="color: #cccccc;">)</span></div>
+</div>
+</div>
+</body>
+</html>

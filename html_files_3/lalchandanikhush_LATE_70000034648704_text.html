@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Khush Lalchandani</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Khush Lalchandani</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Pseudocode<br># 1. Use a set to keep track of characters we have seen so far.<br># 2. Loop through each character in the string:<br># &nbsp; &nbsp;a. If the character is &nbsp;in the set, return False.<br># &nbsp; &nbsp;b. If the character is not in the set, add it to the set.<br># 3. If the loop completes, return True as all characters are different.</p>
+<p><br>def has_unique_characters(string):<br>&nbsp; &nbsp; # use a set to keep track of seen characters<br>&nbsp; &nbsp; seen_characters = set()</p>
+<p>&nbsp; &nbsp; # go through all characters<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Duplicate character found<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; # Add the character to already seen set<br>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char)</p>
+<p>&nbsp; &nbsp; # return true if all are different<br>&nbsp; &nbsp; return True</p>
+</div>
+</body>
+</html>

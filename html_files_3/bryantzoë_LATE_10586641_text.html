@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Zoë	Bryant</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Zoë	Bryant</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><code>'''</code><br><code>understand: find duplicate letters in the string</code></p>
+<p><code>clues: count of the letter in the string would be greater than one if the letter is duplicated</code></p>
+<p><code>assemble:&nbsp;</code><br><code>INPUT string</code><br><code>FOR letter in string</code><br><code>&nbsp; &nbsp; IF count of letter is &gt; one, add to duplicates list</code><br><code>&nbsp; &nbsp; IF letter is already in duplicates list, dont add again</code><br><code>PRINT duplicate list</code><br><code>'''</code></p>
+<p><code>duplicates = []</code><br><code>string = input("Enter your phrase: ")</code><br><code>for letter in string:</code><br><code>&nbsp; &nbsp; #if the letter appears more than once and is not already in the duplicate list</code><br><code>&nbsp; &nbsp; if string.count(letter) &gt; 1 and letter not in duplicates:</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; #add the letter to the duplicates list</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; duplicates.append(letter)</code><br><code>#print the duplicates</code><br><code>print(f'duplicates: {duplicates}')</code></p>
+</div>
+</body>
+</html>

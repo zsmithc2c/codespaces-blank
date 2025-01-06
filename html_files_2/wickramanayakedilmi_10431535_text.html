@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Dilmi	Wickramanayake</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Dilmi	Wickramanayake</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>"""</span></div>
+<div><span>Problem: Display area of Shapes</span></div>
+<div><span>How many conditionals do I need?</span></div>
+<div><span>input - lengths, widths, height, radius</span></div>
+<br>
+<div><span>Clues: use user inputs and implement that in the formula</span></div>
+<div><span>Tools: math operators</span></div>
+<div><span>"""</span></div>
+<div><span>import</span> <span>math</span> <span># for pi</span></div>
+<div><span>input1</span> <span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? "</span><span>)</span></div>
+<br>
+<div><span>if</span><span>(</span><span>input1</span> <span>==</span> <span>"circle"</span><span>): </span><span># if user wants area for circle</span></div>
+<div><span>&nbsp; &nbsp; </span><span>cirInput</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Please give me the radius of the circle? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area: "</span><span>, </span><span>cirInput</span><span>*</span> <span>cirInput</span> <span>*</span> <span>math</span><span>.</span><span>pi</span><span>) </span><span># pi * r^2</span></div>
+<div><span>elif</span><span>(</span><span>input1</span> <span>==</span> <span>"rectangle"</span><span>):</span><span># if user wants area for rectangle</span></div>
+<div><span>&nbsp; &nbsp; </span><span>rectLength</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"What is the length? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>rectWidth</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"What is the width? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area: "</span><span>, </span><span>rectLength</span> <span>*</span> <span>rectWidth</span><span>) </span><span># L * W</span></div>
+<div><span>elif</span><span>(</span><span>input1</span> <span>==</span> <span>"square"</span><span>): </span><span># if user wants area for square</span></div>
+<div><span>&nbsp; &nbsp; </span><span>squareSide</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"What is the side length? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area: "</span><span>, </span><span>squareSide</span> <span>*</span> <span>squareSide</span><span>) </span><span># L* L</span></div>
+<div><span>elif</span><span>(</span><span>input1</span> <span>==</span> <span>"triangle"</span><span>): </span><span># if user wants area for triangle</span></div>
+<div><span>&nbsp; &nbsp; </span><span>triBase</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"What is the base? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>triHeight</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"What is the height? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area: "</span><span>, (</span><span>triBase</span> <span>*</span> <span>triHeight</span><span>)</span><span>/</span><span>2</span><span>) </span><span># 1/2 * L * W</span></div>
+<br>
+<div><span>"""</span></div>
+<div><span>Examine: You can check by going through all of the conditions like </span></div>
+<div><span>triangle, circle, rectangle, and square</span></div>
+<div><span>How to improve it? make there more options for areas</span></div>
+<div><span>"""</span></div>
+</div>
+</div>
+</body>
+</html>

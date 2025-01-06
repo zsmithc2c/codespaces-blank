@@ -1,0 +1,70 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: joshsal792@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: joshsal792@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>'''</span></div>
+<br>
+<div><span>Problem 1: Palindrome Checker</span></div>
+<div><span>Description:</span></div>
+<br>
+<div><span>Create a program that checks whether a given string is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forwards and backwards (ignoring spaces, punctuation, and capitalization).</span></div>
+<br>
+<div><span>Example:</span></div>
+<br>
+<div><span>Input: "Racecar"</span></div>
+<br>
+<div><span>Output: "The string is a palindrome."</span></div>
+<br>
+<div><span>Input: "Hello"</span></div>
+<br>
+<div><span>Output: "The string is not a palindrome."</span></div>
+<br>
+<div><span>Instructions:</span></div>
+<br>
+<div><span>Use the UCASE strategy to approach this problem. </span></div>
+<div><span>Include comments in your code to explain each step.</span></div>
+<div><span>Remember to consider edge cases, such as empty strings or strings with spaces and punctuation.</span></div>
+<div><span>Spend no more than 1 hour on this problem.</span></div>
+<br><br><br>
+<div><span>'''</span></div>
+<br>
+<div><span># string is given&nbsp;</span></div>
+<br>
+<div><span># any characters and has spaces</span></div>
+<div><span># we can ignore all the junk like caps and punctuations and spaces</span></div>
+<br>
+<div><span># reverse a string</span></div>
+<br>
+<div><span># return a string</span></div>
+<br>
+<div><span>#hi doesnt work which is good</span></div>
+<br>
+<div><span>#tacocat should work</span></div>
+<br><br>
+<div><span>def</span> <span>palindrome</span><span>(</span><span>s</span><span>:</span> <span>str</span><span>)</span> <span>-&gt;</span> <span>str</span><span>:</span><span> &nbsp;</span><span># a function that sets a string as a parameter and ensures a string is returned</span></div>
+<div><span>&nbsp; &nbsp; </span><span>reverse_string</span> <span>=</span> <span>s</span><span>[::</span><span>-</span><span>1</span><span>]</span> <span># make a local variable to check the reverse string</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>reverse_string</span> <span>==</span> <span>s</span><span>:</span> <span># checks if the reversed string is the same as the normal string in which it returns true or false sequence</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The string is a palindrome.</span><span>"</span> <span># returns if true</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The string is not a palindrome.</span><span>"</span> <span># returns if false</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<br>
+<div><span>print</span><span>(</span><span>palindrome</span><span>(</span><span>"</span><span>tacocat</span><span>"</span><span>))</span> <span># just running some tests returns true</span></div>
+<div><span>print</span><span>(</span><span>palindrome</span><span>(</span><span>"</span><span>hello</span><span>"</span><span>))</span> <span># just running some tests returns false</span></div>
+<br>
+<div><span>#everything works also have a video on me explaining</span></div>
+</div>
+</div>
+</body>
+</html>

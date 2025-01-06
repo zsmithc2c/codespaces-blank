@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Jooheon	Lee</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Jooheon	Lee</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># import random so that we can generate the number</span></div>
+<div><span>import</span> <span>random</span></div>
+<br>
+<div><span>def</span> <span>guessing_game</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span># generate the random number </span></div>
+<div><span>&nbsp; &nbsp; </span><span>random_number</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>,</span><span>100</span><span>)</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"This is the guessing game. I have chosen a random number between 1-100."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp;</span></div>
+<div><span>&nbsp; &nbsp; </span><span># loop through the guesses until they get it right </span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter your guess: "</span><span>))</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># compare the user's guess to the actual number</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>guess</span> <span>&lt;</span> <span>random_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too low, try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>guess</span> <span>&gt;</span> <span>random_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too high, try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># break out of the loop if they guessed it correctly </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Congratulations, you've guessed the correct number!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<br>
+<div><span>guessing_game</span><span>()</span></div>
+</div>
+</div>
+</body>
+</html>

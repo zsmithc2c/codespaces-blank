@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: apkumar879@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: apkumar879@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Unique Characters Checker Program</p>
+<p># Step 1: Understand the problem<br># Determine if a string has all unique characters. Return True if unique, False otherwise.</p>
+<p># Step 2: Create a plan<br># 1. Normalize the string if needed (e.g., remove spaces if they're not considered valid).<br># 2. Use a data structure to track characters we've seen so far.<br># 3. Iterate through the string:<br># &nbsp; &nbsp;- If a character is repeated, do nothing<br># &nbsp; &nbsp;- If a character is not seen before, add to the seen_before set.<br># &nbsp; &nbsp;- Check the length of the set and the normalized variable<br># &nbsp; &nbsp; &nbsp; &nbsp; - return False if len(set) &lt; len(normalized)</p>
+<p>def has_unique_characters(input_string):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Function to check if all characters in a string are unique.<br>&nbsp; &nbsp; Args:<br>&nbsp; &nbsp; &nbsp; &nbsp; input_string (str): The string to check.<br>&nbsp; &nbsp; Returns:<br>&nbsp; &nbsp; &nbsp; &nbsp; bool: True if all characters are unique, False otherwise.<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; # Normalize the input: Optionally remove spaces (if not considered as part of the string)<br>&nbsp; &nbsp; normalized = input_string.replace(" ", "") &nbsp;# Remove spaces if they don't count<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Use a set to track characters<br>&nbsp; &nbsp; seen_characters = set()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Iterate through the string<br>&nbsp; &nbsp; for char in normalized:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char not in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char) &nbsp;# Add character to the set<br>&nbsp; &nbsp; # The set will only have the elements 1 time, therefore, if the set has less chars than the original we know there are duplicates.<br>&nbsp; &nbsp; if len(seen_characters) &lt; len(normalized):<br>&nbsp; &nbsp; &nbsp; return False #I did this to optimize the timeliness of this code, incase there is a lot of chars in your string<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; return True</p>
+<p>&nbsp; &nbsp; return True &nbsp;# All characters are unique</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Salama Daudi</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Salama Daudi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#number guessing game.. computer recieves random number, the user guesses. if too high == "too high!", too low == "too low!"</span></div>
+<div><span>#correct guess == game end... accomodate for invalid inputs (ie, letters, symbols...)</span></div>
+<div><span>#INPUT: INT // OUTPUT: STRING (varies on situation)</span></div>
+<br>
+<div><span>#IMPORT RANDOM to choose the number!</span></div>
+<div><span>#keep game running... while loop? then exit if chosen correctly</span></div>
+<br>
+<div><span>import</span><span> random</span></div>
+<br>
+<div><span>def</span> <span>guessNumber</span><span>():</span></div>
+<div><span> compNumb </span><span>=</span><span> random</span><span>.</span><span>randint(</span><span>1</span><span>,</span> <span>100</span><span>)</span> <span>#computer number</span></div>
+<div><span> playerGuess </span><span>=</span> <span>0</span> <span>#initialize guess</span></div>
+<br>
+<div><span>print(</span><span>"</span><span>Try to guess my number!</span><span>"</span><span>)</span></div>
+<div><span>while</span><span> playerGuess </span><span>!=</span><span> compNumb</span><span>:</span> <span>#keep game running</span></div>
+<div><span> playerGuess </span><span>=</span> <span>int(input(</span><span>"</span><span>Guess! </span><span>"</span><span>)) #ask for input, specifically a whole number</span></div>
+<br>
+<div><span>if</span><span> playerGuess </span><span>&gt;</span><span> compNumb</span><span>:</span> <span>#check if high, low, or correct</span></div>
+<div><span>print(</span><span>"</span><span>Too high, try again!</span><span>"</span><span>)</span></div>
+<div><span>elif</span><span> playerGuess </span><span>&lt;</span><span> compNumb</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>Too low, try again!</span><span>"</span><span>)</span></div>
+<br>
+<div><span>print(</span><span>f</span><span>"Correct, my number was </span><span>{</span><span>compNumb</span><span>}</span><span>! Congrats!"</span><span>)</span> <span>#if number is correct, leave loop and congratulate!</span></div>
+<br>
+<div><span>guessNumber()</span></div>
+</div>
+</div>
+</body>
+</html>

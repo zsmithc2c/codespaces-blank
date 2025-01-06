@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Yusuf Russell</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Yusuf Russell</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Make user guess a randomly generated number</span></div>
+<div><span># Import random to be able to generate a random number</span></div>
+<div><span># Choose a random number to store in a variable</span></div>
+<div><span># Use a while loop to make the game keep going until correct number is guessed</span></div>
+<div><span># Use if statements to see if number is greater, less than, or equal to the number and tell the User</span></div>
+<div><span># Use try and except to make sure input is an integer</span></div>
+<div><span>import</span><span> random</span></div>
+<div><span>def</span> <span>number_guessing_game</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; number </span><span>=</span><span> random</span><span>.</span><span>randrange(</span><span>1</span><span>,</span><span>101</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; guess </span><span>=</span> <span>0</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> guess </span><span>!=</span><span> number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess </span><span>=</span> <span>int(input(</span><span>"</span><span>Guess a number 1-100: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Make sure you enter a number! Your guess will be replaced with 0</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> guess </span><span>&gt;</span><span> number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your number is too high!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> guess </span><span>&lt;</span><span> number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your number is too low!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Congratulations! You guessed the number correctly!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>exit()</span></div>
+<br>
+<div><span>number_guessing_game()</span></div>
+</div>
+</div>
+</body>
+</html>

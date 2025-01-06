@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Oritsedamire	Omabuwa</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Oritsedamire	Omabuwa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#palindrome checker</span></div>
+<br>
+<div><span>#user input</span></div>
+<div><span>word </span><span>=</span> <span>input</span><span>(</span><span>"Enter your word: "</span><span>)</span></div>
+<br>
+<div><span>#making lowercase so no issues with punctuations</span></div>
+<div><span>word.lower()</span></div>
+<br>
+<div><span>#less than two cant be flipped</span></div>
+<div><span>if</span> <span>len</span><span>(word) </span><span>&lt;</span> <span>2</span><span>:</span></div>
+<div><span>print</span><span>(</span><span>"Word length too short"</span><span>)</span></div>
+<br>
+<div><span>#setting up for while loop</span></div>
+<div><span>newWord </span><span>=</span> <span>""</span></div>
+<div><span>count </span><span>=</span> <span>len</span><span>(word)</span><span>-</span><span>1</span></div>
+<br>
+<div><span>#while loop to loop thru the input backwards and then add it to a new string</span></div>
+<div><span>while</span><span> count </span><span>&gt;=</span> <span>0</span><span>:</span></div>
+<div><span> newWord </span><span>+=</span><span> word[count]</span></div>
+<div><span> count </span><span>=</span><span> count</span><span>-</span><span>1</span></div>
+<div><span>#check if out new, reversed string is equal to the og input</span></div>
+<div><span>if</span><span> newWord </span><span>==</span><span> word:</span></div>
+<div><span>print</span><span>(</span><span>"This word is a palindrome!"</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>print</span><span>(</span><span>"That word is not a palindrome"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: joseichiromendez@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: joseichiromendez@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import random</p>
+<p># generate random number between 1 and 100</p>
+<p>num = random.randint(1,100)</p>
+<p># get the user guess</p>
+<p>guess = int(input('Guess a number between 1 and 100: '))</p>
+<p># while the user has not guessed correctly create a loop</p>
+<p>while guess != num:</p>
+<p>&nbsp; &nbsp;# if the guess is too high tell the user</p>
+<p>&nbsp; &nbsp;if guess &gt; num:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;print('Too high')</p>
+<p>&nbsp; &nbsp;# if the guess is too low tell the user</p>
+<p>&nbsp; &nbsp;elif guess &lt; num:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; print('Too low')</p>
+<p>&nbsp; &nbsp;# get another guess if the user guessed incorrectly</p>
+<p>&nbsp; &nbsp;guess = int(input('Guess again: '))</p>
+<p># exit the loop and congratulate the user if they got it correctly</p>
+<p>print('Congrats you got it')</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

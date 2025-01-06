@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Jose	Carmona</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Jose	Carmona</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import random<br>#number guessing game<br>#computer picks a number between 1 and 100<br>#player guesses the number<br>#if player guesses too high, computer says "smaller"<br>#if plaer guesses too low, computer says "larger"</p>
+<p><br>#import random in order to generate random number between 1 and 100<br>#generate random number between 1 and 100 and save in variable<br>#start a loop&nbsp;<br>#take in player guess<br>#check if player guess is correct<br>#if not then give player hint<br>#repeat until correct or player quits or maybe add guess limit</p>
+<p>def main():<br>&nbsp; print("welcome to the number guessing game")<br>&nbsp; print("I'm thinking of a number between 1 and 100")<br>&nbsp; print("You have 10 guesses to get it right")<br>&nbsp; print()<br>&nbsp; #generate random number between 1 and 100<br>&nbsp; number = random.randint(1,100)<br>&nbsp; #start a loop<br>&nbsp; for i in range(10):<br>&nbsp; &nbsp; #take in player guess<br>&nbsp; &nbsp; guess = int(input("Guess a number: "))<br>&nbsp; &nbsp; #check if player guess is correct<br>&nbsp; &nbsp; if guess == number:<br>&nbsp; &nbsp; &nbsp; print("You got it!")<br>&nbsp; &nbsp; &nbsp; break<br>&nbsp; &nbsp; #if not then give player hint<br>&nbsp; &nbsp; elif guess &gt; number:<br>&nbsp; &nbsp; &nbsp; print("Too high")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; print("Too low")<br>&nbsp; print("The number was", number)</p>
+<p>#run program<br>main()</p>
+</div>
+</body>
+</html>

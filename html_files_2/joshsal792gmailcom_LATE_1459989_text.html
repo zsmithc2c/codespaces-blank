@@ -1,0 +1,25 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: joshsal792@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: joshsal792@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># we need an import of math</p>
+<p>&nbsp;</p>
+<p># use a dictionary to keep track of the formulas</p>
+<p>&nbsp;</p>
+<p># ensure input is only string</p>
+<p>import math</p>
+<p>def calculate_area():<br>&nbsp; &nbsp; print("I can calculate the area of a shape for you.")<br>&nbsp; &nbsp; print("Which shape do you want me to calculate the area of?")<br>&nbsp; &nbsp; print("Options: circle, rectangle, square, triangle")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Get user input<br>&nbsp; &nbsp; shape = input("Enter the name of the shape: ").strip().lower() # makes sure no matter the capitilization it still works</p>
+<p><br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Dictionary to store shape formulas<br>&nbsp; &nbsp; shape_formulas = {<br>&nbsp; &nbsp; &nbsp; &nbsp; "circle": lambda: math.pi * float(input("Enter the radius: "))**2,<br>&nbsp; &nbsp; &nbsp; &nbsp; "rectangle": lambda: float(input("Enter the length: ")) * float(input("Enter the width: ")),<br>&nbsp; &nbsp; &nbsp; &nbsp; "square": lambda: float(input("Enter the side length: "))**2,<br>&nbsp; &nbsp; &nbsp; &nbsp; "triangle": lambda: 0.5 * float(input("Enter the base: ")) * float(input("Enter the height: "))<br>&nbsp; &nbsp; } # had to search this up<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Calculate area based on shape<br>&nbsp; &nbsp; if shape in shape_formulas:<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = shape_formulas[shape]()<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the {shape} is: {area:.2f}")&nbsp; # get the area of the given shape<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input! Please enter numerical values only.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid shape! Please choose from circle, rectangle, square, or triangle.") # prints if user input not in the formulas</p>
+<p># Run the program<br>calculate_area()</p>
+</div>
+</body>
+</html>

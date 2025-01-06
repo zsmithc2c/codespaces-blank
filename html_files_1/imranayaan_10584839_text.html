@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Ayaan	Imran</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Ayaan	Imran</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Questions I have<br>#1: is it case sensitive?(asumming no)<br>#2: does it include puncuation?(assuming yes)<br>#3: do you want the user to interact with the program(assuming yes)<br>#4: do numbers count?(assuming no)<br>word = input("What word do you want to check?:")<br>word = word.lower() &nbsp;# Convert to lowercase<br>word = ''.join(char for char in word if char.isalnum()) &nbsp;# Remove letter characters</p>
+<p>is_palindrome = True<br>for i in range(len(word) // 2): &nbsp;# Only iterate through the first half of the string<br>&nbsp; &nbsp; if word[i] != word[len(word) - 1 - i]: &nbsp;# Compare symmetric characters<br>&nbsp; &nbsp; &nbsp; &nbsp; is_palindrome = False<br>&nbsp; &nbsp; &nbsp; &nbsp; break # stops loop if it isnt a palindrome</p>
+<p>if is_palindrome:<br>&nbsp; &nbsp; print("This word is a Palindrome")<br>else:<br>&nbsp; &nbsp; print("This word is not a Palindrome")</p>
+</div>
+</body>
+</html>

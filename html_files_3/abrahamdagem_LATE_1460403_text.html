@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Dagem Abraham</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Dagem Abraham</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<pre>test1 = <span>"abcdef"<br></span>test2 = <span>"hello"<br></span><span><br></span><span>def </span><span>uniqueCheck</span>(word: <span>str</span>):<br>    character_cache = []<br>    <span>#Check every character<br></span>    <span>for </span>i <span>in </span><span>range</span>(<span>len</span>(word)):<br>        <span>#see if it has already occured and return false if that evaluates to true<br></span>        <span>if </span>word[i] <span>in </span>character_cache:<br>            <span>return False<br></span>        <span># Add new character to the list<br></span>        character_cache.append(word[i])<br>    <span>#Check Edge Cases<br></span>    <span>if </span>word == <span>""</span>:<br>        <span>return None<br></span>    <span>#Return True if no matches<br></span>    <span>return True<br></span><span><br></span><span>print</span>(uniqueCheck(test1))<br><span>print</span>(uniqueCheck(test2))<br><span>print</span>(uniqueCheck(<span>""</span>))</pre>
+</div>
+</div>
+</body>
+</html>

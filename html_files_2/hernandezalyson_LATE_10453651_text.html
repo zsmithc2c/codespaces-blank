@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Alyson	Hernandez</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Alyson	Hernandez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import math<br># Math module to use pi for the area of a circle</p>
+<p>print("I can calculate the area of a shape for you. ")<br>userShape = input("Which shape do you want me to calculate the area of?: ")</p>
+<p>if userShape == "circle".lower():<br>&nbsp; &nbsp; # You will see this try-except pattern for all of the functions. It catches if the user doesn't input a valid integer.<br>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; radius = int(input("What is the radius?: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break &nbsp;# Exit the loop if input is a valid integer<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please type only integers.")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; area = math.pi * radius**2<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; print("Area:", area)<br>&nbsp; &nbsp;&nbsp;<br>elif userShape == "rectangle".lower():<br>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length = int(input("What is the length?: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width = int(input("What is the width?: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please type only integers.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; area = length * width<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; print("Area:", area)<br>&nbsp; &nbsp;&nbsp;<br>elif userShape == "square".lower():<br>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length = int(input("What is the length?: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please type only integers.")</p>
+<p>&nbsp; &nbsp; area = length ** 2<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; print("Area:", area)<br>&nbsp; &nbsp;&nbsp;<br>elif userShape == "triangle".lower():<br>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; base = int(input("What is the base?: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height = int(input("What is the height?: ")) &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please type only integers.")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; area = (base * height)/2<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; print("Area:", area)<br>&nbsp; &nbsp;&nbsp;<br>else:<br>&nbsp; &nbsp; print("Not a valid shape.")</p>
+</div>
+</body>
+</html>

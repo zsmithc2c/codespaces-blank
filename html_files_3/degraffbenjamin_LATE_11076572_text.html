@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Benjamin DeGraff</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Benjamin DeGraff</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Create a function that determines whether all characters in a given string are unique. If the string has all unique characters, return True; otherwise, return False.</p>
+<p>#Need to check if all characters in a string are different<br>#Sets --&gt; Only contain unique characters<br>#Make a set using the string, and compare them<br>#If they have the same length, then the string is unique because no characters were removed in the set</p>
+<p>def unique_string(s):<br>&nbsp; &nbsp; string = list(s)<br>&nbsp; &nbsp; check = set(string)<br>&nbsp; &nbsp; if len(string) == len(check):<br>&nbsp; &nbsp; &nbsp; &nbsp; return True<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return False</p>
+<p>test = unique_string("Hello my name is Ben") &nbsp; &nbsp;<br>print(f"Is the string unique? {test}")</p>
+</div>
+</body>
+</html>

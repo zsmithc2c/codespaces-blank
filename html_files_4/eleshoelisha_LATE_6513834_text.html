@@ -1,0 +1,17 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Elisha Elesho</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Elisha Elesho</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span class="Editor_t__not_edited_long__JuNNx">import random<br><br>def number_guessing_game():<br>"""</span><span class="Editor_t__added__LtuNJ">"</span><span class="Editor_t__not_edited_long__JuNNx"><br>Play a game where the user guesses a random number between 1 and 100.<br>"""<br># Generate a random number<br>target_number = random.randint(1, 100)<br>print("I've picked a number between 1 and 100. Can you guess it?")<br><br>while True:<br></span><span class="Editor_t__not_edited_long__JuNNx">try:<br># Get the user's guess<br>guess = int(input("Enter your guess: "))<br><br>if guess &lt; 1 or guess &gt; 100:<br></span><span class="Editor_t__not_edited_long__JuNNx">print("Please guess a number between 1 and 100.")<br>continue<br><br># Check the guess<br></span><span class="Editor_t__added__LtuNJ">elif</span><span class="Editor_t__not_edited__WuRP8"><span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">target</span><span class="Editor_t__not_edited_long__JuNNx"><span>&nbsp;</span>guess &lt; target_number:<br>print("Too low! Try again.")<br>elif guess &gt; target_number:<br>print("Too high! Try again.")<br></span><span class="Editor_t__not_edited_long__JuNNx">else:<br>print("Congratulations! You guessed the number.")<br>break<br>except ValueError:<br></span><span class="Editor_t__not_edited__WuRP8">print("Invalid input. Please enter<span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">an</span><span class="Editor_t__not_edited__WuRP8"><span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">integer</span><span class="Editor_t__not_edited__WuRP8">."</span><span class="Editor_t__not_edited_long__JuNNx"><br><br># Main execution<br>if __name__ == "__main__":<br>number_guessing_game()</span></p>
+</div>
+</body>
+</html>

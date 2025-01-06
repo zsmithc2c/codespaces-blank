@@ -1,0 +1,77 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Leo	Huynh</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Leo	Huynh</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>"""</span></div>
+<div><span>Create a program that says: "I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?" and then asks the user to type in the name of a shape (e.g., triangle, rectangle, square, circle).</span></div>
+<br>
+<div><span>Then, depending on which shape the user types, the program will ask for the relevant measurements:</span></div>
+<br>
+<div><span>If they choose circle, prompt for the radius.</span></div>
+<div><span>If they choose rectangle, prompt for the length and width.</span></div>
+<div><span>If they choose square, prompt for the side length.</span></div>
+<div><span>If they choose triangle, prompt for the base and height.</span></div>
+<div><span>Use the correct formula to calculate and return the area of the chosen shape.</span></div>
+<br>
+<div><span>DEF caluclateShape():</span></div>
+<div><span>&nbsp; &nbsp; shape = input()</span></div>
+<div><span>&nbsp; &nbsp; IF invalid answer: retry function</span></div>
+<div><span>&nbsp; &nbsp; IF circle: ask measurements, return calculation</span></div>
+<div><span>&nbsp; &nbsp; IF rectangle: ask measurements, return calculation</span></div>
+<div><span>&nbsp; &nbsp; IF square: ask measurements, return calculation</span></div>
+<div><span>&nbsp; &nbsp; IF triangle: ask measurements, return calculation</span></div>
+<div><span>"""</span></div>
+<br>
+<div><span>import</span> <span>math</span></div>
+<br><br><br>
+<div><span># Checks if input is a float</span></div>
+<div><span>def</span> <span>checkValid</span><span>(</span><span>text</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># If not a float, retry loop</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>measurement</span> <span>=</span> <span>float</span><span>((</span><span>input</span><span>(</span><span>text</span><span>)).</span><span>strip</span><span>())</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>float</span><span>(</span><span>measurement</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid answer. Try again"</span><span>)</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span></div>
+<br>
+<div><span>def</span> <span>calculateShape</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span># If shape is invalid, retry</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>shape</span> <span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?: "</span><span>).</span><span>strip</span><span>().</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Pi x Radius^2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>shape</span> <span>==</span> <span>'circle'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>radius</span> <span>=</span> <span>checkValid</span><span>(</span><span>"Please enter radius: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>math</span><span>.</span><span>pi</span> <span>*</span> <span>radius</span><span>**</span><span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Length x Width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>'rectangle'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>checkValid</span><span>(</span><span>"Please enter length: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>checkValid</span><span>(</span><span>"Please enter width: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>length</span> <span>*</span> <span>width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Length x Length</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>'square'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>checkValid</span><span>(</span><span>"Please enter length: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>length</span><span>**</span><span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># 1/2 Base x Width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>'triangle'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>checkValid</span><span>(</span><span>"Please enter base: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>checkValid</span><span>(</span><span>"Please enter height: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>base</span> <span>*</span> <span>height</span> <span>*</span> <span>.5</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid shape. Try again."</span><span>)</span></div>
+<div><span>print</span><span>(</span><span>calculateShape</span><span>())</span></div>
+</div>
+</div>
+</body>
+</html>

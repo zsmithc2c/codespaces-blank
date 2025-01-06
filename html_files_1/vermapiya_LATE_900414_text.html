@@ -1,0 +1,52 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Piya Verma</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Piya Verma</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>#Function that takes in word to see if palindrome. Returns a string indicating whether or not it is.</span></p>
+<p>&nbsp;</p>
+<p><span>def palindrome_checker(inpstr):</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;# U: Understand the problem</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;# uniform string creation</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;filtstr = ''.join(char.lower() for char in inpstr if char.isalnum())</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;# C: Create a plan</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;# compare the filtered string with its reverse = check for palindrome&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;return filtstr == filtstr[::-1]</span></p>
+<p>&nbsp;</p>
+<p><span>#A: Algorithm implementation</span></p>
+<p><span>if __name__ == "__main__":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;# Example inputs</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;test_cases = [</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Racecar",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Hello",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"A man, a plan, a canal, Panama",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"No lemon, no melon",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"12321",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"12345"</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;]</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;for test in test_cases:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# S: Solve by applying the function</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if palindrome_checker(test):</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Input: \"{test}\"\nOutput: The string is a palindrome.\n")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Input: \"{test}\"\nOutput: The string is not a palindrome.\n")</span></p>
+<p>&nbsp;</p>
+<p><span>#E: Edge cases</span></p>
+<p><span>#empty string: ret true</span></p>
+<p><span>#strings with spaces/punctuation are ignored</span></p>
+<p><span>#case = should not matter in the comparison</span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Hansika	Perisetty</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Hansika	Perisetty</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import java.util.Scanner;<br>import java.util.Random;</p>
+<p>public class GuessingGame {<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Create an instance of the Scanner class to read user input<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in);<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Create an instance of the Random class to generate a random number<br>&nbsp; &nbsp; &nbsp; &nbsp; Random random = new Random();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Generate a random number between 1 and 100 (inclusive)<br>&nbsp; &nbsp; &nbsp; &nbsp; int numberToGuess = random.nextInt(100) + 1;<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Variable to hold the user's guess<br>&nbsp; &nbsp; &nbsp; &nbsp; int userGuess = 0;<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Introduce the game<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("I have chosen a number between 1 and 100.");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Guess? ");<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Loop until the user guesses the number correctly<br>&nbsp; &nbsp; &nbsp; &nbsp; while (userGuess != numberToGuess) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Ask the user for a guess<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter your guess: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; userGuess = scanner.nextInt();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Provide feedback based on the user's guess<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (userGuess &lt; numberToGuess) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("The number is larger. Try again.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (userGuess &gt; numberToGuess) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("The number is smaller. Try again.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Congratulations! You guessed the correct number.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; }<br>}</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Oritsedamire	Omabuwa</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Oritsedamire	Omabuwa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#unique characters</span></div>
+<br>
+<div><span>word </span><span>=</span> <span>input</span><span>(</span><span>'Type your word: '</span><span>)</span></div>
+<br>
+<div><span>word.lower()</span></div>
+<br>
+<div><span>#boolean to keep check if true or false and counter</span></div>
+<div><span>unique </span><span>=</span> <span>True</span></div>
+<div><span>#going to add letters to this list and compare against word to check duplicates</span></div>
+<div><span>word_list </span><span>=</span><span> []</span></div>
+<div><span>count </span><span>=</span> <span>0</span></div>
+<br>
+<div><span>#counts each letter and also stops when its false</span></div>
+<div><span>while</span><span> unique </span><span>==</span> <span>True</span> <span>and</span><span> count</span><span>&lt;</span><span>len</span><span>(word)</span><span>-</span><span>1</span><span>:</span></div>
+<div><span>#must be false if that word is already in the list. also dont include spaces</span></div>
+<div><span>if</span><span> word[count] </span><span>in</span><span> word_list </span><span>and</span><span> word[count] </span><span>!=</span> <span>' '</span><span>:</span></div>
+<div><span> unique </span><span>=</span> <span>False</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>#add the letter to the list to iterate thru again</span></div>
+<div><span> word_list.append(word[count])</span></div>
+<div><span> count</span><span>+=</span><span>1</span></div>
+<br>
+<div><span>#print!</span></div>
+<div><span>print</span><span>(unique)</span></div>
+</div>
+</div>
+</body>
+</html>

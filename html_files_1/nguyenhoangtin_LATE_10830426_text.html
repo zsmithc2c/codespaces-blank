@@ -1,0 +1,28 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Hoang Tin Nguyen</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Hoang Tin Nguyen</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>def</span><span> is_palindrome(s):</span></p>
+<p><span><span class="Apple-converted-space">&nbsp; &nbsp; </span>s = </span><span>''</span><span>.join(c.lower() </span><span>for</span><span> c </span><span>in</span><span> s </span><span>if</span><span> c.isalnum())<span class="Apple-converted-space">&nbsp; </span></span><span># Clean the string</span></p>
+<p><span><span class="Apple-converted-space">&nbsp; &nbsp; </span></span><span>return</span> <span>"The string is a palindrome."</span> <span>if</span><span> s == s[::-</span><span>1</span><span>] </span><span>else</span> <span>"The string is not a palindrome."</span></p>
+<p>&nbsp;</p>
+<p><span># Test cases</span></p>
+<p><span>print(is_palindrome(</span><span>"Racecar"</span><span>))</span></p>
+<p><span>print(is_palindrome(</span><span>"Hello"</span><span>))</span></p>
+<p><span>print(is_palindrome(</span><span>"A man, a plan, a canal, Panama"</span><span>))</span></p>
+<p><span>print(is_palindrome(</span><span>"No 'x' in Nixon"</span><span>))</span></p>
+<p><span>print(is_palindrome(</span><span>""</span><span>))</span></p>
+<p><span>print(is_palindrome(</span><span>"12321"</span><span>))</span></p>
+<p><span>print(is_palindrome(</span><span>"12345"</span><span>))</span></p>
+</div>
+</body>
+</html>

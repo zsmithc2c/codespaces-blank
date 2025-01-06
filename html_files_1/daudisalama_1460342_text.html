@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Salama Daudi</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Salama Daudi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#create a function that checks if a word/phrase is a palindrome</span></div>
+<div><span>#INPUT: STRING // OUTPUT: STRING</span></div>
+<div><span>#what if string = empty? prompt again?</span></div>
+<div><span>#use a loop to check string... slice word and reorgranize by using [::-1] (i used this once in a previous class *evil laugh*)</span></div>
+<br>
+<div><span>##BETA</span></div>
+<div><span>#FUNC palindromeCheck():</span></div>
+<div><span># userWord = input("Input a word, phrase, number to see if it is a palindrome! ")</span></div>
+<div><span># IF userWord is blank: reprompt, otheriwse cont</span></div>
+<div><span># newWord = userWord[::1]</span></div>
+<div><span># IF newWord == userWord,, print ("yes palindrome"), otherwise print ("no")</span></div>
+<br>
+<div><span>def</span> <span>palindromeCheck</span><span>():</span> <span>#couldnt figure out how to do the first check for a blank string.. :(</span></div>
+<div><span> userWord </span><span>=</span> <span>input(</span><span>"</span><span>Input a sequence to check if it is a palindrome: </span><span>"</span><span>)</span> <span>#user input for sequence</span></div>
+<div><span> newWord </span><span>=</span><span> userWord[</span><span>::</span><span>-</span><span>1</span><span>] </span><span>#slicing and reordering the previous word to reverse it</span></div>
+<div><span>print(userWord</span><span>,</span><span> newWord)</span></div>
+<br>
+<div><span>if</span><span> userWord </span><span>==</span><span> newWord</span><span>:</span> <span>#confirm/deny palindrome</span></div>
+<div><span>print(</span><span>"</span><span>this is a palindrome!</span><span>"</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>not a palindrome :(</span><span>"</span><span>)</span></div>
+<br>
+<div><span>palindromeCheck()</span></div>
+</div>
+</div>
+</body>
+</html>

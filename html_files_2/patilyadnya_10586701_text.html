@@ -1,0 +1,25 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Yadnya Patil</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Yadnya Patil</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>For this problem, I first understood that I needed to create a program where the user selects a shape, and the program calculates the area based on the given measurements. I considered 4 shapes (circle, rectangle, square, triangle) and made sure the user could only choose from these options. I used if-elif statements to handle the corresponding area calculation. I also validated inputs, ensuring the measurements were positive numbers. This program provides feedback if the user enters an invalid shape or a negative number.</p>
+<p>import math</p>
+<p>def main():<br>&nbsp; &nbsp; print("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?")<br>&nbsp; &nbsp; // Ask the user to enter the shape they want to calculate the area for<br>&nbsp; &nbsp; shape = input("Enter a shape (circle, rectangle, square, triangle): ")<br>&nbsp; &nbsp;&nbsp;<br>// If the user selects circle<br>&nbsp; &nbsp; if shape == "circle":<br>&nbsp; &nbsp; &nbsp; &nbsp; // Ask for the radius<br>&nbsp; &nbsp; &nbsp; &nbsp; radius= input("Enter the radius of the circle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = float(radius)<br>&nbsp; &nbsp; &nbsp; &nbsp; if radius &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = math.pi * radius ** 2<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("The area of the circle is " + str(area))<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // The only invalid input for this would be negative numbers and zero so here the user is asked to enter a positive number<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please enter a positive number for the radius.")</p>
+<p>// Similarly for other shapes</p>
+<p>&nbsp; &nbsp; elif shape == "rectangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; length = input("Enter the length of the rectangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; width = input("Enter the width of the rectangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; length = float(length)<br>&nbsp; &nbsp; &nbsp; &nbsp; width = float(width)<br>&nbsp; &nbsp; &nbsp; &nbsp; if length &gt; 0 and width &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = length * width<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("The area of the rectangle is " + str(area))<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please enter positive numbers for length and width.")</p>
+<p>&nbsp; &nbsp; elif shape == "square":<br>&nbsp; &nbsp; &nbsp; &nbsp; side = input("Enter the side length of the square: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; side = float(side)<br>&nbsp; &nbsp; &nbsp; &nbsp; if side &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = side ** 2<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("The area of the square is " + str(area))<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please enter a positive number for the side length.")</p>
+<p>&nbsp; &nbsp; elif shape == "triangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; base = input("Enter the base of the triangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; height = input("Enter the height of the triangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; base = float(base)<br>&nbsp; &nbsp; &nbsp; &nbsp; height = float(height)<br>&nbsp; &nbsp; &nbsp; &nbsp; if base &gt; 0 and height &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = 0.5 * base * height<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("The area of the triangle is " + str(area))<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please enter positive numbers for the base and height.")<br>// if the user enters a shape that is not listed this will be printed<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Sorry, I don't recognize that shape.")</p>
+<p>if __name__ == "__main__":<br>&nbsp; &nbsp; main()</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

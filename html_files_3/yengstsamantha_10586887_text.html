@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Samantha	Yengst</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Samantha	Yengst</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># TLDR: replace() to remove spaces<br># okay the directions point out that I should consider cases where the string<br># has spaces which makes me think that spaces shouldn't be considered when<br># checking to make sure every character is unique, so I probably have to<br># figure out how to remove all spaces before checking<br># lol. this already exists in python. Thank you replace(oldvalue, newvalue) :)</p>
+<p># TLDR: empty string = False<br># I mean, by deafult the code is *probably* going to detrimine that an empty<br># string is in-fact a string that has all unique characters, and while I<br># personally agree since no characters can be doubled in an empty string, I think<br># I'm gonna make a special case where if the string is empty it just tells you<br># that you submitted an empty string. (if statement for brownie points lets goo.)</p>
+<p># TLDR: Double for loop to solve duplicates&nbsp;<br># okay it sounds like I need to compare every character with<br># every other character in the string and if any two characters match,&nbsp;<br># condition is false since not all characters are unique.<br># ....soooo, double for loop? *yawn emoji*</p>
+<p># Ngl sounds like I could do this in a single function :/</p>
+<p>def check_unique_characters(user_str):<br>&nbsp; &nbsp; a_str = user_str.replace(" ", "") # set func var to user input w/o spaces<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Quick check for empty strings.<br>&nbsp; &nbsp; if (a_str == ""):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input: Empty string (Or string with only spaces). Please try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Aaaand finally, combing through string for any dulpicate characters<br>&nbsp; &nbsp; for i in range (0, len(a_str)-1, 1): # range(start, stop, step)<br>&nbsp; &nbsp; &nbsp; &nbsp; for j in range (i+1, len(a_str), 1): # range(start, stop, step)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (a_str[i] == a_str[j]):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False # Found repeating character<br>&nbsp; &nbsp; return True # did not find repeating character</p>
+<p><br>u_input = str(input("Please input a string: "))<br># strings are fun because i can just cast to string and no matter what<br># the user actually input, it will come out as a valid input for string functions</p>
+<p>print(check_unique_characters(u_input))</p>
+</div>
+</body>
+</html>

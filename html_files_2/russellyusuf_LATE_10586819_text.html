@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Yusuf Russell</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Yusuf Russell</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Be able to check area of circle, rectangle, square, and triangle</span></div>
+<div><span># Use input and if statement to ask what shape</span></div>
+<div><span># If statement should lead to inputs asking dimensions which should be stored in variables and used in the equation to find the final area</span></div>
+<div><span># make sure selection is valid</span></div>
+<div><span>def</span> <span>area_of_shapes</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; shape </span><span>=</span> <span>0</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> shape </span><span>!=</span> <span>1</span> <span>and</span><span> shape </span><span>!=</span> <span>2</span> <span>and</span><span> shape </span><span>!=</span> <span>3</span> <span>and</span><span> shape </span><span>!=</span><span>4</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; shape </span><span>=</span> <span>int(input(</span><span>"</span><span>I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? 1: Circle, 2: rectangle, 3: Square, 4: Triangle </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> shape </span><span>==</span> <span>1</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; rad </span><span>=</span> <span>float(input(</span><span>"</span><span>What is the radius? </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The area of the circle is </span><span>"</span> <span>+</span><span> str(rad</span><span>*</span><span>3.14</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>2</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; len </span><span>=</span> <span>float(input(</span><span>"</span><span>What is the length: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; width </span><span>=</span> <span>float(input(</span><span>"</span><span>What is the width: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The area of the rectangle is </span><span>"</span> <span>+</span><span> str(len</span><span>*</span><span>width))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>3</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; len </span><span>=</span> <span>float(input(</span><span>"</span><span>What is a side length: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The area of the square is </span><span>"</span> <span>+</span><span> str(len</span><span>*</span><span>len))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>4</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; base </span><span>=</span> <span>float(input(</span><span>"</span><span>What is the base length: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; height </span><span>=</span> <span>float(input(</span><span>"</span><span>What is the height: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The area of the triangle is </span><span>"</span> <span>+</span><span> str(</span><span>0.5</span><span>*</span><span>base</span><span>*</span><span>height))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>exit()</span></div>
+<div><span>area_of_shapes()</span></div>
+</div>
+</div>
+</body>
+</html>

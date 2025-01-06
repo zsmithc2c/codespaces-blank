@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Robert Lockay</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Robert Lockay</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># U:<br># - problem: guide the user through a binary search<br># - validate input: needs to be a number that is within 1 and 100<br># - inputs: guess (number) output: too high, too low, or bingo</p>
+<p># C:<br># - need to generate random num<br># - some sort of loop that runs while the user hasnt guessed num yet</p>
+<p># A:<br># def game(num):<br># &nbsp; guess = input("enter guess")<br>#<br># &nbsp; if guess is invalid:<br># &nbsp; &nbsp; &nbsp; game(num)<br>#<br># &nbsp; if guess equals num<br># &nbsp; &nbsp; &nbsp; print(correct)<br># &nbsp; elif guess &lt; num:<br># &nbsp; &nbsp; &nbsp; print(num greater than guess)<br># &nbsp; &nbsp; &nbsp; game(num)<br># &nbsp; elif guess &gt; num:<br># &nbsp; &nbsp; &nbsp; print(num less than guess)<br># &nbsp; &nbsp; &nbsp; game(num)</p>
+<p># S:<br>from random import randint</p>
+<p># generate random number outside func to allow recursion<br>def guessing_game(target):<br>&nbsp; &nbsp; # define guess outside try catch to ensure scope<br>&nbsp; &nbsp; guess = ""<br>&nbsp; &nbsp; # use try catch with casting to check if guess is an integer<br>&nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; guess = int(input("Guess a number between 1 and 100: "))<br>&nbsp; &nbsp; except:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Not an integer. Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; guessing_game(target)<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # ensure guess is within range<br>&nbsp; &nbsp; if guess &gt; 100 or guess &lt; 1:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Not within range. Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; guessing_game(target)<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # if guess is correct let function complete<br>&nbsp; &nbsp; if guess == target:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Correct!")<br>&nbsp; &nbsp; # if guess is incorrect recurse the user back to the start<br>&nbsp; &nbsp; elif guess &gt; target:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Answer is smaller. Try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; guessing_game(target)<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Answer is greater. Try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; guessing_game(target)</p>
+<p>guessing_game(randint(1, 100))</p>
+<p># E:<br># + handles input validation<br># + guides user through guessing game</p>
+</div>
+</body>
+</html>

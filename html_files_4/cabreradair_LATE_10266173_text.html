@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Dair	Cabrera</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Dair	Cabrera</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>Understand - make the system choose a random number from 1-100 for the user to guess</span></p>
+<p>&nbsp;</p>
+<p><span>Clues- Make a random number generator and evaluate if the users input is greater or lower than the chosen number</span></p>
+<p>&nbsp;</p>
+<p><span>Assemble - Make a random number generator to choose a number from 1-100 -&nbsp; get the users input on their guess for the number - if the number is greater than or less than the generated number, the system will tell the user.</span></p>
+<p>&nbsp;</p>
+<p><span>Solve-</span></p>
+<p>&nbsp;</p>
+<p><span>import os</span></p>
+<p><span>import time</span></p>
+<p><span>import random</span></p>
+<p>&nbsp;</p>
+<p><span>number = random.randint(1, 100) ## chooses a number from one to one hundred</span></p>
+<p>&nbsp;</p>
+<p><span>guess = int(input("Guess the number: ")) ## asks the user for a guess</span></p>
+<p>&nbsp;</p>
+<p><span>while guess != number:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;if guess &gt; number:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.system('clear')</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guess = int(input("Guess lower: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;if guess &lt; number:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.system('clear')</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guess = int(input("Guess higher: ")) ## tell the user whether or not their input is greater or lower than the correct answer</span></p>
+<p>&nbsp;</p>
+<p><span>print("You win!")</span></p>
+<p>&nbsp;</p>
+<p><span>Examine- User is able to receive hints on how to guess the correct number, the game ends once it is chosen.</span></p>
+</div>
+</body>
+</html>

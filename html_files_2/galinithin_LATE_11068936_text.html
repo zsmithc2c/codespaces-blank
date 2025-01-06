@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Nithin Gali</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Nithin Gali</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Main program<br>shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?")</p>
+<p># Convert the input shape to lowercase&nbsp;<br>shape = shape.strip().lower()</p>
+<p># If the shape is a circle<br>if shape == "circle":<br>&nbsp; &nbsp; radius = input("Enter the radius of the circle:")<br>&nbsp; &nbsp; if radius.isdigit():&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = float(radius) &nbsp;# Convert to float<br>&nbsp; &nbsp; &nbsp; &nbsp; area = 3.14159 * radius * radius &nbsp;# Calculate area of circle<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the circle is {area:.2f} square units.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input for radius. Please enter a number.")</p>
+<p># If the shape is a rectangle<br>elif shape == "rectangle":<br>&nbsp; &nbsp; length = input("Please enter the length of the rectangle:")<br>&nbsp; &nbsp; width = input"Please enter the width of the rectangle:")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; if length.isdigit() and width.isdigit(): &nbsp;# Check if both are numbers<br>&nbsp; &nbsp; &nbsp; &nbsp; length = float(length) &nbsp;# Convert to float<br>&nbsp; &nbsp; &nbsp; &nbsp; width = float(width) &nbsp;# Convert to float<br>&nbsp; &nbsp; &nbsp; &nbsp; area = length * width &nbsp;# Calculate area of rectangle<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the rectangle is {area:.2f} square units.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input for length or width. Please enter numbers.")</p>
+<p># If the shape is a square<br>elif shape == "square":<br>&nbsp; &nbsp; side = input("Enter the side length of the square:")<br>&nbsp; &nbsp; if side.isdigit():&nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; side = float(side) &nbsp;# Convert to float<br>&nbsp; &nbsp; &nbsp; &nbsp; area = side * side &nbsp;# Calculate area of square<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the square is {area:.2f} square units.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input for side length. Please enter a number.")</p>
+<p># If the shape is a triangle<br>elif shape == "triangle":<br>&nbsp; &nbsp; base = input("Enter the base of the triangle:")<br>&nbsp; &nbsp; height = input("Enter the height of the triangle:")<br><br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; if base.isdigit() and height.isdigit(): &nbsp;# Check if both are numbers<br>&nbsp; &nbsp; &nbsp; &nbsp; base = float(base) &nbsp;# Convert to float<br>&nbsp; &nbsp; &nbsp; &nbsp; height = float(height) &nbsp;# Convert to float<br>&nbsp; &nbsp; &nbsp; &nbsp; area = 0.5 * base * height &nbsp;# Calculate area of triangle<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the triangle is {area:.2f} square units.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input for base or height. Please enter numbers.")</p>
+<p># If the shape is not recognized<br>else:<br>&nbsp; &nbsp; print("Sorry, I don't recognize that shape. Please enter a valid shape.")</p>
+</div>
+</body>
+</html>

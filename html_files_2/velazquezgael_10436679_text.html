@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Gael Velazquez</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Gael Velazquez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>print("I can calculate the area of a shape for you.")</p>
+<p>shape = input("Which shape do you want me to calculate the are of? ")#We ask the user for the shape</p>
+<p>if( shape == "circle"):# checks if it is a circle</p>
+<p>&nbsp; &nbsp;radius = int(input("What is the radius of the circle: "))#Make the input radius in to a int</p>
+<p>&nbsp; &nbsp;squareValue = radius * radius#Square the radius</p>
+<p>&nbsp; &nbsp;answer = 3.14 * float(squareValue)#Converts the int squareValue to a decimal and multiply by the square root of pie</p>
+<p>&nbsp; &nbsp;print("The area of the circle is " +&nbsp; answer)</p>
+<p>elif(shape == "rectangle"):</p>
+<p>&nbsp; &nbsp;length = int(input("What is the length of the rectangle? "))</p>
+<p>&nbsp; &nbsp;width = int(input("What is the width of the rectangle? "))</p>
+<p>&nbsp; &nbsp; answer = length * width</p>
+<p>&nbsp; &nbsp; print("The area of the rectangle is " + answer)</p>
+<p>elif( shape == "square"):</p>
+<p>&nbsp; &nbsp; sideLength = int(input("What is the side length of the square? "))</p>
+<p>&nbsp; &nbsp; answer = sideLength * sideLength</p>
+<p>&nbsp; &nbsp; print("The area of the square is " + answer)</p>
+<p>elif( shape == "triangle"):</p>
+<p>&nbsp; &nbsp;base = float(input("What is the base of the triangle? "))</p>
+<p>&nbsp; &nbsp;height = float(input("What is the height of the triangle"))</p>
+<p>&nbsp; &nbsp;value = base * height</p>
+<p>&nbsp; &nbsp;answer = value / 2.0</p>
+<p>&nbsp; &nbsp;print("The area of the triangle is " + answer)</p>
+<p>else:</p>
+<p>&nbsp;print("Invalid put in either triangle,square,rectangle, or circle")</p>
+<p>shape = input("Which shape do you want me to calculate the are of? ")</p>
+</div>
+</body>
+</html>

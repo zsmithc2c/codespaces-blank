@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Zephan	Ofori</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Zephan	Ofori</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><br>word = input("Enter a word: ") ##This is the input that receives the word</p>
+<p><br>edgeCases = [";", ".", ",", "{", "[", "}", "]", "|", " "] #Creating a possible edgecase list</p>
+<p>for edgeCase in edgeCases: #for each element in the list<br>&nbsp; &nbsp; while edgeCase in word: #while there is an edgecase in the word<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Make sure there are no spaces or punctuations in your word. Please try again.") #print warning<br>&nbsp; &nbsp; &nbsp; &nbsp; word = input("Enter a word: ")#ask for another input until input is acceptable</p>
+<p>newWord = "" ##Creating a new string to put the reverse version of the word</p>
+<p>for i in range(len(word)): ##running a for loop to get the index of every letter in the word<br>&nbsp; &nbsp; index = len(word) - i - 1 ##accurately tracks the index of the last letter all the way to the first<br>&nbsp; &nbsp; newWord += word[index] ## puts the reversed letters into the new String<br>&nbsp; &nbsp;&nbsp;<br>if word == newWord:<br>&nbsp; &nbsp; print("The string is a palindrome.") &nbsp;## print if string is a palindrome<br>else:<br>&nbsp; &nbsp; print("The string is not a palindrome.") ## print if string is not a palindrome<br>&nbsp; &nbsp;&nbsp;</p>
+</div>
+</body>
+</html>

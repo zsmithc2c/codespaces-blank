@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Yvaine Liew</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Yvaine Liew</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>Same link as before but another file: <a href="https://codesandbox.io/p/github/yvaine8888/DecemberCodingPractice/main" target="_blank">https://codesandbox.io/p/github/yvaine8888/DecemberCodingPractice/main</a>&nbsp;</p>
+<p>Code:</p>
+<div>
+<div><span>'''</span></div>
+<div><span>Problem - Create a function that determines if all characters in a string are unique.</span></div>
+<br>
+<div><span>function</span></div>
+<br>
+<div><span>use a for loop through the string to check if it occurs more than once.</span></div>
+<div><span>that means another for loop.</span></div>
+<div><span>if it does return false</span></div>
+<div><span>Note: I consider spaces to be a character so it will return false if there are multiple spaces.</span></div>
+<div><span>I also consider captilization to be different letters and empty strings to be unique.</span></div>
+<div><span>'''</span></div>
+<br>
+<div><span>def</span> <span>is_unique</span><span>(</span><span>s</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Going through each element to see if there is more than one of it</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> ele </span><span>in</span><span> s</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; count </span><span>=</span> <span>0</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#Checking it</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>for</span><span> char </span><span>in</span><span> s</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> ele </span><span>==</span><span> char</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; count </span><span>=</span><span> count </span><span>+</span> <span>1</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Returning false if more than one count</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> count </span><span>&gt;</span> <span>1</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Returning true if okay</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+</div>
+</div>
+</body>
+</html>

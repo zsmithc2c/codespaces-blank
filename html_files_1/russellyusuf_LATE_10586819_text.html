@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Yusuf Russell</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Yusuf Russell</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Check if word is same forwards and backwards</span></div>
+<div><span># Use .upper to make sure uppercase letters are dealt with</span></div>
+<div><span># Add string to list to make use of reverse list function to make solution easier</span></div>
+<div><span>def</span> <span>is_palindrome</span><span>(</span><span>string</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#create two lists, one for original and one for reversed to check if both are the same in the end</span></div>
+<div><span>&nbsp; &nbsp; original </span><span>=</span><span> []</span></div>
+<div><span>&nbsp; &nbsp; reversed </span><span>=</span><span> []</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> character </span><span>in</span><span> string</span><span>.</span><span>upper()</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; original</span><span>.</span><span>append(character)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; reversed</span><span>.</span><span>append(character)</span></div>
+<div><span>&nbsp; &nbsp; reversed</span><span>.</span><span>reverse()</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Use sinple if statement to check if both lists are the same</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> original </span><span>==</span><span> reversed</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<br>
+<div><span>print(is_palindrome(</span><span>"</span><span>racecar</span><span>"</span><span>))</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Dilmi	Wickramanayake</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Dilmi	Wickramanayake</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div><br>
+<div><span>"""</span></div>
+<div><span>Problem: Check if the text is the same when it is reversed</span></div>
+<br>
+<div><span>Clues: try to find a way to reverse a string, and equal it to the original string</span></div>
+<div><span>Tools: index []</span></div>
+<div><span>"""</span></div>
+<div><span>def</span> <span>isPalindrome</span><span>(</span><span>text</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>text</span> <span>=</span> <span>text</span><span>.lower() </span><span># upper and lowercase are different so it will mess up the comparison</span></div>
+<div><span>&nbsp; &nbsp; </span><span>index</span> <span>=</span> <span>len</span><span>(</span><span>text</span><span>) </span><span>-</span><span>1</span> <span># reverse index</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>i</span> <span>in</span> <span>range</span><span>(</span><span>len</span><span>(</span><span>text</span><span>)): </span><span># made to iterate through reversed string and regular string</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>text</span><span>[</span><span>i</span><span>] </span><span>==</span> <span>text</span><span>[</span><span>index</span><span>]):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>text</span><span>[</span><span>i</span><span>] </span><span># this is just a placeholder so that the if statement runs</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"This string is not a palindrome"</span> <span># if anything doesn't equal that means its not a palindrome</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>index</span><span>-=</span><span>1</span> <span># decrement the reverse index</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>"This string is a palindrome"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp;</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>testcase1</span> <span>=</span> <span>isPalindrome</span><span>(</span><span>"Hello"</span><span>)</span></div>
+<div><span>print</span><span>(</span><span>testcase1</span><span>)</span></div>
+<br>
+<div><span>testcase2</span> <span>=</span> <span>isPalindrome</span><span>(</span><span>"Racecar"</span><span>)</span></div>
+<div><span>print</span><span>(</span><span>testcase2</span><span>)</span></div>
+<br>
+<div><span>testcase3</span> <span>=</span> <span>isPalindrome</span><span>(</span><span>"tacocat"</span><span>)</span></div>
+<div><span>print</span><span>(</span><span>testcase3</span><span>)</span></div>
+<br>
+<div><span>"""</span></div>
+<div><span>Examine: I could have used the .reverse() method, and </span></div>
+<div><span>could have compared the original string to the reversed string</span></div>
+<div><span>"""</span></div>
+</div>
+</div>
+</body>
+</html>

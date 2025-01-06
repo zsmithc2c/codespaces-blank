@@ -1,0 +1,18 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Hansika	Perisetty</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Hansika	Perisetty</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import java.util.Scanner;</p>
+<p>public class AreaCalculator {<br>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("I can calculate the area of a shape for you.");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Which shape do you want me to calculate the area of?");<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in); // Create a scanner object<br>&nbsp; &nbsp; &nbsp; &nbsp; String shape = scanner.nextLine(); // Read the shape input<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; if (shape.equals("circle")) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Radius? ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int radius = scanner.nextInt();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanner.nextLine(); // Clear the buffer<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Area: " + (Math.PI * Math.pow(radius, 2)));<br>&nbsp; &nbsp; &nbsp; &nbsp; } else if (shape.equals("rectangle")) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Length and Width? ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int length = scanner.nextInt();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int width = scanner.nextInt();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanner.nextLine(); // Clear the buffer<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Area: " + (length * width));<br>&nbsp; &nbsp; &nbsp; &nbsp; } else if (shape.equals("square")) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Side Length? ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int sideLength = scanner.nextInt();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanner.nextLine(); // Clear the buffer<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Area: " + (sideLength * sideLength));<br>&nbsp; &nbsp; &nbsp; &nbsp; } else if (shape.equals("triangle")) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Base and Height? ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int base = scanner.nextInt();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int height = scanner.nextInt();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanner.nextLine(); // Clear the buffer<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Area: " + (0.5 * base * height));<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Invalid shape! Please enter 'circle', 'rectangle', 'square', or 'triangle'.");<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>}</p>
+</div>
+</body>
+</html>

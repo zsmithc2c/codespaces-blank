@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Thomas</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Thomas</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># create program that asks user for number and keeps asking them while<br># they have not guess it. also rpvoide hints by telling them if if<br># there guess is to low or to high<br># will need to use random<br>import random</p>
+<p># need to get random number<br>randomNum = random.randint(1,100)</p>
+<p># need to use input to get input<br>guess = int(input("guess a number between 1 and 100 "))</p>
+<p># need to use while loop to keep asking user for input<br>while guess != randomNum:<br>&nbsp; &nbsp; &nbsp;# if num greater than randomNum tell user &nbsp; &nbsp;<br>&nbsp; &nbsp; if(guess &gt; randomNum):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("num to high")<br>&nbsp; &nbsp; # if num less than randomNum tell user &nbsp; &nbsp;<br>&nbsp; &nbsp; elif(guess &lt; randomNum):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("num to low")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("you got it")<br>&nbsp; &nbsp; &nbsp; &nbsp; break<br>&nbsp; &nbsp; # ask user again to enter a guess<br>&nbsp; &nbsp; guess = int(input("guess a number between 1 and 100 "))</p>
+</div>
+</body>
+</html>

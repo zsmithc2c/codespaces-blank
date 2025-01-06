@@ -1,0 +1,27 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Suhurrith Adhikari</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Suhurrith Adhikari</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Basically in this question, we take in a String input and return a string</p>
+<p># Edge Cases 1: What happens if there is a space between "race car", does it still count as a palindrome<br>#Edge Case 2: additionally the function is NOT case-sensitive seen in example "Racecar", which still counts as a palindrome</p>
+<p>#Taking in a string input for the function<br>def is_palindrome(s):<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Standardize the text by making everything lowercase<br>&nbsp; &nbsp; s = s.lower()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #even if there are spaces in the string, please remove the space and delete which standardizes the text<br>&nbsp; &nbsp; s = s.replace(" ", "")<br>&nbsp; &nbsp; s = s.replace(",", "")<br>&nbsp; &nbsp; s = s.replace(".", "")<br>&nbsp; &nbsp; s = s.replace("/", "")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # This feature uses indexing feature in Python to check whether the string is the same as when it is reversed.<br>&nbsp; &nbsp; #Additionally if the string is empty it should not be a palindrome, therefore the length of the string must be greater than 0<br>&nbsp; &nbsp; if (s == s[::-1]) and (len(s) != 0):<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is a palindrome."<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome."</p>
+<p><br>#Testing:</p>
+<p>print(is_palindrome("racecar")) #Output: The string is a palindrome</p>
+<p>print(is_palindrome("Racecar")) #Output: The string is a palindrome</p>
+<p>print(is_palindrome("race car")) #Output: The string is a palindrome</p>
+<p>print(is_palindrome("Hello"))#Output: The string is not a palindrome</p>
+<p>print(is_palindrome("")) #Output: The string is not a palindrome</p>
+<p>print(is_palindrome("race,car")) #Output: The string is a palindrome</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

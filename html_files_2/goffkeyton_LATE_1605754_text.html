@@ -1,0 +1,84 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Keyton Goff</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Keyton Goff</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div style="color: #d9dfe7; background-color: #171f2b; font-family: Consolas, 'Courier New', monospace;  font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #7f8d9f;"># Calculate the area of a variety of 2D shapes.</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Import the math library for the pi constant</span></div>
+<div><span style="color: #fd8da3;">import</span><span style="color: #d9dfe7;"> math</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Define a function to get valid numerical input from the user (a number or expression)</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">get_num</span><span style="color: #d9dfe7;">(variable: </span><span style="color: #92a9ff;">str</span><span style="color: #d9dfe7;">) -&gt; </span><span style="color: #92a9ff;">float</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">while</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">True</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">try</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; uin </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">eval</span><span style="color: #d9dfe7;">(</span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #fd8da3;">f</span><span style="color: #77d5a3;">"enter a number or literal expression for </span><span style="color: #92a9ff;">{</span><span style="color: #d9dfe7;">variable</span><span style="color: #92a9ff;">}</span><span style="color: #77d5a3;">: "</span><span style="color: #d9dfe7;">))</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> uin</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">except</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"invalid input: enter only a number or literal expression"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #7f8d9f;"># Define some calculation functions</span></div>
+<div><span style="color: #7f8d9f;"># Return the area of a circle given radius r</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">area_circle</span><span style="color: #d9dfe7;">() -&gt; </span><span style="color: #92a9ff;">float</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; r </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> get_num(</span><span style="color: #77d5a3;">"radius"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> math.pi </span><span style="color: #fd8da3;">*</span><span style="color: #d9dfe7;"> math.pow(r, </span><span style="color: #92a9ff;">2</span><span style="color: #d9dfe7;">)</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Return the area of a square given side x</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">area_square</span><span style="color: #d9dfe7;">() -&gt; </span><span style="color: #92a9ff;">float</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; x </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> get_num(</span><span style="color: #77d5a3;">"square side"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> math.pow(x, </span><span style="color: #92a9ff;">2</span><span style="color: #d9dfe7;">)</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Return the area of a rectangle given side x and y</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">area_rect</span><span style="color: #d9dfe7;">() -&gt; </span><span style="color: #92a9ff;">float</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; x </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> get_num(</span><span style="color: #77d5a3;">"side 1"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; y </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> get_num(</span><span style="color: #77d5a3;">"side 2"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> x</span><span style="color: #fd8da3;">*</span><span style="color: #d9dfe7;">y</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Return the area of a triangle given base b and height h</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">area_tri</span><span style="color: #d9dfe7;">() -&gt; </span><span style="color: #92a9ff;">float</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; b </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> get_num(</span><span style="color: #77d5a3;">"base"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; h </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> get_num(</span><span style="color: #77d5a3;">"height"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">.5</span><span style="color: #d9dfe7;"> </span><span style="color: #fd8da3;">*</span><span style="color: #d9dfe7;"> b </span><span style="color: #fd8da3;">*</span><span style="color: #d9dfe7;"> h</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Define a function to allow the user to select the given shape they want to calculate for</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">shape_select</span><span style="color: #d9dfe7;">():</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #7f8d9f;"># Define two lists with corresponding indexes </span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; shapes </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> [</span><span style="color: #77d5a3;">"circle"</span><span style="color: #d9dfe7;">, </span><span style="color: #77d5a3;">"rectangle"</span><span style="color: #d9dfe7;">, </span><span style="color: #77d5a3;">"square"</span><span style="color: #d9dfe7;">, </span><span style="color: #77d5a3;">"triangle"</span><span style="color: #d9dfe7;">]</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; functions </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> [area_circle, area_rect, area_square, area_tri]</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #7f8d9f;"># Print the options</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #92a9ff;">print</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"select a shape to calculate for: "</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">for</span><span style="color: #d9dfe7;"> i,s </span><span style="color: #fd8da3;">in</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">enumerate</span><span style="color: #d9dfe7;">(shapes):</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">print</span><span style="color: #d9dfe7;">(i,s)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">while</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">True</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Enter an input loop so we can continuously ask the user for input incase of invalid inputs</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">try</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Use a try-catch statement to catch the ValueError raised by int() when non-numerical characters are provided</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; uin </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">int</span><span style="color: #d9dfe7;">(</span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"enter the index of the shape to calculate: "</span><span style="color: #d9dfe7;">)) </span><span style="color: #7f8d9f;"># Get the input and convert it to an integer</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> uin </span><span style="color: #fd8da3;">&gt;</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">3</span><span style="color: #d9dfe7;"> </span><span style="color: #fd8da3;">or</span><span style="color: #d9dfe7;"> uin </span><span style="color: #fd8da3;">&lt;</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">0</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Ensure the input is within the acceptable range 0-3</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"out of range: input only 0-3"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">continue</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">break</span><span style="color: #d9dfe7;"> </span><span style="color: #7f8d9f;"># Exit the input loop if we have a valid input</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">except</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Warn the user about non-numerical inputs</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"invalid input: input numbers only"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">continue</span></div>
+<br>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #7f8d9f;"># Calculate the area of the requested shape using the user's selection to index the functions list and run the corresponding function</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #92a9ff;">print</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"the area of the shape is"</span><span style="color: #d9dfe7;">, functions[uin]())</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Run the main function shape_select</span></div>
+<div><span style="color: #d9dfe7;">shape_select()</span></div>
+</div>
+<div id="highlighter--hover-tools" style="display: none;">
+<div id="highlighter--hover-tools--container"></div>
+</div>
+</div>
+</body>
+</html>

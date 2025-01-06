@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Zoë	Bryant</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Zoë	Bryant</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><code>'''</code><br><code>understand: check if a string is a palindrome (the same forwards and backwards)</code></p>
+<p><code>clues: the string reversed should be the same as the original string</code></p>
+<p><code>assemble:&nbsp;</code><br><code>INPUT string</code><br><code>FOR letter in string, original_order.append()</code><br><code>reverse_order = original_order.reverse()</code><br><code>IF reverse_order == original order, the string is a palindrome</code><br><code>ELSE the string is not a palindrome</code><br><code>'''</code></p>
+<p><code>#possible edge cases: numbers, capitalization</code></p>
+<p><code>original_order = []</code><br><code>reverse_order = []</code></p>
+<p><code>possible_palindrome = input("Enter your string: ")</code></p>
+<p><code>#turn the string into a list</code><br><code>#add to 2 lists</code><br><code>for letter in possible_palindrome:</code><br><code>&nbsp; &nbsp; original_order.append(letter)</code><br><code>&nbsp; &nbsp; reverse_order.append(letter)</code></p>
+<p><code>#reverse the order of one of the lists</code><br><code>reverse_order.reverse()</code></p>
+<p><code>#if the original order list and the reverse order list are the same, the string is a palindrome</code><br><code>if original_order == reverse_order:</code><br><code>&nbsp; &nbsp; print("The string is a palindrome")</code></p>
+<p><code>#if they arent the same, the string is not a palindrome</code><br><code>else:</code><br><code>&nbsp; &nbsp; print("The string is not a palindrome")</code></p>
+</div>
+</body>
+</html>

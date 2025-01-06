@@ -1,0 +1,44 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Leo	Huynh</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Leo	Huynh</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>"""</span></div>
+<div><span>Create a function that determines whether all characters in a given string are unique. If the string has all unique characters, return True; otherwise, return False.</span></div>
+<br>
+<div><span>DEF isUnique(word):</span></div>
+<div><span>&nbsp; &nbsp; FOR letter in word:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; word.remove(letter)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; IF word.find(letter) == -1:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RETURN FALSE</span></div>
+<div><span>&nbsp; &nbsp; RETURN TRUE</span></div>
+<br><br>
+<div><span>"""</span></div>
+<br>
+<div><span>def</span> <span>isUnique</span><span>(</span><span>word</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># split word into list to make it mutable</span></div>
+<div><span>&nbsp; &nbsp; </span><span>listWord</span> <span>=</span> <span>list</span><span>(</span><span>word</span><span>.strip().lower())</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>i</span> <span>in</span> <span>range</span><span>(</span><span>len</span><span>(</span><span>listWord</span><span>)):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>char</span> <span>=</span> <span>listWord</span><span>[</span><span>0</span><span>]</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Remove the letter to check if there is another</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>listWord</span><span>.</span><span>pop</span><span>(</span><span>0</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>listWord</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>char</span> <span>in</span> <span>listWord</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># return false if the letter is found</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span><span># if no dupe, return true</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br><br></div>
+</div>
+</body>
+</html>

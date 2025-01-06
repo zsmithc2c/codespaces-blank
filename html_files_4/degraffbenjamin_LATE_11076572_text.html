@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Benjamin DeGraff</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Benjamin DeGraff</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Create a program that plays a guessing game with the user. The program will choose a random number between 1 and 100, and then ask the user to guess the number.<br>#If the user guesses correctly, the program congratulates the player and ends the game.<br>#If the user's guess is too high, the program tells them the answer is smaller and lets them guess again.<br>#If the user's guess is too low, the program tells them the answer is larger and lets them guess again.</p>
+<p>#Generate a random number, then use a while loop to continue playing until user guesses the number</p>
+<p>import random</p>
+<p>def guessing_game():<br>&nbsp; &nbsp; number = random.randint(1,100) #Generate random number<br>&nbsp; &nbsp; PLAYING = True #Create check varaible<br>&nbsp; &nbsp; while PLAYING == True:&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; try: #Making sure user inputs a number<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess = int(input("Enter a number between 1 and 100: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if guess == number: #If guess is correct<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Congrats! You win!")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PLAYING = False<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif guess &gt; number: #If guess is too high<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Lower!")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif guess &lt; number: #If guess is too low<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Higher!")<br>&nbsp; &nbsp; &nbsp; &nbsp; except:&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please enter a number")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>guessing_game()</p>
+</div>
+</body>
+</html>

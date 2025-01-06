@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Dagem Abraham</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Dagem Abraham</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<pre>test1 = <span>"Racecar"<br></span>test2 = <span>"Hello"<br></span><span><br></span><span># Possible outputs include "The string is a palindrome.", and "The string is not a palindrome."<br></span><span><br></span><span>def </span><span>pChecker</span>(word: <span>str</span>):<br>    <span># Left and Right pointer<br></span>    l = <span>0<br></span>    r = <span>len</span>(word) - <span>1<br></span>    <span># Initial value until you find it's not a palindrome<br></span>    result = <span>"The string is a palindrome."<br></span><span><br></span>    <span># Check half of the word to match first half with second<br></span>    <span>for </span>i <span>in </span><span>range</span>(<span>len</span>(word) // <span>2</span>):<br>        <span># Check for Palindrome condition and if there isn't a match set result accordingly and break<br></span>        <span>if </span>word[l + i].lower() != word[r-i].lower():<br>            result = <span>"The string is not a palindrome."<br></span>            <span>break<br></span><span>        else</span>:<br>            <span>continue<br></span>    <span>#Return the result<br></span>    <span>return </span>result<br><br><span>#Test Cases<br></span><span>print</span>(pChecker(test1))<br><span>print</span>(pChecker(test2))</pre>
+</div>
+</div>
+</body>
+</html>

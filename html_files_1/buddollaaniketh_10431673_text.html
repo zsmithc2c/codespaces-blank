@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Aniketh	Buddolla</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Aniketh	Buddolla</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def is_palindrome(string):<br>&nbsp; &nbsp; # Normalize the string<br>&nbsp; &nbsp; cleaned_string = ""<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char.isalnum(): &nbsp;# Check if the character is a letter or number<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cleaned_string += char.lower() &nbsp;# Convert to lowercase and add to cleaned_string</p>
+<p>&nbsp; &nbsp; # Check if the cleaned string is equal to its reverse<br>&nbsp; &nbsp; return cleaned_string == cleaned_string[::-1]</p>
+<p># Get user input and display the result<br>user_input = input("Enter a string: ")</p>
+<p>if is_palindrome(user_input): &nbsp;# Call the function with the user's input<br>&nbsp; &nbsp; print("The string is a palindrome.")<br>else:<br>&nbsp; &nbsp; print("The string is not a palindrome.")</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Ronit Katikaneni</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Ronit Katikaneni</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#UCASE</span></div>
+<div><span>#U: The problem requires us to create a random number and have the user guess it providing higher or lower messages</span></div>
+<div><span>#C: Some clues are that the user has to keep guessing, so we can use a while loop to keep going till they guess correctly</span></div>
+<div><span>#A: Step1: Create a function Step2: Create a while true loop with a try and Exception to validate inputs, Step3: Check if the number is between 1-100, Step4: check if the number if correct guess, higher, or lower, and display the proper message, Step5: End the game if the number is guess properly</span></div>
+<div><span>#S: The S is my solution below</span></div>
+<div><span>#E: I tested without multiple edge cases and inputs and received proper results</span></div>
+<br><br><br>
+<div><span>#impor random</span></div>
+<div><span>import</span><span> random</span></div>
+<br>
+<div><span># Generate a random number between 1 and 100</span></div>
+<div><span>random_number </span><span>=</span><span> random</span><span>.</span><span>randint(</span><span>1</span><span>,</span> <span>100</span><span>)</span></div>
+<br>
+<div><span>def</span> <span>guessNumber</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span><span> &nbsp;</span><span># Keep looping until the correct guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#take in the users guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num </span><span>=</span> <span>int(input(</span><span>"</span><span>Please input a number from 1-100: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if the number is from 1-100 and if not make them retry</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> num </span><span>&lt;</span> <span>1</span> <span>or</span><span> num </span><span>&gt;</span> <span>100</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your number is out of range. Please try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if their guess was correct and print correct and break</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> num </span><span>==</span><span> random_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Correct Guess!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#if their guess is higher tell them they are too high</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span><span> num </span><span>&gt;</span><span> random_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your guess is too high, try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#if their guess is lower, tell them it is too low and try again</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your guess is too low, try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if they inputed something that wasnt a number and make them redo</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Invalid input</span><span>"</span><span>)</span></div>
+<br>
+<div><span># Start the game</span></div>
+<div><span>guessNumber()</span></div>
+</div>
+</div>
+</body>
+</html>

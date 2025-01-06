@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Temi	Alabi</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Temi	Alabi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <pre class="a-b-r-La">import random
+mode=input("Pick a mode: beginner, intermediate, or hard")
+emptylist=[]
+count=0
+if mode=="beginner":
+	nums=random.randint(1,100)
+	while count&lt;10:
+		count=count+1
+		guess= int(input("Type in a number."))
+		emptylist.append(guess)
+		if guess==nums:
+			print("Congratulations")
+			count=10
+		elif guess&gt;nums:
+			print("Wrong, go lower")
+		elif guess&lt;nums:
+			print("Wrong, go higher")
+	print(emptylist)
+	print("You had", len(emptylist), "guesses")
+elif mode=="intermediate":
+	nums=random.randint(1,100)
+	while count&lt;6:
+		count=count+1
+		guess= int(input("Type in a number."))
+		emptylist.append(guess)
+		if guess==nums:
+			print("Congratulations")
+			count=6
+		elif guess&gt;nums:
+			print("Wrong, go lower")
+		elif guess&lt;nums:
+			print("Wrong, go higher")
+	print(emptylist)
+	print("You had", len(emptylist),"guesses")
+elif mode=="hard":
+	nums=random.randint(1,100)
+	while count&lt;4:
+		count=count+1
+		guess= int(input("Type in a number."))
+		emptylist.append(guess)
+		if guess==nums:
+			print("Congratulations")
+			count=4
+		elif guess&gt;nums:
+			print("Wrong, go lower")
+		elif guess&lt;nums:
+			print("Wrong, go higher")
+	print(emptylist)
+	print("You had",len(emptylist), "guesses")</pre>
+</div>
+</body>
+</html>

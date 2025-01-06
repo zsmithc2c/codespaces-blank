@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: joshsal792@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: joshsal792@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div><br><br>
+<div><span>"""</span></div>
+<div><span>Problem 3: Unique Characters in a String</span></div>
+<div><span>Description:</span></div>
+<br>
+<div><span>Create a function that determines whether all characters in a given string are unique. If the string has all unique characters, return True; otherwise, return False.</span></div>
+<br>
+<div><span>Example:</span></div>
+<br>
+<div><span>Input: "abcdef"</span></div>
+<br>
+<div><span>Output: True</span></div>
+<br>
+<div><span>Input: "hello"</span></div>
+<br>
+<div><span>Output: False</span></div>
+<br>
+<div><span>Instructions:</span></div>
+<br>
+<div><span>Use the UCASE strategy to structure your approach.</span></div>
+<div><span>Use comments to explain each part of your code.</span></div>
+<div><span>Think about how to handle different types of input, such as empty strings or strings with spaces.</span></div>
+<div><span>Spend no more than 1 hour working on this problem.</span></div>
+<br>
+<div><span>"""</span></div>
+<br><br><br>
+<div><span># needs to be a string thats given</span></div>
+<br>
+<div><span># if ALL characters are unique the returns True meaning it was not shown before in the string</span></div>
+<br>
+<div><span># if not return false</span></div>
+<br>
+<div><span># boolean and string needed for this </span></div>
+<br>
+<div><span># function needs string as a parameter</span></div>
+<br><br>
+<div><span>def</span> <span>unique_chars</span><span>(</span><span>s</span><span>:</span> <span>str</span><span>)</span> <span>-&gt;</span> <span>bool</span><span>: # function takes in string as parameter and ensure it returns or outputs a bool</span></div>
+<div><span>&nbsp; &nbsp; </span><span># A set to track characters we've already seen</span></div>
+<div><span>&nbsp; &nbsp; </span><span>checker</span> <span>=</span> <span>set</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># Iterate through each character in the string</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>char</span> <span>in</span> <span>s</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>char</span> <span>in</span> <span>checker</span><span>:</span><span> &nbsp;</span><span># If the character is already in the set, it's not unique</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>checker</span><span>.</span><span>add</span><span>(</span><span>char</span><span>)</span><span> &nbsp;</span><span># Add the character to the set</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span><span> &nbsp;</span><span># If no duplicates were found, all characters are unique</span></div>
+<br>
+<div><span># Example</span></div>
+<div><span>print</span><span>(</span><span>unique_chars</span><span>(</span><span>"</span><span>havxg</span><span>"</span><span>))</span><span> &nbsp;</span><span># Output True</span></div>
+<div><span>print</span><span>(</span><span>unique_chars</span><span>(</span><span>"</span><span>hello</span><span>"</span><span>))</span><span> &nbsp;</span><span># Output False</span></div>
+</div>
+</div>
+</body>
+</html>

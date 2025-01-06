@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Andy Chen</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Andy Chen</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def is_unique(string):<br># Create an empty set to store the characters of the string #&nbsp;</p>
+<p>&nbsp; &nbsp; char_set = set()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Iterate through each character in the string<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; # If the character is already in the set, return False<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in char_set:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; # Otherwise, add the character to the set<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; char_set.add(char)<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # If all characters are unique, return True<br>&nbsp; &nbsp; return True</p>
+<p>#Allow the user to enter their string to check if it is unique&nbsp;</p>
+<p>string = input("Enter a string: ")<br>print(is_unique(string))</p>
+<p>#If the loop completes without finding duplicates, the function will return True. Simple word: it will check for repeated letters and if there isn't it will be identified as a unique string.&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

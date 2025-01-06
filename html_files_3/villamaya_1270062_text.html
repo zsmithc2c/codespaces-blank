@@ -1,0 +1,69 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Maya Villa</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Maya Villa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#UCASE</span></div>
+<div><span># U - Given a string, determine if all the characters are unique or not.</span></div>
+<div><span># Inputs - a string</span></div>
+<div><span># Outputs - True or False if the characters in the string are unique or not</span></div>
+<div><span># Edge Cases - Capital letters. I will make the string lowercase at first.</span></div>
+<div><span># Clarifying Questions - Is a space considered a character? I will omit them in my testing. I will also assume that there is no punctuation in the strings</span></div>
+<div><span># Update: I reread the instructions and I am supposed to consider them as an edge case as well as empty strings</span></div>
+<br>
+<div><span># C - I am going to be looking at the string so I will need string methods. I need to compare letters to one another to determine if they are</span></div>
+<div><span># unique so I need to iterate through something and use comparison operators. I will need to return a true or false at the end.</span></div>
+<br>
+<div><span># A and S</span></div>
+<br>
+<div><span># given a string, I might want to separate all the characters, into a list</span></div>
+<div><span>string1 = </span><span>"abcdefg"</span></div>
+<div><span>string2 = </span><span>"hello"</span></div>
+<div><span>string3 = </span><span>"youarecool"</span></div>
+<div><span>string4 = </span><span>"silent"</span></div>
+<div><span>string5 = </span><span>""</span></div>
+<div><span>string6 = </span><span>"a b cde fg"</span></div>
+<br>
+<div><span>def</span><span> unique_character(input):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> len(input) == </span><span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; string_list = []</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> character </span><span>in</span><span> input:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> character != </span><span>" "</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; string_list.append(character) </span><span># converts the string into a list</span></div>
+<div><span>&nbsp; &nbsp; </span><span># then I will take each character and compare it to all other characters</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> i </span><span>in</span><span> range(len(string_list)):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; comparison_char = string_list[i]</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; string_list.pop(i) </span><span># I need to take out this character to make comparison easier while not accidentally comparing this character with itself</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>for</span><span> char </span><span>in</span><span> string_list:</span></div>
+<div><span>&nbsp; &nbsp; </span><span># &nbsp; if it matches with another character, then return false</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> char == comparison_char:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; string_list.insert(i, comparison_char) </span><span># you need to add this character back so the original string doesn't get small and produce an error</span></div>
+<div><span>&nbsp; &nbsp; </span><span># &nbsp; if it does NOT match with any other character then keep going onto the other characters</span></div>
+<div><span>&nbsp; &nbsp; </span><span># if we make it through all the characters, meaning none of the characters match with each other, then return true</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span>print(unique_character(string1))</span></div>
+<div><span>print(unique_character(string2))</span></div>
+<div><span>print(unique_character(string3))</span></div>
+<div><span>print(unique_character(string4))</span></div>
+<div><span>print(unique_character(string5))</span></div>
+<div><span>print(unique_character(string6))</span></div>
+<br>
+<div><span># E - Yes, we can check the results using the tests I made. We can understand it at a glance thanks to the comments and the naming conventions of</span></div>
+<div><span># all the variables involved. The solution could be improved with another string or list method. For example, you could identify each character in</span></div>
+<div><span># the string and count how many times it repeats. If the number returned is more than one, then return false.</span></div>
+</div>
+</div>
+</body>
+</html>

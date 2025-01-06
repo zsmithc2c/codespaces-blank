@@ -1,0 +1,82 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Arnab Shrestha</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Arnab Shrestha</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>SAME PICTURE AS LAST ATTEMPT but I updated the the code to account for spaces. The time is still around 40 minutes.</p>
+<p><img src="/users/1270012/files/35402414/preview?verifier=xmKMZ9wExb183lLvEbsi0lz2LQwdVbwP5A1vTpGg" alt="Screenshot 2024-12-27 223458.png" width="535" height="289"></p>
+<div>
+<div><span>"""</span></div>
+<div><span>Understand:</span></div>
+<div><span>&nbsp; &nbsp; Create a palindrome checker that checks if a word or sentence is the exact same when reversed.</span></div>
+<br>
+<div><span>&nbsp; &nbsp; Inputs:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; String input from user</span></div>
+<div><span>&nbsp; &nbsp; Outputs:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; if user input is a palindrome: "The string is a palindrome."</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; else: "The string is not a palindrome."</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; Question:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; What happens if the string is empty?</span></div>
+<br>
+<div><span>Clues/hints:</span></div>
+<div><span>&nbsp; &nbsp; if the word/phrase is writen the same forward or backword, I will need to make another string that is the reversed version of the user's input.</span></div>
+<div><span>&nbsp; &nbsp; ignoring capitalization meanings I can use .lower() when comparing the user input string and the reversed string.</span></div>
+<div><span>&nbsp; &nbsp; ignoring spaces and punctuation means I should take out spaces and punctuations in the user input string.</span></div>
+<br>
+<div><span>Assemble/pseudocode:</span></div>
+<div><span>&nbsp; &nbsp; inputString = input("Type a word or phrase: ");</span></div>
+<br>
+<div><span>&nbsp; &nbsp; if inputString has spaces or punctuations:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; remove spaces and punctuations from inputString</span></div>
+<br>
+<div><span>&nbsp; &nbsp; reveseredString = ""</span></div>
+<div><span>&nbsp; &nbsp; for reversed inputString:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; revseredString += i;</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; if inputString.lower() == reversedString.lower():</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is a palindrome.")</span></div>
+<div><span>&nbsp; &nbsp; else:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is not a palindrome.")</span></div>
+<br>
+<div><span>Examination:</span></div>
+<div><span>&nbsp; &nbsp; Made a list of punctuations for efficiency</span></div>
+<div><span>&nbsp; &nbsp; Forgot to account for spaces in the input</span></div>
+<div><span>"""</span></div>
+<br>
+<div><span># User input</span></div>
+<div><span>inputString</span> <span>=</span> <span>input</span><span>(</span><span>"Type a word or phrase: "</span><span>)</span></div>
+<br>
+<div><span>#Checks if the input is empty</span></div>
+<div><span>if</span> <span>inputString</span> <span>==</span> <span>""</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"No input"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>quit</span><span>()</span></div>
+<br>
+<div><span># List of possible punctuations and space</span></div>
+<div><span>allPunctuationsAndSpace</span> <span>=</span><span> [</span><span>" "</span><span>,</span><span>","</span><span>, </span><span>"."</span><span>,</span><span>"/"</span><span>,</span><span>"?"</span><span>,</span><span>"!"</span><span>,</span><span>"("</span><span>,</span><span>")"</span><span>,</span><span>";"</span><span>,</span><span>":"</span><span>,</span><span>"'"</span><span>,</span><span>"</span><span>\"</span><span>"</span><span>,</span><span>"["</span><span>,</span><span>"]"</span><span>,</span><span>"{"</span><span>,</span><span>"}"</span><span>,</span><span>"-"</span><span>]</span></div>
+<br>
+<div><span>#Checks if each punctuation is in inputString and takes the punctuation out if it is</span></div>
+<div><span>for</span> <span>character</span> <span>in</span> <span>allPunctuationsAndSpace</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>character</span> <span>in</span> <span>inputString</span><span> :</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>inputString</span> <span>=</span> <span>inputString</span><span>.</span><span>replace</span><span>(</span><span>character</span><span>, </span><span>""</span><span>) </span><span># replaces with empty string to delete the punctuation</span></div>
+<br>
+<div><span>reveseredString</span> <span>=</span> <span>""</span> <span>#initializes the variable</span></div>
+<div><span>for</span> <span>i</span> <span>in</span> <span>reversed</span><span>(</span><span>inputString</span><span>): </span><span># For loop that starts backwards</span></div>
+<div><span>&nbsp; &nbsp; </span><span>reveseredString</span> <span>+=</span> <span>i</span></div>
+<br>
+<div><span>if</span> <span>reveseredString</span><span>.</span><span>lower</span><span>() </span><span>==</span> <span>inputString</span><span>.</span><span>lower</span><span>(): </span><span># compares the original user input with the reversed version with all letters in lowercase</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The string is a palindrome."</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The string is not a palindrome."</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

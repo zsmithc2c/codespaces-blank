@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Sirisha Thapa</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Sirisha Thapa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>public class PalindromeChecker</p>
+<p>{</p>
+<p>&nbsp; &nbsp; // Method to check if a string is a palindrome<br>&nbsp; &nbsp; public static String isPalindrome(String s)</p>
+<p>&nbsp; &nbsp; &nbsp;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // **Understand**: The task is to check if a string is a palindrome ignoring spaces, punctuation, and&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;capitalization.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // **Clues**:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- We can check if the string reads the same forwards and backwards.<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // **Assemble**:&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Clean the string by removing all non-alphabet characters and converting it to uppercase.<br>&nbsp; &nbsp; &nbsp; &nbsp; StringBuilder cleanedString = new StringBuilder();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Loop through the string and add only alphabet characters in uppercase to the cleaned string<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; s.length(); i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; char c = s.charAt(i);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (Character.isLetterOrDigit(c)) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cleanedString.append(Character.toUpperCase(c));<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // **Solve**:<br>&nbsp; &nbsp; &nbsp; &nbsp; // Now that the string is cleaned, check if it is the same forwards and backwards.<br>&nbsp; &nbsp; &nbsp; &nbsp; String cleanedStr = cleanedString.toString();<br>&nbsp; &nbsp; &nbsp; &nbsp; String reversedStr = cleanedString.reverse().toString(); // Reverse the string<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Compare the cleaned string with its reverse<br>&nbsp; &nbsp; &nbsp; &nbsp; if (cleanedStr.equals(reversedStr)) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return "The string is a palindrome.";<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome.";<br>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // **Examine**:<br>&nbsp; &nbsp; &nbsp; &nbsp; // We need to make sure the solution works for different cases, including edge cases like empty strings,<br>&nbsp; &nbsp; &nbsp; &nbsp; // strings with only spaces, and strings with mixed punctuation.<br>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Create a Scanner object to read input from the user<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in);<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Ask the user for input<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Enter a string to check if it's a palindrome:");</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Read the user's input<br>&nbsp; &nbsp; &nbsp; &nbsp; String inputStr = scanner.nextLine();</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Call the isPalindrome method and display the result<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(isPalindrome(inputStr));<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Close the scanner to avoid resource leak<br>&nbsp; &nbsp; &nbsp; &nbsp; scanner.close();<br>&nbsp; &nbsp; }<br>}</p>
+</div>
+</body>
+</html>

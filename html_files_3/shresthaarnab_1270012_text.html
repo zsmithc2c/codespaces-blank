@@ -1,0 +1,76 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Arnab Shrestha</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Arnab Shrestha</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><img src="/users/1270012/files/35402364/preview?verifier=rXcy171Jzh6SL98VfHwd4Ue5c9GeLHSmR1KYSy1T" alt="image.png" width="567" height="305"></p>
+<div>
+<div><span>"""</span></div>
+<div><span>Understand:</span></div>
+<div><span>&nbsp; &nbsp; Prompt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Create a program that checks a string for any repeated characters</span></div>
+<br>
+<div><span>&nbsp; &nbsp; Input:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; One user input for word/phrase</span></div>
+<div><span>&nbsp; &nbsp; Outputs:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; if user input has all unique characters: "True"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; else: "False"</span></div>
+<br>
+<div><span>&nbsp; &nbsp; Questions:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; What do I do with spaces and punctuation? I decided to exclude them</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; What happens if the input is empty?</span></div>
+<br>
+<div><span>Clues/Hints:</span></div>
+<div><span>&nbsp; &nbsp; Since im checking for repeated characters, I should make a linear search that checks every other character for every character</span></div>
+<br>
+<div><span>Assemble/pseudocode:</span></div>
+<div><span>&nbsp; &nbsp; input variable userInput</span></div>
+<br>
+<div><span>&nbsp; &nbsp; if userInput has any spaces or punctuations, they get deleted.</span></div>
+<br>
+<div><span>&nbsp; &nbsp; for character in userInput:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; for i in range(userInput):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if character == userInput[i]:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print false</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quit()</span></div>
+<div><span>&nbsp; &nbsp; print true</span></div>
+<div><span>"""</span></div>
+<br>
+<div><span># User input</span></div>
+<div><span>inputString</span> <span>=</span> <span>input</span><span>(</span><span>"Type here: "</span><span>)</span></div>
+<div><span>inputString</span><span>.</span><span>lower</span><span>() </span><span># Makes all the characters lowercase</span></div>
+<br>
+<div><span>#Checks if the input is empty</span></div>
+<div><span>if</span> <span>inputString</span> <span>==</span> <span>""</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"No input"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>quit</span><span>()</span></div>
+<br>
+<div><span># List of possible punctuations and space</span></div>
+<div><span>allPunctuationsAndSpace</span> <span>=</span><span> [</span><span>" "</span><span>,</span><span>","</span><span>, </span><span>"."</span><span>,</span><span>"/"</span><span>,</span><span>"?"</span><span>,</span><span>"!"</span><span>,</span><span>"("</span><span>,</span><span>")"</span><span>,</span><span>";"</span><span>,</span><span>":"</span><span>,</span><span>"'"</span><span>,</span><span>"</span><span>\"</span><span>"</span><span>,</span><span>"["</span><span>,</span><span>"]"</span><span>,</span><span>"{"</span><span>,</span><span>"}"</span><span>,</span><span>"-"</span><span>]</span></div>
+<br>
+<div><span>#Checks if each punctuation is in inputString and takes the punctuation out if it is</span></div>
+<div><span>for</span> <span>character</span> <span>in</span> <span>allPunctuationsAndSpace</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>character</span> <span>in</span> <span>inputString</span><span> :</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>inputString</span> <span>=</span> <span>inputString</span><span>.</span><span>replace</span><span>(</span><span>character</span><span>, </span><span>""</span><span>) </span><span># replaces with empty string to delete the punctuation</span></div>
+<br>
+<div><span>allUniqueChar</span> <span>=</span> <span>True</span> <span>#initializes boolean variable</span></div>
+<br>
+<div><span># imbedded for loops so each character in inputString can be compared to all the other characters</span></div>
+<div><span>for</span> <span>x</span> <span>in</span> <span>range</span><span>(</span><span>len</span><span>(</span><span>inputString</span><span>)):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>y</span> <span>in</span> <span>range</span><span>(</span><span>len</span><span>(</span><span>inputString</span><span>)):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>x</span> <span>!=</span> <span>y</span> <span>and</span> <span>inputString</span><span>[</span><span>x</span><span>] </span><span>==</span> <span>inputString</span><span>[</span><span>y</span><span>]: </span><span># checks if the char at the y index is the same as the x index when the indexs are not the same.</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>allUniqueChar</span> <span>=</span> <span>False</span></div>
+<br>
+<div><span>print</span><span>(</span><span>allUniqueChar</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

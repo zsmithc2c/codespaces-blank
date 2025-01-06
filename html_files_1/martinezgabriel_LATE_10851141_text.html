@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Gabriel Martinez</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Gabriel Martinez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import string</p>
+<p>def is_palindrome(s):<br>&nbsp; &nbsp; # Step 1: Convert the string to uppercase to ignore case<br>&nbsp; &nbsp; s = s.upper()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Step 2: Remove all spaces and punctuation<br>&nbsp; &nbsp; s = ''.join(c for c in s if c.isalnum())<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Step 3: Check if the string is equal to its reverse<br>&nbsp; &nbsp; if s == s[::-1]:<br>&nbsp; &nbsp; &nbsp; &nbsp; return True<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return False</p>
+<p># Main code to take input and print result<br>if __name__ == "__main__":<br>&nbsp; &nbsp; # Take input from the user<br>&nbsp; &nbsp; input_string = input("Enter a string: ")</p>
+<p>&nbsp; &nbsp; # Step 4: Check if the input string is a palindrome<br>&nbsp; &nbsp; if is_palindrome(input_string):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is a palindrome.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is not a palindrome.")</p>
+</div>
+</body>
+</html>

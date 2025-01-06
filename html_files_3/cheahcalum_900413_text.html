@@ -1,0 +1,53 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Calum Cheah </title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Calum Cheah </h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>&nbsp;</p>
+<div>
+<div><code><span>import</span><span> sys</span></code></div>
+<br>
+<div><code><span># Notes:</span></code></div>
+<div><code><span># - Check if string has all unique characters - i.e. there are no duplicate characters, may be able to use a set</span></code></div>
+<div><code><span># - Should probably ignore spaces?</span></code></div>
+<div><code><span># - Empty string should return true</span></code></div>
+<br>
+<div><code><span># Steps:</span></code></div>
+<div><code><span># 1. Take input from console or from the arguments passed to the script</span></code></div>
+<div><code><span># 2. Remove spaces in string</span></code></div>
+<div><code><span># 3. Convert string to set to remove duplicates</span></code></div>
+<div><code><span># 4. Check if len(string) == len(set)</span></code></div>
+<div><code><span># &nbsp; - If they are equivalent, there were no duplicates</span></code></div>
+<div><code><span># 5. Output result to user</span></code></div>
+<br>
+<div><code><span>def</span> <span>main</span><span>(</span><span>*</span><span>args</span><span>): &nbsp; &nbsp;</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>if</span> <span>len</span><span>(args) </span><span>&lt;</span> <span>1</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; string </span><span>=</span> <span>input</span><span>(</span><span>"Enter string to check if all characters are unique: "</span><span>) </span><span># if no arguments were passed to the script, prompt user for input</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; string </span><span>=</span><span> args[</span><span>0</span><span>] </span><span># if argument was provided to script, use the argument as the string</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; string </span><span>=</span><span> string.replace(</span><span>" "</span><span>, </span><span>""</span><span>) </span><span># remove spaces in string</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; stringSet </span><span>=</span> <span>set</span><span>(string) </span><span># convert string to a set to remove duplicates</span></code></div>
+<div><code><span>&nbsp; &nbsp; unique </span><span>=</span> <span>len</span><span>(stringSet) </span><span>==</span> <span>len</span><span>(string) </span><span># if the length of the set is the same, no duplicates were found</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># if the string is unique, print True, else False</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>if</span><span> unique:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>True</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>False</span><span>)</span></code></div>
+<br>
+<div><code><span>if</span> <span>__name__</span> <span>==</span> <span>"__main__"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; main(</span><span>*</span><span>sys.argv[</span><span>1</span><span>:])</span></code></div>
+</div>
+</div>
+</body>
+</html>

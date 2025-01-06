@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Dilmi	Wickramanayake</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Dilmi	Wickramanayake</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>"""</span></div>
+<div><span>Problem: Check if text has only one of the same letter</span></div>
+<br>
+<div><span>Clues: Check previous letters from the text to eachother</span></div>
+<div><span>Tools: index []</span></div>
+<div><span>"""</span></div>
+<div><span>def</span> <span>isUnique</span><span>(</span><span>text</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>check</span> <span>=</span><span> [] </span><span># list to check if previous letters equal current letters</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>i</span> <span>in</span> <span>range</span><span>(</span><span>len</span><span>(</span><span>text</span><span>)): </span><span># iterate throught text</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>text</span><span>[</span><span>i</span><span>] </span><span>in</span> <span>check</span><span>): </span><span># if equals previous letters</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>check</span><span>.</span><span>append</span><span>(</span><span>text</span><span>[</span><span>i</span><span>]) </span><span># add current letter</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span>testcase1</span> <span>=</span> <span>isUnique</span><span>(</span><span>"abcdef"</span><span>)</span></div>
+<div><span>print</span><span>(</span><span>testcase1</span><span>)</span></div>
+<div><span>testcase2</span> <span>=</span> <span>isUnique</span><span>(</span><span>"hello"</span><span>)</span></div>
+<div><span>print</span><span>(</span><span>testcase2</span><span>)</span></div>
+<div><span>testcase3</span> <span>=</span> <span>isUnique</span><span>(</span><span>"uiomnbvgfs"</span><span>)</span></div>
+<div><span>print</span><span>(</span><span>testcase3</span><span>)</span></div>
+<br>
+<div><span>"""</span></div>
+<div><span>Examine: I could have used the .count() method </span></div>
+<div><span>to check if each letter has only one count</span></div>
+<div><span>"""</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Hector	Perez Ramirez</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Hector	Perez Ramirez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># I have to make a game that choses a number between 1 and 100 and the user has to guess it. I will use random import and and as user gets closer the program will tell them how close they are to real number</p>
+<p>#--------------------------------------<br>import random</p>
+<p>def random_number_game():<br>&nbsp; # step 1 - get randome number between 1 and 100<br>&nbsp;random_target = random.randint(1, 100)</p>
+<p># step 2 - variables for the game<br>&nbsp;guess = None # the users current guess.Set to None<br>&nbsp;attempts = 0 # the number of attempts the user has made</p>
+<p># step 3 - start the game loop<br>&nbsp;while guess != random_target:<br># step 4 - get the user's guess<br>&nbsp; &nbsp;guess = int(input("Guess a number between 1 and 100: "))</p>
+<p># step 5 - Increse the number of attempts<br>&nbsp; &nbsp;attempts += 1</p>
+<p>&nbsp; &nbsp;<br># Step 6 - Provide feedback based on the guess<br>&nbsp; &nbsp;if guess &lt; random_target:<br>&nbsp; &nbsp; &nbsp; &nbsp;print("Too low! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp;if random_target - guess &lt;= 5:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("You're close! The number is just a few higher.")<br>&nbsp; &nbsp;elif guess &gt; random_target:<br>&nbsp; &nbsp; &nbsp; &nbsp;print("Too high! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp;if guess - random_target &lt;= 5:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("You're close! The number is just a few lower.")<br>&nbsp; &nbsp;else:<br>&nbsp; &nbsp; &nbsp; &nbsp;# This branch is executed when the guess is correct<br>&nbsp; &nbsp; &nbsp; &nbsp;print(f"Congratulations! You guessed the correct number {random_target} in {attempts} attempts.")<br>&nbsp; &nbsp; &nbsp; &nbsp;break &nbsp;# Exit the loop and end the game</p>
+<p># step 7 - initialize game<br>random_number_game()</p>
+</div>
+</body>
+</html>

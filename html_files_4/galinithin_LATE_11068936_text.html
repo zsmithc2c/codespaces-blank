@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Nithin Gali</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Nithin Gali</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import random&nbsp;&nbsp;</p>
+<p>#Generate a random number between 1 and 100<br>random = random.randint(1, 100)</p>
+<p>print("I have chosen a number between 1 and 100. Try to guess it.")</p>
+<p>#Loop to keep asking the user for guesses<br>while True:<br>&nbsp; &nbsp; #Ask the user to enter a guess<br>&nbsp; &nbsp; guess = input("Enter your guess: ")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Try to convert the guess to an integer<br>&nbsp; &nbsp; if guess.isdigit():<br>&nbsp; &nbsp; &nbsp; &nbsp; guess = int(guess)<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; #Check if the guess is correct<br>&nbsp; &nbsp; &nbsp; &nbsp; if guess == random:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("You guessed the number correctly")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; #If the guess is too high<br>&nbsp; &nbsp; &nbsp; &nbsp; elif guess &gt; random:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Your guess is too high. Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; #If the guess is too low<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Your guess is too low. Try again.")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Please enter a valid number.")</p>
+</div>
+</body>
+</html>

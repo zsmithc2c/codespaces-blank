@@ -1,0 +1,94 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Leo	Huynh</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Leo	Huynh</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>"""</span></div>
+<div><span>Create a program that plays a guessing game with the user. The program will choose a random number between 1 and 100, and then ask the user to guess the number.</span></div>
+<br>
+<div><span>If the user guesses correctly, the program congratulates the player and ends the game.</span></div>
+<div><span>If the user's guess is too high, the program tells them the answer is smaller and lets them guess again.</span></div>
+<div><span>If the user's guess is too low, the program tells them the answer is larger and lets them guess again.</span></div>
+<br>
+<div><span>IMPORT random</span></div>
+<br>
+<div><span>DEF game():</span></div>
+<div><span>&nbsp; &nbsp; num = random.Randint(1, 100)</span></div>
+<div><span>&nbsp; &nbsp; WHILE True:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; INPUT guess number</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; IF guess &lt; num:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PRINT answer is smaller</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; ELIF guess &gt; num:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PRINT answer is bigger</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; ELSE:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PRINT correct</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break</span></div>
+<br>
+<div><span>WHILE true:</span></div>
+<br>
+<div><span>INPUT ask user if they want to play a game</span></div>
+<div><span>IF yes:</span></div>
+<div><span>&nbsp; &nbsp; game()</span></div>
+<div><span>ELSE:</span></div>
+<div><span>&nbsp; &nbsp; BREAK</span></div>
+<br><br>
+<div><span>"""</span></div>
+<div><span># Import random to generate num from 1 to 100</span></div>
+<div><span>import</span> <span>random</span></div>
+<br>
+<div><span># Similar to problem two, I tried to break sanitization up into another function</span></div>
+<div><span>def</span> <span>invalidAnswer</span><span>(</span><span>answer</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># (I used f strings for problem 4 for the player to get a better response for their answer to try again)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"</span><span>{</span><span>answer</span><span>}</span><span> is not valid. Please enter an integer from 1 to 100."</span><span>)</span></div>
+<br>
+<div><span>def</span> <span>game</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span># generate number from 1 to 100 for guessing</span></div>
+<div><span>&nbsp; &nbsp; </span><span>num</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># Create loop to try again</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>: </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>input</span><span>(</span><span>"Guess a number from 1 to 100: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>int</span><span>(</span><span>guess</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>guess</span> <span>&lt;</span> <span>1</span> <span>or</span> <span>guess</span> <span>&gt;</span> <span>100</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>invalidAnswer</span><span>(</span><span>guess</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>invalidAnswer</span><span>(</span><span>guess</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if guess is smaller</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>guess</span> <span>&gt;</span> <span>num</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The number is smaller than </span><span>{</span><span>guess</span><span>}</span><span>."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if guess is greater</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>guess</span> <span>&lt;</span> <span>num</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The number is bigger than </span><span>{</span><span>guess</span><span>}</span><span>."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if guess is correct, prompt player is they want to play again</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"You got it correct, congratulations! The number was </span><span>{</span><span>guess</span><span>}</span><span>."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span># Main game loop</span></div>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>play</span> <span>=</span> <span>input</span><span>(</span><span>"Would you like to play a guessing game?: "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>play</span> <span>==</span> <span>'yes'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>game</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>play</span> <span>==</span> <span>'no'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; </span><span># if invalid answer</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Please respond with 'yes' or 'no'."</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

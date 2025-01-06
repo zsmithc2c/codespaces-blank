@@ -1,0 +1,102 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Halil Tunc</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Halil Tunc</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Terms:</span></div>
+<div><span># The program will calculate the area of a shape based on user input</span></div>
+<div><span># Shapes: Circle, Rectangle, Square, Triangle</span></div>
+<div><span># User provides the shape name and the required dimensions</span></div>
+<br>
+<div><span># Plan:</span></div>
+<div><span># Define the functions for area calculations</span></div>
+<div><span># Prompt the user for the needed numbers to plug into the equation</span></div>
+<div><span># Make sure the numbers the user enters arent negative</span></div>
+<div><span># Plug in the numbers the user entered into the equation</span></div>
+<br>
+<div><span># Formulas:</span></div>
+<div><span># Circle: Area = pi * radius^2</span></div>
+<div><span># Rectangle: Area = length * width</span></div>
+<div><span># Square: Area = side^2</span></div>
+<div><span># Triangle: Area = 0.5 * base * height</span></div>
+<br>
+<div><span>import</span><span> math</span></div>
+<br>
+<div><span># Function to calculate the area of the given shape</span></div>
+<div><span>def</span> <span>calculate_area</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>I can calculate the area of a shape for you.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Which shape do you want me to calculate the area of?</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Please pick from: circle, rectangle, square, and triangle</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># Get user input for the shape</span></div>
+<div><span>&nbsp; &nbsp; shape </span><span>=</span> <span>input(</span><span>"</span><span>Enter the name of the shape: </span><span>"</span><span>)</span><span>.</span><span>lower()</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># Handling different shapes</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> shape </span><span>==</span> <span>"</span><span>circle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; radius </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the radius of the circle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># The radius shouldn't be less than 0</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> radius </span><span>&lt;</span> <span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The radius cannot be negative. Please try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> math</span><span>.</span><span>pi </span><span>*</span><span> radius </span><span>**</span> <span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the circle is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># When given a ValueError specifically the code should tell the user that they need to enter a number for the radius.</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Invalid input. Please enter a number for the radius.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"</span><span>rectangle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the length of the rectangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the width of the rectangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> length </span><span>&lt;</span> <span>0</span> <span>or</span><span> width </span><span>&lt;</span> <span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The length and width cannot be negative. Please try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># We are able to keeep using the area variable because for a different shape the user needs to run the instance again, so the variables aren't getting mixed up.</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> length </span><span>*</span><span> width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the rectangle is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Invalid input. Please enter numbers for length and width.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"</span><span>square</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; side </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the side length of the square: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> side </span><span>&lt;</span> <span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The side length cannot be negative. Please try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># All the sides in a square are equal to each other so we can just square the length of one side to get the area.</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> side </span><span>**</span> <span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the square is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Invalid input. Please enter a number for the side length.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"</span><span>triangle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; base </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the base of the triangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the height of the triangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> base </span><span>&lt;</span> <span>0</span> <span>or</span><span> height </span><span>&lt;</span> <span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The base and height cannot be negative. Please try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span> <span>0.5</span> <span>*</span><span> base </span><span>*</span><span> height</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the triangle is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Invalid input. Please enter numbers for base and height.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Invalid shape. Please choose from circle, rectangle, square, or triangle.</span><span>"</span><span>)</span></div>
+<br>
+<div><span># Running the main program </span></div>
+<div><span>calculate_area()</span></div>
+</div>
+</div>
+</body>
+</html>

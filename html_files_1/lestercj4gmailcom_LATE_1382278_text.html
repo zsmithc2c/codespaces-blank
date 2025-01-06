@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: lestercj4@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: lestercj4@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>check_palindrome</span><span>(</span><span>word</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>alpha</span> <span>=</span> <span>"abcdefghijklmnopqrstuvwxyz"</span></div>
+<div><span>&nbsp; &nbsp; </span><span># make a string of all lowercase letters</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>word</span> <span>=</span> <span>word</span><span>.lower()</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>new_word</span> <span>=</span> <span>""</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>char</span> <span>in</span> <span>word</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>char</span> <span>in</span> <span>alpha</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>new_word</span> <span>+=</span> <span>char</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; </span><span># remove all non-alphabetic characters</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>word</span> <span>=</span> <span>new_word</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>reverse</span> <span>=</span> <span>list</span><span>(</span><span>word</span><span>) </span><span># convert to list</span></div>
+<div><span>&nbsp; &nbsp; </span><span>reverse</span><span>.</span><span>reverse</span><span>() </span><span># use builtin reverse function of list</span></div>
+<div><span>&nbsp; &nbsp; </span><span>reverse</span> <span>=</span> <span>""</span><span>.</span><span>join</span><span>(</span><span>reverse</span><span>) </span><span># convert back to string</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># handle validation and print and return the correct things</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>word</span> <span>==</span> <span>reverse</span> <span>and</span> <span>word</span> <span>!=</span> <span>""</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The string is a palindrome"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The string is not a palindrome"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>word</span> <span>=</span> <span>input</span><span>(</span><span>"Enter a word: "</span><span>)</span></div>
+<div><span>check_palindrome</span><span>(</span><span>word</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

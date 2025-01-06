@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Samantha	Yengst</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Samantha	Yengst</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># ask to calc shape</p>
+<p><br>#only 4 different shapes to calc<br># each shape different function? kinda-<br># can double up square and rectangle<br># fun to calc area of quadlaterial (b, h)<br># A = b * h</p>
+<p># calc area of sq<br># call quad function but side = b and side = h</p>
+<p># calc area of triangle<br># could do base * 1/2 = b, height = h but don't want to confuse others<br># A = (1/2)b*h</p>
+<p>import math</p>
+<p>&nbsp;</p>
+<p># Non-specific commentary<br># prompt function<br>def prompt():<br>&nbsp; &nbsp; print("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?")<br>&nbsp; &nbsp; u_shape = pick_shape() # Will always return valid input from user<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; indent()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; area = find_formula(u_shape)<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; indent()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; print(f"Area of {u_shape} is {area}.")<br>&nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p>def pick_shape():<br>&nbsp; &nbsp; shapes = ["triangle", "rectangle", "square", "circle"]<br>&nbsp; &nbsp; u_shape = ""<br>&nbsp; &nbsp; while not(u_shape in shapes): # validate user input<br>&nbsp; &nbsp; &nbsp; &nbsp; u_shape = input("Please enter the name of a shape. [Triangle, Rectangle, Square, Circle]: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; u_shape = u_shape.lower()<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; return u_shape</p>
+<p><br># function that takes in the name of shape and figures out what functions to call to get inputs and calc and stuff<br>def find_formula(shape):<br>&nbsp; &nbsp; a = 0<br>&nbsp; &nbsp; if (shape == "triangle"): # call triangle functions<br>&nbsp; &nbsp; &nbsp; &nbsp; b, h = get_user_inputs_tri()<br>&nbsp; &nbsp; &nbsp; &nbsp; a = calc_triangle(b, h)<br>&nbsp; &nbsp; elif (shape == "circle"): # call circle functions<br>&nbsp; &nbsp; &nbsp; &nbsp; r = get_user_inputs_cir()<br>&nbsp; &nbsp; &nbsp; &nbsp; a = calc_cir(r)<br>&nbsp; &nbsp; elif (shape == "square"): # call square functions<br>&nbsp; &nbsp; &nbsp; &nbsp; s = get_user_inputs_sq()<br>&nbsp; &nbsp; &nbsp; &nbsp; a = calc_rectangle(s, s)<br>&nbsp; &nbsp; elif (shape == "rectangle"): # call rectangle functions<br>&nbsp; &nbsp; &nbsp; &nbsp; l, w = get_user_inputs_rectangle()<br>&nbsp; &nbsp; &nbsp; &nbsp; a = calc_rectangle(l, w)<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Something went wrong. Please try again.") # if all other conditions fail.<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; return a</p>
+<p><br># If they choose circle, prompt for the radius.<br># If they choose rectangle, prompt for the length and width.<br># If they choose square, prompt for the side length.<br># If they choose triangle, prompt for the base and height.<br>def get_user_inputs_tri():<br>&nbsp; &nbsp; b = good_number("base", "Triangle")<br>&nbsp; &nbsp; h = good_number("height", "Triangle")<br>&nbsp; &nbsp; return b, h</p>
+<p>def get_user_inputs_cir():<br>&nbsp; &nbsp; r = good_number("radius", "Circle")<br>&nbsp; &nbsp; return r</p>
+<p>def get_user_inputs_rectangle():<br>&nbsp; &nbsp; l = good_number("length", "Rectangle")<br>&nbsp; &nbsp; w = good_number("width", "Rectangle")<br>&nbsp; &nbsp; return l, w</p>
+<p>def get_user_inputs_sq():<br>&nbsp; &nbsp; s = good_number("side length", "Square")<br>&nbsp; &nbsp; return s</p>
+<p># function to make sure user inputs a good number<br>def good_number(var, shape):<br>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"What is the {var} of the {shape}?: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; num = input("(Please enter a number greater than 0): ")<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num = int(num)<br>&nbsp; &nbsp; &nbsp; &nbsp; except:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Something went wrong. Please try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print()<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (num &lt; 1):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please chose a number greater than 0.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print()<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return num</p>
+<p># Calc areas when given lengths<br>def calc_triangle(b, h):<br>&nbsp; &nbsp; return (1/2)*b*h # A = (1/2)bh</p>
+<p>def calc_rectangle(l, w):<br>&nbsp; &nbsp; return l*w # A = l * w</p>
+<p>def calc_cir(r):<br>&nbsp; &nbsp; return math.pi *(r*r) # A = pi(r^2)</p>
+<p># for beautiful formatting<br>def indent():<br>&nbsp; &nbsp; print()<br>&nbsp; &nbsp; print("~~~")<br>&nbsp; &nbsp; print()</p>
+<p>prompt() # let the magic begin</p>
+</div>
+</body>
+</html>

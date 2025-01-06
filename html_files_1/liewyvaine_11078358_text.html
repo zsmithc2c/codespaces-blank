@@ -1,0 +1,51 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Yvaine Liew</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Yvaine Liew</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>Here is the link: <a href="https://codesandbox.io/p/devbox/9p2r74" target="_blank">https://codesandbox.io/p/devbox/9p2r74</a>&nbsp;</p>
+<p>Or you can look at the code:</p>
+<p>* Note: couldn't do tabs</p>
+<div>
+<div><span>'''</span></div>
+<div><span>Problem - Create a function to check if the given string is a palindrome</span></div>
+<br>
+<div><span>Need to get rid of capitalization, punctuation, and empty spaces.</span></div>
+<br>
+<div><span>function</span></div>
+<br>
+<div><span>make it lower</span></div>
+<div><span>replace spaces and punctuation with empty from a string with it all</span></div>
+<br>
+<div><span>check if the string is equal to it reversed</span></div>
+<div><span>if so return true else return false</span></div>
+<div><span>'''</span></div>
+<br>
+<div><span>def</span> <span>is_palindrome</span><span>(</span><span>s</span><span>):</span></div>
+<div><span># Making it all lowercase</span></div>
+<div><span> s </span><span>=</span><span> s</span><span>.</span><span>lower()</span></div>
+<br>
+<div><span># All the things to replace</span></div>
+<div><span> replacing </span><span>=</span> <span>"</span><span>''!()-[]</span><span>{}</span><span> ;:\"\,&lt;&gt;./?@#$%^&amp;*_~''</span><span>"</span></div>
+<br>
+<div><span># Replacing it</span></div>
+<div><span>for</span><span> ele </span><span>in</span><span> replacing</span><span>:</span></div>
+<div><span> s </span><span>=</span><span> s</span><span>.</span><span>replace(ele</span><span>,</span> <span>""</span><span>)</span></div>
+<br>
+<div><span># Checking and returning if it is a palindrome</span></div>
+<div><span>if</span><span> s </span><span>==</span><span> s[</span><span>::</span><span>-</span><span>1</span><span>]</span><span>:</span></div>
+<div><span>return</span> <span>"</span><span>The string is a palindrome.</span><span>"</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>return</span> <span>"</span><span>The string is not a palindrome.</span><span>"</span></div>
+</div>
+</div>
+</body>
+</html>

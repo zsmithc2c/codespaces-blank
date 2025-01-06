@@ -1,0 +1,68 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Shreya Sreekant</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Shreya Sreekant</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#TASK: Play a guessing game with the user using numbers from 1-100.</span></div>
+<br>
+<div><span>#EDGE CASE: Empty string as an input or guessing out of the 1-100 range.</span></div>
+<br>
+<div><span>#PSUEDOCODE:</span></div>
+<div><span># int var num takes input </span></div>
+<div><span># int var comp_guess contains computer input</span></div>
+<div><span># IF num &gt; comp_guess</span></div>
+<div><span># &nbsp; print ('guess too high')</span></div>
+<div><span># ELIF num &lt; comp_guess</span></div>
+<div><span># &nbsp; print ('guess too low')</span></div>
+<div><span># ELIF num = comp_guess</span></div>
+<div><span># &nbsp; print ('correct guess')</span></div>
+<div><span># ELIF num &lt; 0 or num &gt; 100</span></div>
+<div><span># &nbsp; print ('guess is outside of range')</span></div>
+<div><span># ELIF num = ''</span></div>
+<div><span># &nbsp; print('please guess a valid number)</span></div>
+<br>
+<div><span>import</span><span> random</span></div>
+<br>
+<div><span>print(</span><span>'</span><span>Let\'s play a guessing game! Try to guess the same number as me, in the range 1-100:</span><span>'</span><span>)</span></div>
+<div><span>comp_guess </span><span>=</span><span> random</span><span>.</span><span>randint(</span><span>1</span><span>,</span> <span>100</span><span>)</span></div>
+<br>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#Get the user's guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; num </span><span>=</span> <span>input(</span><span>"</span><span>Enter your guess: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> num </span><span>==</span> <span>''</span><span>:</span><span> &nbsp;</span><span>#Check for empty string</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Please guess a valid number.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; num </span><span>=</span> <span>int(num)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#Check if the guess is within the 1-100 range</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> num </span><span>&lt;</span> <span>1</span> <span>or</span><span> num </span><span>&gt;</span> <span>100</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Please enter a number that is within the 1-100 range.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#Check if the guess is correct, too high, or too low</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> num </span><span>==</span><span> comp_guess</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Congrats, you guessed the right number!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span><span> num </span><span>&lt;</span><span> comp_guess</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your guess is too low, try again!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your guess is too high, try again!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Please enter a number between 1 and 100.</span><span>"</span><span>)</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span></div>
+</div>
+</div>
+</body>
+</html>

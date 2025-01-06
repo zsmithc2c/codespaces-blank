@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Benjamin DeGraff</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Benjamin DeGraff</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Create a program that says: "I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?" and then asks the user to type in the name of a shape (e.g., triangle, rectangle, square, circle).<br>#Then, depending on which shape the user types, the program will ask for the relevant measurements:<br>#If they choose circle, prompt for the radius.<br>#If they choose rectangle, prompt for the length and width.<br>#If they choose square, prompt for the side length.<br>#If they choose triangle, prompt for the base and height.<br>#Use the correct formula to calculate and return the area of the chosen shape.</p>
+<p>#User input needed to get answers from user<br>#Based on answers, calculate the area using the chosen formula<br>#Input: string/int<br>#Output: int</p>
+<p>PI = 3.14159 #Constant for PI</p>
+<p>def area_calc():<br>&nbsp; &nbsp; #Get the shape<br>&nbsp; &nbsp; shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?\n[1] Circle\n[2] Rectangle\n[3] Square\n[4] Triangle\n&gt; ")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Check which shape, if none then return invalid input (Could also use try/catch system instead)<br>&nbsp; &nbsp; if shape == "1":<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = int(input("Radius? "))<br>&nbsp; &nbsp; &nbsp; &nbsp; return radius * radius * PI<br>&nbsp; &nbsp; elif shape == "2":<br>&nbsp; &nbsp; &nbsp; &nbsp; length = int(input("Length? "))<br>&nbsp; &nbsp; &nbsp; &nbsp; width = int(input("Width? "))<br>&nbsp; &nbsp; &nbsp; &nbsp; return length * width<br>&nbsp; &nbsp; elif shape == "3":<br>&nbsp; &nbsp; &nbsp; &nbsp; length = int(input("Length? "))<br>&nbsp; &nbsp; &nbsp; &nbsp; return length * length<br>&nbsp; &nbsp; elif shape == "4":<br>&nbsp; &nbsp; &nbsp; &nbsp; base = int(input("Base? "))<br>&nbsp; &nbsp; &nbsp; &nbsp; height = int(input("Height? "))<br>&nbsp; &nbsp; &nbsp; &nbsp; return 0.5 * base * height<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "invalid input"</p>
+<p><br>area = area_calc()<br>print(f"The area is {area}.")</p>
+</div>
+</body>
+</html>

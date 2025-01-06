@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Alan	Morillo</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Alan	Morillo</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>import random</div>
+<div>def number_guessing_game(target):</div>
+<div>&nbsp; &nbsp; try: # get user input</div>
+<div>&nbsp; &nbsp; guess = int(input("Guess a number between 1 and 100: "))</div>
+<div>&nbsp; &nbsp; if(guess &gt; target):</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; print("Lower") # if guess is greater than target, let the user know they need a lower guess</div>
+<div>&nbsp; &nbsp; elif(guess &lt; target):</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; print("Higher")# if guess is less than target, let the user know they need a higher guess</div>
+<div>&nbsp; &nbsp; else: # Otherwise, they must have guessed the correct number</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; print("You got it!")</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; return # End</div>
+<div>&nbsp; &nbsp; except ValueError:</div>
+<div>&nbsp; &nbsp; &nbsp; print("Invalid type.") # Type is invalid because a non-integer was inputed</div>
+<div><span> &nbsp; return number_guessing_game(target) # uses recursion until the player guesses the number</span></div>
+<div>#Choose random number and play the game</div>
+<div>num = random.randint(1, 100)</div>
+<div>number_guessing_game(num)</div>
+</div>
+</body>
+</html>

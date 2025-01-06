@@ -1,0 +1,83 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Yvaine Liew</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Yvaine Liew</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>This is the link. Same as before but in another file: <a href="https://codesandbox.io/p/github/yvaine8888/DecemberCodingPractice/main" target="_blank">https://codesandbox.io/p/github/yvaine8888/DecemberCodingPractice/main</a>&nbsp;</p>
+<p><br>This is the code. Can ident now for some reason:</p>
+<div>
+<div><span>'''</span></div>
+<div><span>Problem - Create a program that gets the area based on the shape.</span></div>
+<br>
+<div><span>function</span></div>
+<div><span>get the shape</span></div>
+<br>
+<div><span>use if, elif, and else statements to calculate the area</span></div>
+<br>
+<div><span>then you return the area (I'm doing it as a string)</span></div>
+<div><span>Make sure to return an error message if input is wrong like incorrect shape or not a number</span></div>
+<div><span>'''</span></div>
+<br>
+<div><span>def</span> <span>get_area</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Asking for the shape to calculate the area</span></div>
+<div><span>&nbsp; &nbsp; shape </span><span>=</span> <span>input(</span><span>"</span><span>I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; shape </span><span>=</span><span> shape</span><span>.</span><span>lower()</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Calculating the area based on shape and return error messages.</span></div>
+<div><span>&nbsp; &nbsp; area </span><span>=</span> <span>0</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> shape </span><span>==</span> <span>"</span><span>circle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; radius </span><span>=</span> <span>input(</span><span>"</span><span>Please enter the radius: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>is_not_num(radius)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>I'm sorry, but this is not valid.</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; radius </span><span>=</span> <span>float(radius)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> radius</span><span>*</span><span>radius</span><span>*</span><span>3.14</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"</span><span>rectangle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; length </span><span>=</span> <span>input(</span><span>"</span><span>Please enter the length: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>is_not_num(length)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>I'm sorry, but this is not valid.</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; width </span><span>=</span> <span>input(</span><span>"</span><span>Please enter the width: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>is_not_num(width)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>I'm sorry, but this is not valid.</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; length </span><span>=</span> <span>float(length)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; width </span><span>=</span> <span>float(width)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> length </span><span>*</span><span> width</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"</span><span>square</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; side_length </span><span>=</span> <span>input(</span><span>"</span><span>Please enter the side-length: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>is_not_num(side_length)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>I'm sorry, but this is not valid.</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> side_length </span><span>*</span><span> side_length</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"</span><span>triangle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; base </span><span>=</span> <span>input(</span><span>"</span><span>Please enter the base: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>is_not_num(base)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>I'm sorry, but this is not valid.</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; height </span><span>=</span> <span>input(</span><span>"</span><span>Please enter the height: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>is_not_num(height)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>I'm sorry, but this is not valid.</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; base </span><span>=</span> <span>float(base)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; height </span><span>=</span> <span>float(height)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> base </span><span>*</span><span> height </span><span>/</span> <span>2</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>I'm sorry, but it is an invalid shape. Please check spelling.</span><span>"</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># Returning the area as a string.</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>f</span><span>"The area of a </span><span>{</span><span>shape</span><span>}</span><span> is </span><span>{</span><span>area</span><span>}</span><span>."</span></div>
+<br>
+<div><span># This returns if it is not a num for error messages.</span></div>
+<div><span>def</span> <span>is_not_num</span><span>(</span><span>str</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; str </span><span>=</span> <span>float(str)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+</div>
+</div>
+</body>
+</html>

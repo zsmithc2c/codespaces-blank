@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Noora Fashho</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Noora Fashho</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>unique_characters</span><span>(</span><span>string</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Uses a list to track the letters seen</span></div>
+<div><span>&nbsp; &nbsp; </span><span>seen</span><span> = []</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>#iterates through every letter in the string and if letter in seen, returns false</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>letter</span> <span>in</span> <span>string</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>letter</span> <span>in</span> <span>seen</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#if letter in seen, then letter is appended to the list</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>seen</span><span>.</span><span>append</span><span>(</span><span>letter</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span>#gets input from user</span></div>
+<div><span>user_input</span><span> = </span><span>input</span><span>(</span><span>"Enter a string to check if all characters are unique: "</span><span>).</span><span>strip</span><span>()</span></div>
+<br><br>
+<div><span># Checks if all letters are unique and prints the answer</span></div>
+<div><span>if</span> <span>unique_characters</span><span>(</span><span>user_input</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"All characters in the string are unique."</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The string has duplicate characters."</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

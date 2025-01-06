@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: apkumar879@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: apkumar879@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Palindrome Checker Program</p>
+<p># Step 1: Understand the problem<br># A palindrome reads the same forward and backward, ignoring spaces, punctuation, and capitalization.</p>
+<p># Step 2: Create a plan<br># 1. Normalize the input: Remove spaces, punctuation, and make it lowercase.<br># 2. Check if the normalized string is equal to its reverse.<br># 3. Handle edge cases like empty strings.</p>
+<p># Step 3: Algorithm implementation<br>import string</p>
+<p>def is_palindrome(input_string):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Function to check if a given string is a palindrome.<br>&nbsp; &nbsp; Args:<br>&nbsp; &nbsp; &nbsp; &nbsp; input_string (str): The input string to check.<br>&nbsp; &nbsp; Returns:<br>&nbsp; &nbsp; &nbsp; &nbsp; str: Message stating whether the string is a palindrome.<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; # Normalize the string<br>&nbsp; &nbsp; # Remove spaces and punctuation, and convert to lowercase<br>&nbsp; &nbsp; normalized = ''.join(<br>&nbsp; &nbsp; &nbsp; &nbsp; char.lower() for char in input_string if char.isalnum()<br>&nbsp; &nbsp; )<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Check if the string is the same as its reverse<br>&nbsp; &nbsp; if normalized == normalized[::-1]:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is a palindrome."<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome."</p>
+<p><br># Step 4: Execute with examples<br># Example Inputs<br>examples = ["Racecar", "Hello", "A man, a plan, a canal: Panama", "", "12321", "12345"]</p>
+<p>for example in examples:<br>&nbsp; &nbsp; print(f"Input: \"{example}\"")<br>&nbsp; &nbsp; print(f"Output: {is_palindrome(example)}\n")</p>
+</div>
+</body>
+</html>

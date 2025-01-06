@@ -1,0 +1,28 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Hector	Perez Ramirez</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Hector	Perez Ramirez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># based on my understanding of the problem i need to ask the user for a type of shape and then ask for the right measurments to calculate the area of the shape.</p>
+<p># plan:<br># 1. ask the user for the type of shape<br># 2. determine right calculation based on shape<br># 3. ask for the right measurments and print the output. (the output should be area)</p>
+<p>#-------------------------------</p>
+<p>import math &nbsp;# To use math.pi for accurate circle calculations</p>
+<p>def calculate_area(shape):<br>&nbsp; &nbsp; # Check the shape and calculate the area accordingly<br>&nbsp; &nbsp; if shape.lower() == "circle":<br>&nbsp; &nbsp; &nbsp; &nbsp; # For circle, we need the radius<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = float(input("Please enter the radius of the circle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = math.pi * radius**2 &nbsp;# Formula for the area of a circle<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the circle is: {area:.2f}")</p>
+<p>&nbsp; &nbsp; elif shape.lower() == "rectangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; # For rectangle, we need length and width<br>&nbsp; &nbsp; &nbsp; &nbsp; length = float(input("Please enter the length of the rectangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; width = float(input("Please enter the width of the rectangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = length * width &nbsp;# Formula for the area of a rectangle<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the rectangle is: {area:.2f}")</p>
+<p>&nbsp; &nbsp; elif shape.lower() == "square":<br>&nbsp; &nbsp; &nbsp; &nbsp; # For square, we need the side length<br>&nbsp; &nbsp; &nbsp; &nbsp; side = float(input("Please enter the side length of the square: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = side * side &nbsp;# Formula for the area of a square<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the square is: {area:.2f}")</p>
+<p>&nbsp; &nbsp; elif shape.lower() == "triangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; # For triangle, we need base and height<br>&nbsp; &nbsp; &nbsp; &nbsp; base = float(input("Please enter the base of the triangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; height = float(input("Please enter the height of the triangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = 0.5 * base * height &nbsp;# Formula for the area of a triangle<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the triangle is: {area:.2f}")</p>
+<p>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; # If the shape entered is not recognized<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Sorry, I don't know how to calculate the area of that shape.")</p>
+<p>def main():<br>&nbsp; &nbsp; # Welcome message and asking the user for the shape<br>&nbsp; &nbsp; print("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?")<br>&nbsp; &nbsp; shape = input("Please enter the name of the shape (e.g., circle, rectangle, square, triangle): ").strip()</p>
+<p>&nbsp; &nbsp; # Call the function to calculate the area based on the user input<br>&nbsp; &nbsp; calculate_area(shape)</p>
+<p># Run the program<br>if __name__ == "__main__":<br>&nbsp; &nbsp; main()</p>
+</div>
+</body>
+</html>

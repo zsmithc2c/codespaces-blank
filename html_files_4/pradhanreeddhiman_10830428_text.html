@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Reeddhiman Pradhan</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Reeddhiman Pradhan</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Import the random class&nbsp;<br>import random</p>
+<p># Generate a random number between 1 and 100<br>random_num = random.randint(1, 100)</p>
+<p># Welcome the user to the number guessing game<br>print("Welcome to the number guessing game! If you guess the right number, you win! ")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br># Let the game begin<br>while True:<br>&nbsp; &nbsp; try:&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; # Ask for user input<br>&nbsp; &nbsp; &nbsp; &nbsp; user_num = int(input("Guess a number between 1 and 100 (inclusive): "))</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # Check whether user guess is too high, low, or the right number<br>&nbsp; &nbsp; &nbsp; &nbsp; if user_num &gt; random_num:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Your guess is too high, try a lower number")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; elif user_num &lt; random_num:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Your guess is too low, try a higher number")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Congratulations, you guessed the correct number: " + str(user_num))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break # Exit out of the game if the random number is guessed correctly<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Handles invalid input<br>&nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("This is not a number! Please enter a number between 1 and 100")</p>
+</div>
+</body>
+</html>

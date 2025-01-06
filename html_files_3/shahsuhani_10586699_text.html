@@ -1,0 +1,25 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Suhani Shah</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Suhani Shah</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def all_unique_characters(input_string):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Determine whether all characters in a given string are unique.</p>
+<p>&nbsp; &nbsp; Args:<br>&nbsp; &nbsp; &nbsp; &nbsp; input_string (str): The string to check.</p>
+<p>&nbsp; &nbsp; Returns:<br>&nbsp; &nbsp; &nbsp; &nbsp; bool: True if all characters are unique, False otherwise.<br>&nbsp; &nbsp; """</p>
+<p>&nbsp; &nbsp; # Step 1: Handle edge cases like empty strings or strings with spaces<br>&nbsp; &nbsp; if not input_string:<br>&nbsp; &nbsp; &nbsp; &nbsp; return True &nbsp;# An empty string has all unique characters</p>
+<p>&nbsp; &nbsp; # Step 2: Normalize the string (remove spaces if they don't count as unique characters)<br>&nbsp; &nbsp; cleaned_string = input_string.replace(" ", "")</p>
+<p>&nbsp; &nbsp; # Step 3: Use a set to track seen characters<br>&nbsp; &nbsp; seen_characters = set()</p>
+<p>&nbsp; &nbsp; # Step 4: Iterate through each character in the cleaned string<br>&nbsp; &nbsp; for char in cleaned_string:<br>&nbsp; &nbsp; &nbsp; &nbsp; # Step 5: Check if the character is already in the set<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False &nbsp;# Duplicate character found<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; # Step 6: Add the character to the set<br>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char)</p>
+<p>&nbsp; &nbsp; # Step 7: If no duplicates are found, return True<br>&nbsp; &nbsp; return True</p>
+<p># Example usage<br>print(all_unique_characters("abcdef")) &nbsp;# Output: True<br>print(all_unique_characters("hello")) &nbsp; # Output: False</p>
+</div>
+</body>
+</html>

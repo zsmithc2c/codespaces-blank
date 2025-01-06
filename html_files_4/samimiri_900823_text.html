@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Sami Miri</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Sami Miri</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span> <span>random</span></div>
+<br>
+<div><span>def</span> <span>guessing_game</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Welcome to the Guessing Game!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>number_to_guess</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>attempts</span> <span>=</span> <span>0</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>user_guess</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Guess a number between 1 and 100: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>attempts</span> <span>+=</span> <span>1</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>user_guess</span> <span>&lt;</span> <span>1</span> <span>or</span> <span>user_guess</span> <span>&gt;</span> <span>100</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Please guess a number within the range of 1 to 100."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>user_guess</span> <span>&lt;</span> <span>number_to_guess</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too low! Try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>user_guess</span> <span>&gt;</span> <span>number_to_guess</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too high! Try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"Congratulations! You guessed the number in </span><span>{</span><span>attempts</span><span>}</span><span> attempts."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input. Please enter a valid number."</span><span>)</span></div>
+<br>
+<div><span># Run the game</span></div>
+<div><span>if</span> <span>__name__</span> <span>==</span> <span>"__main__"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>guessing_game</span><span>()</span></div>
+</div>
+</div>
+</body>
+</html>

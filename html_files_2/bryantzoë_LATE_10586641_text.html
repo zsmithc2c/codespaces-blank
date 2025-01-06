@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Zoë	Bryant</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Zoë	Bryant</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><code>'''</code><br><code>understand: find the area of different shapes</code></p>
+<p><code>clues: find out what the shape is; each shapes will need different attibutes and use different equations to calculate the area</code></p>
+<p><code>assemble:&nbsp;</code><br><code>INPUT type of shape</code><br><code>&nbsp; &nbsp; IF shape is a square, a triangle, a rectangle or a circle</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; INPUT needed attributes of shape (ex. base and height of the triangle)</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; calculate the area with the equation (ex. base*height*0.5 )</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; PRINT area</code><br><code>&nbsp; &nbsp; ELSE</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; invalid input</code><br><code>'''</code></p>
+<p><code>#possible edge cases: different units</code></p>
+<p><code>print("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?")</code><br><code>shape_type = input("What shape would you like to find the area of? ")</code></p>
+<p><code>if shape_type == 'circle':</code><br><code>&nbsp; &nbsp; radius = float(input("What is the radius of the circle? "))</code><br><code>&nbsp; &nbsp; circle_area = 2*3.1415962*radius</code><br><code>&nbsp; &nbsp; print(f'circle area = {circle_area} units squared')</code></p>
+<p><code>elif shape_type == 'rectangle':</code><br><code>&nbsp; &nbsp; length = float(input("What is the length of the rectangle? "))</code><br><code>&nbsp; &nbsp; width = float(input("What is the width of the rectangle? "))</code><br><code>&nbsp; &nbsp; rectangle_area = length*width</code><br><code>&nbsp; &nbsp; print(f'rectangle area = {rectangle_area} units squared')</code></p>
+<p><code>elif shape_type == 'square':</code><br><code>&nbsp; &nbsp; side_length = float(input("What is the length of the square's sides? "))</code><br><code>&nbsp; &nbsp; square_area = side_length*side_length</code><br><code>&nbsp; &nbsp; print(f'sqaure area = {square_area} units squared')</code></p>
+<p><code>elif shape_type == 'triangle':</code><br><code>&nbsp; &nbsp; base = float(input("What is the base of the triangle? "))</code><br><code>&nbsp; &nbsp; height = float(input("What is the height of the triangle? "))</code><br><code>&nbsp; &nbsp; triangle_area = base*height*0.5</code><br><code>&nbsp; &nbsp; print(f'triangle area = {triangle_area} units squared')</code></p>
+<p><code>else:</code><br><code>&nbsp; &nbsp; print("Sorry, your input is invalid. Please try again.")</code></p>
+</div>
+</body>
+</html>

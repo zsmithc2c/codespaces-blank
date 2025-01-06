@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: David Chinea</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: David Chinea</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?")</div>
+<div>area = areaCalculator(shape)</div>
+<div>print(f"The area of your {shape} is {area}")</div>
+<div>def areaCalculator(shape):</div>
+<div><span>&nbsp; &nbsp; area = 0</span></div>
+<div><span>&nbsp;&nbsp; &nbsp;if shape = "circle":</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; radius = input("Input a radius: ")</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; area = math.pi * pow(radius, 2) #area of a circle is (pi)(r^2)</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; elif shape = "rectangle":</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; length = input("Input a length: ")</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; width = input("Input a width: ")&nbsp;&nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; area = length * width #area of a rectangle is w*l</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; elif shape = "square":</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; side = input("Input a side length: ")</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; area = pow(side, 2) #area of a square is s^2</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; elif shape = "triangle":</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; base = input("Input a base: ")</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; height = input("Input a height: ")</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; area = .5 * base * height #area of a triangle is (1/2)(b*h)</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; else:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; print("Not a shape.")</span></div>
+<div><span>&nbsp; &nbsp; &nbsp;&nbsp; return area</span></div>
+</div>
+</body>
+</html>

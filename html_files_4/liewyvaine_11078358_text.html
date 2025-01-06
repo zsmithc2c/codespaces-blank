@@ -1,0 +1,60 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Yvaine Liew</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Yvaine Liew</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>Link:<a href="https://codesandbox.io/p/github/yvaine8888/DecemberCodingPractice/draft/autumn-hill"> https://codesandbox.io/p/github/yvaine8888/DecemberCodingPractice/draft/autumn-hill&nbsp;</a></p>
+<p>Code:</p>
+<div>
+<div><span>'''</span></div>
+<div><span>Problem - Create a program to play a number guessing game.</span></div>
+<br>
+<div><span>get a random 1-100</span></div>
+<br>
+<div><span>create a while loop that keeps on asking the user for a number 1-100</span></div>
+<div><span>inside the loop</span></div>
+<div><span>if not a number say so then continue</span></div>
+<br>
+<div><span>if correct, break</span></div>
+<div><span>if more than 100 or less than 1, tell so</span></div>
+<div><span>if greater, tell smaller</span></div>
+<div><span>if smaller, tell greater</span></div>
+<div><span>'''</span></div>
+<div><span>import</span><span> random</span></div>
+<div><span># Getting the correct number</span></div>
+<div><span>num </span><span>=</span><span> random</span><span>.</span><span>randint(</span><span>1</span><span>,</span> <span>100</span><span>)</span></div>
+<br>
+<div><span># The while loop that allows the user to guess and prints when the input is incorrect or correct.</span></div>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print()</span></div>
+<div><span>&nbsp; &nbsp; </span><span># The user's guess</span></div>
+<div><span>&nbsp; &nbsp; guess </span><span>=</span> <span>input(</span><span>"</span><span>Please guess a number 1-100: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Printing error if the input is not a number else make it an integer</span></div>
+<div><span>&nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; guess </span><span>=</span> <span>int(guess)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Please guess a valid number next time.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># Tell if the number is corect or incorrect and print messages based on that.</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> guess </span><span>==</span><span> num</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Congratulations! You guessed the right number.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> guess </span><span>&gt;</span> <span>100</span> <span>or</span><span> guess </span><span>&lt;</span> <span>1</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Please guess a number 1-100 next time.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> guess </span><span>&gt;</span><span> num</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your guess is too high. Try a smaller number.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Your guess is too low. Try a larger number.</span><span>"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

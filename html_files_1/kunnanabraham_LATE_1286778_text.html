@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Abraham Kunnan</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Abraham Kunnan</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Function to check if a string is a palindrome<br>def is_palindrome(input_string):<br>&nbsp; &nbsp; # Remove spaces, punctuation, and convert to lowercase<br>&nbsp; &nbsp; import string<br>&nbsp; &nbsp; cleaned_string = ''.join(char.lower() for char in input_string if char.isalnum())</p>
+<p>&nbsp; &nbsp; # Compare the cleaned string with its reverse<br>&nbsp; &nbsp; return cleaned_string == cleaned_string[::-1]</p>
+<p># Main function to test the program<br>def main():<br>&nbsp; &nbsp; # Get user input<br>&nbsp; &nbsp; input_string = input("Enter a string to check if it's a palindrome: ").strip()</p>
+<p>&nbsp; &nbsp; # Handle the edge case of an empty string<br>&nbsp; &nbsp; if not input_string:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The input string is empty. Please enter a valid string.")<br>&nbsp; &nbsp; &nbsp; &nbsp; return</p>
+<p>&nbsp; &nbsp; # Check if the string is a palindrome and display the result<br>&nbsp; &nbsp; if is_palindrome(input_string):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is a palindrome.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is not a palindrome.")</p>
+<p># Run the program<br>if __name__ == "__main__":<br>&nbsp; &nbsp; main()</p>
+</div>
+</body>
+</html>

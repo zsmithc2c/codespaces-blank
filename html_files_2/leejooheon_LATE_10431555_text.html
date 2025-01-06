@@ -1,0 +1,47 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Jooheon	Lee</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Jooheon	Lee</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div>
+<div>
+<div><span># have a conditional for all the different shapes and ask for their according measurements </span></div>
+<div><span>def</span> <span>area_of_shape</span><span>(</span><span>shape</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>shape</span><span>==</span><span>"circle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>radius</span> <span>=</span> <span>input</span><span>(</span><span>"Enter the radius: "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area of the circle is: "</span> <span>+</span> <span>radius</span><span>*</span><span>2</span><span>*</span><span>pi)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span><span>==</span><span>"rectangle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>input</span><span>(</span><span>"Enter the length: "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>input</span><span>(</span><span>"Enter the width: "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area of the rectangle is: "</span> <span>+</span> <span>length</span><span>*</span><span>width</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span><span>==</span><span>"square"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>side_length</span> <span>=</span> <span>input</span><span>(</span><span>"Enter a side length: "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area of the circle is: "</span> <span>+</span> <span>side_length</span><span>*</span><span>side_length</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span><span>==</span><span>"triangle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>input</span><span>(</span><span>"Enter the base: "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>input</span><span>(</span><span>"Enter the height: "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area of the triangle is "</span> <span>+</span> <span>base</span><span>*</span><span>height</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if the shape inputted is none of the above, the user is prompted to enter one of these shapes</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Please select a circle, rectangle, square or triangle."</span><span>)</span></div>
+<div>
+<div><span># get the shape that they want to calculate the area of and change it all to lowercase </span></div>
+<div><span>shape</span> <span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?"</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>#call the function with the new input</span></div>
+<div><span>area_of_shape(shape)</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

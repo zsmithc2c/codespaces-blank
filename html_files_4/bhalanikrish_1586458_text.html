@@ -1,0 +1,50 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Krish Bhalani</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Krish Bhalani</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span> <span>java.util.*</span><span>;</span></div>
+<div><span>//imports scanner and math.random (* imports everything)</span></div>
+<div><span>public</span> <span>class</span> <span>numberguess</span><span> {</span></div>
+<div><span>&nbsp; &nbsp; </span><span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[] </span><span>args</span><span>) {</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>Scanner</span> <span>x</span> <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span><span>in</span><span>);</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>Random</span> <span>random</span> <span>=</span> <span>new</span> <span>Random</span><span>();</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>//https://www.geeksforgeeks.org/generating-random-numbers-in-java/</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>int</span> <span>a</span> <span>=</span> <span>random</span><span>.</span><span>nextInt</span><span>(</span><span>100</span><span>) </span><span>+</span> <span>1</span><span>;</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>//chooses random number 0-99 and+1 ensures its 0-100</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>System</span><span>.</span><span>out</span><span>.</span><span>println</span><span>(</span><span>"What is ur number?"</span><span>);</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>int</span> <span>b</span> <span>=</span> <span>x</span><span>.</span><span>nextInt</span><span>();</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>//asks user the number they guess</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> (</span><span>a</span> <span>&gt;</span> <span>b</span><span>){</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>System</span><span>.</span><span>out</span><span>.</span><span>println</span><span>(</span><span>"too low"</span><span>);</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>//shows number low then actual number by comparing real number with user input</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> (</span><span>a</span> <span>&lt;</span> <span>b</span><span>){</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>System</span><span>.</span><span>out</span><span>.</span><span>println</span><span>(</span><span>"too high"</span><span>);</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>//shows number high then actual number by comparing real number with user input</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span> {</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>System</span><span>.</span><span>out</span><span>.</span><span>println</span><span>(</span><span>"You got the number!"</span><span>);</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>//shows number exact by comparing real number with user input</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+<br><br><br><br>
+<div><span>&nbsp; &nbsp; }</span></div>
+<div><span>}</span></div>
+</div>
+</div>
+</body>
+</html>

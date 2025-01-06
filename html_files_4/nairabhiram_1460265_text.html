@@ -1,0 +1,63 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Abhiram Nair</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Abhiram Nair</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div style="color: #cccccc; background-color: #1f1f1f; font-family: Consolas, 'Courier New', monospace;  font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #c586c0;">import</span><span style="color: #cccccc;"> </span><span style="color: #4ec9b0;">random</span></div>
+<br>
+<div><span style="color: #6a9955;">#Understand</span></div>
+<div><span style="color: #6a9955;"># We need to create a guessing game where the program randomly selects a number between 1 and 100.</span></div>
+<div><span style="color: #6a9955;"># The user will guess the number, and the program will tell the user whether the guess is too high, too low, or correct.</span></div>
+<br>
+<div><span style="color: #6a9955;">#Create</span></div>
+<div><span style="color: #569cd6;">def</span><span style="color: #cccccc;"> </span><span style="color: #dcdcaa;">guessing_game</span><span style="color: #cccccc;">():</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># Generate a random number between 1 and 100</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #9cdcfe;">secret_number</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">=</span><span style="color: #cccccc;"> </span><span style="color: #4ec9b0;">random</span><span style="color: #cccccc;">.</span><span style="color: #9cdcfe;">randint</span><span style="color: #cccccc;">(</span><span style="color: #b5cea8;">1</span><span style="color: #cccccc;">, </span><span style="color: #b5cea8;">100</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Welcome to the Guessing Game!"</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"I have selected a number between 1 and 100. Can you guess it?"</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #c586c0;">while</span><span style="color: #cccccc;"> </span><span style="color: #569cd6;">True</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Prompt the user for their guess</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #9cdcfe;">user_input</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">=</span><span style="color: #cccccc;"> </span><span style="color: #dcdcaa;">input</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Enter your guess (or type 'exit' to quit): "</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Handle exit command</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">if</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">user_input</span><span style="color: #cccccc;">.</span><span style="color: #dcdcaa;">lower</span><span style="color: #cccccc;">() </span><span style="color: #d4d4d4;">==</span><span style="color: #cccccc;"> </span><span style="color: #ce9178;">'exit'</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Thanks for playing! Goodbye!"</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">break</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Validate user input</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">try</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #9cdcfe;">guess</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">=</span><span style="color: #cccccc;"> </span><span style="color: #4ec9b0;">int</span><span style="color: #cccccc;">(</span><span style="color: #9cdcfe;">user_input</span><span style="color: #cccccc;">) &nbsp;</span><span style="color: #6a9955;"># Convert input to an integer</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">except</span><span style="color: #cccccc;"> </span><span style="color: #4ec9b0;">ValueError</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Invalid input! Please enter a number between 1 and 100."</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">continue</span><span style="color: #cccccc;"> &nbsp;</span><span style="color: #6a9955;"># Skip to the next iteration of the loop</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Check if the guess is within the valid range</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">if</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">guess</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">&lt;</span><span style="color: #cccccc;"> </span><span style="color: #b5cea8;">1</span><span style="color: #cccccc;"> </span><span style="color: #569cd6;">or</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">guess</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">&gt;</span><span style="color: #cccccc;"> </span><span style="color: #b5cea8;">100</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Please guess a number between 1 and 100."</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">continue</span><span style="color: #cccccc;"> &nbsp;</span><span style="color: #6a9955;"># Skip to the next iteration of the loop</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Compare the guess to the secret number</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">if</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">guess</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">==</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">secret_number</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Congratulations! You've guessed the correct number!"</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">break</span><span style="color: #cccccc;"> &nbsp;</span><span style="color: #6a9955;"># End the game if the guess is correct</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">elif</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">guess</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">&lt;</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">secret_number</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Too low! Try again."</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">else</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"Too high! Try again."</span><span style="color: #cccccc;">)</span></div>
+<br>
+<div><span style="color: #6a9955;"># Call the function to start the game</span></div>
+<div><span style="color: #dcdcaa;">guessing_game</span><span style="color: #cccccc;">()</span></div>
+</div>
+</div>
+</body>
+</html>

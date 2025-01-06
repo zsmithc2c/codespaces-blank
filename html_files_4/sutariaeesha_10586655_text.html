@@ -1,0 +1,40 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Eesha Sutaria</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Eesha Sutaria</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span> <span>random</span></div>
+<div><span>#The computer picks the random number</span></div>
+<div><span>num</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
+<div><span>#boolean to keep track of whether they have guessed the correct number yet</span></div>
+<div><span>wrong</span> <span>=</span> <span>True</span></div>
+<div><span>print</span><span>(</span><span>"Hello! Welcome to my number guessing game. Here's how it works:</span><span>\n</span><span>The computer picked a random number between 1 and 100. You will guess what the number is.</span><span>\n</span><span>If you are wrong, I will tell you whether your guess is too high or too low until you guess the correct number.</span><span>\n</span><span>Good luck!</span><span>\n</span><span>"</span><span>)</span></div>
+<div><span>while</span> <span>wrong</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>input</span><span>(</span><span>"Enter a guess. It must be a number between 1 and 100: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Checks that the guess is actually an integer between 1 and 100</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>guess</span><span>.</span><span>isnumeric</span><span>() </span><span>==</span> <span>False</span> <span>or</span> <span>int</span><span>(</span><span>guess</span><span>)</span><span>&lt;</span><span>1</span> <span>or</span> <span>int</span><span>(</span><span>guess</span><span>)</span><span>&gt;</span><span>100</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>input</span><span>(</span><span>"That was not an acceptable input. Please enter a number between 1 and 100: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>int</span><span>(</span><span>guess</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Checks if the guess is right and if it is, tell them they won and change wrong to false to get out of the loop</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> (</span><span>guess</span> <span>==</span> <span>num</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Congratulations! You won!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>wrong</span> <span>=</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Check if your guess is smaller than the number and if it is, tells them that</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> (</span><span>guess</span> <span>&lt;</span> <span>num</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Your guess is too small. The number is bigger."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Check if your guess is bigger than the number and if it is, tells them that</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> (</span><span>guess</span> <span>&gt;</span> <span>num</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"You guess is too big. The number is smaller."</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

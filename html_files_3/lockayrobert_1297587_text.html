@@ -1,0 +1,27 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Robert Lockay</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Robert Lockay</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># U:<br># - does a string have any repeating chars<br># - edge cases<br># &nbsp; - an empty string doesnt repeat characters so true<br># &nbsp; - a string with spaces needs to be trimmed of them since a repeating space would be a false alarm<br># - input: a string. output: boolean.</p>
+<p># C:<br># - I know i need a list of seen characters of some sort to check against for repeated characters</p>
+<p># A:<br># def is_unique(string):<br># &nbsp; str_list = string.replace(" ", "").split("")<br># &nbsp; seen = []<br>#<br># &nbsp; for char in str_list:<br># &nbsp; &nbsp; &nbsp; if char in seen:<br># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false<br># &nbsp; &nbsp; &nbsp; seen.append(char)<br># &nbsp; return true</p>
+<p># S:<br>from time import time</p>
+<p>def is_unique(string):<br>&nbsp; &nbsp; # trim whitespace<br>&nbsp; &nbsp; string = string.replace(" ", "")<br>&nbsp; &nbsp; # seen list to track seen characters<br>&nbsp; &nbsp; seen = []</p>
+<p>&nbsp; &nbsp; # loop through each character<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; # quit and return false the moment we see a repeat<br>&nbsp; &nbsp; &nbsp; &nbsp; # check to see if the current character is in our seen list<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; seen.append(char)<br>&nbsp; &nbsp; # if we reach this we can assume all chars are unique and return true<br>&nbsp; &nbsp; return True</p>
+<p># less lines<br>def is_unique_alt(string):<br>&nbsp; &nbsp; clean_str = string.replace(" ", "")<br>&nbsp; &nbsp; if len(set(clean_str)) != len(clean_str):<br>&nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; return True</p>
+<p>start = time()<br>is_unique("abcdefghijlkmonpdlgjk;lkgjl &nbsp; &nbsp; &nbsp; ;aszjdfal;sjdg;l &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;akjsdg;lakgjsd;a")<br>print(time() - start)</p>
+<p>start = time()<br>is_unique_alt("abcdefghijlkmonpdlgjk;lkgjl &nbsp; &nbsp; &nbsp; ;aszjdfal;sjdg;l &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;akjsdg;lakgjsd;a")<br>print(time() - start)</p>
+<p># test values<br>print(is_unique("abcdef"))<br>print(is_unique_alt("abcdef"))<br>print(is_unique("hello"))<br>print(is_unique_alt("hello"))<br>print(is_unique("he l o"))<br>print(is_unique_alt("he l o"))</p>
+<p># E:<br># - works correctly on test values<br># - might be faster to convert string to set and compare lengths<br># &nbsp; - there is no signifigant time difference, but the set conversion method is less lines</p>
+</div>
+</body>
+</html>

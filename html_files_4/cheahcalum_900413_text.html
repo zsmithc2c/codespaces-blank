@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Calum Cheah </title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Calum Cheah </h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><code><span>import</span><span> random</span></code></div>
+<br>
+<div><code><span># Notes:</span></code></div>
+<div><code><span># - Randomly selected number from 1-100</span></code></div>
+<div><code><span># - Likely need to check to ensure that user enters a valid integer</span></code></div>
+<div><code><span># - Need to compare user's guess with the selected answer and return high or low</span></code></div>
+<br>
+<div><code><span># Steps:</span></code></div>
+<div><code><span># 1. Randomly select answer as an integer from 1-100</span></code></div>
+<div><code><span># 2. Prompt user for guess</span></code></div>
+<div><code><span># 3. Compare guess with answer</span></code></div>
+<div><code><span># &nbsp; - If guess is correct, exit loop, congratulate user</span></code></div>
+<div><code><span># &nbsp; - If guess is incorrect, tell user higher/lower and reprompt for guess</span></code></div>
+<br>
+<div><code><span>def</span> <span>promptInteger</span><span>(</span><span>prompt</span><span>: </span><span>str</span><span>, </span><span>min</span><span>: </span><span>int</span><span>, </span><span>max</span><span>: </span><span>int</span><span>) -&gt; </span><span>int</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>"""</span></code></div>
+<div><code><span>&nbsp; &nbsp; This function prompts the user until they enter a valid integer from [min, max]</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; @param prompt: &nbsp;this is the string that the user will be prompted with</span></code></div>
+<div><code><span>&nbsp; &nbsp; @param min: &nbsp; &nbsp; minimum value that the user is allowed to input</span></code></div>
+<div><code><span>&nbsp; &nbsp; @param max: &nbsp; &nbsp; maximum value that the user is allowed to input</span></code></div>
+<div><code><span>&nbsp; &nbsp; @return: &nbsp; &nbsp; &nbsp; &nbsp;returns the integer entered by the user</span></code></div>
+<div><code><span>&nbsp; &nbsp; """</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; num </span><span>=</span> <span>min</span><span>-</span><span>1</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>while</span> <span>not</span> <span>min</span> <span>&lt;</span><span> num </span><span>&lt;</span> <span>max</span> <span>or</span> <span>not</span> <span>isinstance</span><span>(num, </span><span>int</span><span>): </span><span># repeatedly prompt user until they enter a valid integer</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(prompt)) </span><span># attempt to read input and convert to int</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>pass</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>not</span> <span>min</span> <span>&lt;</span><span> num </span><span>&lt;</span> <span>max</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"Please enter a valid number from [</span><span>{</span><span>min</span><span>}</span><span>, </span><span>{</span><span>max</span><span>}</span><span>]"</span><span>) </span><span># remind user if they enter an invalid string</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>return</span><span> num</span></code></div>
+<br>
+<div><code><span>def</span> <span>main</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; MIN </span><span>=</span> <span>1</span></code></div>
+<div><code><span>&nbsp; &nbsp; MAX </span><span>=</span> <span>100</span></code></div>
+<div><code><span>&nbsp; &nbsp; answer </span><span>=</span><span> random.randint(MIN, MAX) </span><span># select random integer from 1-100</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Welcome to my number guessing game! I will select a random number and you have to try to guess it!"</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; guess </span><span>=</span> <span>None</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>while</span><span> guess </span><span>!=</span><span> answer: </span><span># Keep prompting user until they guess correctly</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; guess </span><span>=</span><span> promptInteger(</span><span>"Enter a guess: "</span><span>, MIN, MAX) </span><span># prompt user for guess from [MIN, MAX]</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> guess </span><span>&lt;</span><span> answer:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Your guess was too low!"</span><span>) </span><span># inform user if the guess is too low</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span><span> guess </span><span>&gt;</span><span> answer:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Your guess was too high!"</span><span>) </span><span># inform user if the guess is too high</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Congratulations! You guessed correctly!"</span><span>) </span><span># Loop exited - user guessed correctly, congratulate them</span></code></div>
+<br>
+<div><code><span>if</span> <span>__name__</span> <span>==</span> <span>"__main__"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; main()</span></code></div>
+</div>
+</div>
+</body>
+</html>

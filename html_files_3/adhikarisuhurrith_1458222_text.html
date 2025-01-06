@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Suhurrith Adhikari</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Suhurrith Adhikari</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Function takes in a string and returns a boolean</p>
+<p>#Edge case #1: Make sure the function is not case-sensitive by standarizing all of the text by making everything lowercase</p>
+<p>#Edge case #2: IF there are any spaces, replace them with no spaces.</p>
+<p>#Edge case #3: Make sure that the length of the string is NOT 0, seen in the if statement below, Basically, avoiding empty strings.</p>
+<p>#Main functionality is that set() will automatically remove all duplicated letters<br>def unique_characters(s):<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Making all of the characters in the string lowercase<br>&nbsp; &nbsp; s.lower()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Replace all of the spaces with NO spaces<br>&nbsp; &nbsp; s.replace(" ", "")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Making sure that the string is NOT empty<br>&nbsp; &nbsp; if (len(s) != 0):</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # the set() functionality already removes duplicated letters of a string<br>&nbsp; &nbsp; &nbsp; &nbsp; reordered_str = set(s)<br>&nbsp; &nbsp; &nbsp; &nbsp; return len(s) == len(reordered_str)<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "Please retype the string with actual letters"</p>
+<p>print(unique_characters("abcdef")) &nbsp;# Output: True<br>print(unique_characters("hello")) # Output: False</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Patrick Wilson</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Patrick Wilson</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def has_unique_characters(s):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Determine if a string has all unique characters.<br>&nbsp; &nbsp; :param s: str, input string<br>&nbsp; &nbsp; :return: bool, True if all characters are unique, False otherwise<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; # Use a set to track characters already seen<br>&nbsp; &nbsp; seen = set()</p>
+<p>&nbsp; &nbsp; for char in s:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False &nbsp;# Duplicate character found<br>&nbsp; &nbsp; &nbsp; &nbsp; seen.add(char)</p>
+<p>&nbsp; &nbsp; return True &nbsp;# All characters are unique</p>
+</div>
+</body>
+</html>

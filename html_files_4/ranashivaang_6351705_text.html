@@ -1,0 +1,17 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Shivaang	Rana</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Shivaang	Rana</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># thought process: # use a while loop to make the game continuous # use random library to make computers random num # use input to get user input and cast it to a int to compare value to computer random num # game logic with number of guesses # if statements to tell the user how their guess compares to the computers random num # implement everything import random def num_guessing_game(): # use random library to make computers random num computerGuess = random.randint(1,100) print("Try to guess the random number between 1 - 100 that I made.") gameOver = False # game logic with number of guesses numOfGuesses = 0 # use a while loop to make the game continuous while gameOver == False: userGuess = int(input("Your guess: ")) # if statements to tell the user how their guess compares to the computers random num if userGuess &gt; computerGuess: print("The number is smaller...") numOfGuesses += 1 if userGuess &lt; computerGuess: print("The number is higher...") numOfGuesses += 1 if userGuess == computerGuess: print("You correctly guessed the number!") gameOver = True # game logic with number of guesses if numOfGuesses &gt; 10: print("You ran out of guesses. Better luck next time!") gameOver = True # calling function num_guessing_game()</p>
+</div>
+</body>
+</html>

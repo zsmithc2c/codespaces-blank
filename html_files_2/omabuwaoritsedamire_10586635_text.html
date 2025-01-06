@@ -1,0 +1,47 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Oritsedamire	Omabuwa</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Oritsedamire	Omabuwa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span><span> math</span></div>
+<div><span>#area calculator</span></div>
+<br>
+<div><span>#print and input</span></div>
+<div><span>print</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?"</span><span>)</span></div>
+<div><span>print</span><span>()</span></div>
+<div><span>shape </span><span>=</span> <span>input</span><span>(</span><span>"Type in your shape: "</span><span>) </span></div>
+<br>
+<div><span>#just in case</span></div>
+<div><span>shape.lower()</span></div>
+<br>
+<div><span>#check if shape is circle, triangle, square, or rectangle. find side lengths and do math</span></div>
+<div><span>if</span><span>(shape </span><span>==</span> <span>'circle'</span><span>):</span></div>
+<div><span> radius </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"What's the radius?"</span><span>))</span></div>
+<div><span> area </span><span>=</span><span> math.pi </span><span>*</span> <span>pow</span><span>(radius,</span><span>2</span><span>)</span></div>
+<div><span>if</span><span>(shape </span><span>==</span> <span>'rectangle'</span><span>):</span></div>
+<div><span> length </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>'Whats the length?'</span><span>))</span></div>
+<div><span> width </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>'Whats the width?'</span><span>))</span></div>
+<div><span> area </span><span>=</span><span> length </span><span>*</span><span> width</span></div>
+<div><span>if</span><span>(shape </span><span>==</span> <span>'triangle'</span><span>):</span></div>
+<div><span> base </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>'Whats the base?'</span><span>))</span></div>
+<div><span> height </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>'Whats the height?'</span><span>))</span></div>
+<div><span> area </span><span>=</span> <span>.5</span> <span>*</span><span> base </span><span>*</span><span> height</span></div>
+<div><span>if</span><span>(shape </span><span>==</span> <span>'square'</span><span>):</span></div>
+<div><span> side </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>'What is the side length?'</span><span>))</span></div>
+<div><span> area </span><span>=</span><span> side </span><span>*</span> <span>4</span></div>
+<br>
+<div><span>#didnt return so i could test it but would be return area</span></div>
+<div><span>print</span><span>(area)</span></div>
+</div>
+</div>
+</body>
+</html>

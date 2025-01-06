@@ -1,0 +1,54 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Dair	Cabrera</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Dair	Cabrera</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>Understand - get the users shape of choice, see their measurements, and give an area with said measurements</span></p>
+<p>&nbsp;</p>
+<p><span>Clues- use the measurements and formulas based on the shape the user requests to give an accurate&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span>Assemble - get the user's shape - based on their shape, get the measurements for the formula of their chosen shape - use the shape formula to give an accurate area of their shape.</span></p>
+<p>&nbsp;</p>
+<p><span>Solve-</span></p>
+<p>&nbsp;</p>
+<p><span>import os</span></p>
+<p><span>import time</span></p>
+<p><span>import math</span></p>
+<p>&nbsp;</p>
+<p><span>def Area_Calculator():</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?: ")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;if shape == "circle":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radius = int(input("What is your radius: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Area = print(Radius * Radius * math.pi)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif shape == "rectangle":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Length = int(input("What is your length: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width = int(input("What is your width: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Area = print(Length * Width)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif shape == "square":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Side_Length = int(input("What is your side length: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Area = print(Side_Length * Side_Length)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif shape == "triangle":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Base = int(input("What is your base length: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height = int(input("What is your Height: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Area = print(Base * Height / 2)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;else:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.system('clear')</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Sorry, thats not a valid shape!")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.system('clear')</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Area_Calculator()</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>Area_Calculator()</span></p>
+<p>&nbsp;</p>
+<p><span>Examine- User is able to receive the area of the shape they inputted</span></p>
+</div>
+</body>
+</html>

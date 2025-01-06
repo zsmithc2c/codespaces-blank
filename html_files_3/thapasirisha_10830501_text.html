@@ -1,0 +1,29 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Sirisha Thapa</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Sirisha Thapa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import java.util.Scanner; // This is to use Scanner for input</p>
+<p>public class UniqueCharactersChecker&nbsp;<br>{</p>
+<p>&nbsp; &nbsp; public static void main(String[] args)&nbsp;<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Step 1: Understand the problem<br>&nbsp; &nbsp; &nbsp; &nbsp; // We need to check if all characters in a string are different.&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; //If they are, return true, if not false.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Create a scanner object to read user input<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Ask the user for input<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Enter a string to check if all characters are unique:");<br>&nbsp; &nbsp; &nbsp; &nbsp; String inputString = scanner.nextLine();</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Step 2: Clues<br>&nbsp; &nbsp; &nbsp; &nbsp; // To solve this, we can use a simple method to check if any character repeats in the string.<br>&nbsp; &nbsp; &nbsp; &nbsp; // We can use an array or a set to keep track of characters we have already seen.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Step 3: Assemble the solution<br>&nbsp; &nbsp; &nbsp; &nbsp; boolean result = areCharactersUnique(inputString);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Step 4: Solve (call the function and print the result)<br>&nbsp; &nbsp; &nbsp; &nbsp; if (result) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("All characters are unique.");<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("The string has repeating characters.");<br>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Close the scanner<br>&nbsp; &nbsp; &nbsp; &nbsp; scanner.close();<br>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; // Function to check if all characters are unique in the given string<br>&nbsp; &nbsp; public static boolean areCharactersUnique(String str)&nbsp;<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Step 5: Examine the approach<br>&nbsp; &nbsp; &nbsp; &nbsp; // Use a simple method that checks each character in the string<br>&nbsp; &nbsp; &nbsp; &nbsp; // and sees if it repeats using an array or set.<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Using a boolean array to track seen characters (for ASCII characters)<br>&nbsp; &nbsp; &nbsp; &nbsp; boolean[] charSet = new boolean[256]; &nbsp;// There are 256 ASCII characters<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Loop through each character in the string<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; str.length(); i++)<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; char currentChar = str.charAt(i); &nbsp;// Get the character at the current position</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // If the character has already been seen, return false<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (charSet[currentChar])<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Mark the character as seen by setting its corresponding index to true<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; charSet[currentChar] = true;<br>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // If we went through the whole string without finding duplicates, return true<br>&nbsp; &nbsp; &nbsp; &nbsp; return true;<br>&nbsp; &nbsp; }</p>
+</div>
+</body>
+</html>

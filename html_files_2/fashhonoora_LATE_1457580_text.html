@@ -1,0 +1,58 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Noora Fashho</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Noora Fashho</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div><br>
+<div><span>print(</span><span>"</span><span>I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?</span><span>"</span><span>)</span></div>
+<div><span>user_input </span><span>=</span> <span>input(</span><span>"</span><span>Type in the name of a shape (e.g., triangle, rectangle, square, circle): </span><span>"</span><span>)</span><span>.</span><span>strip()</span><span>.</span><span>lower()</span></div>
+<br>
+<div><span>#checks if the user said circle</span></div>
+<div><span>if</span><span> user_input </span><span>==</span> <span>"</span><span>circle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; radius </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the radius of the circle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#uses the users input of radius to find the area</span></div>
+<div><span>&nbsp; &nbsp; area1 </span><span>=</span> <span>3.14159</span> <span>*</span><span> radius </span><span>**</span> <span>2</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#prints area</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the circle is </span><span>{</span><span>area1</span><span>}</span><span>."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>#checks if the user said rectangle</span></div>
+<div><span>elif</span><span> user_input </span><span>==</span> <span>"</span><span>rectangle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#uses the users input of length and width to then calculate the area</span></div>
+<div><span>&nbsp; &nbsp; length </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the length of the rectangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; width </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the width of the rectangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; area2 </span><span>=</span><span> length </span><span>*</span><span> width</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#prints area</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the rectangle is </span><span>{</span><span>area2</span><span>}</span><span>."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>#checks if the user said square</span></div>
+<div><span>elif</span><span> user_input </span><span>==</span> <span>"</span><span>square</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#uses the users input of the side length to then calc the the area</span></div>
+<div><span>&nbsp; &nbsp; side </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the side length of the square: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; area3 </span><span>=</span><span> side </span><span>**</span> <span>2</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#prints area</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the square is </span><span>{</span><span>area3</span><span>}</span><span>."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>#checks if the user said triangle</span></div>
+<div><span>elif</span><span> user_input </span><span>==</span> <span>"</span><span>triangle</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#uses the users input of the base and height to calc the triangle area</span></div>
+<div><span>&nbsp; &nbsp; base </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the base of the triangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; height </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the height of the triangle: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; area4 </span><span>=</span> <span>0.5</span> <span>*</span><span> base </span><span>*</span><span> height</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#prints area</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"The area of the triangle is </span><span>{</span><span>area4</span><span>}</span><span>."</span><span>)</span></div>
+<br>
+<div><span>#doesn't cal any other shape's area besides the ones given</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Sorry, I can only calculate the area for circle, rectangle, square, or triangle.</span><span>"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

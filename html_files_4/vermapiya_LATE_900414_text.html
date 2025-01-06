@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Piya Verma</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Piya Verma</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>import random</span></p>
+<p>&nbsp;</p>
+<p><span>def guessing_game():</span></p>
+<p><span>#plays a guessing game with the user.</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#U: Understand the problem</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;print("I'm thinking of a number between 1 and 100.")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;print("Guess what it is?")</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#generate a random number between 1 and 100</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;guessnum = random.randint(1, 100)</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#initialize variables for the game loop</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;guesscorrectly = False</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;while not guesscorrectly:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Ask the user for their guess</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_input = input("Enter your guess: ").strip()</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Check if the input is a valid integer</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_guess = int(user_input)</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Check if the guess is within range</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if user_guess &lt; 1 or user_guess &gt; 100:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Please enter a number between 1 and 100.")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#C: Create a plan</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#compare the user's guess to the target number</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if user_guess &lt; guessnum:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Too low! Try guessing a larger number.")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif user_guess &gt; guessnum:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Too high! Try guessing a smaller number.")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#correctly guessed</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Congratulations! You've guessed the number {guessnum} correctly!")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guesscorrectly = True</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except ValueError:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Handle invalid (non-integer) inputs</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Invalid input. Please enter a numeric value.")</span></p>
+<p>&nbsp;</p>
+<p><span>#A: Algorithm implementation</span></p>
+<p><span>if __name__ == "__main__":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;guessing_game()</span></p>
+<p>&nbsp;</p>
+<p><span>#E: Edge cases handled</span></p>
+<p><span>#noninteger-prompt user</span></p>
+<p><span>#outside range-warning</span></p>
+</div>
+</body>
+</html>

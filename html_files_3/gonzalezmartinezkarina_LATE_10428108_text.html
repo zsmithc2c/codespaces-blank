@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Karina	Gonzalez-Martinez</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Karina	Gonzalez-Martinez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Function to check if all characters in a string are unique<br>def has_unique_characters(string):<br>&nbsp; &nbsp; # Create an empty set to store characters we have seen<br>&nbsp; &nbsp; seen_characters = set()</p>
+<p>&nbsp; &nbsp; # Loop through each character in the string<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; # If the character is already in the set, return False<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; # Add the character to the set<br>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char)</p>
+<p>&nbsp; &nbsp; # If no duplicates were found, return True<br>&nbsp; &nbsp; return True</p>
+<p># Prompt the user to input a string<br>user_input = input("Enter a string to check if it has all unique characters: ")</p>
+<p># Check if the input string is empty<br>if user_input.strip() == "":<br>&nbsp; &nbsp; print("You entered an empty string. Please provide a valid input.")<br>else:<br>&nbsp; &nbsp; # Call the function and display the result<br>&nbsp; &nbsp; if has_unique_characters(user_input):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string has all unique characters.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string does not have all unique characters.")</p>
+</div>
+</body>
+</html>

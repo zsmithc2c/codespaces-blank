@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Dagem Abraham</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Dagem Abraham</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<pre><span>import </span>random  <span># Importing random module to generate a random number<br></span><span><br></span><span># Function to play the guessing game<br></span><span>def </span><span>play_guessing_game</span>():<br>    <span># Generate a random number between 1 and 100<br></span>    secret_number = random.randint(<span>1</span>, <span>100</span>)  <br>    <span>print</span>(<span>"Welcome to the Number Guessing Game!"</span>)<br>    <span>print</span>(<span>"I'm thinking of a number between 1 and 100."</span>)<br>    <span>print</span>(<span>"Try to guess it!"</span>)<br>    <span>while True</span>:<br>        <span>try</span>:<br>            <span># Ask the user for their guess<br></span>            guess = <span>int</span>(<span>input</span>(<span>"Enter your guess: "</span>))<br><br>            <span># Validate the guess is within range<br></span>            <span>if </span>guess &lt; <span>1 </span><span>or </span>guess &gt; <span>100</span>:<br>                <span>print</span>(<span>"Please enter a number between 1 and 100."</span>)<br>                <span>continue<br></span><span><br></span>            <span># Check if the guess is correct<br></span>            <span>if </span>guess == secret_number:<br>                <span>print</span>(<span>f"Congratulations! You guessed the correct number: </span><span>{</span>secret_number<span>}</span><span>"</span>)<br>                <span>break<br></span>            <span># Provide hints if the guess is incorrect<br></span>            <span>elif </span>guess &lt; secret_number:<br>                <span>print</span>(<span>"Too low! Try guessing a larger number."</span>)<br>            <span>else</span>:<br>                <span>print</span>(<span>"Too high! Try guessing a smaller number."</span>)<br>        <span>except </span><span>ValueError</span>:<br>            <span># Handle invalid (non-numeric) inputs gracefully<br></span>            <span>print</span>(<span>"Invalid input. Please enter a valid number between 1 and 100."</span>)<br><br><span># Start the game<br></span>play_guessing_game()</pre>
+</div>
+</div>
+</body>
+</html>

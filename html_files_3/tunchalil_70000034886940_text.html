@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Halil Tunc</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Halil Tunc</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Terms</span></div>
+<div><span># If the input string contains all unique characters, return True</span></div>
+<div><span># Otherwise, return False. I think that empty strings should return True because technically there are no duplicate characters.</span></div>
+<br>
+<div><span># Plan</span></div>
+<div><span># I should make a list of letters that were seen the first time and if a letter in that list is seen again then the code should return False. </span></div>
+<div><span># But, if all the characters are in that list of characters seen the first time then the code should return True.</span></div>
+<div><span># The list doesn't need to be in order so I will probably use set()</span></div>
+<br>
+<div><span># Determines if all characters in a string are unique</span></div>
+<div><span>def</span> <span>has_unique_characters</span><span>(</span><span>s</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Handle edge cases like empty strings</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>not</span><span> s</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; # An empty string technically has all unique characters</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># Use a set to track characters we've seen</span></div>
+<div><span>&nbsp; &nbsp; seen_characters </span><span>=</span> <span>set()</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> char </span><span>in</span><span> s</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Check if the character has already been seen (is in the set)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> char </span><span>in</span><span> seen_characters</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># Found a duplicate character</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># If the character hasn't already been seen then it will be added to the set.</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters</span><span>.</span><span>add(char)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># If we complete the loop without finding duplicates, all characters are unique</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span># Prompt the user to enter a string</span></div>
+<div><span>user_input </span><span>=</span> <span>input(</span><span>"</span><span>Enter a string to check for unique characters: </span><span>"</span><span>)</span></div>
+<div><span>result </span><span>=</span> <span>has_unique_characters(user_input)</span></div>
+<br>
+<div><span># Output the result</span></div>
+<div><span>if</span><span> result</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>All characters in the string are unique!</span><span>"</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>The string contains duplicate characters.</span><span>"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

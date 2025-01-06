@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Andy Chen</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Andy Chen</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def calulate_shape():</p>
+<p>#define or call out the function#&nbsp;<br>&nbsp; &nbsp; shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? triangle, rectangle, square, circle ")&nbsp;</p>
+<p>#Ask the user to pick out the four options provided#&nbsp;<br>&nbsp; &nbsp; if shape == "triangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; base = float(input("Enter the base of the triangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; height = float(input("Enter the height of the triangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = 0.5 * base * height<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the triangle is {area}.")&nbsp;</p>
+<p>#If their input is a triangle they will be needed to provide the base and the height of the triangle. Then the system will use the data and multiply them together with 0.5 to the get to area which they will present to the user. #&nbsp;<br>&nbsp; &nbsp; elif shape == "rectangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; length = float(input("Enter the length of the rectangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; width = float(input("Enter the width of the rectangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = length * width<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the rectangle is {area}.")</p>
+<p>#If the user input was a rectangle they need to provide the base stat which is the length and width of the rectangle. Which the system will be using to get the area by multiplying them together.#<br>&nbsp; &nbsp; elif shape == "square" :<br>&nbsp; &nbsp; &nbsp; &nbsp; side = float(input("Enter the side of the square: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = side * side&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the square is {area}.")</p>
+<p>#The square is the most easiest where the user needs to provide the one factor for the formula and for the system it will only need to do a one step equation.#&nbsp;<br>&nbsp; &nbsp; elif shape == "circle":<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = float(input("Enter the radius of the circle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; area = 3.14159 * radius * radius<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the circle is {area}.")&nbsp;</p>
+<p>#The circle is the relative most hardest in the formula of the given where the system required to have radius to be identified and multiply the radius with itself then with the PI(3.14)#&nbsp;<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Sorry, I don't know how to calculate the area of that shape.")&nbsp;</p>
+<p>#In case the user enter a wrong option and the function will end while they tell them that they have enter an option that wasn't in the system.#&nbsp;</p>
+</div>
+</body>
+</html>

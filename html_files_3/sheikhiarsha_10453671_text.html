@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Arsha	Sheikhi</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Arsha	Sheikhi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div style="color: #bbbbbb; background-color: #1a1a1a; font-family: Consolas, 'Courier New', monospace;  font-size: 14px; line-height: 19px; white-space: pre;" data-darkreader-inline-color="" data-darkreader-inline-bgcolor="">
+<div><span style="color: #6f6f6f;" data-darkreader-inline-color="">#Function to determine whether all characters (NOT LETTERS) are unique</span></div>
+<div><span style="color: #a390ff;" data-darkreader-inline-color="">def</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> </span><span style="color: #cdf861;" data-darkreader-inline-color="">CheckUniqueLetters</span><span style="color: #86897a;" data-darkreader-inline-color="">(</span><span style="color: #ebebeb;" data-darkreader-inline-color="">word</span><span style="color: #86897a;" data-darkreader-inline-color="">):</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; </span><span style="color: #6f6f6f;" data-darkreader-inline-color="">#Create list to enter letters in later</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; LetterList </span><span style="color: #b3e8b4;" data-darkreader-inline-color="">=</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> []</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; </span><span style="color: #6f6f6f;" data-darkreader-inline-color="">#As the loop goes through word, each character of word will be checked if it is in the list.</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; </span><span style="color: #6f6f6f;" data-darkreader-inline-color="">#If not, add letter. If so, return False</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; </span><span style="color: #a390ff;" data-darkreader-inline-color="">for</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> character </span><span style="color: #a390ff;" data-darkreader-inline-color="">in</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> word</span><span style="color: #86897a;" data-darkreader-inline-color="">:</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #a390ff;" data-darkreader-inline-color="">if</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> character </span><span style="color: #b3e8b4;" data-darkreader-inline-color="">not</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> </span><span style="color: #b3e8b4;" data-darkreader-inline-color="">in</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> LetterList</span><span style="color: #86897a;" data-darkreader-inline-color="">:</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; LetterList</span><span style="color: #86897a;" data-darkreader-inline-color="">.</span><span style="color: #cdf861;" data-darkreader-inline-color="">append(character)</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #a390ff;" data-darkreader-inline-color="">else</span><span style="color: #86897a;" data-darkreader-inline-color="">:</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #a390ff;" data-darkreader-inline-color="">return</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> </span><span style="color: #7ad9fb;" data-darkreader-inline-color="">False</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; </span><span style="color: #6f6f6f;" data-darkreader-inline-color="">#If it does not return False by loop completion, all characters are unique and will return True</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">&nbsp; &nbsp; </span><span style="color: #a390ff;" data-darkreader-inline-color="">return</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> </span><span style="color: #7ad9fb;" data-darkreader-inline-color="">True</span></div>
+<br>
+<div><span style="color: #6f6f6f;" data-darkreader-inline-color="">#All characters will be made string</span></div>
+<div><span style="color: #bbbbbb;" data-darkreader-inline-color="">EnterWord </span><span style="color: #b3e8b4;" data-darkreader-inline-color="">=</span><span style="color: #bbbbbb;" data-darkreader-inline-color=""> </span><span style="color: #cdf861;" data-darkreader-inline-color="">str(input(</span><span style="color: #b3e8b4;" data-darkreader-inline-color="">"</span><span style="color: #bfd084;" data-darkreader-inline-color="">Enter a word: </span><span style="color: #b3e8b4;" data-darkreader-inline-color="">"</span><span style="color: #cdf861;" data-darkreader-inline-color="">))</span></div>
+<div><span style="color: #6f6f6f;" data-darkreader-inline-color="">#.lower() is not necessary since we are checking for unique characters and not unique letters</span></div>
+<div><span style="color: #cdf861;" data-darkreader-inline-color="">print(CheckUniqueLetters(EnterWord))</span></div>
+</div>
+</div>
+</body>
+</html>

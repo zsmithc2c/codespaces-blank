@@ -1,0 +1,44 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Nasir Colon</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Nasir Colon</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#make a mini menu for choosing a shape </span></div>
+<div><span>from</span><span> math </span><span>import</span><span> pi</span></div>
+<div><span>def</span> <span>shape_menu</span><span>():</span></div>
+<div><span>&nbsp; &nbsp;shape_choice </span><span>=</span> <span>input(</span><span>"</span><span>choose the shape to calculate the area for: \n 1.circle \n 2.rectange \n 3.square \n 4.triangle \n please input your shape(1-4) here:</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; </span><span>#make an if statment to do the math for every type of shape</span></div>
+<div><span>&nbsp; &nbsp;</span><span>if</span><span> shape_choice </span><span>==</span> <span>"</span><span>1</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; area </span><span>=</span> <span>float(input(</span><span>"</span><span>please input your radius:</span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; circle_area </span><span>=</span><span> pi </span><span>*</span><span> area</span><span>**</span><span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; </span><span>print(circle_area)</span></div>
+<div><span>&nbsp; &nbsp;</span><span>elif</span><span> shape_choice </span><span>==</span> <span>"</span><span>2</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; area </span><span>=</span> <span>float(input(</span><span>"</span><span>please input your length:</span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; area2 </span><span>=</span> <span>float(input(</span><span>"</span><span>please input your width:</span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; rectangle_area </span><span>=</span><span> area </span><span>*</span><span> area2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; </span><span>print(rectangle_area)</span></div>
+<div><span>&nbsp; &nbsp;</span><span>elif</span><span> shape_choice </span><span>==</span> <span>"</span><span>3</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; area </span><span>=</span> <span>float(input(</span><span>"</span><span>please input your side length</span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; square_area </span><span>=</span><span> area</span><span>**</span><span>2</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(square_area)</span></div>
+<div><span>&nbsp; &nbsp;</span><span>elif</span><span> shape_choice </span><span>==</span> <span>"</span><span>4</span><span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; area </span><span>=</span> <span>float(input(</span><span>"</span><span>please input your base:</span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; area2 </span><span>=</span> <span>float(input(</span><span>"</span><span>please input your height:</span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; triangle_area </span><span>=</span> <span>0.5</span> <span>*</span><span> area </span><span>*</span><span> area2</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(triangle_area)</span></div>
+<div><span>&nbsp; &nbsp;</span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>please input a valid choice.</span><span>"</span><span>)</span><span> &nbsp;</span><span>#for invalid inputs it will say to choose a valid one &nbsp; </span></div>
+<div><span>shape_menu()</span></div>
+</div>
+</div>
+</body>
+</html>

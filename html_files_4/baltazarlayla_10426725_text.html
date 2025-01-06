@@ -1,0 +1,25 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Layla	Baltazar</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Layla	Baltazar</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def number_guess():<br>&nbsp; print("Welcome to the Number Guessing Game!")<br>&nbsp; print("Try to guess! I'm thinking of a number between 1 and 100.")</p>
+<p>&nbsp; #generates a random number<br>&nbsp; hidden_number = random.randint(1, 100)</p>
+<p>&nbsp; while True:<br>&nbsp; &nbsp; guess = input ("Enter your guess: ")</p>
+<p>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; if not guess.isdigit():<br>&nbsp; &nbsp; &nbsp; print("Invalid input. Please choose a number between 1 and 100.")<br>&nbsp; &nbsp; &nbsp; continue</p>
+<p>&nbsp; &nbsp; guess = int(guess)</p>
+<p>&nbsp; &nbsp; #checks to see if the guess is right<br>&nbsp; &nbsp; if guess == hidden_number:<br>&nbsp; &nbsp; &nbsp; print("Congratulations! You guessed my number.")</p>
+<p>&nbsp; &nbsp; elif guess &lt; hidden_number:<br>&nbsp; &nbsp; &nbsp; print("Too low! Try a higher number")</p>
+<p>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; print("Too high! Try a lower number.")</p>
+<p><br>number_guess()</p>
+</div>
+</body>
+</html>

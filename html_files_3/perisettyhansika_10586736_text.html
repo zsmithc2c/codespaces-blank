@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Hansika	Perisetty</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Hansika	Perisetty</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>public class Unique {<br>&nbsp; &nbsp; private String word;</p>
+<p>&nbsp; &nbsp; // Constructor to initialize word<br>&nbsp; &nbsp; public Unique(String w) {<br>&nbsp; &nbsp; &nbsp; &nbsp; word = w;<br>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; // Method to check if the string has unique characters<br>&nbsp; &nbsp; public boolean isUnique() {<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; word.length() - 1; i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Compare current character with the next character<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (word.substring(i, i + 1).equals(word.substring(i + 1, i + 2))) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false; // Return false if a duplicate is found<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; return true; // Return true if no duplicates are found after the loop<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; Unique string = new Unique("hello");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(string.isUnique()); // Output: false (because 'l' repeats)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Unique string2 = new Unique("abc");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(string2.isUnique()); // Output: true (no duplicates)<br>&nbsp; &nbsp; }</p>
+<p>}</p>
+</div>
+</body>
+</html>

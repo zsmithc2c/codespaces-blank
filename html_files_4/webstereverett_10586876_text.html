@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Everett	Webster</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Everett	Webster</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import random</p>
+<p># Create a program for a guessing game</p>
+<p><br># Define function for the game<br>def guessing_game():<br>&nbsp; &nbsp; # enable system to randomly pick a number<br>&nbsp; &nbsp; number_to_guess = random.randint(1, 100) &nbsp;<br>&nbsp; &nbsp; # print statement indicating a number has been chosen for the user to guess<br>&nbsp; &nbsp; print("I have chosen a number between 1 and 100. Can you guess what it is?")</p>
+<p>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # collect users input for the guess<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; user_guess = int(input("Enter your guess: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # if statement for which the user guesses too low or high<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if user_guess &lt; 1 or user_guess &gt; 100:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please guess a number between 1 and 100.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif user_guess &lt; number_to_guess:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too low! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif user_guess &gt; number_to_guess:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too high! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Congrats! You guessed the number.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please Try Again.")</p>
+<p># Main function of the program<br>if __name__ == "__main__":<br>&nbsp; &nbsp; guessing_game()</p>
+</div>
+</body>
+</html>

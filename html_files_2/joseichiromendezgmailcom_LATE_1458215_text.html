@@ -1,0 +1,51 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: joseichiromendez@gmail.com</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: joseichiromendez@gmail.com</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import math</p>
+<p># ask the user what type of shape they want to calculate area of</p>
+<p>def area_calc(shape):</p>
+<p># if it is a circle</p>
+<p>&nbsp; &nbsp; if shape.lower() == 'circle':</p>
+<p>&nbsp; &nbsp; # ask for radius</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; radius = float(input('Whats the radius? '))</p>
+<p>&nbsp; &nbsp; # calculate area</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return math.pi * radius * radius</p>
+<p># if it is a rectangle</p>
+<p>&nbsp; &nbsp; elif shape.lower() == 'rectangle':</p>
+<p>&nbsp; &nbsp;# ask for length</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;length = float(input('Whats the length? '))</p>
+<p>&nbsp; &nbsp;# ask for height</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;height = float(input('Whats the height? '))</p>
+<p>&nbsp; &nbsp;# calculate area</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return length*height</p>
+<p># if it is a square</p>
+<p>&nbsp; &nbsp; elif shape.lower() == 'square':</p>
+<p>&nbsp; &nbsp; # ask for length</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; length = float(input('Whats the length? '))</p>
+<p>&nbsp; &nbsp; # calculate area</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return length*length</p>
+<p># if it is a triangle</p>
+<p>&nbsp; &nbsp;elif shape.lower() == 'triangle':</p>
+<p>&nbsp; &nbsp; # ask for base</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; base = float(input('Whats the base? '))</p>
+<p>&nbsp; &nbsp; # ask for height</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; height = float(input('Whats the height? '))</p>
+<p>&nbsp; &nbsp; # calculate area&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return .5 * base * height</p>
+<p>&nbsp; &nbsp; # if the user entered a invalid shape&nbsp;</p>
+<p>&nbsp; &nbsp; else:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # return invalid shape</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return 'Invalid shape'</p>
+</div>
+</body>
+</html>

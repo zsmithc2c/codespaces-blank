@@ -1,0 +1,56 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Halil Tunc</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Halil Tunc</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Terms:</span></div>
+<div><span># Detect a word that reads the same forward and backward. </span></div>
+<div><span># Ignore spaces, punctuation, and capitalization.</span></div>
+<br>
+<div><span># Plan:</span></div>
+<div><span># Convert the string to lowercase</span></div>
+<div><span># Remove non-alphanumeric characters</span></div>
+<div><span># Check if the cleaned string reads the same forward and backward by using an array</span></div>
+<div><span># If it does, print "The string is a palindrome"</span></div>
+<div><span># Otherwise, print "The string is not a palindrome"</span></div>
+<br>
+<div><span># Function to check if string is a palindrome</span></div>
+<div><span>def</span> <span>is_palindrome</span><span>(</span><span>input_string</span><span>):</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># Convert the string to lowercase to make it case-insensitive</span></div>
+<div><span>&nbsp; &nbsp; cleaned_string </span><span>=</span><span> input_string</span><span>.</span><span>lower()</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># Remove non-alphanumeric characters</span></div>
+<div><span>&nbsp; &nbsp; </span><span># To remove all the characters that aren't letters and numbers I had to read multiple articles and decided that using .isalnum() would make the most sense here.</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Here are the two main articles I used to learn about .isalnum(): (https://www.geeksforgeeks.org/python-remove-all-characters-except-letters-and-numbers/), (https://flexiple.com/python/remove-non-alphanumeric-characters-python)</span></div>
+<div><span>&nbsp; &nbsp; cleaned_string </span><span>=</span> <span>''</span><span>.</span><span>join(char </span><span>for</span><span> char </span><span>in</span><span> cleaned_string </span><span>if</span><span> char</span><span>.</span><span>isalnum())</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># Compare characters in the string, comparing the first letter with the last letter, and then each letter in the beginning with the corresponding letter towards the end</span></div>
+<div><span>&nbsp; &nbsp; left</span><span>,</span><span> right </span><span>=</span> <span>0</span><span>,</span> <span>len(cleaned_string)</span> <span>-</span> <span>1</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># As long as the characters aren't overlapping the code should keep checking each letter</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> left </span><span>&lt;</span><span> right</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> cleaned_string[left] </span><span>!=</span><span> cleaned_string[right]</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The string is not a palindrome.</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; left </span><span>+=</span> <span>1</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; right </span><span>-=</span> <span>1</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The string is a palindrome.</span><span>"</span></div>
+<br>
+<div><span>print(</span><span>"</span><span>Welcome to the Palindrome Checker!</span><span>"</span><span>)</span></div>
+<div><span>user_input </span><span>=</span> <span>input(</span><span>"</span><span>Enter a string to check if it's a palindrome: </span><span>"</span><span>)</span></div>
+<div><span>result </span><span>=</span> <span>is_palindrome(user_input)</span></div>
+<div><span>print(result)</span></div>
+</div>
+</div>
+</body>
+</html>

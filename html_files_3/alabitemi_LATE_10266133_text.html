@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Temi	Alabi</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Temi	Alabi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>&nbsp;</p>
+<p><span>public class UniqueChars {</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;public static boolean allUniqueChars(String str) {</span></p>
+<p><span>&nbsp; &nbsp;</span><span>&nbsp; &nbsp; &nbsp;int n = str.length();</span></p>
+<p><span>&nbsp; &nbsp; &nbsp;for (int i = 0; i &lt; n; i++) {</span></p>
+<p><span>&nbsp; &nbsp; &nbsp; for (int j = i + 1; j &lt; n; j++) { //check the value right next to it so that we know there are not dupes</span></p>
+<p><span>&nbsp; &nbsp; &nbsp;if (str.charAt(i) == str.charAt(j)) {&nbsp;</span></p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp;return false; // Duplicate found }</span></p>
+<p><span>&nbsp;}</span></p>
+<p><span>&nbsp;}&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span>return true; // All are unique</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Testing</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(allUniqueCharacters("abcdef")); // Output: true</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(allUniqueCharacters("hello"));&nbsp; // Output: false</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+</div>
+</body>
+</html>

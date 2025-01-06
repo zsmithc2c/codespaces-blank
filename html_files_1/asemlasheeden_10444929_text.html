@@ -1,0 +1,34 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Eden Asemlashe</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Eden Asemlashe</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#Practice 1</span></div>
+<br>
+<div><span>import</span><span> re</span></div>
+<div><span># use regular expression to find all the words in the string</span></div>
+<br>
+<div><span>the_string </span><span>=</span> <span>input</span><span>(</span><span>'Enter a palindrome:'</span><span>)</span></div>
+<br>
+<div><span># replace anything thats not a lowercase or # </span></div>
+<div><span># make sure that string comparsion is case senstive</span></div>
+<div><span>processed_string </span><span>=</span><span> re.sub(</span><span>r</span><span>'</span><span>[^</span><span>A-Za-z0-9</span><span>]</span><span>'</span><span>, </span><span>''</span><span>, the_string).lower()</span></div>
+<br>
+<div><span># check if the string is equal to its reverse</span></div>
+<div><span>if</span><span> processed_string </span><span>==</span><span> processed_string[::</span><span>-</span><span>1</span><span>]:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>'The string is a palindrome'</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>'The string is not a palindrome'</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

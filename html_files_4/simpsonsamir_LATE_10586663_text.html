@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Samir Simpson</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Samir Simpson</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import random as r</p>
+<p>def guessing_game():<br>&nbsp; &nbsp; number = r.randint(1, 100)<br>&nbsp; &nbsp; print("This is the number guessing game!")<br>&nbsp; &nbsp; print("There is a number between 1 and 100. Can you guess what it is?")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess = int(input("Enter your guess: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if guess &lt; 1 or guess &gt; 100:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Please enter a number between 1 and 100.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif guess &lt; number:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too low! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif guess &gt; number:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too high! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"Congratulations! You guessed it right. The number was {number}. &nbsp;”</p>
+<p>guessing_game()</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Arsha	Sheikhi</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Arsha	Sheikhi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Create function to do the task of checking if a word is a palindrome<br>def CheckWord(word):<br>&nbsp; &nbsp; #Create list to add letters into for checking&nbsp;<br>&nbsp; &nbsp; LetterList = []<br>&nbsp; &nbsp; for letter in word:<br>&nbsp; &nbsp; &nbsp; &nbsp; LetterList.append(letter)<br>&nbsp; &nbsp; #Create a list for the reversed letter to compare to the normal list<br>&nbsp; &nbsp; ReverseLetterList = []<br>&nbsp; &nbsp; #Add each letter from the normal list in reverse to the new list<br>&nbsp; &nbsp; for letter in reversed(LetterList):<br>&nbsp; &nbsp; &nbsp; &nbsp; ReverseLetterList.append(letter)<br>&nbsp; &nbsp; #Compare lists. If they are the same, then it is a palindrome<br>&nbsp; &nbsp; if LetterList == ReverseLetterList:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is a palindrome.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is not a palindrome.")</p>
+<p>EnterWord = str(input("Enter a word here: "))<br>CheckWord(EnterWord)</p>
+</div>
+</body>
+</html>

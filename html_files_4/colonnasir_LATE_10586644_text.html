@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Nasir Colon</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Nasir Colon</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div>
+<div>
+<div><span>import</span><span> random </span></div>
+<br>
+<div><span>number </span><span>=</span> <span>range(</span><span>1</span><span>,</span><span>100</span><span>)</span> <span>#making a range of numbers to choose from</span></div>
+<br>
+<div><span>def</span> <span>guessing_game</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; correct_number </span><span>=</span><span> random</span><span>.</span><span>choice(number)</span><span>#picking a random number from the range</span></div>
+<div><span>&nbsp; &nbsp; guess </span><span>=</span> <span>int(input(</span><span>"</span><span>pick a number:</span><span>"</span><span>))</span> <span>#pick a numebr</span></div>
+<div><span>&nbsp; &nbsp; </span><span>try</span><span>:</span><span> &nbsp;</span><span># trys to see if the input was a number</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; val </span><span>=</span> <span>int(guess)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span> <span># if isnt a number it will ask for a number</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Not an number.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; guess </span><span>=</span> <span>int(input(</span><span>"</span><span>pick a number:</span><span>"</span><span>))</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> guess </span><span>!=</span><span> correct_number</span><span>:</span> <span># keep the game going until the player wins</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> guess </span><span>==</span><span> correct_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>You got it</span><span>"</span><span>)</span> <span>#win condition met and the game ends</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span><span> guess </span><span>&gt;</span><span> correct_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>too high</span><span>"</span><span>)</span> <span>#adding extra information for the player to guess right</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess </span><span>=</span> <span>int(input(</span><span>"</span><span>pick a number:</span><span>"</span><span>))</span> <span>#lets the player guess again and also to prevent an infininte loop</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span><span> guess </span><span>&lt;</span><span> correct_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>too low</span><span>"</span><span>)</span><span> &nbsp; &nbsp;</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess </span><span>=</span> <span>int(input(</span><span>"</span><span>pick a number:</span><span>"</span><span>))</span></div>
+<div><span>guessing_game()</span></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

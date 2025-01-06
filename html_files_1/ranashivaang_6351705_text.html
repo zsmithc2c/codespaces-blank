@@ -1,0 +1,17 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Shivaang	Rana</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Shivaang	Rana</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># thought process: # reverse the input and check if the reversed input is the same as the original input # if it is the same then it is a palindrome # if it is not the same then it isn't a palindrome # for empty strings it should return True # for strings with spaces and punctation, i will assume that they should be left alone and not removed as it could change the meaning of the word def palindrome_checker(s1): # store reversed string reverseds1 = "" # go through original string and reverse it for letter in s1: reverseds1 = letter + reverseds1 # check if original is equal to reversed if s1 == reverseds1: print("The string is a palindrome") # conditional if it is NOT equal to each other else: print("The string is not a palindrome") palindrome_checker("racecar")</p>
+</div>
+</body>
+</html>

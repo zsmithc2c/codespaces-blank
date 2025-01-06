@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Aniketh	Buddolla</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Aniketh	Buddolla</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def calculate_area():<br>&nbsp; &nbsp; # Inform the user about the program's purpose<br>&nbsp; &nbsp; print("I can calculate the area of a shape for you.")<br>&nbsp; &nbsp; print("Which shape do you want me to calculate the area of?")<br>&nbsp; &nbsp; print("Options: circle, rectangle, square, triangle")</p>
+<p>&nbsp; &nbsp; # Ask the user to input the name of the shape<br>&nbsp; &nbsp; shape = input("Enter the shape: ").strip().lower() &nbsp;# Convert input to lowercase and remove extra spaces</p>
+<p>&nbsp; &nbsp; # Handle each shape type<br>&nbsp; &nbsp; if shape == "circle":<br>&nbsp; &nbsp; &nbsp; &nbsp; # Ask for the radius of the circle<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = float(input("Enter the radius of the circle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; # Calculate the area using πr^2 (approximating π as 3.14159)<br>&nbsp; &nbsp; &nbsp; &nbsp; area = 3.14159 * radius ** 2<br>&nbsp; &nbsp; &nbsp; &nbsp; # Display the result formatted to 2 decimal places<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the circle is {area:.2f}")<br>&nbsp; &nbsp; elif shape == "rectangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; # Ask for the length and width of the rectangle<br>&nbsp; &nbsp; &nbsp; &nbsp; length = float(input("Enter the length of the rectangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; width = float(input("Enter the width of the rectangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; # Calculate the area using length × width<br>&nbsp; &nbsp; &nbsp; &nbsp; area = length * width<br>&nbsp; &nbsp; &nbsp; &nbsp; # Display the result formatted to 2 decimal places<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the rectangle is {area:.2f}")<br>&nbsp; &nbsp; elif shape == "square":<br>&nbsp; &nbsp; &nbsp; &nbsp; # Ask for the side length of the square<br>&nbsp; &nbsp; &nbsp; &nbsp; side = float(input("Enter the side length of the square: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; # Calculate the area using side^2<br>&nbsp; &nbsp; &nbsp; &nbsp; area = side ** 2<br>&nbsp; &nbsp; &nbsp; &nbsp; # Display the result formatted to 2 decimal places<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the square is {area:.2f}")<br>&nbsp; &nbsp; elif shape == "triangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; # Ask for the base and height of the triangle<br>&nbsp; &nbsp; &nbsp; &nbsp; base = float(input("Enter the base of the triangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; height = float(input("Enter the height of the triangle: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; # Calculate the area using 0.5 × base × height<br>&nbsp; &nbsp; &nbsp; &nbsp; area = 0.5 * base * height<br>&nbsp; &nbsp; &nbsp; &nbsp; # Display the result formatted to 2 decimal places<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the triangle is {area:.2f}")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; # Handle invalid shape input<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Sorry, I don't recognize that shape.")</p>
+<p># Call the function to execute the program<br>calculate_area()</p>
+</div>
+</body>
+</html>

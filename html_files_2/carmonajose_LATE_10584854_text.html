@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Jose	Carmona</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Jose	Carmona</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Area calcuator:<br>#ask and take in the shape of choice from user<br>#depending on shape ask and take in nessecary values/measurments<br>#use measurments to calculate area of users shape</p>
+<p>#calculate area of circle<br>def circle_area(radius):<br>&nbsp; return 3.14 * radius * radius<br>#calculate area of square<br>def square_area(side):<br>&nbsp; return side * side<br>#calculate area of rectangle<br>def rectangle_area(length, width):<br>&nbsp; return length * width<br>#calculate area of triangle<br>def triangle_area(base, height):<br>&nbsp; return base * height / 2</p>
+<p>#main function<br>def Area_calculator():<br>&nbsp; #requesting shape<br>&nbsp; shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?(circle, square, recangle, triangle)")<br>&nbsp; #checking the shape then promting for measurments then printing area of shape using measurments given<br>&nbsp; if shape == "circle":<br>&nbsp; &nbsp; radius = int(input("what is the radius of the circle?"))<br>&nbsp; &nbsp; print("the area of the circle is " + str(circle_area(radius)))<br>&nbsp; elif shape == "square":<br>&nbsp; &nbsp; side = int(input("What is the side length of the square?"))<br>&nbsp; &nbsp; print("The area of the square is " + str(square_area(side)))<br>&nbsp; elif shape == "rectangle":<br>&nbsp; &nbsp; length = int(input("What is the length of the rectangle?"))<br>&nbsp; &nbsp; width = int(input("What is the width of the rectangle?"))<br>&nbsp; &nbsp; print("The area of the rectangle is " + str(rectangle_area(length, width)))<br>&nbsp; elif shape == "triangle":<br>&nbsp; &nbsp; base = int(input("What is the base of the triangle?"))<br>&nbsp; &nbsp; height = int(input("What is the height of the triangle?"))<br>&nbsp; &nbsp; print("The area of the triangle is " + str(triangle_area(base, height)))</p>
+<p>#running main function<br>Area_calculator()</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Khang	Huynh</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Khang	Huynh</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><br>def is_palindrome(s):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; checks if the given string is a palindrome by comparing characters from start and end toward the middle (*assuming that we are only checking alphanumeric characters*)<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; returns:<br>&nbsp; &nbsp; str: a message indicating if the string is a palindrome.<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; # convert the string to lowercase for case insensitivity<br>&nbsp; &nbsp; s = s.lower()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # filter alphanumeric characters<br>&nbsp; &nbsp; s2 = "".join(char for char in s if char.isalnum())<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #edge case if there are no alphanumeric characters<br>&nbsp; &nbsp; if not s2:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome."<br>&nbsp; &nbsp; # compare characters from start to middle with reversed end to middle<br>&nbsp; &nbsp; n = len(s2)<br>&nbsp; &nbsp; for i in range(n // 2):</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if s2[i] != s2[n - 1 - i]:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome."<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; return "The string is a palindrome."</p>
+<p># test cases<br>print(is_palindrome("Racecar")) &nbsp;# the string is a palindrome.<br>print(is_palindrome("Hello")) &nbsp; &nbsp;# the string is not a palindrome.<br>print(is_palindrome("")) &nbsp; &nbsp; &nbsp; &nbsp; # the string is not a palindrome. (edge case)<br>print(is_palindrome("#!")) &nbsp; &nbsp; &nbsp; # the string is not a palindrome. (edge case)</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Reeddhiman Pradhan</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Reeddhiman Pradhan</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Ask user for a word<br>word = input("Enter a word: ")</p>
+<p># Create a new variable that reverses the word<br>reversed_word = ""</p>
+<p>"""<br>In each iteration (using a for loop), the current character (char)&nbsp;<br>is added to the front of reversed_word<br>"""<br>for char in word:<br>&nbsp; &nbsp; reversed_word = char + reversed_word<br>&nbsp; &nbsp;&nbsp;<br>if reversed_word.lower() == word.lower(): # Ensures both words are in the same format<br>&nbsp; &nbsp; print("The string is a palindrome.")</p>
+<p>elif word == "": # If word is an empty string<br>&nbsp; &nbsp; print("Please type in a word.")</p>
+<p>elif word == "?" or word == "." or word == ";" or word == ":" or word == "!": # If word has punctuation<br>&nbsp; &nbsp; print("This is not a word.")&nbsp;</p>
+<p>else: # If word does not match reversed_word<br>&nbsp; &nbsp; print("The string is not a palindrome.")</p>
+</div>
+</body>
+</html>

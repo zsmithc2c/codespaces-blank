@@ -1,0 +1,89 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Faraja Athanas</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Faraja Athanas</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>UNDERSTANDING:</span></p>
+<p><span># We need to create ask the user to guess a number that the computer gussed</span></p>
+<p><span>#input: a int entered by the user&nbsp;</span></p>
+<p><span>Clues:</span></p>
+<p><span> </span><span>#we migh need to use an if statement to check</span></p>
+<p><span> </span><span># a while loop for the user to keep guessing&nbsp;</span></p>
+<p><span>#we might need to remove space&nbsp;</span></p>
+<p><span>Assemble:</span></p>
+<p><span> </span><span>Import the random madual</span></p>
+<p><span> </span><span>Let the computer choose a number ranging from a specific range</span></p>
+<p><span> </span><span>Ask the user to enter their guess within then range&nbsp;</span></p>
+<p><span> </span><span>Use an if statement to check if the numbers are the same&nbsp;</span></p>
+<p><span> </span></p>
+<p><span>Solve:</span></p>
+<p>&nbsp;</p>
+<p><span>Real working code:</span></p>
+<p><span>import random</span></p>
+<p>&nbsp;</p>
+<p><span>computer_choice = random.randint(1,100)</span></p>
+<p>&nbsp;</p>
+<p><span>while True:</span></p>
+<p><span>&nbsp;&nbsp;user_input = input("Enter a number ")</span></p>
+<p><span>&nbsp;&nbsp;try:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;user_input = int(user_input)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;if user_input == computer_choice:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"The user input {user_input} equals the computer choice {computer_choice}")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif user_input &lt; computer_choice:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("------------------------")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{user_input} Is too low ")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif user_input &gt; computer_choice:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("------------------------")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{user_input} Is too high ")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;except ValueError:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;user_input = input("You entered a nun numeric value try again")</span></p>
+<p><span>&nbsp;&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span>Examine:</span></p>
+<p><span>Computer&nbsp; = 5 and user = 5:</span></p>
+<p><span> </span><span>Breaks&nbsp;</span></p>
+<p><span>Otherwise, check if the user input is either low or high then aks the user to enter the value again&nbsp;</span></p>
+<p><span>Improvement:</span></p>
+<p><span>We can add a if statement to insure the use enter a value that is in the right range(1-100) in this case&nbsp;</span></p>
+<p><span>Refined code 😐</span></p>
+<p><span>import random</span></p>
+<p>&nbsp;</p>
+<p><span>computer_choice = random.randint(1,100)</span></p>
+<p>&nbsp;</p>
+<p><span>while True:</span></p>
+<p><span>&nbsp;&nbsp;user_input = int(input("Enter a number "))</span></p>
+<p><span>&nbsp;&nbsp;if user_input &gt;= 1 and user_input &lt;= 100:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;pass</span></p>
+<p><span>&nbsp;&nbsp;else:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;user_input = input("Enter a value within the range of 1-100" )</span></p>
+<p><span>&nbsp;&nbsp;try:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;user_input = int(user_input)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;if user_input == computer_choice:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"The user input {user_input} equals the computer choice {computer_choice}")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif user_input &lt; computer_choice:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("------------------------")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{user_input} Is too low ")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif user_input &gt; computer_choice:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("------------------------")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{user_input} Is too high ")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;except ValueError:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;user_input = input("You entered a nun numeric value try again")</span></p>
+<p><span>&nbsp;</span></p>
+</div>
+</body>
+</html>

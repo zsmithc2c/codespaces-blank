@@ -1,0 +1,68 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Maya Villa</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Maya Villa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#UCASE</span></div>
+<div><span># U - I need to check if a string is a palindrome, which means that whatever the phrase is</span></div>
+<div><span># &nbsp;must be read the same forwards and backwards</span></div>
+<div><span># Input: a string</span></div>
+<div><span># Output: Either yes or no that it is a palindrome</span></div>
+<div><span># Edge cases? It must ignore spaces, punctuation, and capitalization</span></div>
+<br>
+<div><span># C - input and string methods need to be used. == to check if two strings are equivalent.</span></div>
+<br>
+<div><span># A and S</span></div>
+<br>
+<div><span># inputs for testing</span></div>
+<div><span>input1 = </span><span>"tacocat"</span></div>
+<div><span>input2 = </span><span>"racecar"</span></div>
+<div><span>input3 = </span><span>"rac,e Car"</span> <span># input for the test</span></div>
+<div><span>input4 = </span><span>"hello there"</span></div>
+<br>
+<div><span># needed to get rid of capitalization, spaces, and puntucation since palindromes ignore that but the program will not</span></div>
+<div><span>def</span><span> fixEdgeCases(input):</span></div>
+<div><span>&nbsp; &nbsp; input = input.lower() </span><span># make all characters lowercase for simplicity</span></div>
+<div><span>&nbsp; &nbsp; string_list = [] </span><span># need all the characters spaced out</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> character </span><span>in</span><span> input:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; string_list.append(character) </span><span># all characters are now in a list</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> character </span><span>in</span><span> string_list: </span><span># gets rid of the other two edge cases</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> character == </span><span>"."</span> <span>or</span><span> character == </span><span>"?"</span> <span>or</span><span> character == </span><span>"!"</span> <span>or</span><span> character == </span><span>","</span><span>: </span><span># punctuation I chose to omit, more can be added</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; string_list.remove(character)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> character == </span><span>" "</span><span>: </span><span># spaces</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; string_list.remove(character)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> string_list </span><span># returns the list of all the characters but without spaces and punctuation</span></div>
+<br>
+<div><span># reverses a list input and returns the reversed list as a string</span></div>
+<div><span>def</span><span> reverseString(string_list):</span></div>
+<div><span>&nbsp; &nbsp; string_list.reverse() </span><span># reverse the characters</span></div>
+<div><span>&nbsp; &nbsp; newString = </span><span>""</span><span>.join(string_list) </span><span># create a new string</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> newString</span></div>
+<br>
+<div><span># a function to determine if an input is a palindrome</span></div>
+<div><span>def</span><span> isPalindrome(original_string): </span><span>#takes in string input</span></div>
+<div><span>&nbsp; &nbsp; string_list = fixEdgeCases(original_string)</span></div>
+<div><span>&nbsp; &nbsp; original_string = </span><span>""</span><span>.join(string_list)</span></div>
+<div><span>&nbsp; &nbsp; reversed_string = reverseString(string_list) </span><span># creates a reversed string</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> reversed_string == original_string: </span><span># check if they are equalivalent</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"The string is a palindrome."</span><span>) </span><span># True!</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"The string is not a palindrome."</span><span>) </span><span># False!</span></div>
+<br>
+<div><span>isPalindrome(input4)</span></div>
+<br>
+<div><span># E - Yes, we can check the result using the test cases I made above. I believe it can be understood at the glance, especially with the comments.</span></div>
+<div><span># I think the performance could be optimized by using different data types at different moments, but I don't know which ones are more efficient.</span></div>
+</div>
+</div>
+</body>
+</html>

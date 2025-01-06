@@ -1,0 +1,56 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Salama Daudi</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Salama Daudi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#create a program that asks for a shape, and then takes the area of it based on its dimensions</span></div>
+<div><span>#INPUTS: STRING, INT? FLOAT? // OUTPUT: INT? FLOAT?</span></div>
+<div><span>##accomodate for decimals? or stick with whole numbers?</span></div>
+<br>
+<div><span>#process seems simple, just ask for a shape then inputs, then plug into formula to return...</span></div>
+<div><span>##inputs and if statements seem to be the way to go!</span></div>
+<br>
+<div><span>#FORMULAS:</span></div>
+<div><span>#areaTriangle = 0.5(b * h)</span></div>
+<div><span>#areaCircle = 3.14(r * r)</span></div>
+<div><span>#areaSquare = s * s</span></div>
+<div><span>#areaRectangle = l * w</span></div>
+<br>
+<div><span>def</span> <span>area</span><span>():</span></div>
+<div><span> userShape </span><span>=</span> <span>input(</span><span>"</span><span>I can calculate the area of a shape for you. Which shape do you want me to calculate the area of: Circle, triangle, square, or rectangle? </span><span>"</span><span>)</span></div>
+<div><span>if</span><span> userShape </span><span>==</span> <span>"</span><span>Rectangle</span><span>"</span> <span>or</span><span> userShape </span><span>==</span> <span>"</span><span>rectangle</span><span>"</span><span>:</span></div>
+<div><span> l </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter length: </span><span>"</span><span>))</span> <span>#ask for inputs, i decided to accomodate for decimal measurements!</span></div>
+<div><span> w </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter width: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span><span> l </span><span>*</span><span> w </span><span>#formula to solve</span></div>
+<div><span>print(</span><span>f</span><span>"The area is </span><span>{</span><span>area</span><span>}</span><span>!"</span><span>)</span> <span>#answer</span></div>
+<br>
+<div><span>if</span><span> userShape </span><span>==</span> <span>"</span><span>Triangle</span><span>"</span> <span>or</span><span> userShape </span><span>==</span> <span>"</span><span>triangle</span><span>"</span><span>:</span> <span>#rinse and repeat for other shapes!</span></div>
+<div><span> b </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter base: </span><span>"</span><span>))</span></div>
+<div><span> h </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter height: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span> <span>0.5</span><span>(b</span><span>*</span><span>h)</span></div>
+<div><span>print(</span><span>f</span><span>"The area is </span><span>{</span><span>area</span><span>}</span><span>!"</span><span>)</span></div>
+<br>
+<div><span>if</span><span> userShape </span><span>==</span> <span>"</span><span>Circle</span><span>"</span> <span>or</span><span> userShape </span><span>==</span> <span>"</span><span>circle</span><span>"</span><span>:</span></div>
+<div><span> r </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter radius: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span> <span>3.14</span><span>(r </span><span>*</span><span> r)</span></div>
+<div><span>print(</span><span>f</span><span>"The area is </span><span>{</span><span>area</span><span>}</span><span>!"</span><span>)</span></div>
+<br>
+<div><span>if</span><span> userShape </span><span>==</span> <span>"</span><span>Square</span><span>"</span> <span>or</span><span> userShape </span><span>==</span> <span>"</span><span>square</span><span>"</span><span>:</span></div>
+<div><span> s </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter side length: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span><span> s </span><span>*</span><span> s</span></div>
+<div><span>print(</span><span>f</span><span>"The area is </span><span>{</span><span>area</span><span>}</span><span>!"</span><span>)</span></div>
+<br>
+<div><span>area()</span></div>
+</div>
+</div>
+</body>
+</html>

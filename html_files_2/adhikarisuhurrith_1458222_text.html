@@ -1,0 +1,28 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Suhurrith Adhikari</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Suhurrith Adhikari</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Function does takes in user input of the shape, and then based on the shape the function will get the area.</p>
+<p><br># using the math library to do so me calculations such as accessing the precise value of pi</p>
+<p># Edge case #1: The shape is not among the shapes that will get the area, we will use else to say that it is an invalid shape</p>
+<p>#Edge case #2; the specifc values such as the radius, side length, width must be an actual number so used an if-else to suppress errors<br>import math</p>
+<p>def calculate_area():<br>&nbsp; &nbsp; print("I can calculate the area of a shape for you.")<br>&nbsp; &nbsp; print("Which shape do you want me to calculate the area of? (circle, rectangle, square, triangle)")</p>
+<p>&nbsp; &nbsp; # With user input getting the shape by removing whitespace and standardizing text by lowercasing all inputs.<br>&nbsp; &nbsp; shape = input("Enter the name of the shape: ").strip().lower()</p>
+<p>&nbsp; &nbsp; # Circle: the area is a pi * (radius) ^2<br>&nbsp; &nbsp; if shape == "circle":<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = input("Enter the radius of the circle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; if radius.isdigit() and float(radius) &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; radius = float(radius)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = math.pi * radius**2<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the circle is {area:.2f}.")<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid radius. Please enter a positive number.")</p>
+<p>&nbsp; &nbsp; # Rectangle: area is length * width<br>&nbsp; &nbsp; elif shape == "rectangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; length = input("Enter the length of the rectangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; width = input("Enter the width of the rectangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; if length.isdigit() and width.isdigit() and float(length) &gt; 0 and float(width) &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length = float(length)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width = float(width)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = length * width<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the rectangle is {area:.2f}.")<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid length or width. Please enter positive numbers.")</p>
+<p>&nbsp; &nbsp; # the shape square's area is sidelength to the power of 2<br>&nbsp; &nbsp; elif shape == "square":<br>&nbsp; &nbsp; &nbsp; &nbsp; side = input("Enter the side length of the square: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; if side.isdigit() and float(side) &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; side = float(side)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = side**2<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the square is {area:.2f}.")<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid side length. Please enter a positive number.")</p>
+<p>&nbsp; &nbsp; # the shape triangle's area is 1/2 * b * h<br>&nbsp; &nbsp; elif shape == "triangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; base = input("Enter the base of the triangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; height = input("Enter the height of the triangle: ")<br>&nbsp; &nbsp; &nbsp; &nbsp; if base.isdigit() and height.isdigit() and float(base) &gt; 0 and float(height) &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; base = float(base)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height = float(height)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = 0.5 * base * height<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the triangle is {area:.2f}.")<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid base or height. Please enter positive numbers.")</p>
+<p>&nbsp; &nbsp; # edge case else statement<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid shape. Please choose from circle, rectangle, square, or triangle.")</p>
+<p>#testing<br>calculate_area()</p>
+</div>
+</body>
+</html>

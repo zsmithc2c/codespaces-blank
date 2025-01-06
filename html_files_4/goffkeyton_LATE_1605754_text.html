@@ -1,0 +1,66 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Keyton Goff</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Keyton Goff</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div style="color: #d9dfe7; background-color: #171f2b; font-family: Consolas, 'Courier New', monospace;  font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #7f8d9f;"># Number Guessing Game</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Import the random library to get the random number we will have the player guess</span></div>
+<div><span style="color: #fd8da3;">import</span><span style="color: #d9dfe7;"> random</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Define a constant for our random number the player will try to guess</span></div>
+<div><span style="color: #d9dfe7;">goal </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> random.randint(</span><span style="color: #92a9ff;">1</span><span style="color: #d9dfe7;">,</span><span style="color: #92a9ff;">100</span><span style="color: #d9dfe7;">)</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Define a function to check the player's answer</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">check_answer</span><span style="color: #d9dfe7;">(n: </span><span style="color: #92a9ff;">int</span><span style="color: #d9dfe7;">):</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> n </span><span style="color: #fd8da3;">==</span><span style="color: #d9dfe7;"> goal: </span><span style="color: #7f8d9f;"># Return a number to indicate the player's guess is high, low, or equal to the goal</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">0</span><span style="color: #d9dfe7;"> &nbsp;</span><span style="color: #7f8d9f;"># 0 = correct, 1 = low, 2 = high</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> n </span><span style="color: #fd8da3;">&gt;</span><span style="color: #d9dfe7;"> goal:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">1</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> n </span><span style="color: #fd8da3;">&lt;</span><span style="color: #d9dfe7;"> goal:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">2</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #7f8d9f;"># Define a function to get and validate user inputs</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">get_valid_uin</span><span style="color: #d9dfe7;">():</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">while</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">True</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Enter an input loop so we can continuously ask the player for input incase they enter something invalid</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">try</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Use a try-catch statement to catch the ValueError</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; uin </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">int</span><span style="color: #d9dfe7;">(</span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"Guess the number (1-100): "</span><span style="color: #d9dfe7;">)) </span><span style="color: #7f8d9f;"># Get the input</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> uin </span><span style="color: #fd8da3;">&gt;</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">100</span><span style="color: #d9dfe7;"> </span><span style="color: #fd8da3;">or</span><span style="color: #d9dfe7;"> uin </span><span style="color: #fd8da3;">&lt;</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">1</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Ensure the input is within the acceptable range 1-100</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"Out of range: select only numbers 1-100! Press enter to continue..."</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">continue</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> uin </span><span style="color: #7f8d9f;"># Return the input if it is valid</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">except</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Warn the user about non-numerical characters</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">input</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"Value error: select only numerical characters! Press enter to continue..."</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">continue</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Define the program's main function</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">main</span><span style="color: #d9dfe7;">():</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">while</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">True</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Enter an input loop to continuously check numbers until the correct one is selected</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; uin </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> get_valid_uin() </span><span style="color: #7f8d9f;"># Get the user's input</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; check </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> check_answer(uin) </span><span style="color: #7f8d9f;"># Check if it is correct, high, or low</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> check </span><span style="color: #fd8da3;">==</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">0</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Inform the user about their input</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">break</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">elif</span><span style="color: #d9dfe7;"> check </span><span style="color: #fd8da3;">==</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">1</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">print</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"The number is lower!"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">continue</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">elif</span><span style="color: #d9dfe7;"> check </span><span style="color: #fd8da3;">==</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">2</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #92a9ff;">print</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"The number is higher!"</span><span style="color: #d9dfe7;">)</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">continue</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #92a9ff;">print</span><span style="color: #d9dfe7;">(</span><span style="color: #77d5a3;">"You win! The number was"</span><span style="color: #d9dfe7;">, goal)</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Run the main function</span></div>
+<div><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">__name__</span><span style="color: #d9dfe7;"> </span><span style="color: #fd8da3;">==</span><span style="color: #d9dfe7;"> </span><span style="color: #77d5a3;">"__main__"</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; main()</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Shivaang	Rana</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Shivaang	Rana</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># thought process: # make a empty list that stores everything "we" have seen # go through each letter # check if the letter we are on is in the seen list we originally made # if the letter we are on is the seen list that means theres duplicates # if it isnt seen, we add it to the list because its a unique letter # if the loop successfully runs in its entirety then we return True # if the loop stops at any point then it returns False since that means there was a duplicate def has_unique_characters(s1): seenLetters = [] for letter in s1: if letter in seenLetters: return False seenLetters.append(letter) return True</p>
+</div>
+</body>
+</html>

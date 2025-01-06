@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Elenna Patterson</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Elenna Patterson</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#import random to use random library</p>
+<p>import random<br>user_num = int(input('Enter a number 1-100: '))<br>comp_num = random.randint(1, 100)</p>
+<p>#loop to make sure that it runs through until correct number</p>
+<p>while user_num &lt; 1 or user_num &gt; 100:<br>&nbsp; &nbsp; user_num = int(input('Please enter a number 1-100: '))</p>
+<p>#loop until user == computer</p>
+<p>while user_num != comp_num:<br>&nbsp; &nbsp; if user_num &gt; comp_num:<br>&nbsp; &nbsp; &nbsp; &nbsp; user_num = int(input('Your number is too high, guess again: '))<br>&nbsp; &nbsp; elif user_num &lt; comp_num:<br>&nbsp; &nbsp; &nbsp; &nbsp; user_num = int(input('Your number is too low, guess again: '))</p>
+<p>print('You got the correct number!')</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

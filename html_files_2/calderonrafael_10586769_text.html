@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Rafael Calderon</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Rafael Calderon</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>from</span> <span>math</span> <span>import</span> <span>pi</span> <span>#import to access the value of pi</span></div>
+<br>
+<div><span>#set of methods that return a numerical value that represents the calculated area for the respective shape</span></div>
+<div><span>def</span> <span>square</span><span>(</span><span>side</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>side</span> <span>**</span> <span>2</span></div>
+<br>
+<div><span>def</span> <span>rectangle</span><span>(</span><span>length</span><span>, </span><span>width</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>length</span> <span>*</span> <span>width</span></div>
+<br>
+<div><span>def</span> <span>triangle</span><span>(</span><span>base</span><span>, </span><span>height</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> &nbsp;(</span><span>base</span> <span>*</span> <span>height</span><span>)</span><span>/</span><span>2</span></div>
+<br>
+<div><span>def</span> <span>circle</span><span>(</span><span>radius</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>pi</span> <span>*</span> <span>radius</span> <span>**</span> <span>2</span></div>
+<br>
+<div><span>def</span> <span>main</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span>shape</span> <span>=</span> <span>input</span><span>(</span><span>"For what shape (square, rectangle, circle, or triangle) would you like to calculate the area? "</span><span>).</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#switch-case for each shape</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#each case prevents an error from occuring from casting the user's input and displays the calculated area</span></div>
+<div><span>&nbsp; &nbsp; </span><span>match</span> <span>shape</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>case</span> <span>'square'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>side</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter the measure of the side lengths of the square: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#sting format for the superscript was found at https://www.geeksforgeeks.org/how-to-print-superscript-and-subscript-in-python/</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the square is </span><span>{</span><span>square</span><span>(</span><span>side</span><span>)</span><span>}</span><span> units</span><span>\u00b2</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>case</span> <span>'rectangle'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter the measure of the width: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>int</span><span>(</span><span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter the measure of the length; "</span><span>)))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the rectangle is </span><span>{</span><span>rectangle</span><span>(</span><span>length</span><span>, </span><span>width</span><span>)</span><span>}</span><span> units</span><span>\u00b2</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>case</span> <span>'circle'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>radius</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter the radius of the the circle: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the circle is </span><span>{</span><span>circle</span><span>(</span><span>radius</span><span>)</span><span>}</span><span> units</span><span>\u00b2</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>case</span> <span>'triangle'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter the measure of the base: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>int</span><span>(</span><span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter the measure of the height: "</span><span>)))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the triangle is </span><span>{</span><span>triangle</span><span>(</span><span>base</span><span>, </span><span>height</span><span>)</span><span>}</span><span> units</span><span>\u00b2</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>case</span><span> _: </span><span>#base case that runs when none of the above cases are true</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input."</span><span>)</span></div>
+<br><br>
+<div><span>if</span> <span>__name__</span> <span>==</span> <span>"__main__"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>main</span><span>()</span></div>
+</div>
+</div>
+</body>
+</html>

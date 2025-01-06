@@ -1,0 +1,56 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Ahmanii Peoples</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Ahmanii Peoples</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>Pseudocode</p>
+<p>_______</p>
+<div>
+<div><span>#generate a number between 1 - 100</span></div>
+<div><span>#make the user guess a number between one and 100</span></div>
+<div><span>#create a function that checks the answer</span></div>
+<div><span>#use a while loop</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#if the number is higher than the guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#tell the user its too high, and try again</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#if the number is lower than the guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#tell the user its too low, and try again</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#if the user got it correct</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#tell the user you got it right!!!</span></div>
+<br>
+<div><span>#resource(s)https://www.geeksforgeeks.org/random-numbers-in-python/</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span>#https://www.geeksforgeeks.org/random-numbers-in-python/</span></div>
+<div><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">_______</span></div>
+<div><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Code&nbsp;</span></div>
+<div>_______</div>
+<div>
+<div>
+<div><span>import</span> <span>random</span></div>
+<div><span>num</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Guess what number I chose: "</span><span>))</span></div>
+<br>
+<div><span>def</span> <span>number_guesser</span><span>(</span><span>x</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>,</span><span>100</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>x</span> <span>!=</span> <span>guess</span><span>: </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>x</span> <span>&lt;=</span> <span>guess</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Sorry! That number is too low. Try aiming higher!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>x</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>())</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>x</span> <span>&gt;=</span> <span>guess</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Sorry! That number is too high. Try aiming lower!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>x</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>())</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#elif x == guess:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"Great job! The number is </span><span>{</span><span>guess</span><span>}</span><span>"</span><span>) &nbsp; </span></div>
+<div><span>number_guesser</span><span>(</span><span>num</span><span>)</span></div>
+</div>
+</div>
+<div>_______</div>
+</div>
+</div>
+</body>
+</html>

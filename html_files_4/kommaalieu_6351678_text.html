@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Alieu	Komma</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Alieu	Komma</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Generate a random number<br># Ask user for guess<br># If guess to high, tell user it's lower<br># If guess to low, tell user it's higher<br># Run until user guesses number</p>
+<p>import random</p>
+<p>def guessingGame(number):<br>&nbsp; &nbsp; guessedNumber = False<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; while guessedNumber == False: #Allows user to keep playing the game until they guess the number<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; try: #Used to make sure the user is typing numbers into the input<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess = int(input("Welcome to the guessing game! Guess a number between 1-100. "))<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Make sure you're typing numbers and not letters.\n")<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; try: #Also used to continue program if the user type a letter on the first guess<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if guess &gt;= 1 and guess &lt;= 100: # Makes sure the number is inbetween 1 and 100<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if guess == number: # User guessed correct number<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"\nCongratulations! The number was {number}")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guessedNumber = True<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif guess &gt; number: # User guessed a number that's bigger<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("\nTry guessing a smaller number\n")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif guess &lt; number: # User guessed a number that's smaller<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("\nTry guessing a bigger number\n")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Make sure you're typing numbers between 1-100.\n")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; except UnboundLocalError: #<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pass<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp;&nbsp;</p>
+<p>guessingGame(random.randint(1, 100))</p>
+</div>
+</body>
+</html>

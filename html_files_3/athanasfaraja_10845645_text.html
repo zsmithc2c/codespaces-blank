@@ -1,0 +1,47 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Faraja Athanas</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Faraja Athanas</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p dir="ltr"><span>UNDERSTANDING:</span></p>
+<p dir="ltr"><span># We need to create that determines whether all characters in a given string are unique</span></p>
+<p dir="ltr"><span>#input: a string entered by the user&nbsp;</span></p>
+<p dir="ltr"><span>#A boolean true or false is all the char in the given strings are unique or return false if their are duplicate&nbsp;</span></p>
+<p dir="ltr"><span>Clues:</span></p>
+<p dir="ltr"><span>#we might need to use an empty list to check for duplicate</span></p>
+<p dir="ltr"><span>#we might need to remove space&nbsp;</span></p>
+<p dir="ltr"><span>Assemble:</span></p>
+<p dir="ltr"><span>Make an emply list</span></p>
+<p dir="ltr"><span>Let the user enter a string&nbsp;</span></p>
+<p dir="ltr"><span>Run a for loop for each char i&nbsp; the string&nbsp;</span></p>
+<p dir="ltr"><span>If the given string char&nbsp; apparent in the emply string return false</span></p>
+<p dir="ltr"><span>Else add the char the emply list&nbsp;</span></p>
+<p dir="ltr"><span>Return true if the return false was never triggered&nbsp;</span></p>
+<p dir="ltr">&nbsp;</p>
+<p dir="ltr"><span>Solve:</span></p>
+<p dir="ltr">&nbsp;</p>
+<p dir="ltr"><span>Real working code:</span></p>
+<p dir="ltr"><span>def checkIfStringContainsUpperCase(s):</span><span><br></span><span>&nbsp; check = []</span><span><br></span><span>&nbsp; for i in s:</span><span><br></span><span>&nbsp; &nbsp; if i.upper() in check:</span><span><br></span><span>&nbsp; &nbsp; &nbsp; return False</span><span><br></span><span>&nbsp; &nbsp; else:</span><span><br></span><span>&nbsp; &nbsp; &nbsp; check.append(i)</span><span><br></span><span>&nbsp; </span><span><br></span><span>&nbsp; return True&nbsp; &nbsp; </span><span><br></span><span>&nbsp;&nbsp;</span></p>
+<p dir="ltr"><span>input = input("Enter something: ")</span><span><br></span><span>print(checkIfStringContainsUpperCase(input))</span></p>
+<p dir="ltr">&nbsp;</p>
+<p dir="ltr"><span>Examine:</span></p>
+<p dir="ltr"><span>“ ” return True</span></p>
+<p dir="ltr"><span>“A” Returns True&nbsp;</span></p>
+<p dir="ltr"><span>“aA” Returns false</span></p>
+<p dir="ltr"><span>“abcd” return true</span></p>
+<p dir="ltr"><span>“Faraja” return false</span></p>
+<p dir="ltr"><span>Improvement:</span></p>
+<p dir="ltr"><span>We can use a set() instead of the list the that the program runs faster</span></p>
+<p dir="ltr">&nbsp;</p>
+<p><span>Why use UCASE:</span><span><br></span><span>Following the UCASE ensures that i full understand the problem before solving it </span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Elston Su</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Elston Su</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>import math</span></p>
+<p><span>def calculate_area(): </span></p>
+<p><span>shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?") </span></p>
+<p><span>if shape == "circle": </span></p>
+<p><span>radius = float(input("Please enter the radius of the circle: ")) </span></p>
+<p><span>area = math.pi * radius * radius </span></p>
+<p><span>print(f"The area of the circle is {area:.2f}") </span></p>
+<p><span>elif shape == "rectangle": </span></p>
+<p><span>length = float(input("Please enter the length of the rectangle: ")) </span></p>
+<p><span>width = float(input("Please enter the width of the rectangle: ")) </span></p>
+<p><span>area = length * width </span></p>
+<p><span>print(f"The area of the rectangle is {area:.2f}") </span></p>
+<p><span>elif shape == "square": </span></p>
+<p><span>side = float(input("Please enter the side length of the square: "))</span></p>
+<p><span> area = side * side </span></p>
+<p><span>print(f"The area of the square is {area:.2f}") </span></p>
+<p><span>elif shape == "triangle": </span></p>
+<p><span>base = float(input("Please enter the base of the triangle: ")) </span></p>
+<p><span>height = float(input("Please enter the height of the triangle: ")) </span></p>
+<p><span>area = 0.5 * base * height </span></p>
+<p><span>print(f"The area of the triangle is {area:.2f}") </span></p>
+<p><span>else: </span></p>
+<p><span>print("Invalid shape. Please enter one of the following: triangle, rectangle, square, circle.")</span></p>
+</div>
+</body>
+</html>

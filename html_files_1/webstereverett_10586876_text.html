@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Everett	Webster</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Everett	Webster</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Creating a system to detect palindrome(s)</span></div>
+<br>
+<div><span># define function for the system</span></div>
+<div><span>def</span> <span>is_palindrome</span><span>(</span><span>s</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Normalize the string making it lowercase and remove characters</span></div>
+<div><span>&nbsp; &nbsp; normalized_str </span><span>=</span> <span>''</span><span>.join(char.lower() </span><span>for</span><span> char </span><span>in</span><span> s </span><span>if</span><span> char.isalnum())</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># Check if normalized string reads the same forwards and backwards</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> normalized_str </span><span>==</span><span> normalized_str[::</span><span>-</span><span>1</span><span>]</span></div>
+<br>
+<div><span># Main System</span></div>
+<div><span>if</span><span> __name__ </span><span>==</span> <span>"__main__"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span># User input to enter said string</span></div>
+<div><span>&nbsp; &nbsp; user_input </span><span>=</span> <span>input</span><span>(</span><span>"Enter a string: "</span><span>).strip()</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># Edge case: Check if the string is empty using if/else statement</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>not</span><span> user_input:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"input is empty"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Check if the string is a palindrome using an if/else statement</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> is_palindrome(user_input):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"string is a palindrome."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"string is not a palindrome."</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

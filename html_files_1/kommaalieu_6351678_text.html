@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Alieu	Komma</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Alieu	Komma</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Take in string</p>
+<p># Loop through string</p>
+<p># Check letters in string by going backwards in letters&nbsp;</p>
+<p># Return true if all letters match one another, false if they dont</p>
+<p>&nbsp;</p>
+<div>
+<div><span>def</span> <span>checkPalindrome</span><span>(</span><span>string</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>string</span><span> = </span><span>string</span><span>.lower() # Sets the string to lowercase</span></div>
+<div><span>&nbsp; &nbsp; </span><span>i</span><span> = </span><span>len</span><span>(</span><span>string</span><span>) - </span><span>1 # takes the length of the string</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>char</span> <span>in</span> <span>string</span><span>:&nbsp;</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>char</span><span> == </span><span>string</span><span>[</span><span>i</span><span>]: # check to see if the last letter equals the first letters and so on</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>i</span><span> -= </span><span>1</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>i</span><span> == </span><span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span>print</span><span>(</span><span>checkPalindrome</span><span>(</span><span>"Racecar"</span><span>))</span></div>
+<div><span>print</span><span>(</span><span>checkPalindrome</span><span>(</span><span>"Hello"</span><span>))</span></div>
+</div>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

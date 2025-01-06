@@ -1,0 +1,46 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Calum Cheah </title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Calum Cheah </h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <pre><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">import</span><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;"> sys</span></pre>
+<div><br>
+<div><code><span># Notes:</span></code></div>
+<div><code><span># Spaces, punctuation, and capitalization are ignored when checking palindromes</span></code></div>
+<br>
+<div><code><span># Steps:</span></code></div>
+<div><code><span># 1. Take input from console or from the arguments passed to the script</span></code></div>
+<div><code><span># 2. Remove spaces &amp; punctuation, make all characters lowercase</span></code></div>
+<div><code><span># 3. Check if reversed string == string</span></code></div>
+<div><code><span># 4. Print output</span></code></div>
+<br>
+<div><code><span>def</span> <span>main</span><span>(</span><span>*</span><span>args</span><span>):</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>if</span> <span>len</span><span>(args) </span><span>&lt;</span> <span>1</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; string </span><span>=</span> <span>input</span><span>(</span><span>"Enter string to check if it is a palindrome: "</span><span>) </span><span># if no arguments were passed to the script, prompt user for input</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; string </span><span>=</span><span> args[</span><span>0</span><span>] </span><span># if argument was provided to script, use the argument as the string</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; string </span><span>=</span> <span>""</span><span>.join([char </span><span>for</span><span> char </span><span>in</span><span> string </span><span>if</span><span> char.isalpha()]) </span><span># remove all non-alphabetical characters</span></code></div>
+<div><code><span>&nbsp; &nbsp; string </span><span>=</span><span> string.lower() </span><span># make all characters lowercase</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; isPalindrome </span><span>=</span><span> string </span><span>==</span><span> string[::</span><span>-</span><span>1</span><span>] </span><span># check if string == reversed string</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>if</span><span> isPalindrome:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The string is a palindrome."</span><span>) </span><span># if strings are the same, it is a palindrome</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The string is not a palindrome."</span><span>) </span><span># strings are not the same, it is not a palindrome</span></code></div>
+<br>
+<div><code><span>if</span> <span>__name__</span> <span>==</span> <span>"__main__"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; main(</span><span>*</span><span>sys.argv[</span><span>1</span><span>:])</span></code></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Arnab Shrestha</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Arnab Shrestha</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><img src="/users/1270012/files/35455987/preview?verifier=ejqDAKiRiFnHF6YWRgYqU5s2xA7PfPiA28oNLLu4" alt="image.png" width="699" height="377"></p>
+<div>
+<div><span>"""</span></div>
+<div><span>Understand:</span></div>
+<div><span>&nbsp; &nbsp; Prompt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Create a number guessing game where the user has to guess a random number from 1 to a 100.</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; Inputs:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; int userGuess</span></div>
+<div><span>&nbsp; &nbsp; Outputs:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Wrong, the number is less than {userGuess}</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Wrong, the number is more than {userGuess}</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Correct!</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; Questions:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; What if the user doesn't input a number?</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Can the number have decimals?</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Will the user have a limited amount of tries?</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; What if the user inputs something over or under the maximum and minimum numbers?</span></div>
+<br>
+<div><span>Clues/hints:</span></div>
+<div><span>&nbsp; &nbsp; Since the user needs to guess again, a while loop should be used until the number is guessed correctly.</span></div>
+<div><span>&nbsp; &nbsp; To evaluate if a user input is correct, I need if statements.</span></div>
+<div><span>&nbsp; &nbsp; Since the game is about guessing numbers, I need integer variables.</span></div>
+<div><span>&nbsp; &nbsp; Since the game requires a random number, I will need to import random.</span></div>
+<br>
+<div><span>Assemble/pseudocode:</span></div>
+<div><span>randNum = random number between 1-100</span></div>
+<br>
+<div><span>while True:</span></div>
+<div><span>&nbsp; &nbsp; userGuess = "choose a number between 1-100"</span></div>
+<div><span>&nbsp; &nbsp; if userGuess == randNum:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print("Correct!")</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; break</span></div>
+<div><span>&nbsp; &nbsp; elif userGuess &gt; randNum:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print("Wrong, the number is less than {userGuess}")</span></div>
+<div><span>&nbsp; &nbsp; else:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(" Wrong, the number is more than {userGuess}")</span></div>
+<br>
+<div><span>Examination:</span></div>
+<div><span>&nbsp; &nbsp; After having the main requirements, I went back and made the game error proof with try/except.</span></div>
+<div><span>&nbsp; &nbsp; I added a way for the user to quit.</span></div>
+<div><span>"""</span></div>
+<div><span>import</span> <span>random</span></div>
+<br>
+<div><span>randNum</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>,</span><span>100</span><span>) </span><span># creates a random integer between 1-100</span></div>
+<div><span>while</span> <span>True</span><span>: </span><span># loop that will keep running until false or broken</span></div>
+<div><span>&nbsp; &nbsp; </span><span>try</span><span>: </span><span># catches errors when user inputs something thats not e or an integer</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>userGuess</span> <span>=</span> <span>input</span><span>(</span><span>"choose a number between 1-100 (enter e to exit): "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>userGuess</span> <span>==</span> <span>"e"</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span> <span># breaks the while loop and ends the code</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>userGuess</span> <span>=</span> <span>int</span><span>(</span><span>userGuess</span><span>) </span><span># Converts str to int</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>userGuess</span> <span>==</span> <span>randNum</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Correct!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>userGuess</span> <span>&gt;</span> <span>randNum</span> <span>and</span> <span>userGuess</span> <span>&lt;=</span> <span>100</span><span>: </span><span># condition after and is to check if the input number is within the random number limits</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"Wrong, the number is less than </span><span>{</span><span>userGuess</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>userGuess</span> <span>&lt;</span> <span>randNum</span> <span>and</span> <span>userGuess</span> <span>&gt;=</span> <span>1</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"Wrong, the number is more than </span><span>{</span><span>userGuess</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Guess needs to be between 1-100"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input: input can only be an integer"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

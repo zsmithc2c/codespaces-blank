@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Yasemine</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Yasemine</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import java.util.Scanner; &nbsp;// Import Scanner class for user input<br>import java.util.Random; &nbsp; // Import Random class to generate random numbers</p>
+<p>public class GuessingGame {</p>
+<p>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Start the game<br>&nbsp; &nbsp; &nbsp; &nbsp; Random random = new Random();&nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; int secretNumber = random.nextInt(100) + 1; &nbsp;// gives a random number between 1 and 100<br>&nbsp; &nbsp; &nbsp; &nbsp; int userGuess = 0; &nbsp;// Initialize user's guess</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // read user input<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Start the game<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Welcome to the Number Guessing Game!");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("I have selected a random number between 1 and 100.");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Try to guess it!");</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // continue until user guesses correctly<br>&nbsp; &nbsp; &nbsp; &nbsp; while (userGuess != secretNumber) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter your guess: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Check if the user input is a valid integer<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (scanner.hasNextInt()) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; userGuess = scanner.nextInt(); &nbsp;// Read the user's guess</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // out of range numbers<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (userGuess &lt; 1 || userGuess &gt; 100) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Please enter a number between 1 and 100.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // give hints<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (userGuess &lt; secretNumber) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Too low! Try a higher number.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (userGuess &gt; secretNumber) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Too high! Try a lower number.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Congratulations! You guessed the correct number!");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // if user doesn't enter a int<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Invalid input! Please enter a valid integer.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanner.next();&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp; &nbsp; }<br>}</p>
+</div>
+</body>
+</html>

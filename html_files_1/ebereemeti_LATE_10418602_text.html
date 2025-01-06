@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Emeti	Ebere</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Emeti	Ebere</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def is_palindrome(s):<br>&nbsp; &nbsp; # Remove spaces, punctuation, and convert to lowercase<br>&nbsp; &nbsp; cleaned_string = ''.join(char.lower() for char in s if char.isalnum())<br>&nbsp; &nbsp; # Check if the cleaned string is equal to its reverse<br>&nbsp; &nbsp; return cleaned_string == cleaned_string[::-1]</p>
+<p># Test cases<br>test_strings = ["Racecar", "Hello", "A man, a plan, a canal, Panama", "No 'x' in Nixon", ""]</p>
+<p>for string in test_strings:<br>&nbsp; &nbsp; if is_palindrome(string):<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f'"{string}" is a palindrome.')<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f'"{string}" is not a palindrome.')</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Rafael Calderon</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Rafael Calderon</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>from</span> <span>random</span> <span>import</span> <span>randint</span> <span>#import to access the randint() function</span></div>
+<br>
+<div><span>def</span> <span>main</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Try to guessa number between 1 and 100!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>correct_num</span> <span>=</span> <span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>) </span><span>#generates a random integer between 1 and 100 (inclusive)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>correct_num</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>0</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>guess</span> <span>!=</span> <span>correct_num</span><span>: </span><span>#keeps going until player has guessed correctly</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#prevents errors in casting; goes onto the next iteration if error is caught</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Guess a number: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Invalid input"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#if-else chain to determine what to print to the user or whether the user has won</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>guess</span> <span>&gt;</span> <span>correct_num</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Correct answer is smaller than that!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>guess</span> <span>&lt;</span> <span>correct_num</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Correct answer is larger than that!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"You won!"</span><span>)</span></div>
+<br>
+<div><span>if</span> <span>__name__</span> <span>== </span><span>"__main__"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>main</span><span>()</span></div>
+</div>
+</div>
+</body>
+</html>

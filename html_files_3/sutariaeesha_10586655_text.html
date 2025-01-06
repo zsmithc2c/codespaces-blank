@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Eesha Sutaria</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Eesha Sutaria</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#Creates function that takes a string input</span></div>
+<div><span>def</span> <span>unique</span><span>(</span><span>str</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Gets rid of inconsistencies with capitalization and spaces</span></div>
+<div><span>&nbsp; &nbsp; </span><span>str</span> <span>=</span> <span>str</span><span>.lower()</span></div>
+<div><span>&nbsp; &nbsp; </span><span>str</span> <span>=</span> <span>str</span><span>.replace(</span><span>" "</span><span>,</span><span>""</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Goes through each character and checks if it is different from all the charactes after it in the string</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>i</span> <span>in</span> <span>range</span><span>(</span><span>len</span><span>(</span><span>str</span><span>)):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>for</span> <span>j</span> <span>in</span> <span>range</span><span>(</span><span>i</span><span>+</span><span>1</span><span>,</span><span>len</span><span>(</span><span>str</span><span>)):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#When it finds a repeat, it returns False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>str</span><span>[</span><span>i</span><span>] </span><span>==</span> <span>str</span><span>[</span><span>j</span><span>]:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#If it never returned false then all the values are unique and it returns true</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<div><span>#Call the function with a string user input</span></div>
+<div><span>print</span><span>(</span><span>unique</span><span>(</span><span>input</span><span>(</span><span>"Enter a word or phrase and I will check if all the characters are unique: "</span><span>)))</span></div>
+</div>
+</div>
+</body>
+</html>

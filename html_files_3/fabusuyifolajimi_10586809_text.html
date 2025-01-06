@@ -1,0 +1,50 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Folajimi	Fabusuyi</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Folajimi	Fabusuyi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><code><span>'''</span></code></div>
+<div><code><span>Check if every character in the input string is unique. Meaning there are no repeat characters.</span></code></div>
+<br>
+<div><code><span>Input: string</span></code></div>
+<div><code><span>Output: bool</span></code></div>
+<br>
+<div><code><span>Givens: &nbsp;- If string length is 1 then string is unique</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- If string is empty then string is not unique as it has no characters</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Empty spaces in my approach will count as a character, so if we have multiple empty spaces the string is not unique</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- For my approach upper case letters will count as different from their lowercase counterparts</span></code></div>
+<div><code><span>'''</span></code></div>
+<br>
+<div><code><span>def</span> <span>unique_char</span><span>(</span><span>str</span><span>):</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># Here I have a list that will hold each new character we come across</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>unique_char</span> <span>=</span><span> []</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># Checking if length of string is 0 or 1 and returning the right value accordingly</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>if</span> <span>len</span><span>(</span><span>str</span><span>) </span><span>==</span> <span>1</span><span>: </span><span>return</span> <span>True</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>elif</span> <span>len</span><span>(</span><span>str</span><span>) </span><span>==</span> <span>0</span><span>: </span><span>return</span> <span>False</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># For each character in string, if character is already in our unique character list then we know that the character is not unique, therefore we return False.</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># If the for loop ends without triggering the if statement, then we know all characters are unique, therefore returning True.</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>for</span> <span>char</span> <span>in</span> <span>str</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>char</span> <span>in</span> <span>unique_char</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>unique_char</span><span>.</span><span>append</span><span>(</span><span>char</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></code></div>
+<br><br>
+<div><code><span>print</span><span>(</span><span>unique_char</span><span>(</span><span>""</span><span>)) </span><span>#-&gt; False</span></code></div>
+<div><code><span>print</span><span>(</span><span>unique_char</span><span>(</span><span>"a"</span><span>)) </span><span>#-&gt; True</span></code></div>
+<div><code><span>print</span><span>(</span><span>unique_char</span><span>(</span><span>"Aa"</span><span>)) </span><span>#-&gt; True</span></code></div>
+<div><code><span>print</span><span>(</span><span>unique_char</span><span>(</span><span>"abcdefg"</span><span>)) </span><span>#-&gt; True</span></code></div>
+</div>
+</div>
+</body>
+</html>

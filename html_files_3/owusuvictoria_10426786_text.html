@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Victoria	Owusu</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Victoria	Owusu</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>invalid</span><span> = set(</span><span>" "</span><span>)</span></div>
+<div><span>def unique</span><span>(</span><span>s</span><span>):</span></div>
+<div><span>if</span> <span>" "</span> <span>in</span> <span>s</span><span>:</span></div>
+<div><span> print(</span><span>"Please run the program again. Your input is invalid."</span><span>)</span></div>
+<div><span>return</span> <span>False</span></div>
+<div><span>#checks if input is valid</span></div>
+<div><span>unique_list</span><span> = []</span></div>
+<div><span>#create empty list to append each unique character</span></div>
+<div><span>#for loop to check each character, and if they have a character that is already on the unique list</span></div>
+<div><span>for</span> <span>i</span> <span>in</span> <span>s</span><span>:</span></div>
+<div><span>if</span> <span>i</span> <span>in</span> <span>unique_list</span><span>:</span></div>
+<div><span># if a single character is on the unique_list, then the string has repeated characters. Therefore, False must be returned.</span></div>
+<div><span>return</span> <span>False</span></div>
+<div><span>unique_list</span><span>.</span><span>append</span><span>(</span><span>i</span><span>)</span></div>
+<div><span># add each unique character especially if it's not already on the list</span></div>
+<div><span>return</span> <span>True</span></div>
+<br>
+<div><span>word</span><span> = input(</span><span>"This is a unique character checker. Please enter a word: "</span><span>)</span></div>
+<div><span>print(</span><span>unique</span><span>(</span><span>word</span><span>)) </span><span>#expected: True</span></div>
+</div>
+</div>
+</body>
+</html>

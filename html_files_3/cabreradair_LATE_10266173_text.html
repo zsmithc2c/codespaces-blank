@@ -1,0 +1,44 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Dair	Cabrera</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Dair	Cabrera</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>Understand - get the users input and tell them whether each character in their input is unique or not</span></p>
+<p>&nbsp;</p>
+<p><span>Clues- isolate each character and check if one of them repeats themself</span></p>
+<p>&nbsp;</p>
+<p><span>Assemble - get the user's input - isolate each character into a list - assume that each character is unique until finding a character that repeats itself- if it remains unique, state true, otherwise, state false .</span></p>
+<p>&nbsp;</p>
+<p><span>Solve-</span></p>
+<p>&nbsp;</p>
+<p><span>def Unique():</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;word = str(input("What word do you want to check?:"))## get the user input</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;letters = []## list for the input</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;for l in word :</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;letters.append(l)## places each character inputted into the list</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;flag = True</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;for i in range(len(letters)-1):</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j in range(i+1,len(letters)):</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if letters[i]==letters[j]:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag = False</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break ## assumes that each letter is unique until finding a letter that's been repeated</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;print(flag)</span></p>
+<p>&nbsp;</p>
+<p><span>Unique()</span></p>
+<p>&nbsp;</p>
+<p><span>Examine- user input was successfully able to be identified as whether each character was unique or not</span></p>
+</div>
+</body>
+</html>

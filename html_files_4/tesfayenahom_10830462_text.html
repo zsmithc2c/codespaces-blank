@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Nahom Tesfaye</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Nahom Tesfaye</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span><span> random</span></div>
+<div><span>#genrates a random number between 1 and 100</span></div>
+<div><span>program </span><span>=</span><span> random.randint(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span>try</span><span>:</span><span>#code that might cause an exception</span></div>
+<div><span> user_input </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>'Pick a number between 1 and 100: '</span><span>))</span></div>
+<div><span>if</span><span> program </span><span>==</span><span> user_input:</span><span>#if the user gets it right, we will congratulate them.</span></div>
+<div><span>print</span><span>(</span><span>"Congrats! You got it right!"</span><span>)</span></div>
+<div><span>break</span> <span>#this function ends the code if the user gets the answer correct </span></div>
+<div><span>elif</span><span> user_input </span><span>&gt;</span><span> program: </span><span>#if user input is greater then the program continues</span></div>
+<div><span>print</span><span>(</span><span>"Wrong! That is too high, the answer is smaller."</span><span>)</span><span>#prints out a message that the number is smaller and that they are wrong </span></div>
+<div><span>print</span><span>(</span><span>'Try again!'</span><span>)</span></div>
+<div><span>elif</span><span> user_input </span><span>&lt;</span><span> program: </span><span>#if userinput is smaller then the programs continue until they get it right.</span></div>
+<div><span>print</span><span>(</span><span>"Wrong! The answer is larger!"</span><span>) </span><span>#a message when they get it wrong.</span></div>
+<div><span>print</span><span>(</span><span>'Try again!'</span><span>)</span></div>
+<div><span>except</span> <span>ValueError</span><span>:</span></div>
+<div><span>print</span><span>(</span><span>"Error. Please enter a valid number between 1 and 100."</span><span>)</span></div>
+<div><span>#prints out if user input is an error.</span></div>
+</div>
+</div>
+</body>
+</html>

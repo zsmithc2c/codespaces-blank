@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Derek Perkins</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Derek Perkins</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>'''</p>
+<p>Description:</p>
+<p>Create a program that checks whether a given string is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forwards and backwards (ignoring spaces, punctuation, and capitalization).</p>
+<p>Example:</p>
+<p>Input: "Racecar"</p>
+<p>Output: "The string is a palindrome."</p>
+<p>Input: "Hello"</p>
+<p>Output: "The string is not a palindrome."</p>
+<p>'''</p>
+<p>def main():<br>&nbsp; user_input = input('Input').lower().replace(" ", "").replace(":", "").replace(".", "").replace(",", "").replace(";", "") # turns to lowercase then removes all spaces, ignoring uppercase/removing punctuation<br>&nbsp; if user_input == user_input[::-1]: # splicing, returns a reversed version of object/ string or list<br>&nbsp; &nbsp; print("The string is a palindrome.")<br>&nbsp; else:<br>&nbsp; &nbsp; print("The string is not a palindrome.")<br>main()</p>
+</div>
+</body>
+</html>

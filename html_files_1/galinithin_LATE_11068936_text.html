@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Nithin Gali</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Nithin Gali</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import string</p>
+<p>def is_palindrome(input_string):<br>&nbsp; &nbsp; #Remove spaces and punctuation<br>&nbsp; &nbsp; cleaned_string = ""<br>&nbsp; &nbsp; for char in input_string:<br>&nbsp; &nbsp; &nbsp; &nbsp;# Add the character to the cleaned string only if it's alphanumeric<br>&nbsp; &nbsp; &nbsp; &nbsp; if char.isalnum():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cleaned_string += char<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Convert the string to uppercase (for edge case situations)<br>&nbsp; &nbsp; cleaned_string = cleaned_string.lower()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Check if the string is equal to its reverse<br>&nbsp; &nbsp; reversed_string = ""<br>&nbsp; &nbsp; for i in range(len(cleaned_string) - 1, -1, -1):<br>&nbsp; &nbsp; &nbsp; &nbsp; reversed_string += cleaned_string[i]<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Compare the cleaned string with its reversed version<br>&nbsp; &nbsp; if cleaned_string == reversed_string:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is a palindrome."<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome."</p>
+<p>&nbsp;</p>
+<p>word = input("enter a word here")<br>print(is_palindrome(word))</p>
+</div>
+</body>
+</html>

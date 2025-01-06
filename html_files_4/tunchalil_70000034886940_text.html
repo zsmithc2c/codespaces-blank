@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Halil Tunc</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Halil Tunc</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span># Side note, I remember doing something like this either in School or in Elite 102</span></div>
+<br>
+<div><span># Terms</span></div>
+<div><span># The program needs to generate a random number and guide the user to guess it by providing feedback.</span></div>
+<br>
+<div><span># Plan</span></div>
+<div><span># Generate a random number between 1 and 100.</span></div>
+<div><span># Prompt the user for a guess.</span></div>
+<div><span># Check the guess:</span></div>
+<div><span># If correct, congratulate the user and end the game.</span></div>
+<div><span># If too high, inform the user and ask for another guess.</span></div>
+<div><span># If too low, inform the user and ask for another guess.</span></div>
+<div><span># Handle invalid inputs by by making sure the user enters a number that is between 1 and 100.</span></div>
+<div><span># Loop until the user guesses correctly.</span></div>
+<br>
+<div><span>import</span><span> random</span></div>
+<br>
+<div><span>def</span> <span>guessing_game</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Generate a random number between 1 and 100</span></div>
+<div><span>&nbsp; &nbsp; target_number </span><span>=</span><span> random</span><span>.</span><span>randint(</span><span>1</span><span>,</span> <span>100</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Welcome to the guessing game!</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>"</span><span>I have picked a number between 1 and 100. Can you guess it?</span><span>"</span><span>)</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># Prompt the user for a guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; user_input </span><span>=</span> <span>input(</span><span>"</span><span>Enter your guess: </span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># Validate input</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess </span><span>=</span> <span>int(user_input)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> guess </span><span>&lt;</span> <span>1</span> <span>or</span><span> guess </span><span>&gt;</span> <span>100</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Please enter a number between 1 and 100.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>continue</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># Compare guess to target number</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> guess </span><span>&lt;</span><span> target_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Too low! Try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span><span> guess </span><span>&gt;</span><span> target_number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Too high! Try again.</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>f</span><span>"Congratulations! You guessed it right. The number was </span><span>{</span><span>target_number</span><span>}</span><span>."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># End the loop when the guess is correct</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># Handle invalid inputs</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print(</span><span>"</span><span>Invalid input! Please enter a valid number between 1 and 100.</span><span>"</span><span>)</span></div>
+<br>
+<div><span># Run the function to test the game.</span></div>
+<div><span>guessing_game()</span></div>
+</div>
+</div>
+</body>
+</html>

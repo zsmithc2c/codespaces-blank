@@ -1,0 +1,51 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Abhiram Nair</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Abhiram Nair</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div style="color: #cccccc; background-color: #1f1f1f; font-family: Consolas, 'Courier New', monospace;  font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #6a9955;">#Understand</span></div>
+<div><span style="color: #6a9955;"># We need to create a function that checks if all characters in a given string are unique.</span></div>
+<div><span style="color: #6a9955;"># If all characters are unique, the function should return True, otherwise, it should return False.</span></div>
+<div><span style="color: #6a9955;"># We should also consider edge cases like empty strings and strings with spaces.</span></div>
+<br>
+<div><span style="color: #6a9955;">#Create</span></div>
+<div><span style="color: #569cd6;">def</span><span style="color: #cccccc;"> </span><span style="color: #dcdcaa;">has_unique_characters</span><span style="color: #cccccc;">(</span><span style="color: #9cdcfe;">input_string</span><span style="color: #cccccc;">):</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># If the input string is empty, we can consider it as having all unique characters</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #c586c0;">if</span><span style="color: #cccccc;"> </span><span style="color: #dcdcaa;">len</span><span style="color: #cccccc;">(</span><span style="color: #9cdcfe;">input_string</span><span style="color: #cccccc;">) </span><span style="color: #d4d4d4;">==</span><span style="color: #cccccc;"> </span><span style="color: #b5cea8;">0</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">return</span><span style="color: #cccccc;"> </span><span style="color: #569cd6;">True</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># Create a list to keep track of characters we have seen</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #9cdcfe;">seen_characters</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">=</span><span style="color: #cccccc;"> </span><span style="color: #4ec9b0;">list</span><span style="color: #cccccc;">()</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># Iterate through each character in the input string</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #c586c0;">for</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">char</span><span style="color: #cccccc;"> </span><span style="color: #c586c0;">in</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">input_string</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Ignore spaces</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">if</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">char</span><span style="color: #cccccc;"> </span><span style="color: #d4d4d4;">==</span><span style="color: #cccccc;"> </span><span style="color: #ce9178;">' '</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">continue</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># Check if the character is already in the list</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">if</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">char</span><span style="color: #cccccc;"> </span><span style="color: #569cd6;">in</span><span style="color: #cccccc;"> </span><span style="color: #9cdcfe;">seen_characters</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># If it is, we have a duplicate character</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">return</span><span style="color: #cccccc;"> </span><span style="color: #569cd6;">False</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #c586c0;">else</span><span style="color: #cccccc;">:</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #6a9955;"># If not, add the character to the set</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #9cdcfe;">seen_characters</span><span style="color: #cccccc;">.add(</span><span style="color: #9cdcfe;">char</span><span style="color: #cccccc;">)</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #6a9955;"># If we finish the loop without finding duplicates, return True</span></div>
+<div><span style="color: #cccccc;">&nbsp; &nbsp; </span><span style="color: #c586c0;">return</span><span style="color: #cccccc;"> </span><span style="color: #569cd6;">True</span></div>
+<br>
+<div><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #dcdcaa;">has_unique_characters</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"abcdef"</span><span style="color: #cccccc;">)) &nbsp;</span><span style="color: #6a9955;"># Output: True</span></div>
+<div><span style="color: #dcdcaa;">print</span><span style="color: #cccccc;">(</span><span style="color: #dcdcaa;">has_unique_characters</span><span style="color: #cccccc;">(</span><span style="color: #ce9178;">"hello"</span><span style="color: #cccccc;">)) &nbsp; &nbsp;</span><span style="color: #6a9955;"># Output: False</span></div>
+</div>
+</div>
+</body>
+</html>

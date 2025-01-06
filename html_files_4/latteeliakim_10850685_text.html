@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Eliakim Latte</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Eliakim Latte</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span><span> random</span></div>
+<div><span>def</span> <span>guess_game</span><span>():</span></div>
+<div><span>print(</span><span>"</span><span>Welcome to Guess the predictory!</span><span>"</span><span>)</span></div>
+<div><span>print(</span><span>"</span><span>I thinking of a number between 1 and 100 you guess it.</span><span>"</span><span>)</span></div>
+<div><span># The program randomly selects a number between 1 and 100.</span></div>
+<div><span> operater_guess </span><span>=</span><span> random</span><span>.</span><span>randint(</span><span>1</span> <span>,</span> <span>100</span><span>)</span></div>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span># Player inputs their guess and converts to integer</span></div>
+<div><span>try</span><span>:</span></div>
+<div><span> player_guess </span><span>=</span> <span>int(input(</span><span>"</span><span>\nGuess a number between 1 and 100: </span><span>"</span><span>))</span></div>
+<div><span>except</span><span> ValueError</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>Please enter a valid number!</span><span>"</span><span>)</span></div>
+<div><span>continue</span></div>
+<div><span># Check if the guess is correct.</span></div>
+<div><span>if</span><span> player_guess </span><span>==</span><span> operater_guess </span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>congratulation you won. </span><span>"</span><span>)</span></div>
+<div><span>break</span> <span># Ends the game if the guess is correct.</span></div>
+<div><span>elif</span><span> player_guess </span><span>&lt;</span><span> operater_guess </span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>Too low! Try again.</span><span>"</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>Too high! Try again.</span><span>"</span><span>)</span></div>
+<br>
+<div><span># Call the function to start the game</span></div>
+<div><span>guess_game()</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Raifah Mubin</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Raifah Mubin</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def has_unique_characters(input_string):<br>&nbsp; &nbsp; # Understand:<br>&nbsp; &nbsp; # - Problem: Determine if all characters in the string are unique.<br>&nbsp; &nbsp; # - Input: A string (e.g., "abcdef", "hello").<br>&nbsp; &nbsp; # - Output: True if all characters are unique, False otherwise.<br>&nbsp; &nbsp; # - Edge cases: Empty string, strings with spaces, non-alphanumeric characters.</p>
+<p>&nbsp; &nbsp; # Clues:<br>&nbsp; &nbsp; # - Use a data structure like a set to check uniqueness.<br>&nbsp; &nbsp; # - Sets store unique values and can help identify duplicates efficiently.</p>
+<p>&nbsp; &nbsp; # Assemble:<br>&nbsp; &nbsp; # Step 1: Normalize the string.<br>&nbsp; &nbsp; # - Remove spaces (if we consider them ignorable) and keep as is for case sensitivity.<br>&nbsp; &nbsp; normalized_string = input_string.replace(" ", "")</p>
+<p>&nbsp; &nbsp; # Step 2: Use a set to track seen characters.<br>&nbsp; &nbsp; seen_characters = set()</p>
+<p>&nbsp; &nbsp; # Step 3: Loop through the string and check for duplicates.<br>&nbsp; &nbsp; for char in normalized_string:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # A duplicate is found, so return False.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char)</p>
+<p>&nbsp; &nbsp; # If no duplicates are found, return True.<br>&nbsp; &nbsp; return True</p>
+<p># Test cases to verify the solution:<br># Solve and Examine:<br># - Check outputs with example inputs and edge cases.<br>print(has_unique_characters("abcdef")) &nbsp;# Expected: True<br>print(has_unique_characters("hello")) &nbsp; # Expected: False<br>print(has_unique_characters("")) &nbsp; &nbsp; &nbsp; &nbsp;# Expected: True (empty string has no duplicates)<br>print(has_unique_characters("123 321")) # Expected: False (space and digits repeated)<br>print(has_unique_characters(" !@#")) &nbsp; &nbsp; # Expected: True (unique special characters)</p>
+<p># Examine:<br># - Results match expectations.<br># - Comments explain thought process at every step.</p>
+</div>
+</body>
+</html>

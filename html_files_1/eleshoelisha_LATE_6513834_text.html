@@ -1,0 +1,17 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Elisha Elesho</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Elisha Elesho</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span class="Editor_t__not_edited_long__JuNNx">def is_palindrome(input_str):<br>"""<span>&nbsp;</span></span><span class="Editor_t__not_edited_long__JuNNx">Check if a given string is a palindrome.<br><br>Args:<br>input_str (str): The string to be checked.<br><br>Returns:<br>str: Message indicating whether the string is a palindrome or not.<br>"""<br></span><span class="Editor_t__not_edited__WuRP8">#</span><span class="Editor_t__not_edited__WuRP8">Step 1:<span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">Pre-process</span><span class="Editor_t__not_edited__WuRP8"><span>&nbsp;</span></span><span class="Editor_t__not_edited_long__JuNNx">string by removing non-alphanumeric characters and<span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">changing</span><span class="Editor_t__not_edited__WuRP8"><span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">case<span>&nbsp;</span></span><span class="Editor_t__not_edited__WuRP8">to<span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">lower</span><span class="Editor_t__not_edited_long__JuNNx"><br>cleaned_str = ''.join(char.lower() for char in input_str if char.isalnum())<br><br>#</span><span class="Editor_t__not_edited__WuRP8">Step 2: Check<span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">whether</span><span class="Editor_t__not_edited__WuRP8"><span>&nbsp;</span></span><span class="Editor_t__added__LtuNJ">pre-processed</span><span class="Editor_t__not_edited__WuRP8"><span>&nbsp;</span></span><span class="Editor_t__not_edited_long__JuNNx">string is the same forwards and backwards<br>if cleaned_str == cleaned_str[::-1]:<br>return "The string is a palindrome."<br></span><span class="Editor_t__not_edited_long__JuNNx">else:<br>return "The string is not a palindrome."<br><br># Unit tests<br>if __name__ == "__main__":<br># Testing example cases<br>print(is_palindrome("Racecar")) # Output: "The string is a palindrome."<br>print(is_palindrome("Hello")) # Output: "The string is not a palindrome."<br><br># Testing for edge cases<br></span><span class="Editor_t__not_edited_long__JuNNx">print(is_palindrome("")) # Output: "The string is a palindrome."<br>print(is_palindrome("A man, a plan, a canal, Panama")) # Output: "The string is a palindrome."<br>print(is_palindrome("12321")) # Output: "The string is a palindrome."<br>print(is_palindrome("12345")) # Output: "The string is not a palindrome."</span></p>
+</div>
+</body>
+</html>

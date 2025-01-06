@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Zoë	Bryant</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Zoë	Bryant</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><code>'''</code><br><code>understand: generate a random number and take in a users guess. see if the guess is higher, lower or equal to the random number</code></p>
+<p><code>clues: if the guess is greater than the random number, the guess is too high (tell the user they are too high), if the guess is lesser than the random number, the guess is too low (tell the user they are too low)</code></p>
+<p><code>assemble:&nbsp;</code><br><code>GENERATE random number</code><br><code>WHILE guess is not equal to the random number</code><br><code>&nbsp; &nbsp; INPUT guess</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; IF guess is less than random number</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PRINT guess is too low</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; ELIF guess is greater than random number</code><br><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PRINT guess is too high</code><br><code>PRINT you win!</code><br><code>'''</code></p>
+<p><code>import random</code><br><code>random_number = random.randint(1, 100)</code></p>
+<p><code>#take users guess</code><br><code>guess = int(input('What is the number? '))</code><br><code>print()</code></p>
+<p><code>#as long as the guess is incorrect</code><br><code>while guess != random_number:</code><br><code>&nbsp; print(f'Nope! {guess} is not the number. ')</code><br><code>&nbsp; #if the guess is larger than the random number</code><br><code>&nbsp; if guess &gt; random_number:</code><br><code>&nbsp; &nbsp; #tell the user, and prompt them to guess again</code><br><code>&nbsp; &nbsp; print('Your guess is too high')</code><br><code>&nbsp; &nbsp; print()</code><br><code>&nbsp; #if the guess is less than the random number</code><br><code>&nbsp; elif guess &lt; random_number:</code><br><code>&nbsp; &nbsp; #tell the user, and prompt them to guess again</code><br><code>&nbsp; &nbsp; print('Your guess is too low')</code><br><code>&nbsp; &nbsp; print()</code><br><code>&nbsp; guess = int(input('Try again: '))</code><br><code>&nbsp; print()</code></p>
+<p><code>#if the guess is correct, tell the user and end the game</code><br><code>print('You win!')</code><br><code>exit()</code></p>
+</div>
+</body>
+</html>

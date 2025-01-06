@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Derek Perkins</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Derek Perkins</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>'''</p>
+<p>Create a program that says: "I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?" and then asks the user to type in the name of a shape (e.g., triangle, rectangle, square, circle).</p>
+<p>Then, depending on which shape the user types, the program will ask for the relevant measurements:</p>
+<p>If they choose circle, prompt for the radius.<br>If they choose rectangle, prompt for the length and width.<br>If they choose square, prompt for the side length.<br>If they choose triangle, prompt for the base and height.</p>
+<p>'''<br>import math # for pi<br>def calculate(user_input):<br>&nbsp; print("----CALCULATING----")<br>&nbsp; if user_input == "circle": # checks between the four<br>&nbsp; &nbsp; while True: # repeats until it returns area<br>&nbsp; &nbsp; &nbsp; radius = input("Enter a radius: ")<br>&nbsp; &nbsp; &nbsp; try:&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; rad = int(radius)<br>&nbsp; &nbsp; &nbsp; &nbsp; return math.pi*rad**2 # math<br>&nbsp; &nbsp; &nbsp; except ValueError: # error dealing with values of stuff like ints<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Make sure to use numbers.")<br>&nbsp; elif user_input == "rectangle":<br>&nbsp; &nbsp; while True: # repeats until it returns area<br>&nbsp; &nbsp; &nbsp; length = input("Enter a length: ")<br>&nbsp; &nbsp; &nbsp; width = input("Enter a width: ")<br>&nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; total = int(length) * int(width) #math<br>&nbsp; &nbsp; &nbsp; &nbsp; return total<br>&nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Make sure to use numbers.")<br>&nbsp; elif user_input == "square":<br>&nbsp; &nbsp; while True: # repeats until it returns area<br>&nbsp; &nbsp; &nbsp; length = input("Enter the side length: ")<br>&nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; total = int(length) ** 2 #math<br>&nbsp; &nbsp; &nbsp; &nbsp; return total<br>&nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Make sure to use numbers.")<br>&nbsp; elif user_input == "triangle":<br>&nbsp; &nbsp; while True: # repeats until it returns area<br>&nbsp; &nbsp; &nbsp; base = input("Enter a base: ")<br>&nbsp; &nbsp; &nbsp; height = input("Enter a height: ")<br>&nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; total = (int(base) * int(height))/2 #math<br>&nbsp; &nbsp; &nbsp; &nbsp; return total<br>&nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Make sure to use numbers.")<br>&nbsp; else:<br>&nbsp; &nbsp; print("Please enter a valid shape.")<br>&nbsp; print("-------------------")</p>
+<p>def main():<br>&nbsp; end = False # condition for ending program<br>&nbsp; while not end: # checks if the program hasnt been ended<br>&nbsp; &nbsp; user_input = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? (x to end) ").lower() # sets to lowercase<br>&nbsp; &nbsp; if user_input == "x": # ends if user inputs x<br>&nbsp; &nbsp; &nbsp; end = True<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; area = calculate(user_input)<br>&nbsp; &nbsp; &nbsp; if area: # checks if something is returned<br>&nbsp; &nbsp; &nbsp; &nbsp; print(f'{user_input} area: {area}')<br>main()</p>
+</div>
+</body>
+</html>

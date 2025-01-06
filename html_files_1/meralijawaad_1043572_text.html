@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Jawaad Merali</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Jawaad Merali</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def is_palindrome(string):<br>&nbsp; &nbsp; cleaned_string = ""<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; if ('a' &lt;= char &lt;= 'z') or ('A' &lt;= char &lt;= 'Z') or ('0' &lt;= char &lt;= '9'): # conditional checks character to make sure it is valid<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if 'A' &lt;= char &lt;= 'Z':<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# Converts the character uppercase to lowercase<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cleaned_string += char.lower()<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cleaned_string += char //else statement executes</p>
+<p>&nbsp; &nbsp; reversed_string = ""<br>&nbsp; &nbsp; for i in range(len(cleaned_string) - 1, -1, -1):&nbsp; //traverses the list of strings<br>&nbsp; &nbsp; &nbsp; &nbsp; reversed_string += cleaned_string[i]</p>
+<p>&nbsp; &nbsp; if cleaned_string == reversed_string:&nbsp; //checks if palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is a palindrome."<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome."&nbsp; //else conditional</p>
+<p>input_string = input("Enter a string: "). /sampl test run<br>result = is_palindrome(input_string)<br>print(result)</p>
+</div>
+</body>
+</html>

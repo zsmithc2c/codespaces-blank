@@ -1,0 +1,18 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Shounauk Ganguli</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Shounauk Ganguli</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import random<br>randNumber = random.randint(1, 100) #create random number<br>def guessingGame():<br>&nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; guess = int(input("Guess a number"))<br>&nbsp; &nbsp; except: #handles errors in input<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Please try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; guessingGame()<br>&nbsp; &nbsp; if guess == randNumber:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Congratulations!") #end of the game<br>&nbsp; &nbsp; &nbsp; &nbsp; exit()<br>&nbsp; &nbsp; elif guess &lt; randNumber: #recurses if the guess is too low<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Too low! Try again!")&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; guessingGame()<br>&nbsp; &nbsp; elif guess &gt; randNumber: #recurses if the guess is too high<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Too high! Try again!")<br>&nbsp; &nbsp; &nbsp; &nbsp; guessingGame()<br>guessingGame() #begins the program</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

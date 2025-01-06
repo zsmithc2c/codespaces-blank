@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Sirisha Thapa</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Sirisha Thapa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import java.util.Scanner; // Import Scanner for user input<br>import java.util.Random; // Import Random to generate a random number</p>
+<p>public class GuessingGame {</p>
+<p>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Step 1: Understand the problem<br>&nbsp; &nbsp; &nbsp; &nbsp; // We need a guessing game where the program picks a random number between 1 and 100.<br>&nbsp; &nbsp; &nbsp; &nbsp; // The user guesses the number, and the program tells the user if their guess is too high or too low.<br>&nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Step 2: Clues<br>&nbsp; &nbsp; &nbsp; &nbsp; // To generate a random number, we need to use the Random class.<br>&nbsp; &nbsp; &nbsp; &nbsp; // We need to ask the user for their guess using Scanner.<br>&nbsp; &nbsp; &nbsp; &nbsp; // We need to compare the user's guess to the randomly chosen number.<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Randomly pick a number between 1 and 100<br>&nbsp; &nbsp; &nbsp; &nbsp; Random random = new Random();<br>&nbsp; &nbsp; &nbsp; &nbsp; int targetNumber = random.nextInt(100); &nbsp;// Error: Random number between 0 and 99, we need 1 to 100<br>&nbsp; &nbsp; &nbsp; &nbsp; int guess = -1; // Initialize guess to an invalid number<br>&nbsp; &nbsp; &nbsp; &nbsp; int attempts = 0; // To keep track of how many guesses the user has made<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Step 3: Assemble the game loop<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in);<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Welcome to the Guessing Game!");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("I have chosen a number between 1 and 100. Try to guess it!");<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Start the game loop where the player can keep guessing<br>&nbsp; &nbsp; &nbsp; &nbsp; while (guess != targetNumber) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter your guess: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess = scanner.nextInt(); // Error: Does not handle invalid input (non-integer inputs)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Step 4: Solve - Compare the guess to the target number<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (guess == targetNumber) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Congratulations! You've guessed the correct number.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (guess &gt; targetNumber) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Too high! Try again.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Too low! Try again.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempts++; // Keep track of the number of attempts<br>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Step 5: Examine - Congratulate after correct guess and print the number of attempts<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("It took you " + attempts + " attempts to guess the correct number.");<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; scanner.close(); // Close the scanner object<br>&nbsp; &nbsp; }<br>}</p>
+</div>
+</body>
+</html>

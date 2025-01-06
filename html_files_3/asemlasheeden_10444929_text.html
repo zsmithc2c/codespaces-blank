@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Eden Asemlashe</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Eden Asemlashe</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#Practice 3</span></div>
+<div><span>#compare each character of the string with all the other characters</span></div>
+<div><span>#in the string to check if it is unique or not. </span></div>
+<br>
+<div><span>#Prompt the user to enter a string and store it in 'unique_string'</span></div>
+<div><span>unique_string </span><span>=</span><span> (</span><span>input</span><span>(</span><span>"Enter a string: "</span><span>))</span></div>
+<br>
+<div><span># Prompt the user to enter a string and store it in 'unique_string'</span></div>
+<div><span>def</span> <span>unique_char</span><span>(</span><span>unique_string</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Iterate over each character in the string using its index 'i'</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> i </span><span>in</span> <span>range</span><span>(</span><span>len</span><span>(unique_string)):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Iterate over each character in the string starting from the next character after 'i'</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>for</span><span> j </span><span>in</span> <span>range</span><span>(i </span><span>+</span> <span>1</span><span>, </span><span>len</span><span>(unique_string)):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span># if a another character is found, return False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> unique_string[i] </span><span>==</span><span> unique_string[j]:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<div><span>if</span><span> unique_char(unique_string):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"True"</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"False"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

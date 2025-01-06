@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Victoria	Owusu</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Victoria	Owusu</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>punctuation_marks</span><span> = set(</span><span>"!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~ "</span><span>)</span></div>
+<div><span>#set of punctuation marks to check for</span></div>
+<div><span>def palindrome</span><span>(</span><span>s</span><span>):</span></div>
+<div><span>#palindromes are a word, phrase, or sequence that reads the same backward as forward</span></div>
+<div><span>reverse</span><span> = </span><span>s</span><span>[::</span><span>-1</span><span>]</span></div>
+<div><span>#reversing the string using slicing</span></div>
+<div><span>if</span><span> (</span><span>reverse</span><span> == </span><span>s</span><span>):</span></div>
+<div><span>#use if statement to check if the reverse of a string is equal</span></div>
+<div><span>return</span> <span>True</span></div>
+<div><span>elif</span><span> any(</span><span>char</span> <span>in</span> <span>punctuation_marks</span> <span>for</span> <span>char</span> <span>in</span> <span>s</span><span>):</span></div>
+<div><span>#goes through string to check if input is invalid</span></div>
+<div><span> print(</span><span>"This word is invalid. Please try running the program again."</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>return</span> <span>False</span></div>
+<div><span>#returns false if the reverse of the string isn't the same as the original string</span></div>
+<div><span>string</span><span> = input(</span><span>"This is a palindrome checker. Please enter a word: "</span><span>)</span></div>
+<br>
+<div><span>print(</span><span>palindrome</span><span>(</span><span>string</span><span>))</span></div>
+</div>
+</div>
+</body>
+</html>

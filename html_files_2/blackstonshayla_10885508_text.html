@@ -1,0 +1,62 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Shayla Blackston</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Shayla Blackston</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>Import math # to use the value of pi</span></p>
+<p>&nbsp;</p>
+<p><span>Def calculate_area(shape, dimensions):</span></p>
+<p><span> </span><span>If shape == “triangle”:</span></p>
+<p><span> </span><span> </span><span>Return 0.5 * dimensions[0] * dimensions[1]</span></p>
+<p><span> </span><span>Elif shape == “square”:</span></p>
+<p><span> </span><span> </span><span>Return dimensions[0] ** 2</span></p>
+<p><span> </span><span>Elif shape == “rectangle”:</span></p>
+<p><span> </span><span> </span><span>Return dimensions[0] * dimensions[1]</span></p>
+<p><span> </span><span>Elif shape == “circle”:</span></p>
+<p><span> </span><span> </span><span>Return math.pi * (dimensions[0] ** 2)</span></p>
+<p>&nbsp;</p>
+<p><span>def main():&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;print("I can calculate the area of a shape for you.")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?&nbsp; (circle, rectangle, square, triangle): ")</span></p>
+<p>&nbsp;</p>
+<p><span> </span></p>
+<p>&nbsp;</p>
+<p><span>#prompts</span></p>
+<p>&nbsp;</p>
+<p><span>Prompts = {&nbsp;&nbsp;</span></p>
+<p><span>"circle": "Please enter the radius of the circle: ",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"rectangle": "Please enter the length and width of the rectangle (separated by a space): ",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"square": "Please enter the side length of the square: ",</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"triangle": "Please enter the base and height of the triangle (separated by a space): "</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p><span>&nbsp;&nbsp;</span></p>
+<p><br><br><br></p>
+<p><span>If shape in prompts:</span></p>
+<p><span> </span><span>Try:</span></p>
+<p><span> </span><span> </span><span>If shape in [“Rectangle” , “triangle”]:&nbsp; # we have to do rectangle and triangle separately because there are going to be two inputs.</span></p>
+<p><span> </span><span> </span><span>Dimensions = list(map(float, input(prompts[shape]).split()))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# circle and square have one input</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dimensions = [float(input(prompts[shape]))]</span></p>
+<p><br><br></p>
+<p><span>#now we have to get the areas</span></p>
+<p>&nbsp;</p>
+<p><span>Area = area(shape, dimensions)</span><span><br></span><span> </span><span>Print(f”The area of this {shape} is {area:.2f}”)</span></p>
+<p><span>Except ValueError:</span><span><br></span><span> </span><span>print( Invalid Input. Please enter one of the corresponding shapes and numeric value.”)</span></p>
+<p><br><br></p>
+<p><span><br></span><span>if __name__ == "__main__":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;main()</span></p>
+<p><br><br></p>
+<p><span> </span></p>
+<p><br><br></p>
+</div>
+</body>
+</html>

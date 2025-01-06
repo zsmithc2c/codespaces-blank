@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Jose	Carmona</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Jose	Carmona</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Unique characters in string<br>#take in string<br>#if all characters are unique, return true<br>#else return false<br>#empty string is unique(maybe)</p>
+<p><br>#make empty list to track already seen characters<br>#look at each character in string<br>#check if they are in the list<br>#if not add to list<br>#if yes return false imeadiately<br>#if all characters are unique return true</p>
+<p><br>def unique_characters(string):<br>&nbsp; seen = [] #empty list to track already seen characters<br>&nbsp; for char in string: #loop through string<br>&nbsp; &nbsp; if char in seen: #check if character is in list<br>&nbsp; &nbsp; &nbsp; return False #return false if character is in list<br>&nbsp; &nbsp; seen.append(char) #add character to list if not in list</p>
+<p>&nbsp; return True #returns true if all characters are unique</p>
+<p>&nbsp;</p>
+<p><br>#testing<br>print(unique_characters("abc"))<br>print(unique_characters("Hello"))<br>print(unique_characters("Locos Tacos"))<br>print(unique_characters("shrimp"))</p>
+</div>
+</body>
+</html>

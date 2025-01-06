@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Thenuka	Wickramanayake</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Thenuka	Wickramanayake</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>import math</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;print("I can calculate the area of a shape for you.")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;shape = input("Which shape do you want me to calculate the area of? (circle, rectangle, square, triangle): ").lower()</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;if shape == "circle":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radius = float(input("Enter the radius of the circle: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;area = math.pi * radius**2</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The area of the circle is", area)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif shape == "rectangle":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length = float(input("Enter the length of the rectangle: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width = float(input("Enter the width of the rectangle: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;area = length * width</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The area of the rectangle is", area)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif shape == "square":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;side = float(input("Enter the side length of the square: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;area = side**2</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The area of the square is", area)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;elif shape == "triangle":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;base = float(input("Enter the base of the triangle: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height = float(input("Enter the height of the triangle: "))</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;area = 0.5 * base * height</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The area of the triangle is", area)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;else:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Sorry, I don't recognize that shape.")</span></p>
+<p><br><br></p>
+</div>
+</body>
+</html>

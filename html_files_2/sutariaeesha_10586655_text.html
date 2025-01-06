@@ -1,0 +1,53 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Eesha Sutaria</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Eesha Sutaria</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#for pi</span></div>
+<div><span>import</span> <span>math</span></div>
+<div><span>#Float was adding on a random number at the end of calculations so I used the decimal type</span></div>
+<div><span>from</span> <span>decimal</span> <span>import</span> <span>Decimal</span></div>
+<div><span>go</span> <span>=</span> <span>True</span></div>
+<div><span>#So it keeps going until the user is done giving shapes to find the area of</span></div>
+<div><span>while</span> <span>go</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>shape</span> <span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? (Enter circle, rectangle, square, or triangle): "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>shape</span> <span>=</span> <span>shape</span><span>.</span><span>lower</span><span>()</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#For circles, the user has to enter the radius and then it finds an area by doing pi times rad times rad</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> (</span><span>shape</span> <span>==</span> <span>'circle'</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>rad</span> <span>=</span> <span>float</span><span>(</span><span>input</span><span>(</span><span>"Enter the radius (Just the number): "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area is "</span><span>, &nbsp;</span><span>Decimal</span><span>(</span><span>math</span><span>.</span><span>pi</span> <span>*</span> <span>rad</span> <span>*</span> <span>rad</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#For rectangles, the user has to enter the length and width and then it finds an area by multiplying them</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> (</span><span>shape</span> <span>==</span> <span>'rectangle'</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>Decimal</span><span>(</span><span>input</span><span>(</span><span>"Enter the length (Just the number): "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>Decimal</span><span>(</span><span>input</span><span>(</span><span>"Enter the width (Just the nummber): "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area is "</span><span>, </span><span>length</span><span>*</span><span>width</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#For square, the user has to enter the sidelength and then it finds an area by multipling that side by itself</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> (</span><span>shape</span> <span>==</span> <span>'square'</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>side</span> <span>=</span> <span>Decimal</span><span>(</span><span>input</span><span>(</span><span>"Enter the side length (Just the number): "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area is "</span><span> , </span><span>side</span><span>*</span><span>side</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#For triangle, the user has to enter the base length and height and then it finds an area by doing one half times base times height</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> (</span><span>shape</span> <span>==</span> <span>'triangle'</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>Decimal</span><span>(</span><span>input</span><span>(</span><span>"Enter the base length (Just the number): "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>Decimal</span><span>(</span><span>input</span><span>(</span><span>"Enter the height (Just the number): "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The area is "</span><span> , </span><span>Decimal</span><span>(</span><span>0.5</span><span>)</span><span>*</span><span>base</span><span>*</span><span>height</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#For putting an invalid shape</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"That was an invalid input."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#Check if they want to get the area of another shape</span></div>
+<div><span>&nbsp; &nbsp; </span><span>rep</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Would you like to get the area of another shape? Enter 1 for yes and 2 for no: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>rep</span> <span>==</span> <span>2</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>go</span> <span>=</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Bye! I hope this helped."</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Calum Cheah </title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Calum Cheah </h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><code><span>import</span><span> math</span></code></div>
+<br>
+<div><code><span># Notes:</span></code></div>
+<div><code><span># - Likely need to check to make sure user inputs a number</span></code></div>
+<div><code><span># - Need to reprompt user if they enter an invalid shape</span></code></div>
+<br>
+<div><code><span># Formulas:</span></code></div>
+<div><code><span># Circle: pi * r ^ 2</span></code></div>
+<div><code><span># Rectangle: l * w</span></code></div>
+<div><code><span># Square: s ^ 2</span></code></div>
+<div><code><span># Triangle: (b * h) / 2</span></code></div>
+<br>
+<div><code><span># Steps:</span></code></div>
+<div><code><span># 1. Prompt user for shape (check that a valid shape is input)</span></code></div>
+<div><code><span># 2. Prompt for shape dimensions (check that a valid number is input)</span></code></div>
+<div><code><span># 3. Calculate area</span></code></div>
+<div><code><span># 4. Output area</span></code></div>
+<br>
+<div><code><span>def</span> <span>promptForDimension</span><span>(</span><span>prompt</span><span>: </span><span>str</span><span>) -&gt; </span><span>float</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>"""</span></code></div>
+<div><code><span>&nbsp; &nbsp; This function prompts the user until they enter a valid dimension (positive floating point number)</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; @param prompt: &nbsp;this is the string that the user will be prompted with</span></code></div>
+<div><code><span>&nbsp; &nbsp; @return: &nbsp; &nbsp; &nbsp; &nbsp;returns the dimension that the user enters</span></code></div>
+<div><code><span>&nbsp; &nbsp; """</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; num </span><span>=</span> <span>-</span><span>1</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>while</span><span> num </span><span>&lt;</span> <span>0</span> <span>or</span> <span>not</span> <span>isinstance</span><span>(num, </span><span>float</span><span>): </span><span># repeatedly prompt user until they enter a positive float</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num </span><span>=</span> <span>float</span><span>(</span><span>input</span><span>(prompt)) </span><span># attempt to read input and convert to float</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Please enter a valid number"</span><span>) </span><span># remind user if they enter an invalid string</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>return</span><span> num</span></code></div>
+<br>
+<div><code><span>def</span> <span>main</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; shape </span><span>=</span> <span>""</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># Repeatedly prompt user for shape until they enter a valid shape</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>while</span> <span>not</span><span> shape </span><span>in</span><span> (</span><span>"circle"</span><span>, </span><span>"rectangle"</span><span>, </span><span>"square"</span><span>, </span><span>"triangle"</span><span>):</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; shape </span><span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you (circle, rectangle, square, or triangle). Which shape do you want me to calculate the area of? "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; shape </span><span>=</span><span> shape.lower().strip() </span><span># make shape string lowercase and remove trailing whitespace</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>if</span><span> shape </span><span>==</span> <span>"circle"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if circle, we want to prompt for radius and use the formula for the area of a circle (pi * r^2)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; radius </span><span>=</span><span> promptForDimension(</span><span>"Enter the radius of the circle: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> math.pi </span><span>*</span><span> (radius </span><span>**</span> <span>2</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"rectangle"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if rectangle, we want to prompt for length and width and use the formula for the area of a rectangle (length * width)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; length </span><span>=</span><span> promptForDimension(</span><span>"Enter the length of the rectangle: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; width </span><span>=</span><span> promptForDimension(</span><span>"Enter the width of the rectangle: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> length </span><span>*</span><span> width</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"square"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if square, we want to prompt for side length and use the formula for the area of a square (length^2)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; length </span><span>=</span><span> promptForDimension(</span><span>"Enter the side length of the square: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> length </span><span>**</span> <span>2</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>elif</span><span> shape </span><span>==</span> <span>"triangle"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if triangle, we want to prompt for base and height and use the formula for the area of a triangle (base * height / 2)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; base </span><span>=</span><span> promptForDimension(</span><span>"Enter the length of the base of the triangle: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; height </span><span>=</span><span> promptForDimension(</span><span>"Enter the height of the triangle: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> (base </span><span>*</span><span> height) </span><span>/</span> <span>2</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of your </span><span>{</span><span>shape</span><span>}</span><span> is </span><span>{</span><span>area</span><span>:.5f}</span><span>"</span><span>) </span><span># output area to user</span></code></div>
+<br>
+<div><code><span>if</span> <span>__name__</span> <span>==</span> <span>"__main__"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; main()</span></code></div>
+</div>
+</div>
+</body>
+</html>

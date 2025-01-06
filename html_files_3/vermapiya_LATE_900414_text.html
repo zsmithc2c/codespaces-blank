@@ -1,0 +1,53 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Piya Verma</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Piya Verma</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>def uniqchars(input_string):</span></p>
+<p><span>#determines if all characters in the given string are unique.</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#U: Understand the problem</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#uniform string if not specified</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;input_string = input_string.strip()</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#C: Create a plan</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#set to track seen characters</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;seen = set()</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;#loop through each character in the string</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;for char in input_string:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if char in seen:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False&nbsp; #duplicate character found</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seen.add(char)&nbsp; #add character to the set</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;return True&nbsp; #all unique</span></p>
+<p><span>#A:Algorithm implementation</span></p>
+<p><span>if __name__ == "__main__":</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;# Example inputs</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;test_cases = [</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"abcdef",&nbsp; # Unique characters</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hello", &nbsp; # Duplicate 'l'</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" ", &nbsp; &nbsp; &nbsp; # Single space, unique</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"",&nbsp; &nbsp; &nbsp; &nbsp; # Empty string, unique by definition</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"12345", &nbsp; # Unique digits</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"123451" &nbsp; # Duplicate '1'</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;]</span></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;for test in test_cases:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = uniqchars(test)</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Input: \"{test}\"\nOutput: {result}\n")</span></p>
+<p>&nbsp;</p>
+<p><span>#E: Edge cases handled</span></p>
+<p><span># empty returns true</span></p>
+<p><span>#spaces are characters</span></p>
+<p><span>#case sensitive</span></p>
+</div>
+</body>
+</html>

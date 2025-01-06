@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Dair	Cabrera</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Dair	Cabrera</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>Understand - get the users input and tell them whether their input is a palindrome or not.</span></p>
+<p>&nbsp;</p>
+<p><span>Clues- Reverse the order of the user's input to see if it's the same as the normal input.</span></p>
+<p>&nbsp;</p>
+<p><span>Assemble - get the user's input - rearrange the characters in the users input - check if the rearranged input is the same as the original and give an answer based on if they are or aren't the same.</span></p>
+<p>&nbsp;</p>
+<p><span>Solve-</span></p>
+<p>&nbsp;</p>
+<p><span>def palindrome():</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;Word = str(input("What word do you want to check?:"))## get the user input</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;Backwards = Word[::-1]## reverse the users input</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;if Backwards == Word: ## check if the reversed input is the same as the original</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{Word} is a palindrome")</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;else:</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{Word} is not a palindrome")</span></p>
+<p>&nbsp;</p>
+<p><span>palindrome()</span></p>
+<p>&nbsp;</p>
+<p><span>Examine- user input was successfully defined as either a palindrome or not a palindrome.</span></p>
+</div>
+</body>
+</html>

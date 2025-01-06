@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Elenna Patterson</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Elenna Patterson</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>word = input("Enter a word: ")<br>length = len(word)</p>
+<p>#start at 1 because lists start at 0<br>count = 1<br>istrue = True<br>for letter in word:</p>
+<p>#break from loop so that once false, can't turn true<br>&nbsp; &nbsp; if istrue == False:<br>&nbsp; &nbsp; &nbsp; &nbsp; break<br>&nbsp; &nbsp; elif letter.isalpha():</p>
+<p>#need to make them the same to see if they match<br>&nbsp; &nbsp; &nbsp; &nbsp; if letter.lower() == word[length-count].lower():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; istrue = True<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; istrue = False<br>&nbsp; &nbsp; count += 1</p>
+<p>if istrue == True:<br>&nbsp; &nbsp; print("The string is a palindrome.")<br>else:<br>&nbsp; &nbsp; print("The string is not a palindrome.")</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Azul Castillo</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Azul Castillo</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>user_input </span><span>=</span> <span>input(</span><span>'</span><span>I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?: </span><span>'</span><span>)</span></div>
+<div><span>if</span><span> user_input </span><span>==</span> <span>'</span><span>square</span><span>'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> square</span></div>
+<div><span>if</span><span> user_input </span><span>==</span> <span>'</span><span>circle</span><span>'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> circle</span></div>
+<div><span>if</span><span> user_input </span><span>==</span> <span>'</span><span>rectangle</span><span>'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> rectangle</span></div>
+<div><span>if</span><span> user_input </span><span>==</span> <span>'</span><span>triangle</span><span>'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> triangle</span></div>
+<div><span>elif</span><span> user_input </span><span>==</span> <span>"</span> <span>"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>'</span><span>That is not an option, please try again.</span><span>'</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print(</span><span>'</span><span>That is not an option, try again</span><span>'</span><span>)</span></div>
+<br>
+<div><span>def</span> <span>square</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; num1 </span><span>=</span> <span>int(input(</span><span>'</span><span>What will be your number? </span><span>'</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>4</span> <span>*</span><span> num1</span></div>
+<br>
+<div><span>def</span> <span>rectangle</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; length </span><span>=</span> <span>int(input(</span><span>'</span><span>What is your length number? </span><span>'</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; width </span><span>=</span> <span>int(input(</span><span>'</span><span>What would be your width number? </span><span>'</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> length </span><span>*</span><span> width</span></div>
+<br>
+<div><span>def</span> <span>circle</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; diameter </span><span>=</span> <span>int(input(</span><span>'</span><span>What is your diameter? </span><span>'</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; radius </span><span>=</span><span> diameter </span><span>/</span> <span>2</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>3.14</span> <span>*</span><span> radius</span></div>
+<br>
+<div><span>def</span> <span>triangle</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; height </span><span>=</span> <span>int(input(</span><span>'</span><span>What will be your height ?</span><span>'</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; base </span><span>=</span> <span>int(input(</span><span>'</span><span>What is your base number? </span><span>'</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> height </span><span>*</span><span> base </span><span>/</span> <span>2</span></div>
+</div>
+</div>
+</body>
+</html>

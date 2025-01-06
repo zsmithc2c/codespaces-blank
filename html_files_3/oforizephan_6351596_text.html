@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Zephan	Ofori</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Zephan	Ofori</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Prompt the user to enter a word<br>word = input("Enter a word: ")</p>
+<p># Keep prompting if the input is empty or contains spaces<br>while word == "" or " " in word:<br>&nbsp; &nbsp; word = input("Enter a word: ")</p>
+<p># Initialize a counter to track repeated letters<br>sameCounter = 0</p>
+<p># Loop through each letter in the word<br>for letter in word:<br>&nbsp; &nbsp; # Iterate through each index of the word<br>&nbsp; &nbsp; for i in range(len(word)):<br>&nbsp; &nbsp; &nbsp; &nbsp; # Check if the letter matches another character in the word<br>&nbsp; &nbsp; &nbsp; &nbsp; # Ensure the match is not at the same index&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; if letter == word[i] and word.index(letter) != i:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sameCounter += 1 &nbsp;# Increment the counter for each match found</p>
+<p>if sameCounter == 0:<br>&nbsp; &nbsp; print(True) &nbsp;# No duplicate letters, print True<br>else:<br>&nbsp; &nbsp; print(False) &nbsp;# Duplicate letters found, print False</p>
+</div>
+</body>
+</html>

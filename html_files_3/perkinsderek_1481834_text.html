@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Derek Perkins</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Derek Perkins</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>'''</p>
+<p>Description:</p>
+<p>Create a function that determines whether all characters in a given string are unique. If the string has all unique characters, return True; otherwise, return False.</p>
+<p>Example:</p>
+<p>Input: "abcdef"</p>
+<p>Output: True</p>
+<p>Input: "hello"</p>
+<p>Output: False</p>
+<p>'''</p>
+<p>def main():<br>&nbsp; counted_chars = '' # holds the characters that were already counted<br>&nbsp; is_unique = True # defaults to true unless changed<br>&nbsp; user_input = input('Enter an input').replace(" ","") # removes spaces<br>&nbsp; for char in user_input:<br>&nbsp; &nbsp; if char in counted_chars: # checks if a character is in characters already counted<br>&nbsp; &nbsp; &nbsp; is_unique = False # not unqiue anymore<br>&nbsp; &nbsp; &nbsp; break<br>&nbsp; &nbsp; counted_chars += char # adds character to the counted characters<br>&nbsp; return is_unique<br>main()</p>
+</div>
+</body>
+</html>

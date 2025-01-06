@@ -1,0 +1,62 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Maya Villa</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Maya Villa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#UCASE</span></div>
+<div><span># U - Create a program that will choose a number between 1 and 100 and ask the user to guess. The user will be able to guess again with a hint</span></div>
+<div><span># pointing them in the right direction if they do not get it right the first time.</span></div>
+<div><span># Inputs - an integer from the user for each turn they guess</span></div>
+<div><span># Outputs - confirmation of the user's answer either by saying they are correct or giving them a hint to guess again</span></div>
+<div><span># Edge Cases - Invalid input (not a number and negative integer). Another invalid input could be a decimal. I will consider an input above 100</span></div>
+<div><span># to also be invalid</span></div>
+<div><span># Clarifying Questions - are the 1 and 100 inclusive? I will assume so. Does the user only get two guesses? I will assume not for this example.</span></div>
+<br>
+<div><span># C - Will need the random method so I need to import random. I will also need comparison operators to read the user input and provide a helpful</span></div>
+<div><span># hint. I will need to deal with user input as well as trys and exceptions for the edge cases.</span></div>
+<br>
+<div><span># A and S</span></div>
+<div><span>import</span><span> random</span></div>
+<div><span>#I need to introduce the program to the user first</span></div>
+<div><span>print(</span><span>"Hello! I am going to guess a random number between 1 and 100"</span><span>)</span></div>
+<div><span># I need generate the random number</span></div>
+<div><span>random_num = int(random.random() * </span><span>100</span><span> + </span><span>1</span><span>) </span><span># This should return any integer between 1 and 100 inclusive...</span></div>
+<div><span>#print(random_num)</span></div>
+<div><span>#then I need to ask for input but account for the different errors that can arrise</span></div>
+<div><span>guess = </span><span>0</span></div>
+<div><span>while</span><span> guess != random_num: </span><span># the program will keep going until the user gets the right number</span></div>
+<div><span>&nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> attempt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess = int(input(</span><span>"Please guess the number! "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> guess &lt; </span><span>0</span> <span>or</span><span> guess &gt; </span><span>100</span><span>: </span><span># this is the error if the number is below or above the bounds</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>raise</span><span> Exception</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"That is not a valid input. Try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span># then I need to check the user input for all the cases by comparing the random number and the user's guesses</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> random_num == guess:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"Congrats! You guessed the number!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> random_num &gt; guess:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"The correct number is larger than your guess. Try again!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> random_num &lt; guess:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"The correct number is smaller than your guess. Try again!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span># after this, the program will go back and give the user more chances to get the right number until they do!</span></div>
+<br>
+<div><span># E - Yes, we can check the result if we uncomment the line that says "print(random_num)" so that we can see if the hints and guesses are</span></div>
+<div><span># accurate to what is happening in the program. I believe we cna understand the program at a glance thanks to the comments and the naming</span></div>
+<div><span># conventions of all the variables. I believe the performance of the solution could be improved with a different try and except case.</span></div>
+</div>
+</div>
+</body>
+</html>

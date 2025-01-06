@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Reeddhiman Pradhan</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Reeddhiman Pradhan</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Import Math class<br>import math&nbsp;</p>
+<p># Create the variable pi for the circle area<br>pi = math.pi</p>
+<p># Ask user for the shape they want program to calculate<br>shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? ")</p>
+<p># If user chooses circle, prompt for the radius<br>if shape.lower() == "circle":<br>&nbsp; &nbsp; radius = int(input("Enter the radius of the circle: "))<br>&nbsp; &nbsp; area = pi * (radius ** 2) # Area of circle = pi * r^2<br>&nbsp; &nbsp; print("The area of the circle is: " + str(area))</p>
+<p># If user chooses rectangle, prompt for the length and width<br>elif shape.lower() == "rectangle":<br>&nbsp; &nbsp; length = int(input("Enter the length of the rectangle: "))<br>&nbsp; &nbsp; width = int(input("Enter the width of the rectangle: "))<br>&nbsp; &nbsp; area = length * width # Area of rectangle = l * w<br>&nbsp; &nbsp; print("The area of the rectangle is: " + str(area))<br>&nbsp; &nbsp;&nbsp;<br># If user chooses square, prompt for the side length<br>elif shape.lower() == "square":<br>&nbsp; &nbsp; side_length = int(input("Enter the length of the side of the square: "))<br>&nbsp; &nbsp; area = side_length ** 2 # Area of a square = s^2<br>&nbsp; &nbsp; print("The area of the square is: " + str(area))<br>&nbsp; &nbsp;&nbsp;<br># If user chooses triangle, prompt for the base and height<br>elif shape.lower() == "triangle":<br>&nbsp; &nbsp; base = int(input("Enter the base of the triangle: "))<br>&nbsp; &nbsp; height = int(input("Enter the height of the triangle: "))<br>&nbsp; &nbsp; area = 0.5 * base * height # Area of a triangle = 1/2 * b * h<br>&nbsp; &nbsp; print("The area of the triangle is: " + str(area))<br>&nbsp; &nbsp;&nbsp;<br># If user has shapes that don't match the 4 above, ask them to choose from the 4<br>else:<br>&nbsp; &nbsp; print("Please choose any of these shapes: Circle, Rectangle, Square, or Triangle")</p>
+</div>
+</body>
+</html>

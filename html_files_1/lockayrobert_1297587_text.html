@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Robert Lockay</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Robert Lockay</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># U:&nbsp;<br># - does the string equal its reversed form<br># - input string, output print statement based on boolean result<br># - empty string/string with just spaces is not a palindrome<br># - need to strip spaces and punctuation</p>
+<p># C:<br># - I know I need to reverse the string since im checking its reversed form</p>
+<p># A:&nbsp;<br># function is_palindrome(string)<br># &nbsp; string.remove_spaces()<br># &nbsp; string.to_lower_case()<br># &nbsp;&nbsp;<br># &nbsp; reversed_string = string.reverse()<br># &nbsp; if string equals reversed_string<br># &nbsp; &nbsp; &nbsp; return True<br># &nbsp; else<br># &nbsp; &nbsp; &nbsp; return False</p>
+<p># S:<br>def is_palindrome(string):<br>&nbsp; &nbsp; # remove spaces and set the string to lower case and strip punctuation<br>&nbsp; &nbsp; cleaned_string = string.lower().replace(" ", "").replace("!", "").replace(".", "").replace("?", "")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # check if the string is equal to its reversed form<br>&nbsp; &nbsp; # use slicing to reverse the string<br>&nbsp; &nbsp; if len(cleaned_string) &gt; 0 and cleaned_string == cleaned_string[::-1]:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is a palindrome.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is not a palindrome.")<br>&nbsp; &nbsp;&nbsp;<br># test case 1<br>is_palindrome("Racecar!")<br># test case 2<br>is_palindrome("Hello")</p>
+<p># E:<br># + code passes test cases<br># + code is readable<br># + no obvious performance reworks</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Faraja Athanas</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Faraja Athanas</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><span>Problem 1 Palindrome Checker</span></p>
+<p><span>UNDERSTANDING:</span></p>
+<p><span># Create a program that checks if a given string is a palindrome.</span></p>
+<p><span># Inputs:&nbsp; A string entered by the user.&nbsp;&nbsp;</span></p>
+<p><span>#Outputs:&nbsp; A message indicating whether the input is a palindrome.&nbsp;&nbsp;</span></p>
+<p><span>#Edge Cases:&nbsp; Empty string: Should return True (it’s trivially a palindrome).&nbsp; • #Case differences: “Racecar” should count as a palindrome.&nbsp; • Ignore spaces and special characters (if needed).</span></p>
+<p>&nbsp;</p>
+<p><span>Clues:</span></p>
+<p><span> </span><span>#</span><span>To check for a palindrome:\</span></p>
+<p><span>Normalize the input by converting it to lowercase.</span></p>
+<p><span> </span><span> </span><span>Reverse the string and compare it to the original.</span></p>
+<p><span> </span><span> </span><span> </span><span>#Tools:</span></p>
+<p><span> </span><span>Use .lower() to make the string lowercase.</span></p>
+<p><span> </span><span>Use slicing ([::-1]) to reverse the string.</span></p>
+<p>&nbsp;</p>
+<p><span>Assemble:</span></p>
+<p><span>Accept user input.</span></p>
+<p><span>Convert to lowercase.</span></p>
+<p><span>remove spaces and special characters for strict palindrome checking.]</span></p>
+<p><span>Reverse the string.</span></p>
+<p><span>Compare the original and reversed strings.</span></p>
+<p><span>Output whether it’s a palindrome.</span></p>
+<p>&nbsp;</p>
+<p><span> </span></p>
+<p><span>Solve:</span></p>
+<p>&nbsp;</p>
+<p><span>Real working code:</span></p>
+<p><span>def is_palindrome(s):</span></p>
+<p><span>&nbsp;&nbsp;# Normalize the string: convert to lowercase</span></p>
+<p><span>&nbsp;&nbsp;s = s.lower()</span></p>
+<p><span>&nbsp;&nbsp;# Reverse the string using slicing</span></p>
+<p><span>&nbsp;&nbsp;reversed_s = s[::-1]</span></p>
+<p><span>&nbsp;&nbsp;# Check if the original string is the same as the reversed string</span></p>
+<p><span>&nbsp;&nbsp;return s == reversed_s</span></p>
+<p>&nbsp;</p>
+<p><span>#mainn&nbsp;</span></p>
+<p><span>user_input = input("Enter a string to check if it's a palindrome: ").strip()</span></p>
+<p><span>if is_palindrome(user_input):</span></p>
+<p><span>&nbsp;&nbsp;print(f"'{user_input}' is a palindrome!")</span></p>
+<p><span>else:</span></p>
+<p><span>&nbsp;&nbsp;print(f" '{user_input}' is not a palindrome.")</span></p>
+<p><span>Examine&nbsp;</span></p>
+<p><span>Test Cases:&nbsp;&nbsp;</span></p>
+<p><span>Simple Palindrome:&nbsp; Input: "madam"&nbsp;&nbsp;</span></p>
+<p><span>Output: 'madam' is a palindrome!&nbsp;&nbsp;</span></p>
+<p><span>—-------------------------------</span></p>
+<p><span>Mixed Case: &nbsp; Input: "Racecar"&nbsp;&nbsp;</span></p>
+<p><span>Output:&nbsp; 'Racecar' is a palindrome!</span></p>
+<p>&nbsp;</p>
+<p><span>Fail case: input “Hello Word”</span></p>
+<p><span>Ouput: “</span><span>'hello' is not a palindrome.”</span></p>
+<p><span>Improvement:&nbsp;</span></p>
+<p><span>none&nbsp; needed.</span></p>
+<p><br><br></p>
+</div>
+</body>
+</html>

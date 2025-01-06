@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Yadnya Patil</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Yadnya Patil</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>I started by thinking about how the game should work, where the program randomly picks a number between 1 and 100, and the player guesses it. Based on this, I realized that I’d need a loop to keep asking the player for guesses and conditionals to give feedback on whether the guess was too high or too low. I then wrote the steps out : generate the random number, get the player’s guess, compare it, and repeat until the player guesses correctly. Then I translated these steps into code. I think the game could be improved by adding a method to handle invalid inputs.&nbsp;</p>
+<p>import random</p>
+<p>def number_guessing_game():<br>// Choose a random number within a given range<br>&nbsp; &nbsp; secret_number = random.randint(1, 100)</p>
+<p>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; guess = input("Guess a number between 1 and 100: ")<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; //Convert input to integer<br>&nbsp; &nbsp; &nbsp; &nbsp; guess = int(guess) &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; //Compare the guess with the secret number and let the user know it<br>&nbsp; &nbsp; &nbsp; &nbsp; if guess &lt; secret_number:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too low! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; elif guess &gt; secret_number:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too high! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; // when the user gets the guess correct congratulate them<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Congratulations! You guessed it!")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break</p>
+<p>number_guessing_game()</p>
+</div>
+</body>
+</html>

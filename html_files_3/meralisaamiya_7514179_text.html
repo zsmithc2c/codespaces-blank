@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Saamiya Merali</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Saamiya Merali</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>has_unique_characters</span><span>(</span><span>a</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>len(a)</span> <span>==</span> <span>0</span><span>:</span> <span>#If the length of s is 0, then this if statement will return true</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; string_length </span><span>=</span> <span>len(a)</span> <span>#This is finding the length of s</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> i </span><span>in</span> <span>range(string_length)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; current_char </span><span>=</span><span> a[i]</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>for</span><span> j </span><span>in</span> <span>range(i </span><span>+</span> <span>1</span><span>,</span><span> string_length)</span><span>:</span> <span>#This determines how much the for loop will iterate through the word based on its length.</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; compare_char </span><span>=</span><span> a[j]</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> current_char </span><span>==</span><span> compare_char</span><span>:</span> <span>#This is comparing the characters</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span>print(has_unique_characters(</span><span>"</span><span>abcdef</span><span>"</span><span>))</span><span> &nbsp;</span></div>
+<div><span>print(has_unique_characters(</span><span>"</span><span>hello</span><span>"</span><span>))</span><span> &nbsp; </span></div>
+<div><span>print(has_unique_characters(</span><span>"</span><span>intelligence</span><span>"</span><span>))</span></div>
+</div>
+</div>
+</body>
+</html>

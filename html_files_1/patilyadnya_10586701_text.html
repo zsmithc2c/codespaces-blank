@@ -1,0 +1,18 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Yadnya Patil</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Yadnya Patil</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>I started by understanding that a palindrome is a word that reads the same forward and backward. To check if the string is a palindrome, I reversed it by looping through each character and then compared the original string with the reversed one. If they were the same, I said it’s a palindrome; otherwise, it’s not. But I couldn’t find a way to ignore the punctuation, capitalization and spaces in the string. Currently the program only works if the string has lowercase letters, numbers, or any other characters, and without spaces.</p>
+<p>def palindrome(string):<br>&nbsp; &nbsp; // Start with an empty string to build the reversed version<br>&nbsp; &nbsp; reversed = ""<br>&nbsp; &nbsp; // Loop through each character in the original string and add it to the front of the reversed string<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; reversed = char + reversed<br>&nbsp; &nbsp; // Check if the original string is the same as the reversed one<br>&nbsp; &nbsp; return string == reversed<br>// Ask the user to input a string<br>input = input("Enter a string: ")<br>if palindrome(input):<br>&nbsp; &nbsp; print("It's a palindrome.")<br>else:<br>&nbsp; &nbsp; print("It's not a palindrome.")</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Samantha	Yengst</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Samantha	Yengst</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Problem 1: Palindrome Checker<br># Description:</p>
+<p># Create a program that checks whether a given string is a palindrome. A&nbsp;<br># palindrome is a word, phrase, number, or other sequence of characters that&nbsp;<br># reads the same forwards and backwards (ignoring spaces, punctuation, and&nbsp;<br># capitalization).</p>
+<p># Example:</p>
+<p># Input: "Racecar"</p>
+<p># Output: "The string is a palindrome."</p>
+<p># Input: "Hello"</p>
+<p># Output: "The string is not a palindrome."</p>
+<p># Instructions:</p>
+<p># Use the UCASE strategy to approach this problem.&nbsp;<br># Include comments in your code to explain each step.<br># Remember to consider edge cases, such as empty strings or strings with spaces&nbsp;<br># and punctuation.<br># Spend no more than 1 hour on this problem.</p>
+<p>&nbsp;</p>
+<p># Palindrome Checker Function (With all the nuts and bolts (With commentary))<br>def palindrome_checker():<br>&nbsp; &nbsp; word = input("Please enter word to check: ")# input from user<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; if (word == ""): # Check for empty string<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is empty")<br>&nbsp; &nbsp; elif (is_palindrome(word)):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is a palindrome.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string is not a palindrome.")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; trans()</p>
+<p>def repeat():<br>&nbsp; &nbsp; again = input("Go again?[Y/N]: ").upper()<br>&nbsp; &nbsp; trans()<br>&nbsp; &nbsp; if ((again) == 'Y'):<br>&nbsp; &nbsp; &nbsp; &nbsp; return True<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return False # End if user inputs anything except for 'Y'</p>
+<p>def trans():<br>&nbsp; &nbsp; # make space- reset console<br>&nbsp; &nbsp; print()<br>&nbsp; &nbsp; print("~~~~~~~~~~~~")<br>&nbsp; &nbsp; print()<br># Okay- so, get a word from user (later problem)</p>
+<p># palindrome function?<br>&nbsp; &nbsp; # is word same forward and backwards?&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; # Ignore spaces and punctuation...... how?<br>&nbsp; &nbsp; # compare the og string with a string that's reversed<br>&nbsp; &nbsp; # return true false<br>def is_palindrome(t_string):<br>&nbsp; &nbsp; og = remove_invalid_chars(t_string)<br>&nbsp; &nbsp; new = reverse_string(og)<br>&nbsp; &nbsp; if (og == new):<br>&nbsp; &nbsp; &nbsp; &nbsp; return True<br>&nbsp; &nbsp; return False</p>
+<p># reverse function :'D<br>&nbsp; &nbsp; # input: a string (no spaces or punctuation)<br>&nbsp; &nbsp; # output: that string but reversed (in: helloworld- out: dlrowlleh)<br>def reverse_string(t_string):<br>&nbsp; &nbsp; og = t_string<br>&nbsp; &nbsp; new = ""<br>&nbsp; &nbsp; for i in range(len(og)-1, -1, -1): # range(start, stop, step)<br>&nbsp; &nbsp; &nbsp; &nbsp; new = new + og[i]<br>&nbsp; &nbsp; return new<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p># remove spaces and punctuation function?<br>&nbsp; &nbsp; # input: a string<br>&nbsp; &nbsp; # output: the string with spaces and punctuation removed (also all lowercase<br>&nbsp; &nbsp; # cuz why not)<br>def remove_invalid_chars(t_string):<br>&nbsp; &nbsp; # Remove characters by filtering out a list of characters we want removed<br>&nbsp; &nbsp; punct = [".", ",", "!", "?", " ", "/"]&nbsp;<br>&nbsp; &nbsp; og = t_string.lower() # set this to param<br>&nbsp; &nbsp; new = "" # to be returned<br>&nbsp; &nbsp; invalid = False<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; for i in range(len(og)):<br>&nbsp; &nbsp; &nbsp; &nbsp; invalid = False<br>&nbsp; &nbsp; &nbsp; &nbsp; for j in range(len(punct)):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (og[i] == punct[j]): # check value of i isn't an invalid character<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; invalid = True<br>&nbsp; &nbsp; &nbsp; &nbsp; if (not(invalid)):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; new = new + og[i]<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; return new</p>
+<p><br>def main():<br>&nbsp; &nbsp; # main function :'D<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # print(remove_invalid_chars("tH,e s.tOry!"))<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # print(reverse_string("Hello"))<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # print(is_palindrome("Racecar"))<br>&nbsp; &nbsp; # print(is_palindrome("Hello"))<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; again = True<br>&nbsp; &nbsp; while again:<br>&nbsp; &nbsp; &nbsp; &nbsp; palindrome_checker()<br>&nbsp; &nbsp; &nbsp; &nbsp; again = repeat()<br>&nbsp; &nbsp; print("Have a great day!")</p>
+<p><br>main()&nbsp;<br># aha, I know this function isn't really necessary but it makes my brain happy :'D</p>
+</div>
+</body>
+</html>

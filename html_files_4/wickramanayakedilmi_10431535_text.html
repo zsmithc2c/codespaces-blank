@@ -1,0 +1,51 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Dilmi	Wickramanayake</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Dilmi	Wickramanayake</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>"""</span></div>
+<div><span>Problem: Check if users guess is equal to the random number from 1-100</span></div>
+<br>
+<div><span>Clues: needs to continuously run until user gets correct guess - use while loop and boolean</span></div>
+<div><span>Tools: random, input</span></div>
+<div><span>"""</span></div>
+<div><span>import</span> <span>random</span></div>
+<div><span>random_num</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>) </span><span># getting the random number</span></div>
+<br>
+<div><span>end</span> <span>=</span> <span>False</span> <span># indicates when the user gets the correct number</span></div>
+<br>
+<div><span>while</span><span>(</span><span>end</span> <span>==</span> <span>False</span><span>): </span><span># continues if user doesnt get the correct number</span></div>
+<div><span>&nbsp; &nbsp; </span><span>guess</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Choose a number 1-100: "</span><span>)) </span><span># gets users input</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span>(</span><span>guess</span> <span>==</span> <span>random_num</span><span>): </span><span># if its equal</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Great Job! You got it"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>end</span> <span>=</span> <span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span>(</span><span>guess</span> <span>&gt;</span> <span>random_num</span><span>): </span><span># if guess is too high</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too High!!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span>(</span><span>guess</span> <span>&lt;</span> <span>random_num</span><span>): </span><span># if guess is too low</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too Low!!"</span><span>)</span></div>
+<div><span>"""</span></div>
+<div><span>Examine: I can check this by printing out the random_number and inputting all conditions</span></div>
+<div><span>1. input a number too low</span></div>
+<div><span>2. input a number too high</span></div>
+<div><span>3. input a number that is equal to the number</span></div>
+<div><span>Now check if it has the correct input</span></div>
+<br>
+<div><span>Improve it?</span></div>
+<div><span>I could possibly use less code lines</span></div>
+<div><span>I could also make it more difficult for the user, so I could give the</span></div>
+<div><span>&nbsp;user only 3 chances to guess the number</span></div>
+<div><span>"""</span></div>
+</div>
+</div>
+</body>
+</html>

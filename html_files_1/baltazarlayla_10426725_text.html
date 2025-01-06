@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Layla	Baltazar</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Layla	Baltazar</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#this function checks to see if the string is a palindrone<br>def s_palindrone(text):<br>&nbsp; text = text.lower() #makes the text lowercase</p>
+<p>&nbsp; text = "".join(text.split())<br>&nbsp; reversed_text = text[::-1] #reverses the text</p>
+<p>&nbsp; #comparing the orginal and the new text<br>&nbsp; return text == reversed_text</p>
+<p>#example tests to see if the code works or not<br>words = ["Racecar", "Hello", "lemons", "Tress", "Oceans"]</p>
+<p>for word in words:<br>&nbsp; if s_palindrone(word):<br>&nbsp; &nbsp; print(f'"{word}" is a palindrome.')<br>&nbsp; else:<br>&nbsp; &nbsp; print(f'"{word}" is not a palindrome.')</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

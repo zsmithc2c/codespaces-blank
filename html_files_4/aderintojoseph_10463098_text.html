@@ -1,0 +1,107 @@
+import os
+import glob
+import csv
+import re
+from bs4 import BeautifulSoup
+
+# Update these paths if your folder names are different
+PROBLEM_DIRECTORIES = {
+    1: "./html_files_1",
+    2: "./html_files_2",
+    3: "./html_files_3",
+    4: "./html_files_4",
+}
+
+# Output CSV file
+output_csv = "./extracted_data.csv"
+
+# Regular expression to find "Problem X" (where X is 1, 2, 3, or 4)
+problem_number_regex = re.compile(r"Problem\s*([1-4])\s*:")
+
+def extract_student_data(full_text):
+    """
+    Parse the text to find:
+        - Student name
+        - Problem number (1..4) from the line "December Submission: Problem X: Some Name"
+        - The remaining text (with header line removed).
+
+    Returns a tuple of (name, problem_number, remaining_text).
+    If the pattern is not found, returns (None, None, full_text).
+    """
+    # Split into lines for easier parsing
+    lines = full_text.splitlines()
+
+    name = None
+    problem_num = None
+
+    # We look for a line containing "December Submission:" and "Problem X:"
+    for i, line in enumerate(lines):
+        if "December Submission:" in line and "Problem" in line:
+            match = problem_number_regex.search(line)
+            if match:
+                problem_num = int(match.group(1))  # 1, 2, 3, or 4
+
+            # Name is after the last colon
+            parts = line.split(":")
+            name = parts[-1].strip()
+
+            # Remove this line from the text so we don't keep it in the "remaining text"
+            del lines[i]
+            break
+
+    # Rejoin the remaining lines as the submission text
+    remaining_text = "\n".join(lines).strip()
+
+    return name, problem_num, remaining_text
+
+# Dictionary to store all submissions
+# Key: student name (str), Value: dict of problem_number -> text
+submissions = {}
+
+# Process each problem folder
+for problem_number, folder_path in PROBLEM_DIRECTORIES.items():
+    # Gather all .html files in the current folder
+    html_files = glob.glob(os.path.join(folder_path, "*.html"))
+    
+    for html_file in html_files:
+        with open(html_file, "r", encoding="utf-8", errors="ignore") as f:
+            content = f.read()
+
+        # Extract full text from HTML
+        soup = BeautifulSoup(content, "html.parser")
+        full_text = soup.get_text()
+
+        # Extract student name, problem number, and the submission text
+        name, extracted_problem_num, remaining_text = extract_student_data(full_text)
+
+        # If we didn't find anything in the text, we can set defaults
+        if not name:
+            name = "Unknown"
+        # If the text didn't have "Problem X:", we fall back to the folder's problem_number
+        if not extracted_problem_num:
+            extracted_problem_num = problem_number
+
+        # Initialize a sub-dict for this student if not present
+        if name not in submissions:
+            submissions[name] = {}
+
+        # Store the text under the correct problem number
+        submissions[name][extracted_problem_num] = remaining_text
+
+        print(f"Processed {html_file} => Name='{name}', Problem={extracted_problem_num}")
+
+# Now write a CSV with columns: Name, Problem 1, Problem 2, Problem 3, Problem 4
+columns = ["Name", "Problem 1", "Problem 2", "Problem 3", "Problem 4"]
+
+with open(output_csv, "w", newline="", encoding="utf-8") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(columns)
+
+    # For each student, gather the problem texts (1..4), defaulting to empty string if missing
+    for name, problems_dict in submissions.items():
+        p1_text = problems_dict.get(1, "")
+        p2_text = problems_dict.get(2, "")
+        p3_text = problems_dict.get(3, "")
+        p4_text = problems_dict.get(4, "")
+
+        writer.writerow([name, p1_text, p2_text, p3_text, p4_text])

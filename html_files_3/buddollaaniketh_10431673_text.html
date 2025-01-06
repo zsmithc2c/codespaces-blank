@@ -1,0 +1,18 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Aniketh	Buddolla</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Aniketh	Buddolla</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def has_unique_characters(string):<br>&nbsp; &nbsp; # Use a set to track seen characters<br>&nbsp; &nbsp; seen_characters = set()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Iterate through each character in the string<br>&nbsp; &nbsp; for char in string:<br>&nbsp; &nbsp; &nbsp; &nbsp; # If the character is already in the set, it's not unique<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; # Otherwise, add the character to the set<br>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char)<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # If the loop completes without finding duplicates, all characters are unique<br>&nbsp; &nbsp; return True</p>
+<p># Example usage<br>print(has_unique_characters("abcdef")) &nbsp;# Output: True<br>print(has_unique_characters("hello")) &nbsp; # Output: False</p>
+</div>
+</body>
+</html>

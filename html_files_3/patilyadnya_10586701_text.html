@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Yadnya Patil</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Yadnya Patil</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p><br>//In this program, I understand that the goal is to check if all characters in a string are unique. I used 2 loops ( one within another) to compare each character with every other character in the string. If a match is found, the function returns `False`; otherwise, it returns `True`. The program works well for basic cases, but it doesn't handle case sensitivity. For example, it considers 'L' and 'l' as different characters, though I’m not sure if they should be treated the same.&nbsp;</p>
+<p>def unique_characters(string):<br>&nbsp; &nbsp; for i in range(len(string)):<br>&nbsp; &nbsp; &nbsp; &nbsp; for j in range(i + 1, len(string)):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if string[i] == string[j]:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; return True</p>
+<p>input = input("Enter a string to check if it has unique characters: ")</p>
+<p>print(unique_characters(input))</p>
+</div>
+</body>
+</html>

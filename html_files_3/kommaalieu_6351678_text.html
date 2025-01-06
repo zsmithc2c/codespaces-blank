@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Alieu	Komma</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Alieu	Komma</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># 1. Store letters of string in a list<br># 2. Check to see if a letter appears more than once<br># 3. Return False if a letter appears at least twice<br># 4. Return True if a letter on appears once</p>
+<p>def checkString(string):<br>&nbsp; &nbsp; letters = []<br>&nbsp; &nbsp; string = string.lower()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; for char in string: #populates the letters list with characters<br>&nbsp; &nbsp; &nbsp; &nbsp; letters.append(char)<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; for char in string: #checks to see if two letters equal one another<br>&nbsp; &nbsp; &nbsp; &nbsp;i = 0<br>&nbsp; &nbsp; &nbsp; &nbsp;for letter in letters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if char == " ": #Passes if string has a space<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pass<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif char == letter:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i += 1<br>&nbsp; &nbsp; &nbsp; &nbsp; 1<br>&nbsp; &nbsp; &nbsp; &nbsp;if i &gt; 1: # Checks to see if the character has two instances in the list<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return False</p>
+<p>&nbsp; &nbsp; return True #String must be unique if for loop doesn't return false</p>
+<p>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp;&nbsp;<br>print(checkString("Hello"))<br>print(checkString("abc defg"))</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Maya Villa</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Maya Villa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#UCASE</span></div>
+<div><span># U - Make a calculator that provides the area of the shape the user wants.</span></div>
+<div><span># Inputs - User types in name of a shape, user provides the appropriate dimensions for the shape to get the area</span></div>
+<div><span># Output - prompts user for approrpiate dimensions, outputs the area of the shape</span></div>
+<div><span># Edge Cases - input errors with inappropriate characters, impossible dimensions (zero: 0 times another number, negative numbers)</span></div>
+<div><span># Clarifying questions: Does it want integers or doubles? I will assume only integers for this example</span></div>
+<br>
+<div><span># C - need inputs (string and integer), if statements to determine which function to use, math operations (Pi)</span></div>
+<br>
+<div><span># need to import the math library to get access to pi</span></div>
+<div><span>import</span><span> math</span></div>
+<br>
+<div><span># A and S</span></div>
+<div><span>shape = input(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? "</span><span>) </span><span># prompt user for kind of shape</span></div>
+<div><span># below all the shape functions is the function for determining which shape function to use to get the right dimensions</span></div>
+<div><span># for all inputs asking for an integer, there is a try and except case to catch errors, specifically if the user enters something that isn't a number</span></div>
+<div><span># all inputs also raise an exception if the input is below zero</span></div>
+<div><span># example shown on circle since other formula functions are the same</span></div>
+<br>
+<div><span># circle</span></div>
+<div><span>def</span><span> area_of_circle():</span></div>
+<div><span>&nbsp; &nbsp; attempt = </span><span>True</span> <span># goes into a loop to check for exceptions or edge cases that are mentioned above</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> attempt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; radius = int(input(</span><span>"What is the radius? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> radius &lt; </span><span>0</span><span>: </span><span># this raises an exception if the value is a number, but it is below zero</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>raise</span><span> Exception</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>False</span> <span># ends the loop if there are no more exceptions</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"That is not a valid input. Try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>True</span> <span># goes back into the loop to try again</span></div>
+<div><span>&nbsp; &nbsp; area = math.pi * pow(radius, </span><span>2</span><span>) </span><span># calculates the area</span></div>
+<div><span>&nbsp; &nbsp; print(</span><span>"Area: "</span><span>) </span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> area </span><span># return area</span></div>
+<br>
+<div><span># rectangle</span></div>
+<div><span>def</span><span> area_of_rect():</span></div>
+<div><span>&nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> attempt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length = int(input(</span><span>"What is the length? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width = int(input(</span><span>"What is the width? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> length &lt; </span><span>0</span> <span>or</span><span> width &lt; </span><span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>raise</span><span> Exception</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"One of your inputs is invalid. Try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; area = length * width</span></div>
+<div><span>&nbsp; &nbsp; print(</span><span>"Area: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> area</span></div>
+<br>
+<div><span># square</span></div>
+<div><span>def</span><span> area_of_square():</span></div>
+<div><span>&nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> attempt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; side = int(input(</span><span>"What is the side length? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> side &lt; </span><span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>raise</span><span> Exception</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"That is not a valid input. Try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; area = pow(side, </span><span>2</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; print(</span><span>"Area: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> area</span></div>
+<br>
+<div><span># triangle</span></div>
+<div><span>def</span><span> area_of_triangle():</span></div>
+<div><span>&nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> attempt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; base = int(input(</span><span>"What is the base? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height = int(input(</span><span>"What is the height? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> base &lt; </span><span>0</span> <span>or</span><span> height &lt; </span><span>0</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>raise</span><span> Exception</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"One of your inputs is invalid. Try again."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; attempt = </span><span>True</span></div>
+<div><span>&nbsp; &nbsp; area = (base * height)/</span><span>2</span> <span># will sometimes be a double</span></div>
+<div><span>&nbsp; &nbsp; print(</span><span>"Area: "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span><span> area</span></div>
+<br>
+<div><span># determines what kind of shape it is and what dimensions are needed, if it does not match, say it is an invalid input</span></div>
+<div><span>def</span><span> shapes(input):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span> input == </span><span>"circle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(area_of_circle())</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> input == </span><span>"rectangle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(area_of_rect())</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> input == </span><span>"square"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(area_of_square())</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span> input == </span><span>"triangle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(area_of_triangle())</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print(</span><span>"That is an invalid input! Please enter a valid input."</span><span>) </span><span># user will need to restart program to input again</span></div>
+<br>
+<div><span>shapes(shape) </span><span># testing</span></div>
+<br>
+<div><span># E - Yes, we can check the result. It is more or less understood at a glance. Once you are familiar with the structure of one formula function,</span></div>
+<div><span># you will know how the rest of them work. The performance can be improved with combining the rectangle and square functions since they are </span></div>
+<div><span># similar operations. Performance could also be improved by moving the try and excepts or redoing them entirely, but I am not sure how to do this</span></div>
+<div><span># or what the potential benefits would be.</span></div>
+</div>
+</div>
+</body>
+</html>

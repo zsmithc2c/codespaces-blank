@@ -1,0 +1,28 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Abraham Kunnan</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Abraham Kunnan</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Function to calculate the area of a circle<br>def calculate_circle_area(radius):<br>&nbsp; &nbsp; import math<br>&nbsp; &nbsp; return math.pi * (radius ** 2)</p>
+<p># Function to calculate the area of a rectangle<br>def calculate_rectangle_area(length, width):<br>&nbsp; &nbsp; return length * width</p>
+<p># Function to calculate the area of a square<br>def calculate_square_area(side):<br>&nbsp; &nbsp; return side ** 2</p>
+<p># Function to calculate the area of a triangle<br>def calculate_triangle_area(base, height):<br>&nbsp; &nbsp; return 0.5 * base * height</p>
+<p># Main function to interact with the user<br>def main():<br>&nbsp; &nbsp; print("I can calculate the area of a shape for you.")<br>&nbsp; &nbsp; print("Which shape do you want me to calculate the area of? (circle, rectangle, square, triangle)")</p>
+<p>&nbsp; &nbsp; # Get the shape from the user<br>&nbsp; &nbsp; shape = input("Enter the name of the shape: ").strip().lower()</p>
+<p>&nbsp; &nbsp; # Handle each shape based on the user's input<br>&nbsp; &nbsp; if shape == "circle":<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; radius = float(input("Enter the radius of the circle: ").strip())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if radius &lt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("The radius cannot be negative. Please try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = calculate_circle_area(radius)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the circle is: {area:.2f}")<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please enter a numeric value for the radius.")</p>
+<p>&nbsp; &nbsp; elif shape == "rectangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length = float(input("Enter the length of the rectangle: ").strip())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width = float(input("Enter the width of the rectangle: ").strip())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if length &lt; 0 or width &lt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Length and width cannot be negative. Please try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = calculate_rectangle_area(length, width)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the rectangle is: {area:.2f}")<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please enter numeric values for the length and width.")</p>
+<p>&nbsp; &nbsp; elif shape == "square":<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; side = float(input("Enter the side length of the square: ").strip())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if side &lt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("The side length cannot be negative. Please try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = calculate_square_area(side)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the square is: {area:.2f}")<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please enter a numeric value for the side length.")</p>
+<p>&nbsp; &nbsp; elif shape == "triangle":<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; base = float(input("Enter the base of the triangle: ").strip())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height = float(input("Enter the height of the triangle: ").strip())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if base &lt; 0 or height &lt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Base and height cannot be negative. Please try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = calculate_triangle_area(base, height)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"The area of the triangle is: {area:.2f}")<br>&nbsp; &nbsp; &nbsp; &nbsp; except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please enter numeric values for the base and height.")</p>
+<p>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Sorry, I can only calculate the area for circle, rectangle, square, or triangle.")</p>
+<p># Run the program<br>if __name__ == "__main__":<br>&nbsp; &nbsp; main()</p>
+</div>
+</body>
+</html>

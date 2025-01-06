@@ -1,0 +1,25 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Hansika	Perisetty</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Hansika	Perisetty</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>public class Palindrome {</p>
+<p>&nbsp; &nbsp; private String word;</p>
+<p>&nbsp; &nbsp; public Palindrome(String w) {<br>&nbsp; &nbsp; &nbsp; &nbsp; word = w;<br>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; // Method to reverse a string<br>&nbsp; &nbsp; public String reverse(String word) {<br>&nbsp; &nbsp; &nbsp; &nbsp; String reversed = "";<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = word.length() - 1; i &gt;= 0; i--) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reversed += word.substring(i, i + 1); // Get each character<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; return reversed;<br>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; // Method to check if the string is a palindrome<br>&nbsp; &nbsp; public String isPalindrome() {<br>&nbsp; &nbsp; &nbsp; &nbsp; String reversed = reverse(word); // Call the reverse method<br>&nbsp; &nbsp; &nbsp; &nbsp; if (word.equalsIgnoreCase(reversed)) { // Ignore case when comparing (uppercase, lowercase, etc.)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return "The string is a palindrome.";<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return "The string is not a palindrome.";<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp;&nbsp;<br>}</p>
+<p>&nbsp;</p>
+<p>public class Main {<br>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; Palindrome p = new Palindrome("Racecar");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(p.isPalindrome());<br>&nbsp; &nbsp; }<br>}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

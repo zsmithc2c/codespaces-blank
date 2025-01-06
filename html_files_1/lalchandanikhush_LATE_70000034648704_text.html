@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Khush Lalchandani</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Khush Lalchandani</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Pseudocode<br># 1. Convert the input string to lowercase and remove extra spaces/punc stuff<br># 2.&nbsp; Have two ponters on both sides of string<br># &nbsp;3. Compare the characters at both sides.<br>#&nbsp; &nbsp;4. If the characters arent same return false.<br># 5. Keep moving the indices towards the center and return true if they reach the center</p>
+<p><br>def is_palindrome(string):<br>&nbsp; &nbsp; # Convert the string to lowercase<br>&nbsp; &nbsp; low_string = string.lower()<br>&nbsp; &nbsp; # Remove spaces and punctuation manually<br>&nbsp; &nbsp; string = ""<br>&nbsp; &nbsp; for char in low_string:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char.isalnum():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; string += char<br># Use a loop to compare characters from the start and end of the string<br>&nbsp; &nbsp; start = 0<br>&nbsp; &nbsp; end = len(string) - 1</p>
+<p>&nbsp; &nbsp; while start &lt; end:<br>&nbsp; &nbsp; &nbsp; &nbsp; # Compare characters at the current start and end indices<br>&nbsp; &nbsp; &nbsp; &nbsp; if string[start] != string[end]:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # If they dont match, the string is not a palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; start += 1<br>&nbsp; &nbsp; &nbsp; &nbsp; end -= 1</p>
+<p>&nbsp; &nbsp; # If loop finishes the string is a palindrome<br>&nbsp; &nbsp; return True</p>
+</div>
+</body>
+</html>

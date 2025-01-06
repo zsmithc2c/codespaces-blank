@@ -1,0 +1,28 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Hector	Perez Ramirez</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Hector	Perez Ramirez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Based on my understanding on this problem I have to determine wheather a pharse or word is a palindrome. I believe that a palindrome is a word or phrase that is the same forwards and backwards. Problem also stated that should ignore spaces, punctuation, and capitalization</p>
+<p># How I plan to solve the problem:&nbsp;</p>
+<p># 1. create a variable where the user inputs the string</p>
+<p># 2. create a function to remove all punctuation,capitalization, and convert all to lowercase with a fuction&nbsp;</p>
+<p># 3. print wheater or not the string is a palindrome and ask if they would like to see if another string is a palindrome<br>#_________________________________________________________</p>
+<p>import string<br># function to determine wheather or not a string is a palindrome<br>def palindrome_check(s):<br>&nbsp; s = s.lower()<br>&nbsp; s = s.translate(str.maketrans('', '', string.punctuation))<br>&nbsp; s = s.replace(" ", "")</p>
+<p>&nbsp; if s == s[::-1]:<br>&nbsp; &nbsp; print("This is a palindrome")<br>&nbsp; else:<br>&nbsp; &nbsp; print("This is not a palindrome")</p>
+<p># function that ask user for test string and tells user if it is a palindrome or not.<br>def menu():<br>&nbsp; while True:<br>&nbsp; &nbsp; test_string = input("Pleas insert a string to check if it is a palindrome: ")</p>
+<p>&nbsp; &nbsp; #checks to see if string is a palindrome using function<br>&nbsp; &nbsp; palindrome_check(test_string)</p>
+<p>&nbsp; &nbsp; # Asks user if they would like to check another string<br>&nbsp; &nbsp; repeat = input("would you like to check another string? (y/n): ")<br>&nbsp; &nbsp; if repeat != "y":<br>&nbsp; &nbsp; &nbsp; break</p>
+<p># Calls menu function<br>menu()</p>
+<p># This program gives the user a way to check if a string is a palindrome.</p>
+</div>
+</body>
+</html>

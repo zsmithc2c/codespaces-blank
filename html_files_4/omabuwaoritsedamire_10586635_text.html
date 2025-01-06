@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Oritsedamire	Omabuwa</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Oritsedamire	Omabuwa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span><span> random</span></div>
+<div><span>#number guessing gamne</span></div>
+<br>
+<div><span>#computers number</span></div>
+<div><span>num </span><span>=</span><span> random.randint(</span><span>1</span><span>,</span><span>100</span><span>)</span></div>
+<br>
+<div><span>#users number</span></div>
+<div><span>guess </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Guess my number: "</span><span>))</span></div>
+<br>
+<div><span>#checks invalid</span></div>
+<div><span>if</span><span>(guess</span><span>&lt;</span><span>1</span> <span>or</span><span> guess</span><span>&gt;</span><span>100</span><span>):</span></div>
+<div><span>print</span><span>(</span><span>"Your number must be between 1 and 100"</span><span>)</span></div>
+<br>
+<div><span>#loops until the user guesses, checks if smaller or bigger, breaks when user guesses the number</span></div>
+<div><span>while</span><span>(guess</span><span>!=</span><span>num):</span></div>
+<div><span>if</span><span>(guess </span><span>&gt;</span><span> num):</span></div>
+<div><span>print</span><span>(</span><span>"My number is smaller. Guess again"</span><span>)</span></div>
+<div><span> guess </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Guess my number: "</span><span>))</span></div>
+<div><span>if</span><span>(guess </span><span>&lt;</span><span> num):</span></div>
+<div><span>print</span><span>(</span><span>"My number is bigger. Guess again"</span><span>)</span></div>
+<div><span> guess </span><span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Guess my number: "</span><span>))</span></div>
+<div><span>if</span><span>(guess</span><span>==</span><span>num):</span></div>
+<div><span>print</span><span>(</span><span>"Congrats! Game over!"</span><span>)</span></div>
+<div><span>break</span></div>
+</div>
+</div>
+</body>
+</html>

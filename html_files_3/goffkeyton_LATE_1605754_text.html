@@ -1,0 +1,34 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Keyton Goff</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Keyton Goff</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div style="color: #d9dfe7; background-color: #171f2b; font-family: Consolas, 'Courier New', monospace;  font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #7f8d9f;"># Determine whether all characters of a string are unqiue.</span></div>
+<br>
+<div><span style="color: #7f8d9f;"># Define the function</span></div>
+<div><span style="color: #fd8da3;">def</span><span style="color: #d9dfe7;"> </span><span style="color: #bd9cfe;">is_string_unique</span><span style="color: #d9dfe7;">(string: </span><span style="color: #92a9ff;">str</span><span style="color: #d9dfe7;">) -&gt; </span><span style="color: #92a9ff;">bool</span><span style="color: #d9dfe7;">:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; uniques </span><span style="color: #fd8da3;">=</span><span style="color: #d9dfe7;"> [] </span><span style="color: #7f8d9f;"># Create a list to store unique letters</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">for</span><span style="color: #d9dfe7;"> _, letter </span><span style="color: #fd8da3;">in</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">enumerate</span><span style="color: #d9dfe7;">(string): </span><span style="color: #7f8d9f;"># Iterate through every character in the given string</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">if</span><span style="color: #d9dfe7;"> letter </span><span style="color: #fd8da3;">in</span><span style="color: #d9dfe7;"> uniques: </span><span style="color: #7f8d9f;"># Check if the character has already been found in the string</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">False</span><span style="color: #d9dfe7;"> </span><span style="color: #7f8d9f;"># If so, return false, the character has repeated once</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">else</span><span style="color: #d9dfe7;">: </span><span style="color: #7f8d9f;"># Otherwise, add the string to the list and continue:</span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; uniques.append(letter) </span></div>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #fd8da3;">continue</span><span style="color: #d9dfe7;"> </span></div>
+<br>
+<div><span style="color: #d9dfe7;">&nbsp; &nbsp; </span><span style="color: #fd8da3;">return</span><span style="color: #d9dfe7;"> </span><span style="color: #92a9ff;">True</span><span style="color: #d9dfe7;"> </span><span style="color: #7f8d9f;"># Return true if we did not find any repeated letters</span></div>
+</div>
+<div id="highlighter--hover-tools" style="display: none;">
+<div id="highlighter--hover-tools--container"></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Thomas</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Thomas</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># we need to determine whether or not a string does not have<br>#repeating characters</p>
+<p># need to use string for input<br>input = "abcb"</p>
+<p># boolean to track whether or word is unique or not<br>isTrue = True</p>
+<p># we may need to use an array to store the charcaters that we have #looped through and are already present in the string<br>chars = []<br># we will need to use a for loop to ierate through the string</p>
+<p># loop through each letter in input<br>for i in input:<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # add second loop to check if i is in chars<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# check if i is equal to j in chars<br>&nbsp; &nbsp; if(i in chars):<br>&nbsp; &nbsp; &nbsp; &nbsp; # if i is in chars is then print false<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; isTrue = False<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; # add it to the list for later<br>&nbsp; &nbsp; &nbsp; &nbsp; chars.append(i)<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><br>if(isTrue == True):<br>&nbsp; &nbsp; print("word is unique")<br>elif(isTrue == False):<br>&nbsp; &nbsp; print("word is not unique")</p>
+</div>
+</body>
+</html>

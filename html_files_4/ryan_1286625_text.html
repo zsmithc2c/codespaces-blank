@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Ryan</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Ryan</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#create a guessing game for the user to guess a number between 1 to 100<br>#input: user number guess<br>#output: lower, higher, you got it!</p>
+<p>#The user has to guess the number<br>#if the guess if too high, the user is told to guess lower<br>#if the guess is too low, the user is told to guess higher<br>#the game goes on until user guesses the number</p>
+<p>#import random so the function can pick a random number<br>import random</p>
+<p>#create a function that will generate a random number<br>numbers = list(range(1,101))<br>#use random.choice to pick a random number&nbsp;<br>picked_number = random.choice(numbers)</p>
+<p>def guess(picked_number):<br>&nbsp; #make the user pick a number&nbsp;<br>&nbsp; user_guess = int(input("guess a number from 1-100:"))<br>&nbsp; #compare the numbers and if the user guess is too high, tell the user to guess lower<br>&nbsp; if user_guess &gt; picked_number:<br>&nbsp; &nbsp; print("too high, guess lower")<br>&nbsp; &nbsp; guess(picked_number)<br>&nbsp; #compare the numbers and if the user guess is too low, tell the user to guess higher<br>&nbsp; elif user_guess &lt; picked_number:<br>&nbsp; &nbsp; print("too low, guess higher")<br>&nbsp; &nbsp; guess(picked_number)<br>&nbsp; #compare the numbers and if the user guess is correct, tell the user they got it<br>&nbsp; elif user_guess == picked_number:<br>&nbsp; &nbsp; print("congrats, you got it!")<br>&nbsp; else:<br>&nbsp; #if the input is invalid, tell the user to input a valid number and try again<br>&nbsp; &nbsp; print("invalid input, try again")<br>&nbsp; &nbsp; guess(picked_number)</p>
+<p>#print the function<br>guess(picked_number)</p>
+</div>
+</body>
+</html>

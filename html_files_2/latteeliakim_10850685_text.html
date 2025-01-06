@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Eliakim Latte</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Eliakim Latte</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>calculate_area</span><span>():</span></div>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>\nI can calculate the area of a shape for you.</span><span>"</span><span>)</span></div>
+<div><span> shape </span><span>=</span><span> [</span></div>
+<div><span>"</span><span>1. triangle</span><span>"</span><span>,</span></div>
+<div><span>"</span><span>2. rectangle</span><span>"</span><span>,</span></div>
+<div><span>"</span><span>3. square</span><span>"</span><span>,</span></div>
+<div><span>"</span><span>4. circle</span><span>"</span></div>
+<div><span> ]</span></div>
+<br>
+<div><span># Display the shape options</span></div>
+<div><span>for</span><span> option </span><span>in</span><span> shape</span><span>:</span></div>
+<div><span>print(option)</span></div>
+<br>
+<div><span># Input validation loop</span></div>
+<div><span> calculate </span><span>=</span> <span>""</span></div>
+<div><span>while</span><span> calculate </span><span>not</span> <span>in</span><span> [</span><span>"</span><span>1</span><span>"</span><span>,</span> <span>"</span><span>2</span><span>"</span><span>,</span> <span>"</span><span>3</span><span>"</span><span>,</span> <span>"</span><span>4</span><span>"</span><span>]</span><span>:</span></div>
+<div><span> calculate </span><span>=</span> <span>input(</span><span>"</span><span>\nWhich shape do you want me to calculate the area of (1-4): </span><span>"</span><span>)</span></div>
+<br>
+<div><span># Process based on the user's choice</span></div>
+<div><span>if</span><span> calculate </span><span>==</span> <span>"</span><span>1</span><span>"</span><span>:</span></div>
+<div><span> base </span><span>=</span> <span>float(input(</span><span>"</span><span>Please enter the base of the triangle: </span><span>"</span><span>))</span></div>
+<div><span> height </span><span>=</span> <span>float(input(</span><span>"</span><span>Please enter the height of the triangle: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span> <span>0.5</span> <span>*</span><span> base </span><span>*</span><span> height</span></div>
+<div><span>print(</span><span>f</span><span>"The area of the triangle is: </span><span>{</span><span>area</span><span>:.2f</span><span>}</span><span> square units."</span><span>)</span></div>
+<div><span>elif</span><span> calculate </span><span>==</span> <span>"</span><span>2</span><span>"</span><span>:</span></div>
+<div><span> length </span><span>=</span> <span>float(input(</span><span>"</span><span>Please enter the length of the rectangle: </span><span>"</span><span>))</span></div>
+<div><span> width </span><span>=</span> <span>float(input(</span><span>"</span><span>Please enter the width of the rectangle: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span><span> length </span><span>*</span><span> width</span></div>
+<div><span>print(</span><span>f</span><span>"The area of the rectangle is: </span><span>{</span><span>area</span><span>:.2f</span><span>}</span><span> square units."</span><span>)</span></div>
+<div><span>elif</span><span> calculate </span><span>==</span> <span>"</span><span>3</span><span>"</span><span>:</span></div>
+<div><span> side </span><span>=</span> <span>float(input(</span><span>"</span><span>Please enter the side length of the square: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span><span> side </span><span>**</span> <span>2</span></div>
+<div><span>print(</span><span>f</span><span>"The area of the square is: </span><span>{</span><span>area</span><span>:.2f</span><span>}</span><span> square units."</span><span>)</span></div>
+<div><span>elif</span><span> calculate </span><span>==</span> <span>"</span><span>4</span><span>"</span><span>:</span></div>
+<div><span> radius </span><span>=</span> <span>float(input(</span><span>"</span><span>Please enter the radius of the circle: </span><span>"</span><span>))</span></div>
+<div><span> area </span><span>=</span> <span>3.14159</span> <span>*</span><span> radius </span><span>**</span> <span>2</span></div>
+<div><span>print(</span><span>f</span><span>"The area of the circle is: </span><span>{</span><span>area</span><span>:.2f</span><span>}</span><span> square units."</span><span>)</span></div>
+<br>
+<div><span># Ask if the user wants to calculate again</span></div>
+<div><span> again </span><span>=</span> <span>input(</span><span>"</span><span>\nDo you want to calculate the area of another shape? (yes/no): </span><span>"</span><span>)</span><span>.</span><span>lower()</span></div>
+<div><span>if</span><span> again </span><span>!=</span> <span>"</span><span>yes</span><span>"</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>Goodbye!</span><span>"</span><span>)</span></div>
+<div><span>break</span> <span># Exit the loop and end the program</span></div>
+<br>
+<div><span># Call the function to start the program</span></div>
+<div><span>calculate_area()</span></div>
+</div>
+</div>
+</body>
+</html>

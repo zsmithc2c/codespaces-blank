@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Sami Miri</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Sami Miri</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>is_palindrome</span><span>(</span><span>s</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Convert the string to lowercase and remove non-alphanumeric characters</span></div>
+<div><span>&nbsp; &nbsp; </span><span>cleaned_string</span> <span>=</span> <span>''</span><span>.</span><span>join</span><span>(</span><span>char</span><span>.lower() </span><span>for</span> <span>char</span> <span>in</span> <span>s</span> <span>if</span> <span>char</span><span>.isalnum())</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># Reverse the cleaned string</span></div>
+<div><span>&nbsp; &nbsp; </span><span>reversed_string</span> <span>=</span> <span>cleaned_string</span><span>[::</span><span>-</span><span>1</span><span>]</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># Check if the cleaned string is the same as the reversed string</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>cleaned_string</span> <span>==</span> <span>reversed_string</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"The string is a palindrome."</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"The string is not a palindrome."</span></div>
+<br>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Get user input</span></div>
+<div><span>&nbsp; &nbsp; </span><span>input_string</span> <span>=</span> <span>input</span><span>(</span><span>"Enter a string (or type 'exit' to quit): "</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>input_string</span><span>.</span><span>lower</span><span>() </span><span>==</span> <span>'exit'</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Goodbye!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<div><span>&nbsp; &nbsp; </span><span># Call the function and print the result</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>is_palindrome</span><span>(</span><span>input_string</span><span>))</span></div>
+</div>
+</div>
+</body>
+</html>

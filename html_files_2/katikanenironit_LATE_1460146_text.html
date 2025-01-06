@@ -1,0 +1,73 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Ronit Katikaneni</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Ronit Katikaneni</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#UCASE</span></div>
+<div><span>#U: The problem requires to calculate an area depending on the shape the user inputs</span></div>
+<div><span>#C: Some clues are that since we have to check the shape, we must use if statements to differentiate between shapes</span></div>
+<div><span>#A: Step1: create function and take in string input, Step2: check what shape the user inputted, Step3: Take in proper measurements depending on the shape, Step4: calculate area depending on the shape and return the area</span></div>
+<div><span>#S: The S is my solution below</span></div>
+<div><span>#E: I tested without multiple edge cases and inputs and received proper results</span></div>
+<br><br>
+<div><span>#define function with string parameters</span></div>
+<div><span>def</span> <span>calculatearea</span><span>(</span><span>word</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#lowercase the input word</span></div>
+<div><span>&nbsp; &nbsp; word </span><span>=</span><span> word</span><span>.</span><span>lower()</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span><span>(word </span><span>==</span> <span>"</span><span>circle</span><span>"</span><span> )</span><span>:</span><span>#check if it is a circle</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#define pi and take in input for radius and return area</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; pi </span><span>=</span> <span>3.14</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; radius </span><span>=</span> <span>float(input(</span><span>"</span><span>Please input the radius: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if radius is negative</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(radius </span><span>&lt;</span> <span>0</span><span>)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>Radius cannot be less than zero, try again</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> pi </span><span>*</span><span> radius</span><span>**</span><span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The area of the circle is </span><span>"</span> <span>+</span> <span>str(area)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span>(word </span><span>==</span> <span>"</span><span>rectangle</span><span>"</span><span>)</span><span>:</span><span>#check if rectangle</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#take in length and width and return area</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; length </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the length: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; width </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the width: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if length or width is negative</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(length </span><span>&lt;</span> <span>0</span> <span>or</span><span> width </span><span>&lt;</span> <span>0</span><span>)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>length and width cannot be less than zero, try again</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> length </span><span>*</span><span> width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The area of the circle is </span><span>"</span> <span>+</span> <span>str(area)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span>(word </span><span>==</span> <span>"</span><span>square</span><span>"</span><span>)</span><span>:</span><span># check if square</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#take in side_length and return the area</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; side_length </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the side length: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if side_length is negative</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(side_length </span><span>&lt;</span> <span>0</span><span>)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>side_length cannot be less than zero, try again</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> length </span><span>*</span><span> width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span><span> side_length</span><span>**</span><span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp;</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The area of the circle is </span><span>"</span> <span>+</span> <span>str(area)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span><span>(word </span><span>==</span> <span>"</span><span>triangle</span><span>"</span><span>)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if it is a triangle</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#take in height and base and return area</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; height </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the height: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; base </span><span>=</span> <span>float(input(</span><span>"</span><span>Enter the base: </span><span>"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#check if base or height is negative</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(base </span><span>&lt;</span> <span>0</span> <span>or</span><span> height </span><span>&lt;</span> <span>0</span><span>)</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>base and height cannot be less than zero, try again</span><span>"</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; area </span><span>=</span> <span>.5</span> <span>*</span><span> base </span><span>*</span><span> height</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"</span><span>The area of the circle is </span><span>"</span> <span>+</span> <span>str(area)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#return this if their input was incorrect</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>"</span><span>You did not type in an acceptable shape</span><span>"</span></div>
+<div><span>shape </span><span>=</span> <span>input(</span><span>"</span><span>Enter a shape(circle, rectangle, square, or triangle) to calculate the area: </span><span>"</span><span>)</span></div>
+<br>
+<div><span>print(calculatearea(shape))</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Ahmanii Peoples</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Ahmanii Peoples</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div>
+<div>
+<div><span>#task </span></div>
+<div><span>"""</span></div>
+<div><span>Create a program that says: "I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?" and then asks the user to type in the name of a shape (e.g., triangle, rectangle, square, circle).</span></div>
+<br>
+<div><span>Then, depending on which shape the user types, the program will ask for the relevant measurements:</span></div>
+<br>
+<div><span>If they choose circle, prompt for the radius.</span></div>
+<div><span>If they choose rectangle, prompt for the length and width.</span></div>
+<div><span>If they choose square, prompt for the side length.</span></div>
+<div><span>If they choose triangle, prompt for the base and height.</span></div>
+<div><span>Use the correct formula to calculate and return the area of the chosen shape.</span></div>
+<div><span>"""</span></div>
+<br>
+<div><span>#make a imput that says ""I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?""</span></div>
+<div><span>#make 4 shapes (circle, rectangle, square, and triangle)</span></div>
+<br>
+<div><span>#create a definition that puts in whatever different shape</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#make and if else loop for each shape</span></div>
+<div><span>&nbsp; &nbsp; </span><span># if circle, (get radius, square it, and multiply by 3.14)</span></div>
+<div><span>&nbsp; &nbsp; </span><span># if square, (get side, the square it)</span></div>
+<div><span>&nbsp; &nbsp; </span><span># if rectangle, (get base and height, then mutliply them together)</span></div>
+<div><span>&nbsp; &nbsp; </span><span># if rectangle, (get the base and height, multiply them together, then divide them by 2)</span></div>
+<div><span>&nbsp; &nbsp; </span><span># print, the area of (insert shape here) is (area)</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span>#resource(s) used: https://www.w3schools.com/python/module_math.asp</span></div>
+</div>
+</div>
+<div><span>________</span></div>
+<div><span>shape</span> <span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? make 4 shapes (circle, rectangle, square, and triangle): "</span><span>)</span></div>
+<br>
+<div><span>def</span> <span>area_finder</span><span>(</span><span>x</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>x</span> <span>==</span> <span>"circle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>a</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Type in the radius: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>circ_area</span> <span>=</span> <span>a</span><span>*</span><span>a</span><span>*</span><span>3.14</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the circle is </span><span>{</span><span>circ_area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>x</span> <span>==</span> <span>"rectangle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>a</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Type in the width: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>b</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Type in the height: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>rec_area</span> <span>=</span> <span>a</span><span>*</span><span>b</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the rectangle is </span><span>{</span><span>rec_area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>x</span> <span>==</span> <span>"square"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>a</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Type in the side: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>squ_area</span> <span>=</span> <span>a</span><span>*</span><span>a</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the square is </span><span>{</span><span>squ_area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>x</span> <span>==</span> <span>"triangle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>a</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Type in the base: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>b</span> <span>=</span> <span>int</span><span>(</span><span>input</span><span>(</span><span>"Type in the height: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>c</span> <span>=</span> <span>a</span><span>*</span><span>b</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>tri_area</span> <span>=</span> <span>c</span><span>/</span><span>2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of the square is </span><span>{</span><span>tri_area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Sorry, couldn't catch that, try again"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>shape</span><span>()</span></div>
+<br>
+<div><span>area_finder</span><span>(</span><span>shape</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

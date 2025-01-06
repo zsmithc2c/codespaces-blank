@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Gabriela	Avendano</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Gabriela	Avendano</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#ask user about the shape<br>def calculate_area():<br>&nbsp; #print/ask fir input about shapes<br>&nbsp; print("I can calculate the area of a shape for you.")<br>&nbsp; shape = input("Which shape do you want me to calculate the area of? (circle, rectangle, square, triangle): ").strip().lower()</p>
+<p>&nbsp; if shape == "circle": &nbsp;#if circle solve for radius<br>&nbsp; &nbsp; &nbsp; area = 3.14159 * float(input("Please enter the radius of the circle: ")) ** 2<br>&nbsp; elif shape == "rectangle":#if rectangle propmpt for length and width<br>&nbsp; &nbsp; &nbsp; area = float(input("Please enter the length of the rectangle: ")) * float(input("Please enter the width of the rectangle: "))<br>&nbsp; elif shape == "square": &nbsp;#if square &nbsp;peompt for length<br>&nbsp; &nbsp; &nbsp; area = float(input("Please enter the side length of the square: ")) ** 2<br>&nbsp; elif shape == "triangle": &nbsp;#if triangle prompt for base and height<br>&nbsp; &nbsp; &nbsp; area = 0.5 * float(input("Please enter the base of the triangle: ")) * float(input("Please enter the height of the triangle: "))<br>&nbsp; else:<br>&nbsp; &nbsp; &nbsp; print("I don't recognize that shape, sorry.")<br>&nbsp; &nbsp; &nbsp; return</p>
+<p>&nbsp; print(f"The area of the {shape} is: {area:.2f}")</p>
+<p># Run the program<br>calculate_area()</p>
+</div>
+</body>
+</html>

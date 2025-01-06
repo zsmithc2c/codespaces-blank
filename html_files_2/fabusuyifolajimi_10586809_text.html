@@ -1,0 +1,80 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Folajimi	Fabusuyi</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Folajimi	Fabusuyi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><code><span>import math</span></code></div>
+<div><code><span>'''</span></code></div>
+<div><code><span>Calculate the area of 4 shapes based on input: Circle, Square, Triangle, Rectangle</span></code></div>
+<br>
+<div><code><span>Edge Cases: </span></code></div>
+<div><code><span>&nbsp; &nbsp; Case: Inputs don't match expected type/value</span></code></div>
+<div><code><span>&nbsp; &nbsp; Solution: Validate inputs in while loop unitl player inputs them correctly</span></code></div>
+<br><br>
+<div><code><span>'''</span></code></div>
+<div><code><span>def</span> <span>calculate_area</span><span>():</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># Assigning all the variables here makes the code more organized when checking for input validation by player</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>shape</span> <span>=</span> <span>""</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>radius</span> <span>=</span> <span>""</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>side_length</span> <span>=</span> <span>""</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>""</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>""</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>""</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>""</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># Checks whether player asks for an avaialable shape</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>while</span> <span>not</span> <span>shape</span> <span>in</span><span> [</span><span>"circle"</span><span>, </span><span>"square"</span><span>, </span><span>"rectangle"</span><span>, </span><span>"triangle"</span><span>]:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>shape</span> <span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? "</span><span>).</span><span>lower</span><span>()</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># Calculates for circle, using the math module to get pi</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>if</span> <span>shape</span> <span>==</span> <span>"circle"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># validates inputs</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>while</span> <span>not</span> <span>radius</span><span>.</span><span>isdigit</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>radius</span> <span>=</span> <span>input</span><span>(</span><span>"Radius: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>radius</span> <span>=</span> <span>int</span><span>(</span><span>radius</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area:"</span><span>, </span><span>math</span><span>.</span><span>pi</span> <span>*</span><span> (</span><span>radius</span><span>**</span><span>2</span><span>))</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># Calculates area for square</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>"square"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Validates input</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>while</span> <span>not</span> <span>side_length</span><span>.</span><span>isdigit</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>side_length</span> <span>=</span> <span>input</span><span>(</span><span>"Side Length: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>side_length</span> <span>=</span> <span>int</span><span>(</span><span>side_length</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area:"</span><span>, </span><span>side_length</span><span>**</span><span>2</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># Calculates area for rectange</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>"rectangle"</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Validates input</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>while</span> <span>not</span> <span>length</span><span>.</span><span>isdigit</span><span>() </span><span>or</span> <span>not</span> <span>width</span><span>.</span><span>isdigit</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>input</span><span>(</span><span>"Length: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>input</span><span>(</span><span>"Width: "</span><span>)</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>int</span><span>(</span><span>length</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>int</span><span>(</span><span>width</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area:"</span><span>, </span><span>length</span> <span>*</span> <span>width</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># Calculates area for triangle &nbsp; &nbsp;</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Validates input</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>while</span> <span>not</span> <span>base</span><span>.</span><span>isdigit</span><span>() </span><span>or</span> <span>not</span> <span>height</span><span>.</span><span>isdigit</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>input</span><span>(</span><span>"Base: "</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>input</span><span>(</span><span>"Height: "</span><span>)</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>int</span><span>(</span><span>base</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>int</span><span>(</span><span>height</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Area:"</span><span>, </span><span>0.5</span> <span>*</span> <span>base</span> <span>*</span> <span>height</span><span>)</span></code></div>
+<br>
+<div><code><span>calculate_area</span><span>()</span></code></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Shounauk Ganguli</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Shounauk Ganguli</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>import math #For pi</p>
+<p>def shapeAreaMenu():<br>&nbsp; &nbsp; shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? \n1. Circle\n2. Rectangle\n3. Square\n4. Triangle\n5. Exit")<br>&nbsp; &nbsp; if shape not in ["1", "2", "3", "4", "5"]: #Checking if input is valid<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Please try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; shapeAreaMenu()<br>&nbsp; &nbsp; if shape == "5":<br>&nbsp; &nbsp; &nbsp; &nbsp; exit()<br>&nbsp; &nbsp; if shape == "1":<br>&nbsp; &nbsp; &nbsp; &nbsp; circleArea()<br>&nbsp; &nbsp; if shape == "2":<br>&nbsp; &nbsp; &nbsp; &nbsp; rectangleArea()<br>&nbsp; &nbsp; if shape == "3":<br>&nbsp; &nbsp; &nbsp; &nbsp; squareArea()<br>&nbsp; &nbsp; if shape == "4":<br>&nbsp; &nbsp; &nbsp; &nbsp; triangleArea() #Calls corrosponding function</p>
+<p>def circleArea():<br>&nbsp; &nbsp; try: #Checks if theres an error<br>&nbsp; &nbsp; &nbsp; &nbsp; radius = int(input("What is the radius?"))<br>&nbsp; &nbsp; except:&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Please try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; shapeAreaMenu()<br>&nbsp; &nbsp; area = (math.pi) * (radius) * (radius) #Calculates area<br>&nbsp; &nbsp; print(f"The area is {area}")</p>
+<p>def rectangleArea():<br>&nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; l = int(input("What is the length?"))<br>&nbsp; &nbsp; &nbsp; &nbsp; w = int(input("What is the width?"))&nbsp;<br>&nbsp; &nbsp; except:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Please try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; shapeAreaMenu() #Returns to menu if an error arises<br>&nbsp; &nbsp; area = l*w<br>&nbsp; &nbsp; print(f"The area is {area}")</p>
+<p>def squareArea():<br>&nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; s = int(input("What is the side length?"))<br>&nbsp; &nbsp; except:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Please try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; shapeAreaMenu()<br>&nbsp; &nbsp; area = s*s<br>&nbsp; &nbsp; print(f"The area is {area}") #Prints area</p>
+<p>def triangleArea():<br>&nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; b = int(input("What is the base?"))<br>&nbsp; &nbsp; &nbsp; &nbsp; h = int(input("What is the height?"))<br>&nbsp; &nbsp; except:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Please try again")<br>&nbsp; &nbsp; &nbsp; &nbsp; shapeAreaMenu()<br>&nbsp; &nbsp; area = 0.5 * b * h<br>&nbsp; &nbsp; print(f"The area is {area}")</p>
+<p>shapeAreaMenu() #Calls the start of the program</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

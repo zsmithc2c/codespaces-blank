@@ -1,0 +1,22 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Suhurrith Adhikari</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Suhurrith Adhikari</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Getting user input which SHOULD be a number from 1 to 100</p>
+<p># edge case #1: include invalid input such as a letter, meaning we should check whether the input is a number or string</p>
+<p># edge case #2: What if the user's guess is less than 0 or greater than 100, we should tell them to retry and guess between 1-100</p>
+<p>#We need to use the random library in order to the randin method which will allow us to get a random number from 1 to 100<br>import random</p>
+<p>def guessing_game():<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; #Using the "random" library<br>&nbsp; &nbsp; rand_num = random.randint(1,100)<br>&nbsp; &nbsp; print("Welcome to the Number Guessing Game.")<br>&nbsp; &nbsp; print("I am thinking of a number from 1 to 100, can you guess it?")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; #using user input and getting an integer from user_input as guess<br>&nbsp; &nbsp; &nbsp; &nbsp; user_input = input("Enter your guess from 1 to 100: ")<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; # If the guess is not a digit, lets them guess again<br>&nbsp; &nbsp; &nbsp; &nbsp; if not user_input.isdigit():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Invalid input. Please enter a number.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue # Let them try to guess again<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; #Conversting the user_input to an integer<br>&nbsp; &nbsp; &nbsp; &nbsp; guess = int(user_input)<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; #Making sure that the guess is in the range of 1 and 100<br>&nbsp; &nbsp; &nbsp; &nbsp; if guess &lt; 1 or guess &gt; 100:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Out of range. Please enter a number between 1 and 100.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue # Let them try to guess again<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; # Now it actually checks the guess against the random number, if it is higher than to smaller<br>&nbsp; &nbsp; &nbsp; &nbsp; if guess &lt; rand_num:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too low! Guess again!")<br>&nbsp; &nbsp; &nbsp; &nbsp; elif guess &gt; rand_num:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Too high! Guess again!")<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"Nice! You guessed the right number which was: {rand_num}.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p># testing<br>guessing_game()</p>
+</div>
+</body>
+</html>

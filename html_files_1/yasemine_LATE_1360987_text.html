@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Yasemine</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Yasemine</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>//We need to get a word from the user, check if it is the same word when reversed and if it is output that it is a palindrome and if not output that it isn't</p>
+<p>import java.util.Scanner;</p>
+<p>public class PalindromeChecker {<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; public static void main(String[] args) {<br>&nbsp; &nbsp; &nbsp; &nbsp; // Create a Scanner to take an input word<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in);<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Ask the user for input<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter a string: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; String input = scanner.nextLine();<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Call the method to check if the string is a palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; if (isPalindrome(input)) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("The string is a palindrome.");<br>&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("The string is not a palindrome.");<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; }<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; // Method to check if the string is a palindrome<br>&nbsp; &nbsp; public static boolean isPalindrome(String str)&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; //Check if the string is the same forwards and backwards<br>&nbsp; &nbsp; &nbsp; &nbsp; int left = 0; // Beginning of the string<br>&nbsp; &nbsp; &nbsp; &nbsp; int right = input.length() - 1; // End of the string<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // Compare characters from both ends till reaching the middle<br>&nbsp; &nbsp; &nbsp; &nbsp; while (left &lt; right) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (input.charAt(left) != input.charAt(right)) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false; // If characters don't match, it's not a palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left++; // Move the left towards the center<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right--; // Move the right towards the center<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; // If all characters matched, the string is a palindrome<br>&nbsp; &nbsp; &nbsp; &nbsp; return true;<br>&nbsp; &nbsp; }<br>}</p>
+</div>
+</body>
+</html>

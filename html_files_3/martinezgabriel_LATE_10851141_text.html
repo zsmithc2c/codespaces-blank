@@ -1,0 +1,20 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Gabriel Martinez</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Gabriel Martinez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>def has_unique_characters(s):<br>&nbsp; &nbsp; # Step 1: Handle edge case for empty string<br>&nbsp; &nbsp; if len(s) == 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; return True &nbsp;# An empty string is considered to have all unique characters by definition<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Step 2: Create a set to keep track of characters we've already encountered<br>&nbsp; &nbsp; seen_characters = set()</p>
+<p>&nbsp; &nbsp; # Step 3: Iterate through each character in the string<br>&nbsp; &nbsp; for char in s:<br>&nbsp; &nbsp; &nbsp; &nbsp; # Step 4: Check if the character is already in the set<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False &nbsp;# If the character is already in the set, return False<br>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char) &nbsp;# Add the character to the set</p>
+<p>&nbsp; &nbsp; # Step 5: If no duplicates were found, return True<br>&nbsp; &nbsp; return True</p>
+<p># Example Test Cases<br>print(has_unique_characters("abcdef")) &nbsp;# Output: True<br>print(has_unique_characters("hello")) &nbsp; &nbsp;# Output: False<br>print(has_unique_characters("")) &nbsp; &nbsp; &nbsp; &nbsp;# Output: True (edge case: empty string)<br>print(has_unique_characters("a b c")) &nbsp; # Output: True (spaces are treated as unique)</p>
+</div>
+</body>
+</html>

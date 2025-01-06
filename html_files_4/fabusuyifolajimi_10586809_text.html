@@ -1,0 +1,52 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Folajimi	Fabusuyi</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Folajimi	Fabusuyi</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><code><span>import random</span></code></div>
+<div><code><span>'''</span></code></div>
+<div><code><span>Create a number guesser game, where you are told if the number is higher or lower until you get the number</span></code></div>
+<br>
+<div><code><span>Edge Cases: </span></code></div>
+<div><code><span>&nbsp; &nbsp; Case: Player doesn't input a number</span></code></div>
+<div><code><span>&nbsp; &nbsp; Solution: Input validation with while loop</span></code></div>
+<div><code><span>'''</span></code></div>
+<br>
+<div><code><span>def</span> <span>number_guess</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span># Use the random module to get a random number between 1 and 100</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>number</span> <span>=</span> <span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>)</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; </span><span># Put player input section in while loop, and only break out once player makes the right guess</span></code></div>
+<div><code><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Here I ask for player input and then check if the input is an integer and then I convert the input to an integer.</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>choice</span> <span>=</span> <span>input</span><span>(</span><span>"Guess the number: "</span><span>)</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>while</span> <span>not</span> <span>choice</span><span>.</span><span>isdigit</span><span>():</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>choice</span> <span>=</span> <span>input</span><span>(</span><span>"Guess the number: "</span><span>)</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>choice</span> <span>=</span> <span>int</span><span>(</span><span>choice</span><span>)</span></code></div>
+<br>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># Check whether you got the answer</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>choice</span> <span>&lt;</span> <span>number</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The number is higher, guess again."</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>choice</span> <span>&gt;</span> <span>number</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"The number is lower, guess again."</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Congrats you win!"</span><span>)</span></code></div>
+<div><code><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></code></div>
+<br>
+<div><code><span>number_guess</span><span>()</span></code></div>
+</div>
+</div>
+</body>
+</html>

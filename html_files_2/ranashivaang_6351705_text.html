@@ -1,0 +1,17 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Shivaang	Rana</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Shivaang	Rana</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># thought process: # make a function and ask the user about the shape # make different conditionals handling each shape, its respective inputs and areas # print out the area # rounding for better user readability # handling if a shape that isn't specified in the problem is entered # to use pi import math def area_calculator_assistant(): # used to check if input for shape is one of the valid shapes validShapes = ["circle", "triangle", "rectangle", "square"] print("I can calculate the area of a shape for you. Whcih shape do you want me to calculate the area of?") # shape input shape = input("Type the shape here: ") # make sure that uppercase or caps doesn't interfere with function lowerCaseShape = shape.lower() # if the shape is a circle if lowerCaseShape == "circle": # get radius radius = int(input("What is the radius of your circle? : ")) # calculate area areaCircle = math.pi * ((radius) ** 2) # print out final area using rounding and string concatenation print("The area is: " + str(round(areaCircle, 3))) # repeat if lowerCaseShape == "rectangle": length = int(input("What is the length of your rectangle? : ")) width = int(input("What is the width of your rectangle? : ")) areaRectangle = length * width print("The area is: " + str(round(areaRectangle, 3))) # repeat if lowerCaseShape == "square": side = int(input("What is the side length of your square? : ")) areaSquare = side ** 2 print("The area is: " + str(round(areaSquare, 3))) # repeat if lowerCaseShape == "triangle": base = int(input("What is the base of your triangle? : ")) height = int(input("What is the height of your triangle? : ")) areaTriangle = 0.5 * base * height print("The area is: " + str(round(areaTriangle, 3))) # checking if the user input for shape is valid if lowerCaseShape not in validShapes: print("You might've made a typo or inputted a invalid shape. I can only calculate the area of circles, rectangles, squares, and triangles.") # function call back area_calculator_assistant()</p>
+</div>
+</body>
+</html>

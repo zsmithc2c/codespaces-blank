@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Shreya Sreekant</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Shreya Sreekant</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#TASK: Determine if all the characters in a string are unique.</span></div>
+<br>
+<div><span>#EDGE CASE: Empty string as an input.</span></div>
+<br>
+<div><span>#PSUEDOCODE:</span></div>
+<div><span># String var word takes input </span></div>
+<div><span># FOR letter in word</span></div>
+<div><span># &nbsp;FOR next letter in word</span></div>
+<div><span># &nbsp; IF letter and next letter are not equal</span></div>
+<div><span># &nbsp; &nbsp; return True</span></div>
+<div><span># &nbsp; return False</span></div>
+<br>
+<div><span>string </span><span>=</span> <span>input(</span><span>"</span><span>Enter a word: </span><span>"</span><span>)</span></div>
+<br>
+<div><span>if</span><span> string </span><span>!=</span> <span>''</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span><span> i </span><span>in</span> <span>range(len(string))</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>for</span><span> j </span><span>in</span> <span>range(i </span><span>+</span> <span>1</span><span>,</span><span> len(string))</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> string[i] </span><span>==</span><span> string[j]</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False</span></div>
+<div><span>&nbsp; &nbsp; return True</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Wisdom	Walker</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Wisdom	Walker</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Palindrome Checker</p>
+<p># This program checks if a word or phrase is a palindrome (reads the same forwards and backwards).<br># It ignores spaces, punctuation, and capitalization.</p>
+<p>import re &nbsp;# For cleaning up the input string</p>
+<p>def is_palindrome(string):<br>&nbsp; &nbsp; # Clean the string: remove non-letters and numbers, and make it lowercase<br>&nbsp; &nbsp; cleaned = re.sub(r'[^A-Za-z0-9]', '', string).lower()<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Check if the cleaned string is the same backwards<br>&nbsp; &nbsp; return cleaned == cleaned[::-1]</p>
+<p>def main():<br>&nbsp; &nbsp; # Ask the user for a string<br>&nbsp; &nbsp; user_input = input("Type something to see if it's a palindrome: ").strip()</p>
+<p>&nbsp; &nbsp; # Check for an empty input<br>&nbsp; &nbsp; if not user_input:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("You didn't type anything! Try again.")<br>&nbsp; &nbsp; &nbsp; &nbsp; return</p>
+<p>&nbsp; &nbsp; # Check if it's a palindrome and print the result<br>&nbsp; &nbsp; if is_palindrome(user_input):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Yep, that's a palindrome!")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Nope, not a palindrome.")</p>
+<p>if __name__ == "__main__":<br>&nbsp; &nbsp; main()</p>
+</div>
+</body>
+</html>

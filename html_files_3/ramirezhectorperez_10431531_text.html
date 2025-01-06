@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Hector	Perez Ramirez</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Hector	Perez Ramirez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># based on my understanding of the problem, I have to determine wheater a string has complete unique characters or not.<br>#-----------------------------------<br># function name and converts to s boolian<br>def all_unique_characters(s: str) -&gt; bool:<br>&nbsp; &nbsp; # Convert string to uppercase to ensure case insensitivity<br>&nbsp; &nbsp; s = s.upper()</p>
+<p>&nbsp; &nbsp; # Use a set to track characters we've seen<br>&nbsp; &nbsp; seen = set()<br>&nbsp; &nbsp; for char in s:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; # adds character to list to keep track of characters<br>&nbsp; &nbsp; &nbsp; &nbsp; seen.add(char)</p>
+<p>&nbsp; &nbsp; return True</p>
+<p># Get user input<br>user_input = input("Enter a string to check if all characters are unique: ")</p>
+<p># Call the function and print the result<br>if all_unique_characters(user_input):<br>&nbsp; &nbsp; print("All characters are unique.")<br>else:<br>&nbsp; &nbsp; print("Not all characters are unique.")</p>
+</div>
+</body>
+</html>

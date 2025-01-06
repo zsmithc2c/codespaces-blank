@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Jooheon	Lee</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Jooheon	Lee</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>is_unique</span><span>(</span><span>string</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; </span><span># keep track of all the characters that have been seen already</span></div>
+<div><span>&nbsp; &nbsp; </span><span>tracked_characters</span> <span>=</span> <span>set</span><span>()</span></div>
+<br>
+<div><span>&nbsp; &nbsp; </span><span># go through each character in the string and see if its new or not</span></div>
+<div><span>&nbsp; &nbsp; </span><span>for</span> <span>char</span> <span>in</span> <span>string</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span># if the character has already been found in the set then we can just return false</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>char</span> <span>in</span> <span>tracked_characters</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>: </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>tracked_characters</span><span>.</span><span>add</span><span>(</span><span>char</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>#if we were able to interate through the whole string without there being duplicates, return true</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>True</span></div>
+<br>
+<div><span>#get a string from the user</span></div>
+<div><span>string</span> <span>=</span> <span>input</span><span>(</span><span>"Enter a string: "</span><span>)</span></div>
+<div><span># prints out the result </span></div>
+<div><span>print</span><span>(</span><span>f</span><span>"Are the characters in '</span><span>{</span><span>string</span><span>}</span><span> unique? </span><span>{</span><span>is_unique</span><span>(</span><span>string</span><span>)</span><span>}</span><span>"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

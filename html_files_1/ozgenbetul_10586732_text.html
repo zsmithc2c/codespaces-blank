@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Betul Ozgen</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Betul Ozgen</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#Returns if a string is a plaindrome or not and based on that returns true or false<br>def is_palindrome(phrase):<br>&nbsp; # 1. Remove everything but alphanumeric characters from phrase<br>&nbsp; string = ''<br>&nbsp; for char in phrase:<br>&nbsp; &nbsp; if char.isalnum():<br>&nbsp; &nbsp; &nbsp; &nbsp; string += char.lower()</p>
+<p>&nbsp; # 2. Check if the cleaned string is the same forwards and backwards<br>&nbsp; return string == string[::-1]</p>
+<p># 3. Return True if it is a palindrome, False if not(allow for user to enter strings)<br>test_string = input("Enter a string to check if it is a palindrome: ")</p>
+<p># 4. Check if the string does not contain any valid letters<br>string = ''.join(char.lower() for char in test_string if char.isalnum())<br>if not string:<br>&nbsp; &nbsp; print("The input contains no valid characters (letters or digits) to check.")<br>else:<br>&nbsp; if is_palindrome(test_string):<br>&nbsp; &nbsp; print(f"\"{test_string}\" is a palindrome.")<br>&nbsp; else:<br>&nbsp; &nbsp; print(f"\"{test_string}\" is not a palindrome.")</p>
+<p>&nbsp;&nbsp;</p>
+</div>
+</body>
+</html>

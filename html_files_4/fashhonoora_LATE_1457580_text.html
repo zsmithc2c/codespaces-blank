@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 4: Noora Fashho</title>
+</head>
+<body>
+<h1>December Submission: Problem 4: Noora Fashho</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>import</span> <span>random</span></div>
+<br>
+<div><span>def</span> <span>guessing_game</span><span>():</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Hello and welcome to the Guessing Game!"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"I have chosen a number between 1 and 100, can you guess what it is?"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span># this generates a random number between 1 and 100</span></div>
+<div><span>&nbsp; &nbsp; </span><span>number</span><span> = </span><span>random</span><span>.</span><span>randint</span><span>(</span><span>1</span><span>, </span><span>100</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>attempts</span><span> = </span><span>0</span><span> &nbsp;</span><span># this keeps track of the number of attempts</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span> <span>True</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>try</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#user inputs their guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>guess</span><span> = </span><span>int</span><span>(</span><span>input</span><span>(</span><span>"Enter your guess: "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>attempts</span><span> += </span><span>1</span><span> &nbsp; &nbsp; &nbsp; </span><span>#attempts increases every guess</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span> <span>guess</span><span> == </span><span>number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"Congratulations! You guessed it in </span><span>{</span><span>attempts</span><span>}</span><span> attempt(s)."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>break</span></div>
+<br>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>elif</span> <span>guess</span><span> &lt; </span><span>number</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>#if user's guess is less than the random number generated then...</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too low! Try a larger number."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Too high! Try a smaller number."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>#if invalid number is guessed</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>except</span> <span>ValueError</span><span>: &nbsp; &nbsp;</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>"Please enter a valid number."</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+<div><span>#game starts</span></div>
+<div><span>guessing_game</span><span>()</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Eliakim Latte</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Eliakim Latte</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>has_unique_characters</span><span>(</span><span>s</span><span>):</span></div>
+<div><span># Use a set called column_chars to track characters we have seen</span></div>
+<div><span> column_chars </span><span>=</span> <span>set()</span></div>
+<div><span>for</span><span> char </span><span>in</span><span> s</span><span>:</span></div>
+<div><span># If the character is already in the set, it's a duplicate</span></div>
+<div><span>if</span><span> char </span><span>in</span><span> column_chars</span><span>:</span></div>
+<div><span>return</span> <span>False</span></div>
+<div><span># Otherwise, add the character to the set</span></div>
+<div><span> column_chars</span><span>.</span><span>add(char)</span></div>
+<div><span># If no duplicates were found, return True</span></div>
+<div><span>return</span> <span>True</span></div>
+<br>
+<div><span># Main loop to get user input</span></div>
+<div><span>while</span> <span>True</span><span>:</span></div>
+<div><span># Get user input</span></div>
+<div><span> s </span><span>=</span> <span>input(</span><span>"</span><span>Write a word (or type 'exit' to quit): </span><span>"</span><span>)</span></div>
+<br>
+<div><span># Exit the loop if the user types 'exit'</span></div>
+<div><span>if</span><span> s</span><span>.</span><span>lower()</span> <span>==</span> <span>'</span><span>exit</span><span>'</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>Exiting the program.</span><span>"</span><span>)</span></div>
+<div><span>break</span></div>
+<div><span># Call the function to check if the characters are unique</span></div>
+<div><span>if</span> <span>has_unique_characters(s)</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>All characters are unique!</span><span>"</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>print(</span><span>"</span><span>There are duplicate characters.</span><span>"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Jaime Rodriguez</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Jaime Rodriguez</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<pre><span>#Create a program that detects if there are no repeating characters in a string<br></span><span><br></span><span>#Okay, repeating characters in a string.<br></span><span>#I can go through each character in the string and add it to a list<br></span><span>#Using this, I can check past characters to see if same ones show up<br></span><span>"""<br></span><span>characters = []<br></span><span>for character in string:<br></span><span>    if character in characters:<br></span><span>        False<br></span><span>    else:<br></span><span>        character.append(characters)<br></span><span>True<br></span><span>"""<br></span>string = <span>input</span>(<span>"Input a string: "</span>)<br><br>characters = []<br><span>for </span>character <span>in </span>string:<br>    <span>if </span>character <span>in </span>characters:      <span>#This checks if the same character is in that list<br></span>        <span>print</span>(<span>False</span>)<br>        <span>break<br></span><span>    elif </span>character <span>not in </span>characters:<br>        characters.append(character)  <span>#I add each character to that list<br></span><span>else</span>:<br>    <span>print</span>(<span>True</span>)  <span>#Used a bit of help from Google to the True to print correctly<br></span><span><br></span><span>#Spaces are considered characters, so if there's multiple the program will print False<br></span><span>#Empty inputs dont have repeating characters. It will just print True<br></span><span><br></span><span>#Took ~30 minutes to solve</span></pre>
+</div>
+</div>
+</body>
+</html>

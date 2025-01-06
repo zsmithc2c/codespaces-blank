@@ -1,0 +1,19 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Everett	Webster</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Everett	Webster</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p># Create a function to see if all characters are unique</p>
+<p><br># define a function for the unique characters<br>def all_unique_characters(s):<br>&nbsp; &nbsp; # Compare string length to the set length<br>&nbsp; &nbsp; return len(s) == len(set(s)) &nbsp;</p>
+<p># Where the function is mainly set<br>if __name__ == "__main__":<br>&nbsp; &nbsp; test_string = input("Enter a string to check if all characters are unique: ").strip()<br>&nbsp; &nbsp; # if statement if inputed string was empty<br>&nbsp; &nbsp; if not test_string:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The input string is empty.")<br>&nbsp; &nbsp; # elif all are unique, print all unique<br>&nbsp; &nbsp; elif all_unique_characters(test_string):<br>&nbsp; &nbsp; &nbsp; &nbsp; print("All characters in the string are unique.")<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; # else if strings aren't all unique, they contain duplicates<br>&nbsp; &nbsp; &nbsp; &nbsp; print("The string contains duplicate characters.")</p>
+</div>
+</body>
+</html>

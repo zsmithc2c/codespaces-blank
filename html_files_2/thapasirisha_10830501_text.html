@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Sirisha Thapa</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Sirisha Thapa</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>// File: ShapeAreaCalculator.java</p>
+<p><br>public class ShapeAreaCalculator&nbsp;<br>{</p>
+<p>&nbsp; &nbsp; public static void main(String[] args)&nbsp;<br>&nbsp; &nbsp; {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Create a scanner object to get input from the user<br>&nbsp; &nbsp; &nbsp; &nbsp; Scanner scanner = new Scanner(System.in);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Ask the user to choose a shape<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.print("I can calculate the area of a shape for you.");<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Please type the shape you want to calculate the area of: circle, rectangle, square, or triangle");</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Read the user's choice of shape (convert it to lowercase to avoid case issues)<br>&nbsp; &nbsp; &nbsp; &nbsp; String shape = scanner.nextLine().toLowerCase();</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Declare a variable to store the area of the shape<br>&nbsp; &nbsp; &nbsp; &nbsp; double area = 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Check which shape the user picked and calculate the area<br>&nbsp; &nbsp; &nbsp; &nbsp; if (shape.equals("circle"))&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // For a circle, ask for the radius<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter the radius of the circle: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double radius = scanner.nextDouble();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Calculate the area of the circle (formula: π * radius^2)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = Math.PI * radius * radius; &nbsp;// Math.PI gives the value of π<br>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; else if (shape.equals("rectangle"))&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // For a rectangle, ask for the length and width<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter the length of the rectangle: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double length = scanner.nextDouble();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter the width of the rectangle: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double width = scanner.nextDouble();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Calculate the area of the rectangle (formula: length * width)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = length * width;<br>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; else if (shape.equals("square"))&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // For a square, ask for the side length<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter the side length of the square: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double side = scanner.nextDouble();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Calculate the area of the square (formula: side * side)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = side * side;<br>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; else if (shape.equals("triangle"))<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // For a triangle, ask for the base and height<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter the base of the triangle: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double base = scanner.nextDouble();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("Enter the height of the triangle: ");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; double height = scanner.nextDouble();<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Calculate the area of the triangle (formula: 0.5 * base * height)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; area = 0.5 * base * height;<br>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; else&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // If the shape is not recognized, show an error message<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Sorry, I don't know that shape. Please choose circle, rectangle, square, or triangle.");<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanner.close(); // Close the scanner<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return; // End the program<br>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Show the calculated area to the user<br>&nbsp; &nbsp; &nbsp; &nbsp; System.out.printf("The area of the %s is: %.2f\n", shape, area);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Close the scanner to avoid memory issues<br>&nbsp; &nbsp; &nbsp; &nbsp; scanner.close();<br>&nbsp; &nbsp; }<br>}</p>
+</div>
+</body>
+</html>

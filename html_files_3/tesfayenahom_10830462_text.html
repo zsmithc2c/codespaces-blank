@@ -1,0 +1,30 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Nahom Tesfaye</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Nahom Tesfaye</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>def</span> <span>unique_characters</span><span>(</span><span>str</span><span>):</span></div>
+<div><span>for</span><span> i </span><span>in</span> <span>range</span><span>(</span><span>len</span><span>(</span><span>str</span><span>)):</span></div>
+<div><span>for</span><span> n </span><span>in</span> <span>range</span><span>(i </span><span>+</span> <span>1</span><span>,</span><span>len</span><span>(</span><span>str</span><span>)): </span><span>#check all characters after the current one</span></div>
+<div><span>if</span><span> str[i] </span><span>==</span><span> str[n]: </span><span>#checks if characters at index i are the same as n </span></div>
+<div><span>return</span> <span>False</span> <span>#return false if duplicate is found</span></div>
+<div><span>return</span> <span>True</span> <span># no duplicates, return true </span></div>
+<div><span>str</span> <span>=</span> <span>'Nahom'</span></div>
+<br>
+<div><span>if</span><span> unique_characters(</span><span>str</span><span>):</span></div>
+<div><span>print</span><span>(</span><span>f</span><span>'</span><span>{</span><span>str</span><span>}</span><span> has unique characters.'</span><span>)</span></div>
+<div><span>else</span><span>:</span></div>
+<div><span>print</span><span>(</span><span>f</span><span>'</span><span>{</span><span>str</span><span>}</span><span> does not have unique characters.'</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

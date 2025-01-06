@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Christian	Trinidad</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Christian	Trinidad</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#What i will be doing to solve this problem is to first make a function with the ultimate purpose of taking one input string and seeing if it has letters in it that repeat for exaple "hello" has words that repeat<br># What im going to be doing is using a for loop to go through the string and then using a if statement to see if the letter is in the string and if it is then it not unique<br>def find_unquie_characters():<br>&nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; # User input<br>&nbsp; &nbsp; input_str = input("Enter a string to check for unique characters: ").strip()</p>
+<p>&nbsp; &nbsp; #Handles if only empty strings are given&nbsp;<br>&nbsp; &nbsp; input_str = input_str.replace(" ", "") &nbsp;#eliminates spaces<br>&nbsp; &nbsp; if not input_str:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("it has unique characters.")<br>&nbsp; &nbsp; &nbsp; &nbsp; return True</p>
+<p>&nbsp; &nbsp; # I can then track seen characters using a set<br>&nbsp; &nbsp; seen_characters = set()</p>
+<p>&nbsp; &nbsp; # Iterate each character in the string to see if it is unique or not and return that information<br>&nbsp; &nbsp; for char in input_str:<br>&nbsp; &nbsp; &nbsp; &nbsp; if char in seen_characters:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("The string does not have all unique characters.")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return False<br>&nbsp; &nbsp; &nbsp; &nbsp; seen_characters.add(char) &nbsp;# Add the character to the set.</p>
+<p>&nbsp; &nbsp; # if the string is original we can return true<br>&nbsp; &nbsp; print("The string has all unique characters.")<br>&nbsp; &nbsp; return True</p>
+<p># Runs<br>find_unquie_characters()</p>
+</div>
+</body>
+</html>

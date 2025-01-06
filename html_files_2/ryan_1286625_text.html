@@ -1,0 +1,24 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Ryan</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Ryan</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>#create a function that can calculate the area of certain shapes&nbsp;<br>#input: shape, length, width, radius<br>#output: area of shape</p>
+<p>#return area of shape<br>#area = length*width, (length*width)/2, or 3.14*radius*radius</p>
+<p>#make a def for circle that takes in radius and finds area<br>def circle():<br>&nbsp; radius = input("what is the radius?")<br>&nbsp; area = int(radius)*int(radius)*3.14<br>&nbsp; print(f"the area of the circle is {area}")</p>
+<p>#make a def for rectangle that takes in length and width and finds area<br>def rectangle():<br>&nbsp; length = input("what is the length?")<br>&nbsp; width = input("what is the width?")<br>&nbsp; area = int(length)*int(width)<br>&nbsp; print(f"the area of the rectangle is {area}")</p>
+<p>#make a def for square that takes in length and width and finds area<br>def square():<br>&nbsp; length = input("what is the length?")<br>&nbsp; width = input("what is the width?")<br>&nbsp; area = int(length)*int(width)<br>&nbsp; print(f"the area of the square is {area}")</p>
+<p>#make a def for triangle that takes in base and height and finds area<br>def triangle():<br>&nbsp; base = input("what is the base?")<br>&nbsp; height = input("what is the height?")<br>&nbsp; area = int(base)*int(height)/2<br>&nbsp; print(f"the area of the triangle is {area}")</p>
+<p>#make input function to determine the shape<br>shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of?")</p>
+<p><br>#use if statement to determine what the correct calculator the user wants for shape<br>if shape == "circle":<br>&nbsp; circle()<br>elif shape == "rectangle":<br>&nbsp; rectangle()<br>elif shape == "square":<br>&nbsp; square()<br>elif shape == "triangle":<br>&nbsp; triangle()<br>else:<br>&nbsp; print("choice is invalid, try again")</p>
+</div>
+</body>
+</html>

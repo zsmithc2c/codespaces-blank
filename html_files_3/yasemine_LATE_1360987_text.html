@@ -1,0 +1,25 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 3: Yasemine</title>
+</head>
+<body>
+<h1>December Submission: Problem 3: Yasemine</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>//Note; I already had this code done before so I looked at if while I was writing this one so I don't mess up using the HashSet</p>
+<p>import java.util.HashSet;</p>
+<p>public class UniqueCharacters {</p>
+<p>&nbsp; &nbsp; // Function to determine if all characters in the string are unique<br>&nbsp; &nbsp; public static boolean areCharactersUnique(String input) {<br>&nbsp; &nbsp; &nbsp; &nbsp; // If the input string is empty, return True (since there are no characters to be duplicate)<br>&nbsp; &nbsp; &nbsp; &nbsp; if (input == null || input.isEmpty()) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return true;<br>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Create a set to store characters we've already encountered<br>&nbsp; &nbsp; &nbsp; &nbsp; HashSet&lt;Character&gt; seenCharacters = new HashSet&lt;&gt;();</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Loop through each character in the string<br>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; input.length(); i++) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; char currentChar = input.charAt(i);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // If the character is already in the set, it means it's a duplicate<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (seenCharacters.contains(currentChar)) {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false; &nbsp;// Found a duplicate<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Add the current character to the set<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; seenCharacters.add(currentChar);<br>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // If we loop through the entire string without finding duplicates, return true<br>&nbsp; &nbsp; &nbsp; &nbsp; return true;<br>}</p>
+</div>
+</body>
+</html>

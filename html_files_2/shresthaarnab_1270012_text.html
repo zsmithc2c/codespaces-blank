@@ -1,0 +1,88 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Arnab Shrestha</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Arnab Shrestha</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <p>UPDATED TO HAVE MORE COMMENTS, still around 35 minutes</p>
+<p><img src="/users/1270012/files/35402900/preview?verifier=O74uHo9GQHxDp7TGwR0Hh4lLB9rmfzly4g4wRfcQ" alt="image-3 (1).png" width="558" height="301"></p>
+<div>
+<div><span>"""</span></div>
+<div><span>Understand:</span></div>
+<div><span>&nbsp; &nbsp; Prompt:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Create an area calculating program that can calculate the area of different shapes typed in by the user.</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>&nbsp; &nbsp; Inputs:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; String shapeName</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; one or two int inputs for shape dimensions</span></div>
+<br>
+<div><span>&nbsp; &nbsp; Questions:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; What if the user doesn't input an eligible shape?</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; Can the input dimensions have decimals?</span></div>
+<div><span>&nbsp; &nbsp; </span></div>
+<div><span>Clues/hints:</span></div>
+<div><span>&nbsp; &nbsp; user selection of shapes will require if statements</span></div>
+<div><span>&nbsp; &nbsp; area of a circle will require pi so I need to import math.</span></div>
+<br>
+<div><span>Assemble/pseudocode:</span></div>
+<div><span>&nbsp; &nbsp; input variable shape</span></div>
+<br>
+<div><span>&nbsp; &nbsp; if shape == circle:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; input variable for radius</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; calculate the area of a circle with radius</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print</span></div>
+<div><span>&nbsp; &nbsp; elif shape == rectangle:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; input variable for length</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; input variable for width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; calculate the area of a rectangle with length and width</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print</span></div>
+<div><span>&nbsp; &nbsp; elif etc.</span></div>
+<div><span>&nbsp; &nbsp; else:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; print "shape is not an available option."</span></div>
+<br>
+<div><span>Examination:</span></div>
+<div><span>&nbsp; &nbsp; When I thought I was done I tried running the code and realized I forgot to convert the inputs to integers.</span></div>
+<div><span>&nbsp; &nbsp; I again changed in inputs to floats so the user can input decimal numbers.</span></div>
+<div><span>&nbsp; &nbsp; To make the code more efficient, I used elif and else statements.</span></div>
+<div><span>&nbsp; &nbsp; I forgot to account for capital letters.</span></div>
+<div><span>&nbsp; &nbsp; I forgot to account for non-numeral inputs.</span></div>
+<div><span>"""</span></div>
+<div><span>import</span> <span>math</span></div>
+<br>
+<div><span># User input for shape name</span></div>
+<div><span>shape</span> <span>=</span> <span>input</span><span>(</span><span>"I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? "</span><span>)</span></div>
+<div><span>shape</span> <span>=</span> <span>shape</span><span>.</span><span>lower</span><span>()</span></div>
+<div><span>try</span><span>: </span><span>#try/except for if an input is not a number</span></div>
+<div><span>&nbsp; &nbsp; </span><span>if</span> <span>shape</span> <span>==</span> <span>"circle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>radius</span> <span>=</span> <span>float</span><span>(</span><span>input</span><span>(</span><span>"What is the radius of the circle? &nbsp;"</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>area</span> <span>=</span> <span>math</span><span>.</span><span>pi</span><span>*</span><span>(</span><span>radius</span><span>*</span><span>radius</span><span>) </span><span># pi(r)^2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of a circle with a radius of </span><span>{</span><span>radius</span><span>}</span><span> is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>"rectangle"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>float</span><span>(</span><span>input</span><span>(</span><span>"What is the length of the rectangle? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span> <span>=</span> <span>float</span><span>(</span><span>input</span><span>(</span><span>"What is the width of the rectangle? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>area</span> <span>=</span> <span>length</span><span>*</span><span>width</span> <span># l*w</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of a rectangle with a length of </span><span>{</span><span>length</span><span>}</span><span> and a width of </span><span>{</span><span>width</span><span>}</span><span> is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>"square"</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>length</span> <span>=</span> <span>float</span><span>(</span><span>input</span><span>(</span><span>"What is the length of the rectangle? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>area</span> <span>=</span> <span>length</span><span>*</span><span>length</span> <span># l^2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of a square with a length of </span><span>{</span><span>length</span><span>}</span><span> is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>elif</span> <span>shape</span> <span>==</span> <span>"triangle"</span><span>: </span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>base</span> <span>=</span> <span>float</span><span>(</span><span>input</span><span>(</span><span>"What is the base of the triangle? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span> <span>=</span> <span>float</span><span>(</span><span>input</span><span>(</span><span>"What is the height of the triangle? "</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>area</span> <span>=</span><span> (</span><span>base</span><span>*</span><span>height</span><span>)</span><span>/</span><span>2</span> <span># (b*h)/2</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"The area of a triangle with a base of </span><span>{</span><span>base</span><span>}</span><span> and a height of </span><span>{</span><span>height</span><span>}</span><span> is </span><span>{</span><span>area</span><span>}</span><span>"</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>else</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>print</span><span>(</span><span>f</span><span>"</span><span>{</span><span>shape</span><span>}</span><span> is not an available option."</span><span>)</span></div>
+<div><span>except</span><span>:</span></div>
+<div><span>&nbsp; &nbsp; </span><span>print</span><span>(</span><span>"invalid input"</span><span>)</span></div>
+</div>
+</div>
+</body>
+</html>

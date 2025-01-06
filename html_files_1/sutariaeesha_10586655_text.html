@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 1: Eesha Sutaria</title>
+</head>
+<body>
+<h1>December Submission: Problem 1: Eesha Sutaria</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>
+<div><span>#I use this library for the translate line</span></div>
+<div><span>import</span> <span>string</span></div>
+<div><span>#Creates the function. Takes a string input</span></div>
+<div><span>def</span> <span>palindrome</span><span>(</span><span>str</span><span>):</span></div>
+<div><span>&nbsp; &nbsp;#These 3 lines just make sure that capitalization, spaces, and punctuation have no effect on the result</span></div>
+<div><span>&nbsp; &nbsp; </span><span>str</span> <span>=</span> <span>str</span><span>.lower()</span></div>
+<div><span>&nbsp; &nbsp; </span><span>str</span> <span>=</span> <span>str</span><span>.replace(</span><span>" "</span><span>, </span><span>""</span><span>)</span></div>
+<div><span>&nbsp; &nbsp; </span><span>str</span> <span>=</span> <span>str</span><span>.translate(</span><span>str</span><span>.maketrans(</span><span>''</span><span>, </span><span>''</span><span>, </span><span>string</span><span>.</span><span>punctuation</span><span>))</span></div>
+<div><span>&nbsp; &nbsp; </span><span>match</span> <span>=</span> <span>True</span></div>
+<div><span>&nbsp; &nbsp; </span><span>i</span> <span>=</span> <span>0</span></div>
+<div><span>&nbsp; &nbsp; #Keeps going through the loop while characters as front and end match and it gets halfway through</span></div>
+<div><span>&nbsp; &nbsp; </span><span>while</span><span> (</span><span>match</span><span>==</span> <span>True</span> <span>and</span> <span>i</span> <span>&lt;=</span> <span>len</span><span>(</span><span>str</span><span>)</span><span>/</span><span>2</span><span>):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; #When the character doesn't match the one in it's spot from the end it decides that the string is not a palindrome</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span> (</span><span>str</span><span>[</span><span>i</span><span>]</span><span>!=</span><span>str</span><span>[</span><span>len</span><span>(</span><span>str</span><span>)</span><span>-</span><span>1</span><span>-</span><span>i</span><span>]):</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>match</span> <span>=</span> <span>False</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>return</span> <span>"The string is not a palindrome."</span></div>
+<div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>i</span><span>+=</span><span>1</span></div>
+<div><span>&nbsp; &nbsp; #If it made it through the whole string without deciding match is false then it is a palindrome</span></div>
+<div><span>&nbsp; &nbsp; </span><span>return</span> <span>"The string is a palindrome."</span></div>
+<div><span>#Call the palindrome function and print what it returns</span></div>
+<div><span>print</span><span>(</span><span>palindrome</span><span>(</span><span>input</span><span>(</span><span>"Hello. Enter a word and I will check if it is a palindrome: "</span><span>)))</span></div>
+</div>
+</div>
+</body>
+</html>

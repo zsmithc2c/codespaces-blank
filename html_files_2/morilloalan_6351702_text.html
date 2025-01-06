@@ -1,0 +1,70 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>December Submission: Problem 2: Alan	Morillo</title>
+</head>
+<body>
+<h1>December Submission: Problem 2: Alan	Morillo</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <div>import math</div>
+<div>def circle():</div>
+<div>&nbsp; &nbsp; try:</div>
+<div>&nbsp; &nbsp; &nbsp; # get radius and calculate area</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; rad = float(input("What is the radius? "))&nbsp;</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; return math.pi * math.pow(rad, 2)</div>
+<div>&nbsp; &nbsp; except ValueError:</div>
+<div>&nbsp; &nbsp; &nbsp; # if the input can't be converted to a float, it is invalid</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; print("Invalid radius. Please enter a numeric value.")</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; return circle() # try again</div>
+<div>def rectangle():</div>
+<div>&nbsp; try:</div>
+<div>&nbsp; &nbsp; # get length and width and calculate area</div>
+<div>&nbsp; &nbsp; length = float(input("What is the length? "))</div>
+<div>&nbsp; &nbsp; width = float(input("What is the width? "))</div>
+<div>&nbsp; &nbsp; return length * width</div>
+<div>&nbsp; except ValueError:</div>
+<div>&nbsp; &nbsp; print("Invalid dimension(s)")</div>
+<div>&nbsp; &nbsp; return rectangle()</div>
+<div>def square():</div>
+<div>&nbsp; try:</div>
+<div>&nbsp; &nbsp; # get length and calculate area</div>
+<div>&nbsp; &nbsp; length = float(input("What is the length? "))</div>
+<div>&nbsp; &nbsp; return math.pow(length, 2)</div>
+<div>&nbsp; except ValueError:</div>
+<div>&nbsp; &nbsp; print("Invalid length")</div>
+<div>&nbsp; &nbsp; return square()</div>
+<div>&nbsp;&nbsp;</div>
+<div>def triangle():</div>
+<div>&nbsp; try:</div>
+<div>&nbsp; &nbsp; # get base and height to calculate area</div>
+<div>&nbsp; &nbsp; base = float(input("What is the length of the base? "))</div>
+<div>&nbsp; &nbsp; height = float(input("What is the height? "))</div>
+<div>&nbsp; &nbsp; return 0.5 * base * height</div>
+<div>&nbsp; except ValueError:</div>
+<div>&nbsp; &nbsp; print("Invalid dimension(s)")</div>
+<div>&nbsp; &nbsp; return triangle()</div>
+<div>def area():</div>
+<div>&nbsp; shape_dict = { # using a dictionary of function allows for more shapes to be added with less lines of code</div>
+<div>&nbsp; &nbsp; "circle": circle,</div>
+<div>&nbsp; &nbsp; "rectangle": rectangle,</div>
+<div>&nbsp; &nbsp; "square": square,</div>
+<div>&nbsp; &nbsp; "triangle": triangle</div>
+<div>&nbsp; }</div>
+<div>&nbsp; # get the shape type</div>
+<div>&nbsp; shape = input("I can calculate the area of a shape for you. Which shape do you want me to calculate the area of? ").lower()</div>
+<div>&nbsp; try:</div>
+<div>&nbsp; &nbsp; # call the function corresponding to the shape</div>
+<div>&nbsp; &nbsp; return shape_dict[shape]()</div>
+<div>&nbsp; except KeyError:</div>
+<div>&nbsp; &nbsp; # ask again if shape in invalid</div>
+<div>&nbsp; &nbsp; print("Invalid shape or shape not in list")</div>
+<div>&nbsp; &nbsp; return area()</div>
+<div>print("The area of the shape is " + str(area()))</div>
+</div>
+</body>
+</html>
